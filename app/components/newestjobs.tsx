@@ -31,9 +31,43 @@ const query = gql`query GET_JOBS {
   }
 }`;
 
+interface JobData {
+  category: string[];
+  contractType: string;
+  fieldGroupName: string;
+  longDescription: string;
+  region: string;
+  salary: number;
+  salary2?: number | null;
+  shortDescription: string;
+  type: string;
+}
+
+interface Edge {
+  node: {
+    jobs: JobData;
+    date: string;
+    title: string;
+    slug: string;
+  };
+}
+
+interface Data {
+  posts: {
+    edges: Edge[];
+  };
+}
+
 export default function NewestJobs() {
 
-  const { data } = useSuspenseQuery(query);
+  const { data } = useSuspenseQuery<Data>(query);
+
+  if (!data) {
+    // Handle the case when data is still loading or undefined
+    return null; // Or you can return a loading spinner or a message
+  }
+
+  const edges: Edge[] = data.posts.edges;
 
   return (
     <>
@@ -44,7 +78,7 @@ export default function NewestJobs() {
             <h2 className="text-3xl font-black justify-start uppercase tracking-tighter">New Jobs</h2>
           </div>
           <div className="grid grid-cols-2 gap-8 w-full bg-white px-8">
-            {data.posts.edges.map((edge) => (
+            {edges.map((edge) => (
               <JobTile key={edge.node.slug} jobData={edge.node} />
             ))}
           </div>
