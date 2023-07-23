@@ -10,7 +10,7 @@ function makeClient() {
   });
 
   return new NextSSRApolloClient({
-    cache: new NextSSRInMemoryCache(),
+    cache: new NextSSRInMemoryCache() ,
     link:
       typeof window === "undefined"
         ? ApolloLink.from([
@@ -20,6 +20,15 @@ function makeClient() {
             httpLink,
           ])
         : httpLink,
+    defaultOptions: {
+      // Set default fetch policy to "no-cache" to disable cache for all queries
+      watchQuery: {
+        fetchPolicy: "no-cache",
+      },
+      query: {
+        fetchPolicy: "no-cache",
+      },
+    },
   });
 }
 
