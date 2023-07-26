@@ -3,6 +3,7 @@ export const dynamic = "force-dynamic";
 import {PiMapPinLineBold} from "react-icons/pi"
 import {PiPenNibBold} from "react-icons/pi"
 import {RiMoneyPoundCircleLine} from "react-icons/ri"
+import { FiArrowRight } from "react-icons/fi"
 
 interface JobData {
   title: string;
@@ -41,8 +42,11 @@ export default function JobTile({ jobData }: { jobData: JobData }) {
 
     return(
         <>
-        <div className="flex flex-col  bg-white border border-neutral-300 p-4 rounded-xl hover:shadow-sm hover:bg-neutral-100 cursor-pointer transition-all">
-            <h3 className="text-xl font-black pb-2">{jobData.title}</h3>
+        <div className="group flex flex-col justify-between bg-white border border-neutral-300 p-4 rounded-xl hover:shadow-sm hover:bg-neutral-50 cursor-pointer transition-all max-w-[500px]">
+            <div className="relative flex justify-between">
+              <h3 className="text-xl font-black pb-2">{jobData.title}</h3>
+              <FiArrowRight className='absolute right-4 recruitment-icon w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:right-0 ease-out duration-200'/>
+            </div>
             <div className="flex gap-2 py-2">
 
               {jobData.jobs.category.map((category, index) => (

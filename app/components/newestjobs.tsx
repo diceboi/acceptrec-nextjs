@@ -72,18 +72,21 @@ export default function NewestJobs() {
   return (
     <>
       <section className="flex flex-col justify-center items-center w-full">
-        <div className="w-10/12 lg:w-8/12 -mt-[9vh] z-40 border border-neutral-300 rounded-xl">
-          <div className="flex items-center gap-2 py-4 my-2 ml-8">
-            <FaFire className="text-[#ff914d] w-10 h-10" />
-            <h2 className="text-3xl font-black justify-start uppercase tracking-tighter">New Jobs</h2>
+        <div className="relative w-10/12 lg:w-8/12 h-fit -mt-[200px] z-40 border border-white bg-white rounded-xl shadow-sm overflow-hidden px-8">
+          <div className="flex justify-between items-center gap-2 py-4 my-2">
+            <div className="flex items-baseline gap-2">
+              <FaFire className="text-[#ff914d] w-10 h-10" />
+              <h2 className="text-6xl lg:text-3xl font-black tracking-tighter">New Jobs</h2>
+            </div>
+            <button className="relative flex justify-between items-center w-full lg:w-auto py-2 px-4 font-bold rounded-full gap-4 hover:underline group transition-all z-10">More jobs<HiArrowSmRight className="absolute -right-2 group-hover:-right-4 transition-all" /></button>
           </div>
-          <div className="grid grid-cols-2 gap-8 w-full bg-white px-8">
-            {edges.map((edge) => (
-              <JobTile key={edge.node.slug} jobData={edge.node} />
-            ))}
-          </div>
-          <div className="flex justify-center items-center gap-2 py-4 my-2">
-            <button className="relative flex justify-between items-center w-full lg:w-auto py-2 px-4 font-bold rounded-full gap-4 hover:underline group transition-all">More jobs<HiArrowSmRight className="absolute -right-2 group-hover:-right-4 transition-all" /></button>
+          <div className="absolute h-[350px] w-[200px] top-0 right-8 bg-gradient-to-r from-[#ffffff00] to-white"></div>
+          <div className="overflow-x-scroll ">
+            <div className="flex flex-nowrap gap-8 w-max h-fit pb-8">
+              {edges.map((edge) => (
+                <JobTile key={edge.node.slug} jobData={edge.node}/>
+              ))}
+            </div>
           </div>
         </div>
       </section>

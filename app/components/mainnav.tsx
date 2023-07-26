@@ -28,7 +28,7 @@ export default function MainNav() {
                     
                     
                         <li className='flex items-center hover:border-b-4 hover:mt-1 hover:text-[#00afaa] border-[#00afaa] '><Link href="/jobs" className="flex items-center gap-2 py-8"><span>For Employers</span></Link><BiChevronDown className='text-2xl'/>
-                            <ul className='hidden absolute top-20 p-2 flex-col shadow-xl rounded-xl bg-white submenu z-10 w-80'>
+                            <ul className='hidden absolute top-20 p-2 flex-col shadow-sm rounded-xl bg-white submenu z-10 w-80'>
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
@@ -39,7 +39,7 @@ export default function MainNav() {
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
                                 <li className='relative flex w-full justify-between items-center rounded-lg text-black'><Link href="/read-first" className='w-full flex justify-between items-center px-2 py-3'><span>Read first</span><BiChevronRight className='text-2xl'/></Link>
-                                    <ul className='hidden absolute -top-2 left-[300px] p-2 flex-col shadow-xl rounded-xl bg-white h-fit submenu z-10 w-80'>
+                                    <ul className='hidden absolute -top-2 left-[300px] p-2 flex-col shadow-sm rounded-xl bg-white h-fit submenu z-10 w-80'>
                                         <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
                                         <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
                                         <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
@@ -52,7 +52,7 @@ export default function MainNav() {
                             </ul>
                         </li>
                         <li className='flex items-center h-24 hover:border-b-4 hover:mt-1 hover:text-[#00afaa] border-[#00afaa] '><Link href="/jobs" className="flex items-center gap-2 "><span>For Candidates</span></Link><BiChevronDown className='text-2xl'/>
-                            <ul className='hidden absolute top-20 p-2 flex-col shadow-xl rounded-xl bg-white h-fit submenu z-10 w-80'>
+                            <ul className='hidden absolute top-20 p-2 flex-col shadow-sm rounded-xl bg-white h-fit submenu z-10 w-80'>
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
@@ -82,7 +82,7 @@ export default function MainNav() {
         <nav className='lg:hidden sticky top-0 flex justify-between items-center w-full h-16 px-4 shadow-lg bg-white z-50'>
             <div id="logo" className="flex shrink-0 items-center w-40 h-14">
                 <Link href="/">
-                    <img src="https://teszt.arpusz.hu/wp-content/uploads/2023/01/ph-logo.svg" alt="logo" className="w-40" />
+                    <Image src="/Accept-Stacked-Logo-with-Strapline-RGB300.webp" alt="logo" className="w-40" width={150} height={40} />
                 </Link>
             </div>
             <menu className='flex justify-center items-center gap-4'>
