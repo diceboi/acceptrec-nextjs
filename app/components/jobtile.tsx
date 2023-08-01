@@ -42,7 +42,7 @@ export default function JobTile({ jobData }: { jobData: JobData }) {
 
     return(
         <>
-        <div className="group flex flex-col justify-between bg-white border border-neutral-300 p-4 rounded-xl hover:shadow-sm hover:bg-neutral-50 cursor-pointer transition-all max-w-[500px]">
+        <div className="group flex flex-col justify-between bg-white shadow-special border border-neutral-200 p-4 rounded-3xl hover:shadow-special hover:bg-neutral-50 cursor-pointer transition-all max-w-[500px]">
             <div className="relative flex justify-between">
               <h3 className="text-xl font-black pb-2">{jobData.title}</h3>
               <FiArrowRight className='absolute right-4 recruitment-icon w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:right-0 ease-out duration-200'/>
@@ -56,7 +56,7 @@ export default function JobTile({ jobData }: { jobData: JobData }) {
               ))}
 
             </div>
-            <p className="py-2 font-normal">
+            <p className="py-2 font-medium">
             {jobData.jobs.shortDescription}
             </p>
             <div className="flex items-center gap-4 border-t border-neutral-300 pt-3 mt-2 text-sm">

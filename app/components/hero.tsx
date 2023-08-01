@@ -7,10 +7,10 @@ import { AiFillStar } from 'react-icons/ai'
 export default function Hero() {
     return(
         <>
-            <section className="flex flex-col w-full h-[100vh] overflow-hidden bg-neutral-100">
+            <section className="flex flex-col w-full  pb-32 pt-16 overflow-hidden bg-neutral-100">
                 <div id="jobsearch" className="flex flex-col justify-evenly w-10/12 lg:w-8/12 mx-auto p-4 lg:p-2 z-10">
                     <div id="hero-title" className="flex flex-col gap-4 lg:pt-32 w-full justify-center items-center ">
-                        <h1 className=" text-6xl lg:text-8xl font-black tracking-tighter text-center">Looking for job?</h1>
+                        <h1 className="hero-title text-6xl lg:text-8xl font-black tracking-tighter text-center p-2">Looking for job?</h1>
                         <div className="flex flex-col gap-2 justify-between items-center pb-8">
                             <p className="text-sm lg:text-lg font-medium tracking-widest uppercase text-center">find the best in your region</p>
                             {/*<GoogleReviewsWidget apiKey="AIzaSyDKNg9kVl8dYp43BWI7CE5VOGGl4ZhhBYs" placeId="ChIJFdvKHaJgd0gR6jNAd4xRYJk" />*/}
@@ -23,7 +23,7 @@ export default function Hero() {
                             <div className="flex flex-col justify-between lg:flex-row items-center lg:items-end gap-2">
                                 <div className="grid w-full">
                                     <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Region</label>
-                                    <select id="job-region" className="p-4 shadow-sm rounded-full hover:bg-neutral-50 cursor-pointer">
+                                    <select id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer ">
                                         <option value="Bristol">City of Bristol</option>
                                         <option value="Leicestershire">Leicestershire</option>
                                         <option value="Warwickshire">Warwickshire</option>
@@ -39,7 +39,7 @@ export default function Hero() {
                                 </div>
                                 <div className="grid w-full">
                                     <label htmlFor="job-category" className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Category</label>
-                                    <select id="job-category" className="p-4 shadow-sm rounded-full  hover:bg-neutral-50 cursor-pointer">
+                                    <select id="job-category" className="p-4 shadow-special rounded-full  hover:bg-neutral-50 cursor-pointer">
                                         <option value="Industrial">Industrial</option>
                                         <option value="Logistics-transportation">Logistics & Trapnsportation</option>
                                         <option value="Automotive">Automotive</option>
@@ -57,7 +57,7 @@ export default function Hero() {
                             <div className="flex items-center justify-center gap-1"><span className="flex gap-1 items-center"><AiFillStar className=" text-amber-400"/><b>4.8</b> stars by</span><b><GoogleReviewNumber/></b><span className="flex gap-1 items-center"><FcGoogle /> Google reviews</span></div>                          
                         </form>
                     </div>
-                    <Logocarousel/>
+                    
                     
                 </div>
             </section>

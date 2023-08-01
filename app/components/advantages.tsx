@@ -1,88 +1,66 @@
-import { FiArrowRight } from 'react-icons/fi'
-import { TbMessageStar } from 'react-icons/tb'
-import { GiReceiveMoney } from 'react-icons/gi'
-import { GiMaterialsScience } from 'react-icons/gi'
+import { TbHeartHandshake } from 'react-icons/tb'
+import { TbMoodHeart } from 'react-icons/tb'
+import { TbReportMoney } from 'react-icons/tb'
+import { TbChartInfographic } from 'react-icons/tb'
+import { TbBuildingSkyscraper } from 'react-icons/tb'
+import { TbUsersGroup } from 'react-icons/tb'
 
 export default function Advantages() {
     return(
         <>
-        <section className="flex flex-col gap-8 w-full ">
-            <div className="flex flex-col lg:flex-row justify-center items-center gap-8 w-11/12 lg:w-8/12 m-auto">
-                <div className="group flex gap-4 w-full lg:w-1/3  p-4 ">
-                    <div className='flex flex-col items-start justify-start w-28'>
-                        <TbMessageStar className='w-12 h-12 text-[#00afaa]'/>
-                    </div>
-                    <div className='flex flex-col gap-2'>
-                        <h3 className='text-3xl font-black justify-start tracking-tighter'>Highly Rated</h3>
-                        <p>Rated highly by a number of platforms, including Google, which currently ranks Accept Recruitment as 4.8 stars from over 950 reviews.</p>    
-                    </div>
+        <section className="relative flex flex-col justify-between w-full h-screen pt-20 bg-[url('/tech-job.avif')] bg-cover bg-center">
+        <div className='absolute bottom-0 left-0 h-full w-full bg-gradient-to-b from-[#000000be] to-[#000000be] opacity-100 ease-out duration-200 rounded-b-3xl'></div>
+            <div className="flex flex-col justify-between gap-8 w-11/12 h-full lg:w-8/12 m-auto">
+                <div className=" flex flex-col justify-start gap-4 w-full bg-cover bg-center text-center">
+                    <h1 className='text-sm lg:text-lg font-medium tracking-widest uppercase text-white z-10 '>The accept difference</h1>
+                    <h2 className="flex justify-center gap-3 text-6xl lg:text-8xl font-black tracking-tighter text-white z-10 ">A <p className='text-[#00afaa] underline'>fresh</p> approach</h2>                    
+                    <p className='font-medium text-neutral-300 z-10 w-1/2 m-auto'>As a tech based recruitment company we leverage the latest innovation to deliver outstanding results. Fresh ideas are the forefront of a collaborative approach, your success is our success! </p>
                 </div>
-
-                <div className="group flex gap-4 w-full lg:w-1/3  p-4 ">
-                    <div className='flex flex-col items-start justify-start w-28'>
-                        <GiReceiveMoney className='w-12 h-12 text-[#00afaa]'/>
+                <div className="grid grid-cols-3 grid-rows-2 gap-4 w-full z-10 border-t border-neutral-500 py-8">
+                    <div className='flex flex-col gap-2 p-3'>
+                        <div className='flex items-center gap-2 '>
+                            <TbMoodHeart className='w-10 h-10 text-[#00afaa]'/>
+                            <h3 className='text-2xl font-black tracking-tighter text-white'>Highly Rated</h3>
+                        </div>                        
+                        <p className='font-medium ml-12 text-white'>Rated highly by a number of platforms, including Google, which currently ranks Accept Recruitment as 4.8 stars from over 950+ reviews.</p>
                     </div>
-                    <div className='flex flex-col gap-2'>
-                        <h3 className='text-3xl font-black justify-start tracking-tighter'>Value for Money</h3>
-                        <p>The added extras included into our bespoke proposition means that we deliver outstanding value for the service we provide.</p>    
+                    <div className='flex flex-col gap-2 p-3'>
+                        <div className='flex items-center gap-2'>
+                            <TbReportMoney className='w-10 h-10 text-[#00afaa]'/>
+                            <h3 className='text-2xl font-black tracking-tighter text-white'>Value for Money</h3>
+                        </div>                        
+                        <p className='font-medium ml-12 text-white'>The added extras included into our bespoke proposition means that we deliver outstanding value for the service we provide.</p>
                     </div>
-                </div>
-            </div>
-
-            <div className="flex flex-col lg:flex-row justify-center items-center gap-8 w-11/12 lg:w-8/12 m-auto">
-                <div className="group flex gap-4 w-full lg:w-1/3  p-4 ">
-                    <div className='flex flex-col items-start justify-start w-28'>
-                        <TbMessageStar className='w-12 h-12 text-[#00afaa]'/>
+                    <div className='flex flex-col gap-2 p-3'>
+                        <div className='flex items-center gap-2'>
+                            <TbChartInfographic className='w-10 h-10 text-[#00afaa]'/>
+                            <h3 className='text-2xl font-black tracking-tighter text-white'>Tech Based</h3>
+                        </div>                        
+                        <p className='font-medium ml-12 text-white'>Using the very latest technologies and techniques we deliver cutting edge recruitment solutions, which are unique to Accept.</p>
                     </div>
-                    <div className='flex flex-col gap-2'>
-                        <h3 className='text-3xl font-black justify-start tracking-tighter'>Highly Rated</h3>
-                        <p>Rated highly by a number of platforms, including Google, which currently ranks Accept Recruitment as 4.8 stars from over 950 reviews.</p>    
+                    <div className='flex flex-col gap-2 p-3'>
+                        <div className='flex items-center gap-2'>
+                            <TbHeartHandshake className='w-10 h-10 text-[#00afaa]'/>
+                            <h3 className='text-2xl font-black tracking-tighter text-white'>Ethical and Compliant</h3>
+                        </div>                        
+                        <p className='font-medium ml-12 text-white'>Ensuring that we deliver ethical and compliant recruitment solutions are the very cornerstone of what we do.</p>
                     </div>
-                </div>
-
-                <div className='relative flex flex-col gap-4 w-full lg:w-1/3 justify-start m-auto py-16 border rounded-xl shadow-sm bg-[#00afaa]'>
-                    <h2 className='text-6xl lg:text-6xl text-white text-center font-black tracking-tighter'>
-                        The accept difference
-                    </h2>
-                    <h3 className='text-sm lg:text-lg text-center font-medium tracking-widest uppercase'>
-                    A Fresh Approach
-                    </h3>
-                    <div className='absolute h-16 w-[1px] border-dashed border-neutral-300 left-16 -top-16 bg-neutral-300'></div>
-                </div>
-
-                <div className="group flex gap-4 w-full lg:w-1/3  p-4 ">
-                    <div className='flex flex-col items-start justify-start w-28'>
-                        <GiMaterialsScience className='w-12 h-12 text-[#00afaa]'/>
+                    <div className='flex flex-col gap-2 p-3'>
+                        <div className='flex items-center gap-2'>
+                            <TbBuildingSkyscraper className='w-10 h-10 text-[#00afaa]'/>
+                            <h3 className='text-2xl font-black tracking-tighter text-white'>Industry Expertise</h3>
+                        </div>                        
+                        <p className='font-medium ml-12 text-white'>We have recruited industry specialists to work within our business. Our teams understand your challenges and can offer advice and insights.</p>
                     </div>
-                    <div className='flex flex-col gap-2'>
-                        <h3 className='text-3xl font-black justify-start tracking-tighter'>Tech Based</h3>
-                        <p>Using the very latest technologies and techniques we deliver cutting edge recruitment solutions, which are unique to Accept.</p>    
-                    </div>
-                </div>
-            </div>
-
-            <div className="flex flex-col lg:flex-row justify-center items-center gap-8 w-11/12 lg:w-8/12 m-auto">
-                <div className="group flex gap-4 w-full lg:w-1/3  p-4 ">
-                    <div className='flex flex-col items-start justify-start w-28'>
-                        <TbMessageStar className='w-12 h-12 text-[#00afaa]'/>
-                    </div>
-                    <div className='flex flex-col gap-2'>
-                        <h3 className='text-3xl font-black justify-start tracking-tighter'>Ethical and Compliant</h3>
-                        <p>Ensuring that we deliver ethical and compliant recruitment solutions are the very cornerstone of what we do.</p>    
-                    </div>
-                </div>
-
-                <div className="group flex gap-4 w-full lg:w-1/3  p-4 ">
-                    <div className='flex flex-col items-start justify-start w-28'>
-                        <TbMessageStar className='w-12 h-12 text-[#00afaa]'/>
-                    </div>
-                    <div className='flex flex-col gap-2'>
-                        <h3 className='text-3xl font-black justify-start tracking-tighter'>Industry Expertise</h3>
-                        <p>We have recruited industry specialists to work within our business. Our teams understand your challenges and can offer advice and insights.</p>    
+                    <div className='flex flex-col gap-2 p-3'>
+                        <div className='flex items-center gap-2'>
+                            <TbUsersGroup className='w-10 h-10 text-[#00afaa]'/>
+                            <h3 className='text-2xl font-black tracking-tighter text-white'>Sustainable Partner</h3>
+                        </div>                        
+                        <p className='font-medium ml-12 text-white'>Currently employing over 50 full time employees, we are able to offer clients a local partnership with a national approach.</p>
                     </div>
                 </div>
             </div>
-
         </section>
         </>
     )
