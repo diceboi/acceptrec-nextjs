@@ -58,7 +58,7 @@ export default function Industries() {
                         <p className="text-sm lg:text-lg font-medium tracking-widest uppercase text-white z-10 w-1/2">Office, Call Centre & Administration</p>
                     </div>
                     <div className='flex flex-col'>
-                        <p className="text-neutral-200 text-md font-medium z-10 w-1/2">We know that your company's success depends on the work, knowledge and commitment of each team member.</p>
+                        <p className="text-neutral-200 text-md font-medium z-10 w-1/2">We know that your company`&apos;`s success depends on the work, knowledge and commitment of each team member.</p>
                     </div>
                 </div>
                 <div className='absolute flex items-center gap-2 right-16 bottom-8 bg-[#fff] backdrop-blur-md rounded-full p-2 opacity-0 group-hover:opacity-100 group-hover:right-8 ease-out duration-200'>
