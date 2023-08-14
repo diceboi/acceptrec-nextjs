@@ -9,7 +9,7 @@ export default function Industries() {
     const [selectedDiv, setSelectedDiv] = useState('warehouse');
     const [activeButton, setActiveButton] = useState('warehouse');
   
-    const handleButtonClick = (divId) => {
+    const handleButtonClick = (divId: string) => {
       setSelectedDiv(divId);
       setActiveButton(divId);
     };
