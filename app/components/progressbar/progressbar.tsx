@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-const ProgressBar = ({ percentage, color, delay }) => {
+interface ProgressBarProps {
+  percentage: number; // Specify the type of percentage
+  color: string;     // Specify the type of color
+  delay: number;     // Specify the type of delay
+}
+
+const ProgressBar: React.FC<ProgressBarProps> = ({ percentage, color, delay }) => {
   const [fillerWidth, setFillerWidth] = useState(0);
 
   useEffect(() => {

@@ -1,4 +1,10 @@
-const ThemeHero = ({ title, subtitle, className }) => {
+interface ThemeHeroProps {
+  title: string;     // Specify the type of title
+  subtitle: string; 
+  className: string; // Specify the type of subtitle
+}
+
+const ThemeHero:React.FC<ThemeHeroProps> = ({ title, subtitle, className }) => {
       
     return (
       <div className={className}>
