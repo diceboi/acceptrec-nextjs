@@ -7,7 +7,7 @@ import { AiFillStar } from 'react-icons/ai'
 export default function Hero() {
     return(
         <>
-            <section className="flex flex-col w-full  pb-32 pt-16 overflow-hidden bg-neutral-100">
+            <section className="flex flex-col w-full  pb-32 pt-16 overflow-hidden bg-gradient-to-br from-white to-neutral-200">
                 <div id="jobsearch" className="flex flex-col justify-evenly w-10/12 lg:w-8/12 mx-auto p-4 lg:p-2 z-10">
                     <div id="hero-title" className="flex flex-col gap-4 lg:pt-32 w-full justify-center items-center ">
                         <h1 className="hero-title text-6xl lg:text-8xl font-black tracking-tighter text-center p-2">Looking for job?</h1>

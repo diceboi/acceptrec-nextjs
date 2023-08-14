@@ -5,46 +5,48 @@ import {BiChevronDown} from 'react-icons/bi'
 import {BiChevronRight} from 'react-icons/bi'
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 
 export default function MainNav() {
 
+    const [logoSrc, setLogoSrc] = useState("/Accept-Stacked-Logo-with-Strapline-RGB300.webp");
+
     useEffect(() => {
         function handleScroll() {
-          const menu = document.getElementById("desktop-menu");
-          const menuInner = document.getElementById("menu");
-          const logo = document.getElementById("acceptrec-logo");
-          const links = document.getElementById("mainlink");
-          const submenu = document.getElementById("submenu");
-          const scrollY = window.scrollY;
+            const menu = document.getElementById("desktop-menu");
+            const menuInner = document.getElementById("menu");
+            const logo = document.getElementById("acceptrec-logo"); // logo element
+            const links = document.getElementById("mainlink");
+            const submenu = document.getElementById("submenu");
+            const scrollY = window.scrollY;
     
-          // A menü magasságának és háttérszínének módosítása
-          if (scrollY > 0) {
-            menu.style.height = "55px";
-            menu.style.boxShadow = "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)";
-            menu.style.backgroundColor = "#ffffffd5"; // Itt megadhatod a kívánt háttérszínt
-            logo.style.width = "150px";
-            menuInner.style.height = "55px";
-            submenu.style.top = "43px";
-
-          } else {
-            menu.style.height = "96px"; // Itt megadhatod a kívánt háttérszínt
-            menu.style.boxShadow = "0 0 0 0";
-            menu.style.backgroundColor = "#ffffff00";
-            logo.style.width = "200px";
-            menuInner.style.height = "96px";
-            submenu.style.top = "63px";
-
-          }
+            if (menu) {
+                if (scrollY > 0) {
+                    menu.style.height = "55px";
+                    menu.style.boxShadow = "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)";
+                    menu.style.backgroundColor = "#ffffffd5";
+                    menu.style.borderBottom = "1px solid #d4d4d4";
+                    if (logo) logo.style.width = "100px"; // Null check for logo
+                    if (menuInner) menuInner.style.height = "55px";
+                    if (submenu) submenu.style.top = "43px";
+                } else {
+                    menu.style.height = "96px";
+                    menu.style.boxShadow = "0 0 0 0";
+                    menu.style.backgroundColor = "#ffffff00";
+                    menu.style.borderBottom = "0px solid #d4d4d4";
+                    if (logo) logo.style.width = "150px"; // Null check for logo
+                    if (menuInner) menuInner.style.height = "96px";
+                    if (submenu) submenu.style.top = "63px";
+                }
+            }
         }
     
         window.addEventListener("scroll", handleScroll);
         return () => {
-          window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("scroll", handleScroll);
         };
-      }, []);
-    
+    }, []);
  
     return (
         <>
@@ -52,7 +54,7 @@ export default function MainNav() {
             <div className='flex justify-between items-center gap-8 w-8/12'>
                 <div id="logo" className="flex shrink-0 items-center">
                     <Link href="/">
-                        <Image src="/Accept-Stacked-Logo-with-Strapline-RGB300.webp" id='acceptrec-logo' alt="logo" width={200} height={100} className=" w-52 ease-in-out duration-200" />
+                        <Image src={logoSrc} id='acceptrec-logo' alt="logo" width={150} height={100} className=" w-[150px] ease-in-out duration-200" />
                     </Link>
                 </div>
                 
@@ -61,7 +63,7 @@ export default function MainNav() {
 
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-3 '><Link href="/jobs" className="flex items-center gap-2"><span>Jobs</span></Link></li>
                                         
-                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-3'><Link href="/jobs" className="flex items-center gap-2"><span>About Us</span></Link></li>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-3'><Link href="/about-us" className="flex items-center gap-2"><span>About Us</span></Link></li>
                     
                     
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-3'><Link href="/jobs" className="flex items-center gap-2"><span>For Employers</span></Link><BiChevronDown className='text-2xl'/>
@@ -107,6 +109,8 @@ export default function MainNav() {
                         </li>
                     
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-3'><Link href="/jobs" className="flex items-center gap-2 ">Contact Us</Link></li>
+
+                        <li id='mainlink' className='flex items-center button-85 bg-[#312252] hover:bg-[#1d1430] hover:shadow-md text-white hover:shadow-[#3122528c] px-3 rounded-full transition-all'><Link href="/jobs" className="flex items-center gap-2 ">Sign up / Register</Link></li>
                     
                 </ul>
                 
