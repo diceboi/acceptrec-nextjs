@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { parseStringPromise } from 'xml2js';
 
-export async function fetchAndParseXMLData(url) {
+export async function fetchAndParseXMLData(url: string) {
   try {
     const response = await axios.get(url);
     const xmlData = response.data;
