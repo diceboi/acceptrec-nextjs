@@ -1,3 +1,5 @@
+"use client"
+
 import Hero from './components/hero'
 import Recruitment from './components/recruitment'
 import Advantages from './components/advantages'
