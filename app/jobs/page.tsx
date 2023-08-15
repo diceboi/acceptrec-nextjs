@@ -33,7 +33,7 @@ export default async function Jobs() {
                 <h3 className="text-2xl font-black uppercase">Job filter</h3>
 
                 <div id="region" className="grid grid-rows-10 gap-2 border-t border-neutral-300 py-4 pr-4">
-                    <h4 className="text-sm lg:text-md uppercase font-medium tracking-widest mb-4">Region</h4>
+                    <h4 className="text-sm lg:text-md uppercase font-medium tracking-widest mb-4">Region Try Try</h4>
 
                     <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">City of Bristol
                     <input type="radio" name="radio"/>
