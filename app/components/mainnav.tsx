@@ -50,7 +50,7 @@ export default function MainNav() {
  
     return (
         <>
-        <nav id='desktop-menu' style={{ height: "75px", backgroundColor: "#ffffff00" }} className="hidden lg:flex flex-wrap justify-center px-4 w-full mx-auto z-50 fixed backdrop-blur-sm ease-in-out duration-200">
+        <nav id='desktop-menu' style={{ height: "75px", backgroundColor: "#ffffff00" }} className="hidden lg:flex flex-wrap justify-center px-4 w-full mx-auto z-50 sticky top-0 backdrop-blur-sm ease-in-out duration-200">
             <div className='flex justify-between items-center gap-8 w-8/12'>
                 <div id="logo" className="flex shrink-0 items-center">
                     <Link href="/">

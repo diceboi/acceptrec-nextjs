@@ -2,8 +2,8 @@ import BlogHero from "@/app/components/Theme Components/Bloghero"
 
 export default function Blog() {
     return(
-        
-        <BlogHero title={"This is a blog"} subtitle={"subtitle"}/>
-        
+        <>
+        <BlogHero title={"Getting ready for a job interview? Don’t be afraid to talk about your strengths"} subtitle={"Accept Career Advice"} authorimage="/avatar.jpg" authorname="John Wick" postdate="2023.05.31." category="Career Advice"/>
+        </>
     )
 }
