@@ -14,8 +14,8 @@ interface BlogHeroProps {
 const BlogHero: React.FC<BlogHeroProps> = ({ title, subtitle, authorimage, authorname, postdate, category}) => {
   return (
     <>
-    <div className="flex h-[60vh] mt-6">
-      <div className="relative flex flex-col justify-end gap-4 w-11/12 lg:w-8/12 m-auto h-full p-8 bg-[url('/truck-driver.avif')] bg-cover bg-center rounded-t-3xl">
+    <div className="flex justify-center items-end h-[60vh] bg-gradient-to-br from-white to-[#31225249]">
+      <div className="relative flex flex-col justify-end gap-4 w-11/12 lg:w-8/12 h-[500px] m-auto p-8 bg-[url('/truck-driver.avif')] bg-cover bg-center rounded-t-3xl">
         <p className="text-sm lg:text-lg font-medium text-white tracking-widest uppercase z-10">{subtitle}</p>
         <h1 className="text-4xl lg:text-6xl font-bold text-white tracking-tighter z-10">{title}</h1>
         

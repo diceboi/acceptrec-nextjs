@@ -2,13 +2,15 @@ import { parseStringPromise } from "xml2js";
 
 export default async function getJobs() {
   try {
-    const response = await fetch('https://post.talentvine.co.uk/feed?aggregator=client&clientID=2436');
+    const res = await fetch('https://post.talentvine.co.uk/feed?aggregator=client&clientID=2436', {
+      next: {revalidate: 360},
+    });
 
-    if (!response.ok) {
+    if (!res.ok) {
       throw new Error('Failed to fetch jobs');
     }
 
-    const xmlData = await response.text();
+    const xmlData = await res.text();
     const jsonData = await parseStringPromise(xmlData);
 
     // Convert properties to strings before returning

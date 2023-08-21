@@ -138,3 +138,64 @@
   cursor: pointer;
 }
 
+/*Company highlights list before*/
+
+#highlights-list-left::before {
+  position: absolute;
+  content: '2023';
+  background: #00afaa;
+  color: #fff;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-right: 1em;
+  padding-left: 1em;
+  border-radius: 32px;
+  top: 40%;
+  right: -2em;
+  width: fit-content;
+  height: fit-content;
+}
+
+#highlights-list-left::after {
+  position: absolute;
+  top: 40%;
+  right: 50px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid white;
+  border-right: 0 solid white;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+#highlights-list-right::before {
+  position: absolute;
+  content: '2023';
+  background: #00afaa;
+  color: #fff;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-right: 1em;
+  padding-left: 1em;
+  border-radius: 32px;
+  top: 70%;
+  left: -2em;
+  width: fit-content;
+  height: fit-content;
+}
+
+#highlights-list-right::after {
+  position: absolute;
+  top: 70%;
+  left: 50px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 0 solid white;
+  border-right: 14px solid white;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+.shadow-highlights {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}

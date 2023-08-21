@@ -1,7 +1,10 @@
+"use client"
+
 import './globals.css'
 import { Raleway } from 'next/font/google'
 import MainNav from './components/mainnav'
 import { ApolloWrapper } from './lib/apollo-wrapper'
+import { AnimatePresence } from 'framer-motion'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -20,10 +23,12 @@ export default function RootLayout({
       <head>
       </head>
       <body className={raleway.className}>
-        <ApolloWrapper>
-          <MainNav/>
-          {children}
-        </ApolloWrapper>
+        <AnimatePresence>
+          <ApolloWrapper>
+            <MainNav/>
+            {children}
+          </ApolloWrapper>
+        </AnimatePresence>
       </body>
     </html>
   )

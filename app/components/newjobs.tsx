@@ -3,18 +3,18 @@ import { FaFire } from "react-icons/fa";
 import { HiArrowSmRight } from "react-icons/hi";
 import Link from "next/link";
 import JobTile from "./jobtile";
-import getJobs from "../api/getJobs"; // Import the updated getJobs function
+import getJobs from "../api/getJobs"; 
 
 interface Job {
   id: string;
   title: string;
-  category: string; // Assuming you have a single category
+  category: string;
   description: string;
   town: string;
   state: string;
   salarymin: number;
-  date: string[]; // Assuming an array of date strings
-  url: string; // Assuming the URL to the job details
+  date: string[];
+  url: string;
 }
 
 export default async function NewJobs() {

@@ -1,12 +1,20 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ProgressBar from './progressbar/progressbar';
 import Image from 'next/image';
+import { motion, useInView } from 'framer-motion';
 
 export default function Rated() {
 
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true })
+
     const [percentage, setPercentage] = useState(0);
+
+    useEffect(() => {
+        console.log("Element is in view: ", isInView)
+      }, [isInView])
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -36,14 +44,18 @@ export default function Rated() {
                 <Image src="/rated.webp" width={400} height={300} alt="" className='absolute -top-32 right-[15%] opacity-20'/>
             </div>
 
-            <div className="w-8/12 m-auto grid grid-cols-3 grid-rows-1 gap-8 text-white z-10">
+            <div ref={ref} className="w-8/12 m-auto grid grid-cols-3 grid-rows-1 gap-8 text-white z-10">
                 <div className="flex flex-col gap-4 font-medium bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl shadow-special p-4 ">
                     <div className="flex justify-between items-center">
                         <h3 className='text-2xl font-medium tracking-tight text-white'>Booking fill rate</h3>
                     </div>
-                    <div>
+                    <motion.div                    
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: .6, ease: "easeOut"}}
+                    >
                         <ProgressBar percentage={98} color="#00afaa" delay={0} />
-                    </div>
+                    </motion.div>
                 </div>
                 <div className="flex flex-col gap-4 font-medium bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl shadow-special p-4 ">
                     <div className="flex justify-between items-center">
