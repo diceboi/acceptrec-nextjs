@@ -7,7 +7,7 @@ interface Props {
     loadMore: string | null;
   }
 
-const jobsPagination = ({loadMore}: Props) => {
+const Jobspagination = ({loadMore}: Props) => {
 const router = useRouter();
 
 const handleNext = useCallback(() => {
@@ -26,4 +26,4 @@ return (
 );
 };
 
-export default jobsPagination;
+export default Jobspagination;

@@ -5,7 +5,7 @@ interface Props {
   delay?: number;
 }
 
-const searchDebounce = ({value}: Props) => {
+const Searchdebounce = ({value}: Props) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
   useEffect(() => {
@@ -21,4 +21,4 @@ const searchDebounce = ({value}: Props) => {
   return debouncedValue;
 };
 
-export default searchDebounce;
+export default Searchdebounce;
