@@ -59,7 +59,7 @@ export default function MainNav() {
                 </div>
                 
                 
-                <ul id="menu" className='flex items-center gap-8 text-lg font-bold h-24'>
+                <ul id="menu" className='flex items-center gap-4 text-lg font-bold h-24'>
 
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-3 '><Link href="/jobs" className="flex items-center gap-2"><span>Jobs</span></Link></li>
                                         
