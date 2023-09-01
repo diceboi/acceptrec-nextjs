@@ -17,7 +17,7 @@ export default function ManagedServices() {
                     Your success – Our people
                 </h2>
                 <p className='font-medium w-full lg:w-2/3'>
-                These solutions, based on our unique technology and supported by our in-house resourcing expertise, include but aren't limited to; Contingent Workforce, Recruitment Process Outsourcing, Training and Development support, Consultancy and payroll support.
+                These solutions, based on our unique technology and supported by our in-house resourcing expertise, include but aren&apos;t limited to; Contingent Workforce, Recruitment Process Outsourcing, Training and Development support, Consultancy and payroll support.
                 </p>
             </div>
             <div className='grid grid-cols-6 max-w-full h-[60vh] text-white'>
@@ -68,7 +68,7 @@ export default function ManagedServices() {
                             <TbUserBolt className="w-8 h-8 bg-neutral-200 p-1 rounded-full" />
                             <h3 className='text-bold text-xl'>Better quality candidates</h3>
                         </div>                        
-                        <p>Our candidate sourcing process ensures you only ever get the best talent available. Unlike a traditional recruiter, we’re not restricted by a limited database or an inability to attract jobseekers. Instead, we invest in technology that allows us to appeal to the right candidate in the right time.</p>
+                        <p>Our candidate sourcing process ensures you only ever get the best talent available. Unlike a traditional recruiter, we&apos;re not restricted by a limited database or an inability to attract jobseekers. Instead, we invest in technology that allows us to appeal to the right candidate in the right time.</p>
                     </div>
                     <div className='flex flex-col gap-4 p-4 shadow-special rounded-3xl'>
                         <div className='flex gap-2'>
