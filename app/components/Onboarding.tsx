@@ -18,14 +18,14 @@ export default function Onboarding() {
                     <li id="onboarding-list-left" className="relative border-r border-neutral-300 pr-16 pt-20 before:content-['1']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Client confirmation</h2>
-                            <p>Working towards a common goal and over-arching objectives is what we strive to achieve “A true partnership approach from the start of every new venture."</p>
+                            <p>Working towards a common goal and over-arching objectives is what we strive to achieve &quot;A true partnership approach from the start of every new venture.&quot;</p>
                         </div>
                     </li>
 
                     <li id="onboarding-list-right" className="relative pl-16 pt-40 before:content-['2']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Contract update</h2>
-                            <p>By agreeing a clear, precise and achievable roll-out plan – you will be kept up-to-date with progression every step of the way. We utilise the very latest technology, which allows us to give our Clients comprehensive updates at the touch of a button.</p>
+                            <p>By agreeing a clear, precise and achievable roll-out plan - you will be kept up-to-date with progression every step of the way. We utilise the very latest technology, which allows us to give our Clients comprehensive updates at the touch of a button.</p>
                         </div>
                     </li>
 
