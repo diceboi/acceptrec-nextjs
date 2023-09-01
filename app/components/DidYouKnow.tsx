@@ -12,6 +12,9 @@ export default function DidYouKnow() {
     const [dragging, setDragging] = useState(false);
     const sensitivityFactor = 0.5;
 
+    const [slideStyles, setSlideStyles] = useState({});
+    const [mobileSlideStyles, setMobileSlideStyles] = useState({});
+
     const handleSlideClick = (index: SetStateAction<number>) => {
         setActiveSlide(index);
     };
@@ -50,13 +53,28 @@ export default function DidYouKnow() {
         }
     };
 
-    const slideStyles = {
-        transform: `translateX(-${activeSlide * 41.65}vw)`,
-    };
+    useEffect(() => {
+        const handleResize = () => {
+            const slideWidth = window.innerWidth <= 600 ? 82 : 41.65;
+            setSlideStyles({
+                transform: `translateX(-${activeSlide * slideWidth}vw)`,
+            });
+            setMobileSlideStyles({
+                transform: `translateX(-${activeSlide * 82}vw)`,
+            });
+        };
 
-    const mobileSlideStyles = {
-        transform: `translateX(-${activeSlide * 82}vw)`,
-    };
+        // Initial calculation
+        handleResize();
+
+        // Attach event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup the event listener
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [activeSlide]);
 
     const showLeftArrow = activeSlide > 0;
     const showRightArrow = activeSlide < 8;

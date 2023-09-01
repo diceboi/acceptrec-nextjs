@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, SetStateAction } from 'react';
 import { BiSolidQuoteRight } from 'react-icons/bi';
 import { FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import { PiCheckCircleBold } from 'react-icons/pi';
@@ -12,7 +12,10 @@ export default function ShortlistedCandidates() {
     const [dragging, setDragging] = useState(false);
     const sensitivityFactor = 0.5;
 
-    const handleSlideClick = (index: number) => {
+    const [slideStyles, setSlideStyles] = useState({});
+    const [mobileSlideStyles, setMobileSlideStyles] = useState({});
+
+    const handleSlideClick = (index: SetStateAction<number>) => {
         setActiveSlide(index);
     };
 
@@ -50,16 +53,31 @@ export default function ShortlistedCandidates() {
         }
     };
 
-    const slideStyles = {
-        transform: `translateX(-${activeSlide * 41.65}vw)`,
-    };
+    useEffect(() => {
+        const handleResize = () => {
+            const slideWidth = window.innerWidth <= 600 ? 82 : 41.65;
+            setSlideStyles({
+                transform: `translateX(-${activeSlide * slideWidth}vw)`,
+            });
+            setMobileSlideStyles({
+                transform: `translateX(-${activeSlide * 82}vw)`,
+            });
+        };
 
-    const mobileSlideStyles = {
-        transform: `translateX(-${activeSlide * 82}vw)`,
-    };
+        // Initial calculation
+        handleResize();
+
+        // Attach event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup the event listener
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [activeSlide]);
 
     const showLeftArrow = activeSlide > 0;
-    const showRightArrow = activeSlide < 1;
+    const showRightArrow = activeSlide < 8;
     
     return(
         <>
