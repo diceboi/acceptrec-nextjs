@@ -55,13 +55,15 @@ export default function DidYouKnow() {
 
     useEffect(() => {
         const handleResize = () => {
-            const slideWidth = window.innerWidth <= 600 ? 82 : 41.65;
-            setSlideStyles({
-                transform: `translateX(-${activeSlide * slideWidth}vw)`,
-            });
-            setMobileSlideStyles({
-                transform: `translateX(-${activeSlide * 82}vw)`,
-            });
+            if (typeof window !== 'undefined') {
+                const slideWidth = window.innerWidth <= 600 ? 82 : 41.65;
+                setSlideStyles({
+                    transform: `translateX(-${activeSlide * slideWidth}vw)`,
+                });
+                setMobileSlideStyles({
+                    transform: `translateX(-${activeSlide * 82}vw)`,
+                });
+            }
         };
 
         // Initial calculation
