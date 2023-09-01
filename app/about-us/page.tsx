@@ -10,6 +10,7 @@ import Image from "next/image"
 
 import Abouthero from "../components/Theme Components/AboutHero"
 import Team from "../components/team"
+import DidYouKnow from "../components/DidYouKnow"
 
 export default function AboutUs() {
     return(
@@ -43,9 +44,8 @@ export default function AboutUs() {
             </div>
         </section>
 
-        <section className="flex w-full justify-center items-center m-0 bg-gradient-to-bl from-neutral-100 to-white ">
-            <div className="flex w-11/12 lg:w-8/12  gap-8 py-20 m-auto bg-[url('/helping-hands.webp')] bg-contain bg-left bg-no-repeat">
-                <div className="flex flex-col gap-4 w-1/2 justify-start ">
+        <section className="flex flex-col lg:flex-row w-11/12 lg:w-8/12  gap-8 py-20 m-auto">
+                <div className="flex flex-col gap-4 w-full lg:w-1/2 justify-start bg-[url('/helping-hands.webp')] bg-contain bg-left bg-no-repeat">
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         Our values
                     </h3>
@@ -53,52 +53,52 @@ export default function AboutUs() {
                         Trust and honesty
                     </h2>                
                 </div>
-                <div className="grid grid-cols-2 grid-rows-3 gap-8 w-1/2">
-                    <div className='flex flex-col gap-2 p-3'>
+                <div className="grid grid-cols-2 grid-rows-3 gap-8 w-full lg:w-1/2">
+                    <div className='flex flex-col gap-2 w-full lg:p-3'>
                         <div className='flex items-center gap-2 '>
                             <TbUserHeart className='w-10 h-8 text-[#00afaa]'/>
                             <h3 className='text-2xl font-black tracking-tighter '>Truthfulness</h3>
                         </div>                        
-                        <p className='font-medium ml-12'>Our greatest asset is our team members. Open and honest communication improves strengths of the team.</p>
+                        <p className='font-medium lg:ml-12'>Our greatest asset is our team members. Open and honest communication improves strengths of the team.</p>
                     </div>
-                    <div className='flex flex-col gap-2 p-3'>
+                    <div className='flex flex-col gap-2 w-full lg:p-3'>
                         <div className='flex items-center gap-2'>
                             <LiaFistRaisedSolid className='w-10 h-10 text-[#00afaa]'/>
                             <h3 className='text-2xl font-black tracking-tighter'>Relentless</h3>
                         </div>                        
-                        <p className='font-medium ml-12'>We are passionate recruiters with a continuous desire to learn and innovate. We exceed our customer’s expectations.</p>
+                        <p className='font-medium lg:ml-12'>We are passionate recruiters with a continuous desire to learn and innovate. We exceed our customer’s expectations.</p>
                     </div>
-                    <div className='flex flex-col gap-2 p-3'>
+                    <div className='flex flex-col gap-2 w-full lg:p-3'>
                         <div className='flex items-center gap-2'>
                             <LuHelpingHand className='w-10 h-10 text-[#00afaa]'/>
                             <h3 className='text-2xl font-black tracking-tighter'>Understanding</h3>
                         </div>                        
-                        <p className='font-medium ml-12'>Our knowledge makes us specialists while our compassion makes us human beings - a perfect combo to a long-lasting relationship.</p>
+                        <p className='font-medium lg:ml-12'>Our knowledge makes us specialists while our compassion makes us human beings - a perfect combo to a long-lasting relationship.</p>
                     </div>
-                    <div className='flex flex-col gap-2 p-3'>
+                    <div className='flex flex-col gap-2 w-full lg:p-3'>
                         <div className='flex items-center gap-2'>
                             <TbHeartHandshake className='w-10 h-10 text-[#00afaa]'/>
                             <h3 className='text-2xl font-black tracking-tighter'>Supportive</h3>
                         </div>                        
-                        <p className='font-medium ml-12'>We recognize the unique value in everyone while working as a team. We promote an environment of collaboration and respect.</p>
+                        <p className='font-medium lg:ml-12'>We recognize the unique value in everyone while working as a team. We promote an environment of collaboration and respect.</p>
                     </div>
-                    <div className='flex flex-col gap-2 p-3'>
+                    <div className='flex flex-col gap-2 w-full lg:p-3'>
                         <div className='flex items-center gap-2'>
                             <TbUsersGroup className='w-10 h-10 text-[#00afaa]'/>
                             <h3 className='text-2xl font-black tracking-tighter'>Teamwork</h3>
                         </div>                        
-                        <p className='font-medium ml-12'>When we respect one another, we can work as a team to achieve at a high level. Our strongest asset is the power of “we”.</p>
+                        <p className='font-medium lg:ml-12'>When we respect one another, we can work as a team to achieve at a high level. Our strongest asset is the power of “we”.</p>
                     </div>
-                    <div className='flex flex-col gap-2 p-3'>
+                    <div className='flex flex-col gap-2 w-full lg:p-3'>
                         <div className='flex items-center gap-2'>
                             <FiSmile className='w-10 h-10 text-[#00afaa]'/>
-                            <h3 className='js'>Honesty</h3>
+                            <h3 className='text-2xl font-black tracking-tighter'>Honesty</h3>
                         </div>                        
-                        <p className='font-medium ml-12'>Everything changes with time and the only way to address the differences is to remain honest. Always.</p>
+                        <p className='font-medium lg:ml-12'>Everything changes with time and the only way to address the differences is to remain honest. Always.</p>
                     </div>
                 </div>
-            </div>
         </section>
+        <DidYouKnow />
 
         <section className="relative py-20 bg-neutral-100">
             <div className='flex flex-col w-11/12 lg:w-8/12 gap-8 m-auto'>
@@ -112,147 +112,147 @@ export default function AboutUs() {
                 </div>
                 <ul className="grid grid-cols-2 w-full">
 
-                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 pt-20">
+                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 pt-20 before:content-['2023.05.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Best rated recruitment agency</h2>
                             <p>Officially the best rated recruitment company in the UK backed by an over 900 Google reviews with a 4.8 star rating overall.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-right" className="relative pl-16 pt-40">
+                    <li id="highlights-list-right" className="relative pl-16 pt-40 before:content-['2023.01.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Integrated biometric scanners</h2>
                             <p>Development of integrated Biometric scanners with new system completed allowing real time information for users.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16">
+                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 before:content-['2022.11.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Second National Temporary Worker Day</h2>
                             <p>Celebrated the second year of NTWD with continuous expansion as the special day gains increasing recognition.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-right" className="relative pl-16 pt-20">
+                    <li id="highlights-list-right" className="relative pl-16 pt-20 before:content-['2022.09.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Raised £1000 for Macmillan Coffee Morning</h2>
                             <p>Together with our staff, workers and clients, we raised an amazing £1000 for Macmillan Cancer Support as a part of their Coffee Morning event.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 ">
+                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 before:content-['2022.08.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">New IT system</h2>
                             <p>New IT system bought and developed, significantly enhancing our operational efficiency and streamlining workflows.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-right" className="relative pl-16 pt-20">
+                    <li id="highlights-list-right" className="relative pl-16 pt-20 before:content-['2022.08.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">National Resourcing Centre launched</h2>
                             <p>The successful launch of the National Resourcing Centre propelled us into a new era of resource management and efficiency.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 ">
+                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 before:content-['2022.05.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Office renovation</h2>
                             <p>Complete renovation of the office, showcasing a modern workspace that incorporates a thoughtfully designed relaxation area for our staff.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-right" className="relative pl-16 pt-20">
+                    <li id="highlights-list-right" className="relative pl-16 pt-20 before:content-['2022.02.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">New branch location</h2>
                             <p>New branch officially opens in Bristol.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 ">
+                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 before:content-['2022.01.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">New head office</h2>
                             <p>New head office opens in Leicester.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-right" className="relative pl-16 pt-20">
+                    <li id="highlights-list-right" className="relative pl-16 pt-20 before:content-['2021.12.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Supporting Rainbows Hospice</h2>
                             <p>Rainbows Hospice in Loughborough chosen as Accept’s Charity.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 ">
+                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 before:content-['2021.11.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">National Temporary Worker Day launch</h2>
                             <p>We celebrated National Temporary Worker Day, our own event to celebrate the efforts of temporary workers across the UK.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-right" className="relative pl-16 pt-20">
+                    <li id="highlights-list-right" className="relative pl-16 pt-20 before:content-['2020.05.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">ISO 9001 accredited</h2>
                             <p>We successfully attained ISO 9001 accreditation, marking a significant milestone in our journey towards excellence.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 ">
+                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 before:content-['2019.09.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Company growth during Covid-19</h2>
                             <p>Another successful and profitable year during uncertain times (Covid-19 and Brexit).</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-right" className="relative pl-16 pt-20">
+                    <li id="highlights-list-right" className="relative pl-16 pt-20 before:content-['2019.10.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Marketing Division launch</h2>
                             <p>Marketing Division launched to promote visibility and PR of business.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 ">
+                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 before:content-['2019.09.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">New office</h2>
                             <p>New office opens in Coventry with onsite win.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-right" className="relative pl-16 pt-20">
+                    <li id="highlights-list-right" className="relative pl-16 pt-20 before:content-['2019.10.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">New division</h2>
                             <p>Managed Services Division launched to support onsite operations.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 ">
+                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 before:content-['2018.11.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">New larger premises</h2>
                             <p>Premise relocation to our own unit due to significant business growth.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-right" className="relative pl-16 pt-20">
+                    <li id="highlights-list-right" className="relative pl-16 pt-20 before:content-['2017.08.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">First onsite</h2>
                             <p>First onsite operation won in Leicester.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 ">
+                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 before:content-['2016.08.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Moved to a larger office</h2>
                             <p>We outgrow our present office and move premises.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-right" className="relative pl-16 pt-20">
+                    <li id="highlights-list-right" className="relative pl-16 pt-20 before:content-['2016.02.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">Successful first financial year</h2>
                             <p>First Financial year ends and the business is profitable.</p>
                         </div>
                     </li>
 
-                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 ">
+                    <li id="highlights-list-left" className="relative border-r border-neutral-300 pr-16 before:content-['2015.05.']">
                         <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
                             <h2 className="text-2xl font-black tracking-tighter">First workers supplied</h2>
                             <p>Company launches and the first temporary workers are recruited, ready for our first assignment at Creation Finishing.</p>

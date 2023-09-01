@@ -59,14 +59,14 @@ export default function MainNav() {
                 </div>
                 
                 
-                <ul id="menu" className='flex items-center gap-4 text-lg font-bold h-24'>
+                <ul id="menu" className='flex items-center gap-2 text-sm font-bold h-24'>
 
-                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-3 '><Link href="/jobs" className="flex items-center gap-2"><span>Jobs</span></Link></li>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 '><Link href="/jobs" className="flex items-center gap-2"><span>Jobs</span></Link></li>
                                         
-                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-3'><Link href="/about-us" className="flex items-center gap-2"><span>About Us</span></Link></li>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/about-us" className="flex items-center gap-2"><span>About Us</span></Link></li>
                     
                     
-                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-3'><Link href="/jobs" className="flex items-center gap-2"><span>For Employers</span></Link><BiChevronDown className='text-2xl'/>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/for-employers" className="flex items-center gap-2"><span>For Employers</span></Link><BiChevronDown className='text-2xl'/>
                             <ul id='submenu' className='hidden absolute top-[63px] p-2 flex-col shadow-special rounded-xl bg-white submenu z-10 w-80'>
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
@@ -90,7 +90,7 @@ export default function MainNav() {
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
                             </ul>
                         </li>
-                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-3'><Link href="/jobs" className="flex items-center gap-2 "><span>For Candidates</span></Link><BiChevronDown className='text-2xl'/>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/for-candidates" className="flex items-center gap-2 "><span>For Candidates</span></Link><BiChevronDown className='text-2xl'/>
                             <ul id='submenu' className='hidden absolute top-[63px] p-2 flex-col shadow-special rounded-xl bg-white submenu z-10 w-80'>
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
@@ -107,8 +107,10 @@ export default function MainNav() {
                                 <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>                     
                             </ul>
                         </li>
+
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/blog" className="flex items-center gap-2 ">Blog</Link></li>
                     
-                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-3'><Link href="/jobs" className="flex items-center gap-2 ">Contact Us</Link></li>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/jobs" className="flex items-center gap-2 ">Contact Us</Link></li>
 
                         <li id='mainlink' className='flex items-center button-85 bg-[#312252] hover:bg-[#1d1430] hover:shadow-md text-white hover:shadow-[#3122528c] px-3 rounded-full transition-all'><Link href="/jobs" className="flex items-center gap-2 ">Sign up / Register</Link></li>
                     

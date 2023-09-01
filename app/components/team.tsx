@@ -18,7 +18,7 @@ export default function Team() {
                     </h2>                    
                 </div>                
             </div>
-            <div className='grid grid-cols-3 grid-rows-3 w-11/12 lg:w-8/12 m-auto rounded-3xl'>
+            <div className='grid lg:grid-cols-3 lg:grid-rows-3 w-11/12 lg:w-8/12 m-auto rounded-3xl'>
 
                 <div className="recruitment-tile h-[450px] group flex flex-col cursor-pointer ease-out duration-200">
                     <div className="relative flex flex-col justify-end bg-[url('/Mark-front.webp')] bg-cover bg-center bg-opacity-40 h-full p-4 lg:rounded-tl-3xl ease-out duration-200">
@@ -34,7 +34,7 @@ export default function Team() {
                     </div>                    
                 </div>
 
-                <div className="recruitment-tile group flex flex-col cursor-pointer ease-out duration-200">
+                <div className="recruitment-tile h-[450px] group flex flex-col cursor-pointer ease-out duration-200">
                     <div className="relative flex flex-col justify-end bg-[url('/Monika-Beldycka-f.webp')] bg-cover bg-center bg-opacity-40 h-full p-4 ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <div className="flex flex-col">
@@ -48,7 +48,7 @@ export default function Team() {
                     </div>                    
                 </div>
 
-                <div className="recruitment-tile group flex flex-col cursor-pointer ease-out duration-200">
+                <div className="recruitment-tile h-[450px] group flex flex-col cursor-pointer ease-out duration-200">
                     <div className="relative flex flex-col justify-end bg-[url('/Talki_New.webp')] bg-cover bg-center bg-opacity-40 h-full p-4 lg:rounded-tr-3xl ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <div className="flex flex-col">
@@ -62,7 +62,7 @@ export default function Team() {
                     </div>                    
                 </div>
 
-                <div className="recruitment-tile group flex flex-col cursor-pointer ease-out duration-200">
+                <div className="recruitment-tile h-[450px] group flex flex-col cursor-pointer ease-out duration-200">
                     <div className="relative flex flex-col justify-end bg-[url('/Daria_Bhavsar.jpg')] bg-cover bg-center bg-opacity-40 h-full p-4 ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <div className="flex flex-col">
@@ -76,7 +76,7 @@ export default function Team() {
                     </div>                    
                 </div>
 
-                <div className="recruitment-tile group flex flex-col cursor-pointer ease-out duration-200">
+                <div className="recruitment-tile h-[450px] group flex flex-col cursor-pointer ease-out duration-200">
                     <div className="relative flex flex-col justify-end bg-[url('/Aggie-Jasinska-f.webp')] bg-cover bg-center bg-opacity-40 h-full p-4 ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <div className="flex flex-col">
@@ -90,7 +90,7 @@ export default function Team() {
                     </div>                    
                 </div>
 
-                <div className="recruitment-tile group flex flex-col cursor-pointer ease-out duration-200">
+                <div className="recruitment-tile h-[450px] group flex flex-col cursor-pointer ease-out duration-200">
                     <div className="relative flex flex-col justify-end bg-[url('/Aliona_Cozacenco_f.webp')] bg-cover bg-center bg-opacity-40 h-full p-4 ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <div className="flex flex-col">
@@ -104,7 +104,7 @@ export default function Team() {
                     </div>                    
                 </div>
 
-                <div className="recruitment-tile group flex flex-col cursor-pointer ease-out duration-200">
+                <div className="recruitment-tile h-[450px] group flex flex-col cursor-pointer ease-out duration-200">
                     <div className="relative flex flex-col justify-end bg-[url('/Ada_Website_Picture.png')] bg-cover bg-center bg-opacity-40 h-full lg:rounded-bl-3xl p-4 ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <div className="flex flex-col">
@@ -118,7 +118,7 @@ export default function Team() {
                     </div>                    
                 </div>
 
-                <div className="recruitment-tile group flex flex-col cursor-pointer ease-out duration-200">
+                <div className="recruitment-tile h-[450px] group flex flex-col cursor-pointer ease-out duration-200">
                     <div className="relative flex flex-col justify-end bg-[url('/Monika_Cyrson_f.jpg')] bg-cover bg-center bg-opacity-40 h-full p-4 ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <div className="flex flex-col">
@@ -132,7 +132,7 @@ export default function Team() {
                     </div>                    
                 </div>
 
-                <div className="recruitment-tile group flex flex-col cursor-pointer ease-out duration-200">
+                <div className="recruitment-tile h-[450px] group flex flex-col cursor-pointer ease-out duration-200">
                     <div className="relative flex flex-col justify-end bg-[url('/Peter-turkus.webp')] bg-cover bg-center bg-opacity-40 h-full lg:rounded-br-3xl p-4 ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <div className="flex flex-col">

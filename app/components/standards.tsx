@@ -7,7 +7,7 @@ export default function Standards() {
         <>
         <section className="relative py-20 bg-gradient-to-b from-neutral-100 to-white min-h-screen">
             <div className='flex flex-col w-11/12 lg:w-8/12 gap-8 m-auto'>
-                <div className="flex flex-col gap-4 w-full justify-center items-center text-center bg-contain bg-bottom">
+                <div className="flex flex-col gap-4 w-full justify-center lg:items-center lg:text-center bg-contain bg-bottom">
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         Our promise
                     </h3>
@@ -19,55 +19,55 @@ export default function Standards() {
                         Effective recruitment and strategic workforce planning comes with a support package.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 grid-rows-4 w-full">
-                    <div className='flex gap-8 w-full h-[30vh]'>
-                        <div className='flex justify-center items-center w-1/2 my-8'>
+                <div className="grid grid-cols-1 grid-rows-4 w-full pt-20">
+                    <div className='flex lg:gap-8 lg:w-full min-h-[30vh]'>
+                        <div className='flex justify-center lg:items-center items-start w-1/3 lg:w-1/2 my-8'>
                             <Image src="/support-illustration.svg" width={200} height={300} alt=""/>
 
                         </div>
                         <div className='relative flex justify-center items-center w-1 border-r mx-8 border-neutral-300'>
-                            <p className='absolute -left-3 flex items-center justify-center w-8 h-8 font-black bg-neutral-300 border border-neutral-300 rounded-full'>1</p>
+                            <p className='absolute -left-3 top-14 lg:top-[50%] flex items-center justify-center w-8 h-8 font-black bg-neutral-300 border border-neutral-300 rounded-full'>1</p>
                         </div>
                         <div className='flex flex-col gap-4 justify-center w-1/2'>
                             <h3 className='text-2xl font-black tracking-tighter'>The highest quality of services</h3>
                             <p className='font-medium'>We use cutting edge technology to deliver clients the staff they need when they need them. Modern recruitment tools enable us recruit staff, verify ID and check compliance online with results immediately available.</p>
                         </div>
                     </div>
-                    <div className='flex gap-8 w-full h-[30vh]'>
-                        <div className='flex justify-center items-center w-1/2 my-8'>
+                    <div className='flex lg:gap-8 w-full min-h-[30vh]'>
+                        <div className='flex justify-center lg:items-center items-start w-1/3 lg:w-1/2 my-8'>
                             <Image src="/payroll-illustration.svg" width={200} height={300} alt=""/>
 
                         </div>
                         <div className='relative flex justify-center items-center w-1 border-r mx-8 border-neutral-300'>
-                            <p className='absolute -left-3 flex items-center justify-center w-8 h-8 font-black bg-neutral-300 border border-neutral-300 rounded-full'>2</p>
+                            <p className='absolute -left-3 top-14 lg:top-[50%] flex items-center justify-center w-8 h-8 font-black bg-neutral-300 border border-neutral-300 rounded-full'>2</p>
                         </div>
-                        <div className='flex flex-col gap-4 justify-center w-1/2'>
+                        <div className='flex flex-col gap-4 justify-center w-1/2 min-h-fit'>
                             <h3 className='text-2xl font-black tracking-tighter'>Timely and accurate payroll processing</h3>
                             <p className='font-medium'>We have simplified the processing of bulk hours for large scale users. Using online systems clients are able to track spend and current usage in real time.</p>
                         </div>
                     </div>
-                    <div className='flex gap-8 w-full h-[30vh]'>
-                        <div className='flex justify-center items-center w-1/2 my-8'>
+                    <div className='flex lg:gap-8 w-full min-h-[30vh]'>
+                        <div className='flex justify-center lg:items-center items-start w-1/3 lg:w-1/2 my-8'>
                             <Image src="/data-illustration.svg" width={150} height={300} alt=""/>
 
                         </div>
                         <div className='relative flex justify-center items-center w-1 border-r mx-8 border-neutral-300'>
-                            <p className='absolute -left-3 flex items-center justify-center w-8 h-8 font-black bg-neutral-300 border border-neutral-300 rounded-full'>3</p>
+                            <p className='absolute -left-3 top-14 lg:top-[50%] flex items-center justify-center w-8 h-8 font-black bg-neutral-300 border border-neutral-300 rounded-full'>3</p>
                         </div>
-                        <div className='flex flex-col gap-4 justify-center w-1/2'>
+                        <div className='flex flex-col gap-4 justify-center w-1/2 min-h-fit'>
                             <h3 className='text-2xl font-black tracking-tighter'>Ongoing and effective support</h3>
                             <p className='font-medium'>By using a variety of data sources, we are able to advise on employment trends for your local area. These include availability of labour and pay rates, which allows an effective partnership to pro-actively plan and budget for future requirements.</p>
                         </div>
                     </div>
-                    <div className='flex gap-8 w-full h-[30vh]'>
-                        <div className='flex justify-center items-center w-1/2 my-8'>
+                    <div className='flex lg:gap-8 w-full min-h-[30vh]'>
+                        <div className='flex justify-center lg:items-center items-start w-1/3 lg:w-1/2 my-8'>
                             <Image src="/app-illustration.svg" width={200} height={300} alt=""/>
 
                         </div>
                         <div className='relative flex justify-center items-center w-1 border-r mx-8 border-neutral-300'>
-                            <p className='absolute -left-3 flex items-center justify-center w-8 h-8 font-black bg-neutral-300 border border-neutral-300 rounded-full'>4</p>
+                            <p className='absolute -left-3 top-14 lg:top-[50%] flex items-center justify-center w-8 h-8 font-black bg-neutral-300 border border-neutral-300 rounded-full'>4</p>
                         </div>
-                        <div className='flex flex-col gap-4 justify-center w-1/2'>
+                        <div className='flex flex-col gap-4 justify-center w-1/2 min-h-fit'>
                             <h3 className='text-2xl font-black tracking-tighter'>Our App ensures we deliver for you</h3>
                             <p className='font-medium'>Leverage the relationship your workers have with their phones and take control over booking management in real time. Speed up recruitment process, receive automatic updates and check your workers arrival time by picking up their smartphones signal.</p>
                         </div>

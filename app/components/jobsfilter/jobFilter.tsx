@@ -1,172 +1,121 @@
 "use client";
 
 import React, {useEffect, useState} from "react";
-import {useRouter} from "next/navigation";
-import searchDebounce from "./searchDebounce";
+import {useRouter, useSearchParams} from "next/navigation";
 
-const Jobfilter = () => {
+interface JobFilterProps {
+  uniqueCategories: string[];
+  states: string[];
+  jobTypes: string[];
+  contractTypes: string[];
+}
+
+interface JobTypeMapping {
+  [key: string]: string;
+}
+
+interface ContractTypeMapping {
+  [key: string]: string;
+}
+
+const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobTypes, contractTypes }) => {
+
+  const jobTypeMapping: JobTypeMapping = {
+    fulltime: "Full Time",
+    parttime: "Part Time",
+  };
+  
+  const contractTypeMapping: ContractTypeMapping = {
+    temp: "Temporary",
+    temp2perm: "Temporary (going to be permanent)",
+    perm: "Permanent",
+  };
+
+  const [selectedCategory, setSelectedCategory] = useState(""); // State for selected category
+  const [selectedJobType, setSelectedJobType] = useState(""); // State for selected job type
+  const [selectedContractType, setSelectedContractType] = useState(""); // State for selected contract type
+
+  const jobTypesDisplay = jobTypes.map(type => jobTypeMapping[type] || type);
+  const contractTypesDisplay = contractTypes.map(contracttype => contractTypeMapping[contracttype] || contracttype);
+
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [filter, setFilter] = useState("");
 
-  const debouncedSearch = searchDebounce({value: filter});
-
   useEffect(() => {
-    if (debouncedSearch) {
-      router.push(`/jobs?region=${debouncedSearch}`);
-    } else {
-      router.push("/jobs");
+    const queryParams = [];
+
+    if (filter) {
+      queryParams.push(`region=${filter}`);
     }
-  }, [debouncedSearch]);
+
+    // Modify the following sections to include selected values in queryParams
+    if (selectedCategory) {
+      queryParams.push(`category=${selectedCategory}`);
+    }
+
+    if (selectedJobType) {
+      queryParams.push(`type=${selectedJobType}`);
+    }
+
+    if (selectedContractType) {
+      queryParams.push(`contracttype=${selectedContractType}`);
+    }
+
+    // Combine queryParams to form the final URL
+    const query = queryParams.join("&");
+    const url = query ? `/jobs?${query}` : "/jobs";
+
+    router.push(url);
+  }, [filter, selectedCategory, selectedJobType, selectedContractType]);
 
   return (
     <>  
-      <div id="jobfilter" className="flex flex-col gap-4 w-1/4 border-r border-neutral-300 mr-4">
-          <h3 className="text-2xl font-black uppercase">Job filter</h3>
-
-          <div id="region" className="grid grid-rows-10 gap-2 border-t border-neutral-300 py-4 pr-4">
-              <h4 className="text-sm lg:text-md uppercase font-medium tracking-widest mb-4">Region Try Try</h4>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">City of Bristol
-              <input type="radio" name="radio" value="Bristol" onChange={(event) => setFilter(event.target.value)}/>
-              <span className="checkmark"></span>
-              </label>
-              
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Leicestershire
-              <input type="radio" name="radio" value="Leicestershire" onChange={(event) => setFilter(event.target.value)}/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Warwickshire
-              <input type="radio" name="radio" value="Warwickshire" onChange={(event) => setFilter(event.target.value)}/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Gloucestershire
-              <input type="radio" name="radio" value="Gloucestershire" onChange={(event) => setFilter(event.target.value)}/>
-              <span className="checkmark"></span>
-              </label>
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Staffordshire
-              <input type="radio" name="radio" value="Staffordshire" onChange={(event) => setFilter(event.target.value)}/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Lanarkshire
-              <input type="radio" name="radio" value="Lanarkshire" onChange={(event) => setFilter(event.target.value)}/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Essex
-              <input type="radio" name="radio" value="Essex" onChange={(event) => setFilter(event.target.value)}/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Herefordshire
-              <input type="radio" name="radio" value="Herefordshire" onChange={(event) => setFilter(event.target.value)}/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Glamorgan
-              <input type="radio"  name="radio" value="Glamorgan" onChange={(event) => setFilter(event.target.value)}/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">London
-              <input type="radio"  name="radio" value="London" onChange={(event) => setFilter(event.target.value)}/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Wiltshire
-              <input type="radio"  name="radio" value="Wiltshire" onChange={(event) => setFilter(event.target.value)}/>
-              <span className="checkmark"></span>
-              </label>
+      <div id="jobfilter" className="flex gap-4 w-8/12 m-auto -mt-16">
+          <div className="grid w-full">
+              <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Region</label>
+              <select onChange={(event) => setFilter(event.target.value)} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer ">
+                {
+                  states.map((state) => (
+                    <option key={state} value={state}>{state}</option>                       
+                  ))
+                }
+                
+              </select>
           </div>
 
-          <div id="category" className="grid grid-rows-10 gap-2 border-t border-neutral-300 py-4 pr-4">
-              <h4 className="text-sm lg:text-md uppercase font-medium tracking-widest mb-4">Category</h4>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Industrial
-              <input type="radio"  name="radio" value="Industrial"/>
-              <span className="checkmark"></span>
-              </label>
-              
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Logistics & Trapnsportation
-              <input type="radio"  name="radio" value="Logistics-Trapnsportation"/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Automotive
-              <input type="radio"  name="radio" value="Automotive"/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Engineering
-              <input type="radio"  name="radio" value="Engineering"/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Manufacturing & Production
-              <input type="radio"  name="radio" value="Manufacturing-Production"/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Business
-              <input type="radio"  name="radio" value="Business"/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Administration & Secretarial
-              <input type="radio"  name="radio" value="Administration-Secretarial"/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Recruitment & HR
-              <input type="radio"  name="radio" value="Recruitment-HR"/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Sales
-              <input type="radio"  name="radio" value="Sales"/>
-              <span className="checkmark"></span>
-              </label>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Security & Safety
-              <input type="radio"  name="radio" value="Security-Safety"/>
-              <span className="checkmark"></span>
-              </label>
+          <div className="grid w-full">
+              <label htmlFor="job-category" className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Category</label>
+              <select onChange={(event) => setSelectedCategory(event.target.value)} value={selectedCategory} id="job-category" className="p-4 shadow-special rounded-full  hover:bg-neutral-50 cursor-pointer">
+                {
+                  uniqueCategories.map((category) => (
+                    <option key={category} value={category}>{category}</option>                       
+                  ))
+                }                            
+              </select>
           </div>
 
-          <div id="type" className="grid grid-rows-10 gap-2 border-t border-neutral-300 py-4 pr-4">
-              <h4 className="text-sm lg:text-md uppercase font-medium tracking-widest mb-4">Type</h4>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Full Time
-              <input type="radio"  name="radio" value="Full-time"/>
-              <span className="checkmark"></span>
-              </label>
-              
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Part Time
-              <input type="radio"  name="radio" value="Part-time"/>
-              <span className="checkmark"></span>
-              </label>                    
+          <div className="grid w-full">
+              <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Type</label>
+              <select onChange={(event) => setSelectedJobType(event.target.value)} value={selectedJobType} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer ">
+                {jobTypes.map((jobtype, index) => (
+                <option key={jobtype} value={jobtype}>
+                  {jobTypesDisplay[index]}
+                </option>
+                ))}                 
+              </select>
           </div>
 
-          <div id="contract-type" className="grid grid-rows-10 gap-2 border-t border-neutral-300 py-4 pr-4">
-              <h4 className="text-sm lg:text-md uppercase font-medium tracking-widest mb-4">Contract type</h4>
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Temporary
-              <input type="radio"  name="radio" value="Temporary"/>
-              <span className="checkmark"></span>
-              </label>
-              
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Temporary (going to be permanent)
-              <input type="radio"  name="radio" value="Temporary-to-Permanent"/>
-              <span className="checkmark"></span>
-              </label>    
-
-              <label className="jobfiltercheckmark bg-neutral-50 hover:bg-[#312252] hover:text-white font-medium py-2 px-3 rounded-lg hover:shadow-special cursor-pointer">Permanent
-              <input type="radio"  name="radio" value="Permanent"/>
-              <span className="checkmark"></span>
-              </label>                
-          </div>
+          <div className="grid w-full">
+              <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Contract type</label>
+              <select onChange={(event) => setSelectedContractType(event.target.value)} value={selectedContractType} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer ">
+                {contractTypes.map((contracttype, index) => (
+                <option key={contracttype} value={contracttype}>
+                  {contractTypesDisplay[index]}
+                </option>
+                ))} 
+              </select>
+          </div>          
       </div>
     </>
   );

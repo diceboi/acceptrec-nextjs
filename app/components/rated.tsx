@@ -44,7 +44,7 @@ export default function Rated() {
                 <Image src="/rated.webp" width={400} height={300} alt="" className='absolute -top-32 right-[15%] opacity-20'/>
             </div>
 
-            <div ref={ref} className="w-8/12 m-auto grid grid-cols-3 grid-rows-1 gap-8 text-white z-10">
+            <div ref={ref} className="w-11/12 lg:w-8/12 m-auto grid grid-cols-1 lg:grid-cols-3 grid-rows-1 gap-8 text-white z-10">
                 <div className="flex flex-col gap-4 font-medium bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl shadow-special p-4 ">
                     <div className="flex justify-between items-center">
                         <h3 className='text-2xl font-medium tracking-tight text-white'>Booking fill rate</h3>

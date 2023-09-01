@@ -8,9 +8,11 @@ import NewJobs from './components/newjobs'
 import Rated from './components/rated'
 import Team from './components/team'
 import FacebookMsg from './components/FacebookMsg'
+import FAQComponent from './components/FaqComponent'
 
 
 export default function Home() {
+
   return (
     <>
       <Hero/> 
@@ -23,6 +25,7 @@ export default function Home() {
       <Standards />
       <Team />
       <FacebookMsg />
+      <FAQComponent />
     </>
   )
 }

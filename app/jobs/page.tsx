@@ -1,91 +1,100 @@
-import ThemeHero from "../components/Theme Components/AboutHero"
 import JobsHero from "../components/Theme Components/JobsHero";
+import Jobfilter from "../components/jobsfilter/jobFilter";
+import JobList from "../components/jobsfilter/jobList";
 
 import { parseStringPromise } from "xml2js";
-import JobTile from "../components/jobtile";
-import Jobfilter from "../components/jobsfilter/jobFilter";
-import { useSearchParams } from "next/navigation";
-
-interface Props {
-    searchParams: Record<string, string | undefined>;
-  }
 
 interface Job {
-    id: string;
-    title: string;
-    category: string;
-    description: string;
-    town: string;
-    state: string;
-    salarymin: number;
-    date: string[];
-    url: string;
-  }
+  state?: string[];
+  category?: string[];
+  jobtype?: string[];
+  contracttype?: string[];
+  id?: string[];
+}
 
-  interface ThemeHeroProps {
-    title: string;
-    subtitle: string;
-    className: string;
-  }
+const getJobs = async () => {
+  try {
+    const res = await fetch('https://post.talentvine.co.uk/feed?aggregator=client&clientID=2436', {
+      next: { revalidate: 360 },
+    });
 
-  const getJobs = async () => {
-    try {
-      const res = await fetch('https://post.talentvine.co.uk/feed?aggregator=client&clientID=2436', {
-        next: {revalidate: 360},
-      });
-  
-      if (!res.ok) {
-        throw new Error('Failed to fetch jobs');
-      }
-  
-      const xmlData = await res.text();
-      const jsonData = await parseStringPromise(xmlData);
-  
-      // Convert properties to strings before returning
-      const jobsData = jsonData.source.job.map((job: { title: any[]; category: any[]; url: any[]; description: any[]; salarymin: any[]; salarymax: any[]; }) => {
-        return {
-          ...job,
-          title: job.title[0],
-          category: job.category[0],
-          url: job.url[0],
-          description: job.description[0],
-          salarymin: job.salarymin[0],
-          salarymax: job.salarymax[0],
-        };
-      });
-  
-      return jobsData;
-    } catch (error: unknown) {
-      throw new Error(`Failed to fetch jobs: ${(error as Error).message}`);
+    if (!res.ok) {
+      throw new Error('Failed to fetch jobs');
     }
-  }
 
-const Jobs = async () => {
+    const xmlData = await res.text();
+    const jsonData = await parseStringPromise(xmlData);
 
-    const jobData = await getJobs();
+    const jobFilterData = jsonData.source.job.map((job: Job) => {
+      const state = job.state ? job.state[0] : "";
+      const categoryString = job.category ? job.category[0] : "";
+      const categories = categoryString.split(',');
+      const jobtype = job.jobtype ? job.jobtype[0] : "";
+      const contracttype = job.contracttype ? job.contracttype[0] : "";
+      const id = job.id ? job.id[0] : "";
 
-    const themeHeroProps: ThemeHeroProps = {
-      title: "Jobs",
-      subtitle: "Find the job that's most suitable for you",
-      className: "bg-gradient-to-br from-white to-[#00afa917] h-96 pb-10",
+      return {
+        state,
+        categories,
+        jobtype,
+        contracttype,
+        id,
+      };
+    });
+
+    const allCategories = jobFilterData
+      .flatMap((job: { categories: unknown }) =>
+        Array.isArray(job.categories) ? job.categories : []
+      )
+      .filter((category: any) => typeof category === "string") as string[];
+    const uniqueCategories = [...new Set(allCategories)];
+    const states = jobFilterData
+      .map((job: { state: unknown }) => job.state)
+      .filter((state: any) => typeof state === "string") as string[];
+    const jobTypes = jobFilterData
+      .map((job: { jobtype: unknown }) => job.jobtype)
+      .filter((jobtype: any) => typeof jobtype === "string") as string[];
+    const contractTypes = jobFilterData
+      .map((job: { contracttype: unknown }) => job.contracttype)
+      .filter((contracttype: any) => typeof contracttype === "string") as string[];
+    const ids = jobFilterData
+      .map((job: { id: unknown }) => job.id)
+      .filter((id: any) => typeof id === "string") as string[];
+
+    return {
+      jobFilterData,
+      uniqueCategories,
+      states,
+      jobTypes,
+      contractTypes,
+      ids,
     };
+  } catch (error: unknown) {
+    throw new Error(`Failed to fetch jobs: ${(error as Error).message}`);
+  }
+};
+
+export default async function Jobs() {
+
+    const {
+      uniqueCategories,
+      states,
+      jobTypes,
+      contractTypes,
+      ids,
+    } = await getJobs();
 
     return(
         <>
         <JobsHero title={"Jobs"} subtitle={"Find the job that's most suitable for you"} classname={"bg-gradient-to-br from-white to-[#00afa917] pb-10"}/>
-        <div className="flex w-11/12 lg:w-8/12 m-auto gap-8 py-20">
-            <Jobfilter />
-            <div className="grid grid-cols-2 gap-8 w-max">
-                {
-                    jobData.map((job: Job) => (
-                        <JobTile key={job.id[0]} jobData={job} />                       
-                    ))
-                }
-            </div>
-        </div>
+        <Jobfilter
+          uniqueCategories={uniqueCategories}
+          states={states}
+          jobTypes={jobTypes}
+          contractTypes={contractTypes}
+        />
+        <JobList />
         </>
     )
-}
-
-export default Jobs;
+};
 
