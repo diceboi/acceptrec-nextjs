@@ -6,8 +6,6 @@ import { LuHelpingHand } from 'react-icons/lu'
 import { FiSmile } from 'react-icons/fi'
 import { TbUsersGroup } from 'react-icons/tb'
 
-import Image from "next/image"
-
 import Abouthero from "../components/Theme Components/AboutHero"
 import Team from "../components/team"
 import DidYouKnow from "../components/DidYouKnow"
@@ -20,16 +18,16 @@ export default function AboutUs() {
             <div className="flex flex-col lg:flex-row w-11/12 lg:w-8/12 gap-16 py-20">
                 <div className="w-11/12 lg:w-1/2 flex justify-center flex-col gap-8">
                     <h1 className="text-5xl font-black tracking-tighter ">Our why</h1>
-                    <p className="text-xl font-bold">As someone famously said ‘it all begins with ‘why’. Why are you in business? Why are you different? Why do you do what you do?</p>
+                    <p className="text-xl font-bold">As someone famously said it all begins with `why`. Why are you in business? Why are you different? Why do you do what you do?</p>
                     <p className="text-lg">
                         Our why is uniquely simple
-                        ‘To improve the lives of the temporary workers that are employed by us’
+                        `To improve the lives of the temporary workers that are employed by us`
                         Our workforce are valued both by us and the end client. We look after them, we have a relationship with them. They are individuals with individual needs and we have their back. We support them, we help them, we counsel them. We do everything we can to make their working life a happy and enjoyable place. 
                         Our entire focus is this. With this one, simple proposition we have clear direction and can find new ways to help our temporary workforce with their goals and ambitions.
 
                         This is why so many temporary workers choose Accept as their employer of choice.
                         Our clients benefit from a happy and stable workforce. This is why we are the supplier of choice to over 100 clients on a weekly basis.
-                        If you need help with flexible workers, then please speak with us. We can show ‘why’ we do what we do.
+                        If you need help with flexible workers, then please speak with us. We can show `why` we do what we do.
                     </p>
                     <button 
                         type="submit" 

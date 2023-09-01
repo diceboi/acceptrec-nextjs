@@ -36,14 +36,17 @@ export default function DidYouKnow() {
 
     const handleDragMove = (e: React.MouseEvent | React.TouchEvent) => {
         if (!dragging) return;
-        const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
-        const diff = clientX - dragStartX;
-        const slideWidth = window.innerWidth <= 600 ? 82 : 41.65;
-        const slidesToMove = Math.round(diff * sensitivityFactor / slideWidth);
-        const newActiveSlide = Math.max(0, Math.min(8, activeSlide - slidesToMove));
-        if (newActiveSlide !== activeSlide) {
-            setActiveSlide(newActiveSlide);
-            setDragStartX(clientX); // Reset the drag start X to prevent abrupt movements
+    
+        if (typeof window !== 'undefined') {
+            const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+            const diff = clientX - dragStartX;
+            const slideWidth = window.innerWidth <= 600 ? 82 : 41.65;
+            const slidesToMove = Math.round(diff * sensitivityFactor / slideWidth);
+            const newActiveSlide = Math.max(0, Math.min(8, activeSlide - slidesToMove));
+            if (newActiveSlide !== activeSlide) {
+                setActiveSlide(newActiveSlide);
+                setDragStartX(clientX); // Reset the drag start X to prevent abrupt movements
+            }
         }
     };
 
