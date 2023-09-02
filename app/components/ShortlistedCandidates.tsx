@@ -64,7 +64,7 @@ export default function ShortlistedCandidates() {
                             </div>
                             <div className='p-2'>
                                 <h4 className='lg:text-lg font-bold'>Achievements:</h4>
-                                <p className='text-sm'>With over 19 years' experience within logistics and Warehousing. highly motivated and driven individual, with a passion to succeed in all areas of his professional life. Has managed teams of 50+ staff.</p>
+                                <p className='text-sm'>With over 19 years&apos; experience within logistics and Warehousing. highly motivated and driven individual, with a passion to succeed in all areas of his professional life. Has managed teams of 50+ staff.</p>
                             </div>
                             <div className='p-2'>
                                 <h4 className='lg:text-lg font-bold'>Skills:</h4>
@@ -89,7 +89,7 @@ export default function ShortlistedCandidates() {
                             </div>
                             <div className='p-2'>
                                 <h4 className='lg:text-lg font-bold'>Achievements:</h4>
-                                <p className='text-sm'>24 years' experience in Logistics, Distribution and Manufacturing.</p>
+                                <p className='text-sm'>24 years&apos; experience in Logistics, Distribution and Manufacturing.</p>
                             </div>
                             <div className='p-2'>
                                 <h4 className='lg:text-lg font-bold'>Skills:</h4>
