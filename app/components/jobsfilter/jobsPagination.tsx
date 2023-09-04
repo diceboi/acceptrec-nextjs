@@ -17,7 +17,7 @@ const handleNext = useCallback(() => {
 
     const queryString = loadMore.split("?")[1];
     router.push(`?${queryString}`);
-}, [loadMore]);
+}, [loadMore, router]);
 
 return (
     <div>

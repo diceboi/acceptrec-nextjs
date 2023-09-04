@@ -67,7 +67,7 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
     const url = query ? `/jobs?${query}` : "/jobs";
 
     router.push(url);
-  }, [filter, selectedCategory, selectedJobType, selectedContractType]);
+  }, [filter, selectedCategory, selectedJobType, selectedContractType, router]);
 
   return (
     <>  

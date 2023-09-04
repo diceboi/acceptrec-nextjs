@@ -1,6 +1,5 @@
 "use client"
 
-import { useEffect, useRef } from "react";
 import { FaFire } from "react-icons/fa";
 import { HiArrowSmRight } from "react-icons/hi";
 import Link from "next/link";
@@ -31,40 +30,12 @@ interface Job {
   url: string;
 }
 
-export default function NewJobs({jobs}) {
 
-  const swiperRef = useRef(null);
+interface NewJobsProps {
+  jobs: Job[];
+}
 
-  useEffect(() => {
-    // Check if swiperRef.current exists before initializing Swiper
-    if (swiperRef.current) {
-      const swiperContainer = swiperRef.current;
-      const params = {
-        navigation: true,
-        pagination: true,
-        injectStyles: [
-          `
-            .swiper-button-next,
-            .swiper-button-prev {
-              background-color: white;
-              padding: 8px 16px;
-              border-radius: 100%;
-              border: 2px solid black;
-              color: red;
-            }
-            .swiper-pagination-bullet{
-              width: 40px;
-              height: 40px;
-              background-color: red;
-            }
-        `,
-        ],
-      };
-
-      Object.assign(swiperContainer, params);
-      swiperContainer.initialize();
-    }
-  }, [swiperRef.current]);
+export default function NewJobs({ jobs }: NewJobsProps) {
 
   try {
     const latestJobs = jobs.slice(0, 6); // Get the latest 6 jobs
@@ -101,8 +72,8 @@ export default function NewJobs({jobs}) {
                 onSlideChange={() => console.log('slide change')} 
                 className='flex flex-nowrap gap-8 h-[450px] pb-20 mx-20'>
                 {latestJobs.map((job: Job) => (
-                  <SwiperSlide>
-                  <JobTile key={job.id} jobData={job} />
+                  <SwiperSlide key={job.id}>
+                  <JobTile jobData={job} />
                   </SwiperSlide>
                 ))}
               </Swiper>
