@@ -4,6 +4,9 @@ import OurPromise from '../components/OurPromise'
 import OurServices from '../components/OurServices'
 import EasyRegistration from '../components/EasyRegistration'
 import FilterJobs from '../components/FilterJobs'
+import AgainstViolance from '../components/AgainstViolance'
+import CandidateSuccessStories from '../components/CandidateSuccessStories'
+import JobsInYourArea from '../components/JobsInYourArea'
 
 export default function ForCandidates() {
   return (
@@ -12,7 +15,10 @@ export default function ForCandidates() {
     <OurPromise />
     <EasyRegistration />
     <FilterJobs />
+    <AgainstViolance />
     <OurServices />
+    <CandidateSuccessStories />
+    <JobsInYourArea />
     </>
   )
 }

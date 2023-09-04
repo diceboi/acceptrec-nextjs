@@ -110,9 +110,9 @@ export default function MainNav() {
 
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/blog" className="flex items-center gap-2 ">Blog</Link></li>
                     
-                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/jobs" className="flex items-center gap-2 ">Contact Us</Link></li>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/contact-us" className="flex items-center gap-2 ">Contact Us</Link></li>
 
-                        <li id='mainlink' className='flex items-center button-85 bg-[#312252] hover:bg-[#1d1430] hover:shadow-md text-white hover:shadow-[#3122528c] px-3 rounded-full transition-all'><Link href="/jobs" className="flex items-center gap-2 ">Sign up / Register</Link></li>
+                        <li id='mainlink' className='flex items-center button-85 bg-[#312252] hover:bg-[#1d1430] hover:shadow-md text-white hover:shadow-[#3122528c] px-3 rounded-full transition-all'><Link href="/register" className="flex items-center gap-2 ">Sign up / Register</Link></li>
                     
                 </ul>
                 

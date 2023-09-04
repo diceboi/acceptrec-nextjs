@@ -12,10 +12,10 @@ export default function OurServices() {
             <div className='flex flex-col gap-8 w-11/12 lg:w-8/12 py-20 m-auto'>
                 <div className="flex flex-col gap-4 w-full justify-start ">
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
-                        Our Offer
+                        Services
                     </h3>
                     <h2 className="flex flex-wrap gap-3 text-6xl lg:text-6xl font-black tracking-tighter z-10 ">
-                        Services
+                        Our offer
                     </h2>
                     <p className='font-medium w-full lg:w-1/2'>
                     At Accept, we provide a range of services that candidates in any sector can benefit from. We offer more than just a job.

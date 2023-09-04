@@ -31,24 +31,25 @@ export default function DidYouKnow() {
 
             <div className='relative w-11/12 h-max lg:w-8/12 m-auto overflow-x-hidden py-10'>
                 
-                <Swiper modules={[Navigation, Pagination, Scrollbar, A11y]}
-                        spaceBetween={40}
-                        breakpoints={{
-                            640: {
-                              slidesPerView: 1,
-                            },
-                768: {
-                              slidesPerView: 1,
-                            },
-                            1024: {
-                              slidesPerView: 1.5,
-                            },
-                          }}
-                        navigation
-                        pagination={{ clickable: true }}
-                        onSwiper={(swiper) => console.log(swiper)}
-                        onSlideChange={() => console.log('slide change')} 
-                        className='transition-all duration-500 cursor-pointer'>
+                <Swiper 
+                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    spaceBetween={40}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 1,
+                        },
+                        1024: {
+                            slidesPerView: 1.5,
+                        },
+                        }}
+                    navigation
+                    pagination={{ clickable: true }}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log('slide change')} 
+                    className='transition-all duration-500 cursor-pointer'>
                     
                     <SwiperSlide className='flex flex-col justify-between gap-4 h-auto lg:h-[50vh] p-4 rounded-3xl border border-white border-opacity-10 bg-white bg-opacity-5'>
                         <div className='relative flex lg:flex-row flex-col p-4 gap-8 border-b pb-8 border-white border-opacity-10'>

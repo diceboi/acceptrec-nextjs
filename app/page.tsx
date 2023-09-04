@@ -9,14 +9,16 @@ import Rated from './components/rated'
 import Team from './components/team'
 import FacebookMsg from './components/FacebookMsg'
 import FAQComponent from './components/FaqComponent'
+import getJobs from './api/getJobs'
 
+export default async function Home() {
 
-export default function Home() {
+  const jobs = await getJobs();
 
   return (
     <>
       <Hero/> 
-      <NewJobs/>
+      <NewJobs jobs={jobs}/>
       <Logocarousel/>
       <Recruitment/>
       <Advantages />

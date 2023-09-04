@@ -1,3 +1,5 @@
+"use client"
+
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
@@ -48,7 +50,7 @@ export default function JobTile({ jobData }: { jobData: JobData }) {
     return(
         <>
         <Link href={jobData.url}>
-        <div className="group flex flex-col justify-between bg-white shadow-special border border-neutral-200 p-4 rounded-3xl hover:shadow-special hover:bg-neutral-50 cursor-pointer transition-all max-w-[500px]">
+        <div className="group flex flex-col justify-between bg-white shadow-special border border-neutral-200 p-4 rounded-3xl hover:shadow-special hover:bg-neutral-50 cursor-pointer transition-all">
             <div className="relative flex justify-between">
               <h3 className="text-xl font-black pb-2 w-3/4">{jobData.title}</h3>
               <FiArrowRight className='absolute right-4 recruitment-icon w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:right-0 ease-out duration-200'/>
