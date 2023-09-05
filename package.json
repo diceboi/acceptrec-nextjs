@@ -11,6 +11,8 @@
   "dependencies": {
     "@apollo/client": "^3.8.0-rc.1",
     "@apollo/experimental-nextjs-app-support": "^0.0.0-commit-7dad495",
+    "@googlemaps/react-wrapper": "^1.1.35",
+    "@react-google-maps/api": "^2.19.2",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
@@ -32,6 +34,7 @@
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
+    "@types/google.maps": "^3.54.0",
     "@types/he": "^1.2.0",
     "@types/xml2js": "^0.4.11"
   }

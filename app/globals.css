@@ -271,3 +271,8 @@
 .full-width-tile {
   grid-column: span 3;
 }
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}

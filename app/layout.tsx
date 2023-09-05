@@ -2,6 +2,7 @@ import './globals.css'
 import { Raleway } from 'next/font/google'
 import MainNav from './components/mainnav'
 import { ApolloWrapper } from './lib/apollo-wrapper'
+import Footer from './components/footer'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function RootLayout({
           <ApolloWrapper>
             <MainNav/>
             {children}
+            <Footer/>
           </ApolloWrapper>
       </body>
     </html>
