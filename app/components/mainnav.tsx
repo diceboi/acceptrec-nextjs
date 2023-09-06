@@ -1,24 +1,41 @@
 "use client"
 
+import { useRouter } from 'next/navigation'
 import { IoIosSearch, IoIosMenu } from 'react-icons/io'
 import {BiChevronDown} from 'react-icons/bi'
 import {BiChevronRight} from 'react-icons/bi'
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { TbBuildingFactory2, TbCheckupList, TbChevronLeft, TbChevronRight, TbFriends, TbListSearch, TbMessages, TbMoodPlus, TbPencil, TbPower, TbQuestionMark, TbRosetteNumber1, TbUsers, TbWeight } from 'react-icons/tb';
+import { FiArrowUpRight } from 'react-icons/fi';
 
 
 export default function MainNav() {
 
-    const [logoSrc, setLogoSrc] = useState("/Accept-Stacked-Logo-with-Strapline-RGB300.webp");
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [submenu1Open, setSubmenu1Open] = useState(false);
+    const [submenu2Open, setSubmenu2Open] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!mobileMenuOpen);
+    };
+
+    const toggleSubmenu1 = () => {
+        setSubmenu1Open(!submenu1Open);
+    };
+
+    const toggleSubmenu2 = () => {
+        setSubmenu2Open(!submenu2Open);
+    };
 
     useEffect(() => {
         function handleScroll() {
             const menu = document.getElementById("desktop-menu");
             const menuInner = document.getElementById("menu");
-            const logo = document.getElementById("acceptrec-logo"); // logo element
-            const links = document.getElementById("mainlink");
-            const submenu = document.getElementById("submenu");
+            const logo = document.getElementById("acceptrec-logo");
+            const submenu1 = document.getElementById("submenu1");
+            const submenu2 = document.getElementById("submenu2");
             const scrollY = window.scrollY;
     
             if (menu) {
@@ -27,17 +44,19 @@ export default function MainNav() {
                     menu.style.boxShadow = "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)";
                     menu.style.backgroundColor = "#ffffffd5";
                     menu.style.borderBottom = "1px solid #d4d4d4";
-                    if (logo) logo.style.width = "100px"; // Null check for logo
+                    if (logo) logo.style.width = "100px";
                     if (menuInner) menuInner.style.height = "55px";
-                    if (submenu) submenu.style.top = "43px";
+                    if (submenu1) submenu1.style.top = "40px";
+                    if (submenu2) submenu2.style.top = "40px";
                 } else {
                     menu.style.height = "96px";
                     menu.style.boxShadow = "0 0 0 0";
                     menu.style.backgroundColor = "#ffffff00";
                     menu.style.borderBottom = "0px solid #d4d4d4";
-                    if (logo) logo.style.width = "150px"; // Null check for logo
+                    if (logo) logo.style.width = "150px";
                     if (menuInner) menuInner.style.height = "96px";
-                    if (submenu) submenu.style.top = "63px";
+                    if (submenu1) submenu1.style.top = "60px";
+                    if (submenu2) submenu2.style.top = "60px";
                 }
             }
         }
@@ -50,11 +69,11 @@ export default function MainNav() {
  
     return (
         <>
-        <nav id='desktop-menu' style={{ height: "75px", backgroundColor: "#ffffff00" }} className="hidden lg:flex flex-wrap justify-center px-4 w-full mx-auto z-50 sticky top-0 backdrop-blur-sm ease-in-out duration-200">
+        <nav id='desktop-menu' style={{ height: "75px", backgroundColor: "#ffffff00" }} className="hidden xl:flex flex-wrap justify-center px-4 w-full mx-auto z-50 sticky top-0 backdrop-blur-sm ease-in-out duration-200">
             <div className='flex justify-between items-center gap-8 w-8/12'>
                 <div id="logo" className="flex shrink-0 items-center">
                     <Link href="/">
-                        <Image src={logoSrc} id='acceptrec-logo' alt="logo" width={150} height={100} className=" w-[150px] ease-in-out duration-200" />
+                        <Image src="/Accept-Stacked-Logo-with-Strapline-RGB300.webp" id='acceptrec-logo' alt="logo" width={150} height={100} className=" w-[150px] ease-in-out duration-200" />
                     </Link>
                 </div>
                 
@@ -66,45 +85,40 @@ export default function MainNav() {
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/about-us" className="flex items-center gap-2"><span>About Us</span></Link></li>
                     
                     
-                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/for-employers" className="flex items-center gap-2"><span>For Employers</span></Link><BiChevronDown className='text-2xl'/>
-                            <ul id='submenu' className='hidden absolute top-[63px] p-2 flex-col shadow-special rounded-xl bg-white submenu z-10 w-80'>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='relative flex w-full justify-between items-center rounded-lg text-black'><Link href="/read-first" className='w-full flex justify-between items-center px-2 py-3'><span>Read first</span><BiChevronRight className='text-2xl'/></Link>
-                                    <ul className='hidden absolute -top-2 left-[300px] p-2 flex-col shadow-special rounded-xl bg-white h-fit submenu z-10 w-80'>
-                                        <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                        <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                        <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                        <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                    </ul>
-                                </li>  
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/for-employers" className="flex items-center gap-2"><span>For Employers</span></Link><BiChevronDown className='text-2xl'/>
+                            <ul id='submenu1' className='hidden absolute grid-cols-3 grid-rows-3 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 w-[450px] transition-all'>
+                                <li className='group relative row-span-3 flex w-full rounded-lg text-white text-xl transition-all '>
+                                    
+                                    <Link href="/for-employers" className=' w-full h-full px-2 py-3 rounded-xl bg-[url("/accepted-job.webp")] bg-center bg-cover bg-no-repeat'>
+                                        <p className='absolute bottom-2 text-xl z-10'>For Employers</p>
+                                        <FiArrowUpRight className="absolute text-white top-2 right-2 z-10" />
+                                        <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-[#312252] to-[#31225283] rounded-xl group-hover:opacity-70 transition-all'></div>
+                                    </Link>
+                                </li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbUsers className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Shortlisted Candidates</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbMessages className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Consultancy</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbPencil className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Writing a good job description</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbMoodPlus className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Interview Techniques</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbCheckupList className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Onboarding process</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbBuildingFactory2 className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Industries</span></Link></li>
                             </ul>
                         </li>
-                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/for-candidates" className="flex items-center gap-2 "><span>For Candidates</span></Link><BiChevronDown className='text-2xl'/>
-                            <ul id='submenu' className='hidden absolute top-[63px] p-2 flex-col shadow-special rounded-xl bg-white submenu z-10 w-80'>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>
-                                <li className='flex w-full rounded-lg text-black'><Link href="/read-first" className='w-full px-2 py-3'><span>Read first</span></Link></li>                     
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/for-employers" className="flex items-center gap-2"><span>For Candidates</span></Link><BiChevronDown className='text-2xl'/>
+                            <ul id='submenu2' className='hidden absolute grid-cols-3 grid-rows-3 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 w-[450px] transition-all'>
+                                <li className='group relative row-span-3 flex w-full rounded-lg text-white text-xl transition-all '>
+                                    
+                                    <Link href="/for-candidates" className=' w-full h-full px-2 py-3 rounded-xl bg-[url("/for-candidates.webp")] bg-center bg-cover bg-no-repeat'>
+                                        <p className='absolute bottom-2 text-xl z-10'>For Candidates</p>
+                                        <FiArrowUpRight className="absolute text-white top-2 right-2 z-10" />
+                                        <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-[#28a19d] to-[#00afa936] rounded-xl group-hover:opacity-70 transition-all'></div>
+                                    </Link>
+                                </li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbRosetteNumber1 className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Candidate of the month</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbFriends className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Refer a friend</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbQuestionMark className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>First Job in the UK</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbPower className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Sign-in / Registration</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbListSearch className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Jobs</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbWeight className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Manual handling</span></Link></li>
                             </ul>
                         </li>
 
@@ -112,7 +126,7 @@ export default function MainNav() {
                     
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/contact-us" className="flex items-center gap-2 ">Contact Us</Link></li>
 
-                        <li id='mainlink' className='flex items-center button-85 bg-[#312252] hover:bg-[#1d1430] hover:shadow-md text-white hover:shadow-[#3122528c] px-3 rounded-full transition-all'><Link href="/register" className="flex items-center gap-2 ">Sign in / Register</Link></li>
+                        <li id='mainlink' className='flex items-center button-85 bg-[#312252] hover:bg-[#4e3780] hover:shadow-md text-white hover:shadow-[#3122523b] px-3 py-2 rounded-full transition-all'><Link href="/register" className="flex items-center gap-2 ">Sign in / Register</Link></li>
                     
                 </ul>
                 
@@ -122,15 +136,93 @@ export default function MainNav() {
         </nav> 
 
 
-        <nav className='lg:hidden sticky top-0 flex justify-between items-center w-full h-16 px-4 shadow-lg z-50'>
+        <nav className='xl:hidden sticky top-0 flex justify-between items-center w-full h-16 px-4 shadow-lg z-50'>
             <div id="logo" className="flex shrink-0 items-center w-40 h-14">
                 <Link href="/">
                     <Image src="/Accept-Stacked-Logo-with-Strapline-RGB300.webp" alt="logo" className="w-40" width={150} height={40} />
                 </Link>
             </div>
-            <menu className='flex justify-center items-center gap-4'>
-                <button><IoIosSearch className='h-6 w-auto'/></button>    
-                <button><IoIosMenu className='h-8 w-auto'/></button>
+            <menu className='flex justify-center items-center gap-4'>   
+                <button onClick={toggleMobileMenu}><IoIosMenu className='h-8 w-auto cursor-pointer'/></button>
+                <ul className={`menu-mobile absolute top-[63px] right-0 grid grid-cols-1 justify-start items-center w-screen sm:w-96 bg-white shadow-special${mobileMenuOpen ? ' active' : ''}`}>
+                    <li className='flex justify-between border-t border-neutral-300'>
+                        <Link href="/jobs" className='w-full p-2 font-black text-xl'>Jobs</Link>
+                    </li>
+                    <li className='flex justify-between border-t border-neutral-300'>
+                        <Link href="/about-us" className='w-full p-2 font-black text-xl'>About Us</Link>
+                    </li>
+                    <li className='flex justify-between border-t border-neutral-300'>
+                        <Link href="/for-employers" className='w-full p-2 font-black text-xl'>For Employers</Link>
+                        <div onClick={toggleSubmenu1} className='flex justify-center items-center border-l border-neutral-300 p-1 w-14 cursor-pointer'>
+                            <TbChevronRight className="w-6 h-6 " />
+                        </div>
+
+                        <ul className={`mobilesubmenu absolute top-0 right-0 grid grid-cols-1 justify-start items-center w-screen sm:w-96 bg-white shadow-special${submenu1Open ? ' active' : ''}`}>
+                            <li onClick={toggleSubmenu1} className='flex justify-between items-center border-t border-neutral-300 h-[45px] p-2 cursor-pointer'>
+                                <TbChevronLeft className="w-6 h-6"/>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/jobs" className='w-full p-2 font-black text-xl'>Shortlisted candidates</Link>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/about-us" className='w-full p-2 font-black text-xl'>Consultancy</Link>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/for-employers" className='w-full p-2 font-black text-xl'>Writing a good job description</Link>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/for-candidates" className='w-full p-2 font-black text-xl'>Interview Techniques</Link>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/blog" className='w-full p-2 font-black text-xl'>Onboarding process</Link>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/jobs" className='w-full p-2 font-black text-xl'>Industries</Link>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li className='flex justify-between border-t border-neutral-300'>
+                        <Link href="/for-candidates" className='w-full p-2 font-black text-xl'>For Candidates</Link>
+                        <div onClick={toggleSubmenu2} className='flex justify-center items-center border-l border-neutral-300 p-1 w-14 cursor-pointer'>
+                            <TbChevronRight className="w-6 h-6 " />
+                        </div>
+
+                        <ul className={`mobilesubmenu absolute top-0 right-0 grid grid-cols-1 justify-start items-center w-screen sm:w-96 bg-white shadow-special${submenu2Open ? ' active' : ''}`}>
+                            <li onClick={toggleSubmenu2} className='flex justify-between items-center border-t border-neutral-300 h-[45px] p-2 cursor-pointer'>
+                                <TbChevronLeft className="w-6 h-6"/>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/jobs" className='w-full p-2 font-black text-xl'>Candidate of the month</Link>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/about-us" className='w-full p-2 font-black text-xl'>Refer a friend</Link>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/for-employers" className='w-full p-2 font-black text-xl'>First Job in the UK</Link>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/for-candidates" className='w-full p-2 font-black text-xl'>Sign-in / Registration</Link>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/blog" className='w-full p-2 font-black text-xl'>Jobs</Link>
+                            </li>
+                            <li className='flex justify-between border-t border-neutral-300'>
+                                <Link href="/jobs" className='w-full p-2 font-black text-xl'>Manual handling</Link>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li className='flex justify-between border-t border-neutral-300'>
+                        <Link href="/blog" className='w-full p-2 font-black text-xl'>Blog</Link>
+                    </li>
+                    <li className='flex justify-between border-t border-neutral-300'>
+                        <Link href="/jobs" className='w-full p-2 font-black text-xl'>Contact Us</Link>
+                    </li>
+                    <li className='flex justify-between bg-[#312252]'>
+                        <Link href="/jobs" className='w-full p-2 font-black text-xl text-white'>Sign Up / Register</Link>
+                    </li>
+                </ul>
             </menu>
         </nav>   
         </>    
