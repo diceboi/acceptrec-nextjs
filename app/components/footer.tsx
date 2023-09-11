@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { BsFacebook, BsLinkedin, BsInstagram, BsTwitter } from 'react-icons/bs'
 import { FaTwitterSquare } from 'react-icons/fa'
-import { TbRosetteNumber1, TbFriends, TbQuestionMark, TbPower, TbListSearch, TbWeight, TbUsers, TbMessages, TbPencil, TbMoodPlus, TbCheckupList, TbBuildingFactory2, TbBookmarks, TbAlertCircle, TbMap2 } from 'react-icons/tb'
+import { TbRosetteNumber1, TbFriends, TbQuestionMark, TbPower, TbListSearch, TbWeight, TbUsers, TbMessages, TbPencil, TbMoodPlus, TbCheckupList, TbBuildingFactory2, TbBookmarks, TbAlertCircle, TbMap2, TbBrandTiktok } from 'react-icons/tb'
 
 export default function Footer() {
   return (
@@ -81,7 +81,7 @@ export default function Footer() {
                     <div className="flex flex-nowrap gap-8">
                         <Link href="https://www.facebook.com/acceptrec/" target="_blank"><BsFacebook className="w-6 h-6 text-white hover:text-slate-500 transition-all"/></Link>
                         <Link href="https://www.linkedin.com/company/accept-recruitment/" target="_blank"><BsLinkedin className="w-6 h-6 text-white hover:text-slate-500 transition-all"/></Link>
-                        <Link href="https://twitter.com/acceptrec" target="_blank"><BsTwitter className="w-7 h-7 text-white hover:text-slate-500 transition-all"/></Link>
+                        <Link href="https://www.tiktok.com/@acceptrec?lang=en" target="_blank"><TbBrandTiktok className="w-7 h-7 text-white hover:text-slate-500 transition-all"/></Link>
                         <Link href="https://www.instagram.com/acceptrecruitment/" target="_blank"><BsInstagram className="w-6 h-6 text-white hover:text-slate-500 transition-all"/></Link>
                     </div>
                     <p className="text-slate-500 text-sm">© Accept Recruitment. All Rights Reserved</p>                    

@@ -71,8 +71,8 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
 
   return (
     <>  
-      <div id="jobfilter" className="flex gap-4 w-8/12 m-auto -mt-16">
-          <div className="grid w-full">
+      <div id="jobfilter" className="flex flex-wrap lg:flex-nowrap gap-4 w-11/12 lg:w-8/12 m-auto mt-16 lg:-mt-16">
+          <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
               <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Region</label>
               <select onChange={(event) => setFilter(event.target.value)} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer ">
                 {
@@ -84,7 +84,7 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
               </select>
           </div>
 
-          <div className="grid w-full">
+          <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
               <label htmlFor="job-category" className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Category</label>
               <select onChange={(event) => setSelectedCategory(event.target.value)} value={selectedCategory} id="job-category" className="p-4 shadow-special rounded-full  hover:bg-neutral-50 cursor-pointer">
                 {
@@ -95,7 +95,7 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
               </select>
           </div>
 
-          <div className="grid w-full">
+          <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
               <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Type</label>
               <select onChange={(event) => setSelectedJobType(event.target.value)} value={selectedJobType} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer ">
                 {jobTypes.map((jobtype, index) => (
@@ -106,7 +106,7 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
               </select>
           </div>
 
-          <div className="grid w-full">
+          <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
               <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Contract type</label>
               <select onChange={(event) => setSelectedContractType(event.target.value)} value={selectedContractType} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer ">
                 {contractTypes.map((contracttype, index) => (

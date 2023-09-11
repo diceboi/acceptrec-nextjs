@@ -10,7 +10,7 @@ const GoogleReviewNumber = () => {
   const increaseNumber = () => {
     setNumber((prevNumber) => {
       const nextNumber = prevNumber + 1;
-      if (nextNumber >= 950) {
+      if (nextNumber >= 1000) {
         if (intervalRef.current !== null) {
           clearInterval(intervalRef.current); // Stop the interval when the number reaches 950
         }

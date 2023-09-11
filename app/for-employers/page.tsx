@@ -13,6 +13,7 @@ import Blogtile from '../components/Theme Components/BlogTile'
 import he from 'he'
 import Link from 'next/link'
 import { FiArrowUpRight } from 'react-icons/fi'
+import Standards from '../components/standards'
 
 const query1 = gql`
 query getPosts {
@@ -120,6 +121,7 @@ export default function ForEmployers() {
         <ManagedServices />
         <Onboarding />
         <Industries />
+        <Standards />
         <ShortlistedCandidates />
         <Team />
         <div className='w-8/12 m-auto py-20 border-y border-neutral-300'>
@@ -128,7 +130,7 @@ export default function ForEmployers() {
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         Recent blogs
                     </h3>
-                    <h2 className='text-6xl lg:text-6xl font-black tracking-tighter'>
+                    <h2 className='text-6xl lg:text-6xl font-black tracking-tighter text-[#312252]'>
                         Read more
                     </h2>                    
                 </div>                

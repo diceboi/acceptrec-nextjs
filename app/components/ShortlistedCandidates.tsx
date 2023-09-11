@@ -22,7 +22,7 @@ export default function ShortlistedCandidates() {
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         Shortlisted candidates
                     </h3>
-                    <h2 className='text-6xl lg:text-6xl font-black tracking-tighter'>
+                    <h2 className='text-6xl lg:text-6xl font-black tracking-tighter text-[#312252]'>
                         Someone got your attention?
                     </h2>
                     <p>

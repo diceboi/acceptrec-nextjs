@@ -18,16 +18,13 @@ export default async function Home() {
   return (
     <>
       <Hero/> 
-      <NewJobs jobs={jobs}/>
-      <Logocarousel/>
+      <Industries /> 
       <Recruitment/>
       <Advantages />
       <Rated />
-      <Industries />
-      <Standards />
       <Team />
+      <Logocarousel/>
       <FacebookMsg />
-      <FAQComponent />
     </>
   )
 }

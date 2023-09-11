@@ -13,7 +13,7 @@ export default function Team() {
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         our employees
                     </h3>
-                    <h2 className='text-6xl lg:text-6xl font-black tracking-tighter'>
+                    <h2 className='text-6xl lg:text-6xl font-black tracking-tighter text-[#312252]'>
                         Awesome team members
                     </h2>                    
                 </div>                
@@ -52,8 +52,8 @@ export default function Team() {
                     <div className="relative flex flex-col justify-end bg-[url('/Talki_New.webp')] bg-cover bg-center bg-opacity-40 h-full p-4 lg:rounded-tr-3xl ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <div className="flex flex-col">
-                                <h3 className="text-2xl font-black text-white">Monika Loj</h3>
-                                <p className="font-medium text-white">Operations Director</p>
+                                <h3 className="text-2xl font-black text-white">Natalia Wielgosz</h3>
+                                <p className="font-medium text-white">Head of Accounts & Payroll</p>
                             </div>                            
                             <FiArrowRight className='absolute right-8 bottom-4 recruitment-icon text-white w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:right-4 ease-out duration-200'/>
                         </div>

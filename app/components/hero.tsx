@@ -3,13 +3,15 @@ import Logocarousel from "./logocarousel"
 import {BiSearchAlt} from 'react-icons/bi'
 import { FcGoogle } from 'react-icons/fc'
 import { AiFillStar } from 'react-icons/ai'
+import Image from "next/image"
 
 export default function Hero() {
     return(
         <>
-            <section className="flex flex-col w-full  pb-32 pt-16 overflow-hidden bg-gradient-to-br from-white to-neutral-200">
+            <section className="relative flex flex-col w-full overflow-hidden bg-gradient-to-br from-white to-neutral-200 h-[92vh]">
                 <div id="jobsearch" className="flex flex-col justify-evenly w-10/12 lg:w-8/12 mx-auto p-4 lg:p-2 z-10">
                     <div id="hero-title" className="flex flex-col gap-4 lg:pt-32 w-full justify-center items-center ">
+                    <div className="flex items-center justify-center gap-1 text-sm"><span className="flex gap-1 items-center"><AiFillStar className=" text-amber-400"/><b>4.8</b> stars by</span><b><GoogleReviewNumber/></b><span className="flex gap-1 items-center"> +<FcGoogle /> Google reviews</span></div>
                         <h1 className="hero-title text-6xl lg:text-8xl font-black tracking-tighter text-center p-2">Looking for job?</h1>
                         <div className="flex flex-col gap-2 justify-between items-center pb-8">
                             <p className="text-sm lg:text-lg font-medium tracking-widest uppercase text-center">find the best in your region</p>
@@ -54,12 +56,11 @@ export default function Hero() {
                                 </div>
                                 <button type="submit" className="flex justify-between items-center button-85 w-full bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl shadow-lg text-white hover:shadow-[#00afa93b] lg:w-96 p-4 rounded-full transition-all">Find jobs<BiSearchAlt className="text-xl"/></button>                                
                             </div>
-                            <div className="flex items-center justify-center gap-1"><span className="flex gap-1 items-center"><AiFillStar className=" text-amber-400"/><b>4.8</b> stars by</span><b><GoogleReviewNumber/></b><span className="flex gap-1 items-center"><FcGoogle /> Google reviews</span></div>                          
+                                                      
                         </form>
                     </div>
-                    
-                    
                 </div>
+                <Image src="/herobg.png" width={1280} height={853} alt="happy-team" className="absolute xl:-bottom-[.05em] lg:-bottom-[.5em] md:-bottom-[.65em] -bottom-[.65em] right-1/2 translate-x-1/2 min-w-[1280px] h-auto"/>
             </section>
             </>
     )

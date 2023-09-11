@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       </head>
-      <body className={raleway.className}>
+      <body className={`overflow-x-hidden ${raleway.className}`}>
           <ApolloWrapper>
             <MainNav/>
             {children}

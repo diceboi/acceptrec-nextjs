@@ -52,7 +52,7 @@ const JobList = async () => {
     return(
         <>
         <div className="flex flex-col w-11/12 lg:w-8/12 m-auto gap-8 py-20">
-            <div className="grid grid-cols-3 gap-8 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 w-full">
                 {
                     jobData.map((job: Job) => (
                         <JobTile key={job.id[0]} jobData={job} />                       

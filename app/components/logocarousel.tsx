@@ -3,43 +3,75 @@ import Image from "next/image";
 export default function Logocarousel() {
   return (
     <>
-      <div className="logos flex w-8/12 relative h-32 overflow-hidden py-8 m-auto">
-        <div className="absolute flex w-[200%]">
-          <div className="logos-slide inline-flex justify-between w-full">
+      <div className="logos flex w-8/12 relative h-64 overflow-hidden py-16 m-auto">
+        <div className="absolute flex w-[300%]">
+
+          <div className="logos-slide inline-flex justify-between w-[150%] gap-8">
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/Disability_Confident_BW.webp" width={200} height={150} alt="" className="w-auto h-14"/>
+              <Image src="/logocarousel/armed-forces-covenant.webp" width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/gangmasters-labour.abuse-authority.webp"width={200} height={150} alt="" className="w-auto h-14"/>
+              <Image src="/logocarousel/businessclub.webp"width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/NTWD-accrediation.webp" width={200} height={150} alt="" className="w-auto h-14"/>
+              <Image src="/logocarousel/disability-confident.webp" width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/REC_Logo_BW_.webp" width={200} height={150} alt="" className="w-auto h-14"/>
+              <Image src="/logocarousel/gangmasters.webp" width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/sronger-together-logo_BW.webp" width={200} height={150} alt="" className="w-auto h-14"/>
+              <Image src="/logocarousel/google-review.webp" width={150} height={100} alt="" className=""/>
+            </div>
+            <div className="flex justify-center items-center w-1/5">
+              <Image src="/logocarousel/iso.webp" width={150} height={100} alt="" className=""/>
+            </div>
+            <div className="flex justify-center items-center w-1/5">
+              <Image src="/logocarousel/national-temporary-worker-day.webp" width={150} height={100} alt="" className=""/>
+            </div>
+            <div className="flex justify-center items-center w-1/5">
+              <Image src="/logocarousel/rainbows.webp" width={150} height={100} alt="" className=""/>
+            </div>
+            <div className="flex justify-center items-center w-1/5">
+              <Image src="/logocarousel/stronger-together.webp" width={150} height={100} alt="" className=""/>
+            </div>
+            <div className="flex justify-center items-center w-1/5">
+              <Image src="/logocarousel/three-best-rated.webp" width={150} height={100} alt="" className=""/>
             </div>
           </div>
 
-          <div className="logos-slide inline-flex justify-between w-full">
+          <div className="logos-slide inline-flex justify-between w-[150%] gap-8">
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/Disability_Confident_BW.webp" width={200} height={150} alt="" className="w-auto h-14"/>
+              <Image src="/logocarousel/armed-forces-covenant.webp" width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/gangmasters-labour.abuse-authority.webp"width={200} height={150} alt="" className="w-auto h-14"/>
+              <Image src="/logocarousel/businessclub.webp"width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/NTWD-accrediation.webp" width={200} height={150} alt="" className="w-auto h-14"/>
+              <Image src="/logocarousel/disability-confident.webp" width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/REC_Logo_BW_.webp" width={200} height={150} alt="" className="w-auto h-14"/>
+              <Image src="/logocarousel/gangmasters.webp" width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/sronger-together-logo_BW.webp" width={200} height={150} alt="" className="w-auto h-14"/>
+              <Image src="/logocarousel/google-review.webp" width={150} height={100} alt="" className=""/>
+            </div>
+            <div className="flex justify-center items-center w-1/5">
+              <Image src="/logocarousel/iso.webp" width={150} height={100} alt="" className=""/>
+            </div>
+            <div className="flex justify-center items-center w-1/5">
+              <Image src="/logocarousel/national-temporary-worker-day.webp" width={150} height={100} alt="" className=""/>
+            </div>
+            <div className="flex justify-center items-center w-1/5">
+              <Image src="/logocarousel/rainbows.webp" width={150} height={100} alt="" className=""/>
+            </div>
+            <div className="flex justify-center items-center w-1/5">
+              <Image src="/logocarousel/stronger-together.webp" width={150} height={100} alt="" className=""/>
+            </div>
+            <div className="flex justify-center items-center w-1/5">
+              <Image src="/logocarousel/three-best-rated.webp" width={150} height={100} alt="" className=""/>
             </div>
           </div>
+
         </div>
       </div>
     </>

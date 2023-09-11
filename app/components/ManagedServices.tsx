@@ -13,7 +13,7 @@ export default function ManagedServices() {
                 <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                     Managed Services
                 </h3>
-                <h2 className="flex flex-wrap gap-3 text-6xl lg:text-6xl font-black tracking-tighter z-10 ">
+                <h2 className="flex flex-wrap gap-3 text-6xl lg:text-6xl font-black tracking-tighter z-10  text-[#312252]">
                     Your success – Our people
                 </h2>
                 <p className='font-medium w-full lg:w-2/3'>
