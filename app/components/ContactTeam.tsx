@@ -2,11 +2,9 @@ import React from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import { PiPaperPlaneTiltBold } from 'react-icons/pi'
 
-export default function ContactForm() {
+export default function ContactTeam() {
   return (
     <>
-    <section className='flex justify-center w-full h-auto'>
-        <div className='flex justify-center w-11/12 lg:w-8/12 py-20'>
             <form className='flex flex-col items-center gap-8 w-full'>
                 <input required placeholder='Name' type='name' className=' rounded-full p-4 text-lg shadow-special w-full'></input>
                 <input required placeholder='Phone number' type='tel' className=' rounded-full p-4 text-lg shadow-special w-full'></input>
@@ -22,8 +20,6 @@ export default function ContactForm() {
                   />
                 </button>
             </form>
-        </div>
-    </section>
     </>
   )
 }

@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { BsFacebook, BsLinkedin, BsInstagram, BsTwitter } from 'react-icons/bs'
 import { FaTwitterSquare } from 'react-icons/fa'
-import { TbRosetteNumber1, TbFriends, TbQuestionMark, TbPower, TbListSearch, TbWeight, TbUsers, TbMessages, TbPencil, TbMoodPlus, TbCheckupList, TbBuildingFactory2, TbBookmarks, TbAlertCircle, TbMap2, TbBrandTiktok } from 'react-icons/tb'
+import { TbRosetteNumber1, TbFriends, TbQuestionMark, TbPower, TbListSearch, TbWeight, TbUsers, TbMessages, TbPencil, TbMoodPlus, TbCheckupList, TbBuildingFactory2, TbBookmarks, TbAlertCircle, TbMap2, TbBrandTiktok, TbPhone } from 'react-icons/tb'
 
 export default function Footer() {
   return (
@@ -62,22 +62,26 @@ export default function Footer() {
                 <h3 className="text-[#00afaa] text-xl font-bold">Offices</h3>
                 </div>
                 <ul className="flex flex-col text-white text-sm gap-2">
-                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">Tamworth</li></Link>
-                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">Desford</li></Link>
                     <Link href="/"><li className="hover:text-[#00afaa] transition-all">Leicester HQ</li></Link>
                     <Link href="/"><li className="hover:text-[#00afaa] transition-all">Leicester Branch</li></Link>
+                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">Tamworth</li></Link>
+                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">Desford</li></Link>
                     <Link href="/"><li className="hover:text-[#00afaa] transition-all">Coventry</li></Link>
                     <Link href="/"><li className="hover:text-[#00afaa] transition-all">Bristol</li></Link>
                 </ul>
             </div>
 
-            <div className="flex flex-col justify-between ">
+            <div className="flex flex-col justify-between">
+                <div className="flex flex-col gap-2 pb-8">
                 <Image src="/acceptrec-white-logo.webp" width={200} height={200} alt="white-logo"/>
-                <div className="flex flex-col gap-4">
-                    <div className="flex flex-col py-8">
-                        <h3 className="text-[#00afaa] text-xl font-bold">Partners</h3>
-                        <Link href="https://uk.jooble.org/" target="_black"><Image src="/jooble_logo.webp" width={75} height={75} alt="white-logo"/></Link>
+                    <div className="flex flex-col gap-1">
+                        <TbPhone className="w-6 h-6 text-[#00afaa]"/>
+                        <p className="text-white">0116 218 2133</p>
+                        <p className="text-white">0845 353 3237</p>
                     </div>
+                </div>
+                <div className="flex flex-col gap-4">
+                    
                     <div className="flex flex-nowrap gap-8">
                         <Link href="https://www.facebook.com/acceptrec/" target="_blank"><BsFacebook className="w-6 h-6 text-white hover:text-slate-500 transition-all"/></Link>
                         <Link href="https://www.linkedin.com/company/accept-recruitment/" target="_blank"><BsLinkedin className="w-6 h-6 text-white hover:text-slate-500 transition-all"/></Link>

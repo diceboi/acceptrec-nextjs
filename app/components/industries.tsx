@@ -53,7 +53,7 @@ export default function Industries() {
                     </div>
                 </div>
                 <div className='absolute flex items-center gap-2 right-16 bottom-8 opacity-0 group-hover:opacity-100 group-hover:right-8 ease-out duration-200'>
-                <Link href="/contact-us" className='w-fit'>
+                <Link href="/industries/warhouse-industrial" className='w-fit'>
                     <button  
                             className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                             >
@@ -76,7 +76,7 @@ export default function Industries() {
                     </div>
                 </div>
                 <div className='absolute flex items-center gap-2 right-16 bottom-8 opacity-0 group-hover:opacity-100 group-hover:right-8 ease-out duration-200'>
-                    <Link href="/contact-us" className='w-fit'>
+                    <Link href="/industries/commercial" className='w-fit'>
                         <button  
                                 className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                                 >
@@ -99,7 +99,7 @@ export default function Industries() {
                     </div>
                 </div>
                 <div className='absolute flex items-center gap-2 right-16 bottom-8 opacity-0 group-hover:opacity-100 group-hover:right-8 ease-out duration-200'>
-                <Link href="/contact-us" className='w-fit'>
+                <Link href="/industries/driving-logistics" className='w-fit'>
                         <button  
                                 className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                                 >
@@ -122,7 +122,7 @@ export default function Industries() {
                     </div>
                 </div>
                 <div className='absolute flex items-center gap-2 right-16 bottom-8 opacity-0 group-hover:opacity-100 group-hover:right-8 ease-out duration-200'>
-                    <Link href="/contact-us" className='w-fit'>
+                    <Link href="/industries/food-production" className='w-fit'>
                         <button  
                                 className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                                 >
@@ -145,7 +145,7 @@ export default function Industries() {
                     </div>
                 </div>
                 <div className='absolute flex items-center gap-2 right-16 bottom-8 opacity-0 group-hover:opacity-100 group-hover:right-8 ease-out duration-200'>
-                    <Link href="/contact-us" className='w-fit'>
+                    <Link href="/industries/managed-services" className='w-fit'>
                         <button  
                                 className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                                 >
@@ -168,7 +168,7 @@ export default function Industries() {
                     </div>
                 </div>
                 <div className='absolute flex items-center gap-2 right-16 bottom-8 opacity-0 group-hover:opacity-100 group-hover:right-8 ease-out duration-200'>
-                    <Link href="/contact-us" className='w-fit'>
+                    <Link href="/industries/technical" className='w-fit'>
                         <button  
                                 className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                                 >
@@ -191,7 +191,7 @@ export default function Industries() {
                     </div>
                 </div>
                 <div className='absolute flex items-center gap-2 right-16 bottom-8 opacity-0 group-hover:opacity-100 group-hover:right-8 ease-out duration-200'>
-                    <Link href="/contact-us" className='w-fit'>
+                    <Link href="/industries/ecommerce" className='w-fit'>
                         <button  
                                 className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                                 >
@@ -214,7 +214,7 @@ export default function Industries() {
                     </div>
                 </div>
                 <div className='absolute flex items-center gap-2 right-16 bottom-8 opacity-0 group-hover:opacity-100 group-hover:right-8 ease-out duration-200'>
-                    <Link href="/contact-us" className='w-fit'>
+                    <Link href="/industries/manufacturing" className='w-fit'>
                         <button  
                                 className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                                 >

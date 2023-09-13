@@ -62,6 +62,7 @@ export default function MainNav() {
             const logo = document.getElementById("acceptrec-logo");
             const submenu1 = document.getElementById("submenu1");
             const submenu2 = document.getElementById("submenu2");
+            const submenu3 = document.getElementById("submenu3");
             const scrollY = window.scrollY;
     
             if (menu) {
@@ -74,6 +75,7 @@ export default function MainNav() {
                     if (menuInner) menuInner.style.height = "55px";
                     if (submenu1) submenu1.style.top = "40px";
                     if (submenu2) submenu2.style.top = "40px";
+                    if (submenu3) submenu3.style.top = "40px";
                 } else {
                     menu.style.height = "96px";
                     menu.style.boxShadow = "0 0 0 0";
@@ -83,6 +85,7 @@ export default function MainNav() {
                     if (menuInner) menuInner.style.height = "96px";
                     if (submenu1) submenu1.style.top = "60px";
                     if (submenu2) submenu2.style.top = "60px";
+                    if (submenu3) submenu3.style.top = "60px";
                 }
             }
         }
@@ -128,7 +131,7 @@ export default function MainNav() {
                     
                     
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/for-employers" className="flex items-center gap-2"><span>For Employers</span></Link><BiChevronDown className='text-2xl'/>
-                            <ul id='submenu1' className='hidden absolute grid-cols-3 grid-rows-3 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 w-[550px] transition-all'>
+                            <ul id='submenu2' className='hidden absolute grid-cols-3 grid-rows-3 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 w-[550px] transition-all'>
                                 <li className='group relative row-span-3 flex w-full rounded-lg text-white text-xl transition-all '>
                                     
                                     <Link href="/for-employers" className=' w-full h-full px-2 py-3 rounded-xl bg-[url("/accepted-job.webp")] bg-center bg-cover bg-no-repeat'>
@@ -146,7 +149,7 @@ export default function MainNav() {
                             </ul>
                         </li>
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/for-employers" className="flex items-center gap-2"><span>For Candidates</span></Link><BiChevronDown className='text-2xl'/>
-                            <ul id='submenu2' className='hidden absolute grid-cols-3 grid-rows-3 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 w-[450px] transition-all'>
+                            <ul id='submenu3' className='hidden absolute grid-cols-3 grid-rows-3 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 w-[450px] transition-all'>
                                 <li className='group relative row-span-3 flex w-full rounded-lg text-white text-xl transition-all '>
                                     
                                     <Link href="/for-candidates" className=' w-full h-full px-2 py-3 rounded-xl bg-[url("/for-candidates.webp")] bg-center bg-cover bg-no-repeat'>

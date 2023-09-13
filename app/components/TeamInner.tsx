@@ -4,24 +4,24 @@ import Image from "next/image"
 import Link from "next/link"
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi"
 
-export default function Team() {
+export default function TeamInner() {
     
     return(
         <>
         <section className="w-full py-20">
             <div className='flex flex-col gap-8 w-11/12 lg:w-8/12 m-auto'>
                 <div className='flex flex-col gap-4 w-11/12 lg:w-8/12 justify-start py-16'>
-                    <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
-                        our employees
-                    </h3>
                     <h2 className='text-6xl lg:text-6xl font-black tracking-tighter text-[#312252]'>
                         Awesome team members
-                    </h2>                    
+                    </h2>
+                    <p>
+                        Here is a team of top-class experts who do what seems impossible every day. From the national candidate attraction campaigns to managing multiple teams in a variety of locations across the UK, these individuals are ready to improve their skills every day.
+                    </p>                    
                 </div>                
             </div>
             <div className='grid lg:grid-cols-3 lg:grid-rows-3 w-11/12 lg:w-8/12 m-auto rounded-3xl'>
 
-            <Link href="/about-us/team/mark-pearce" className="recruitment-tile h-[450px] group flex flex-col cursor-pointer ease-out duration-200">
+                <Link href="/about-us/team/mark-pearce" className="recruitment-tile h-[450px] group flex flex-col cursor-pointer ease-out duration-200">
                     <div className="relative flex flex-col justify-end bg-[url('/Mark-front.webp')] bg-cover bg-center bg-opacity-40 h-full p-4 lg:rounded-tl-3xl ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <div className="flex flex-col">
@@ -148,15 +148,6 @@ export default function Team() {
                 </Link>
                 
             </div>
-            <Link href="/about-us/team" className='flex justify-center w-fit m-auto py-16'>
-                <button  
-                        className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
-                        >
-                        About our team
-                        <FiArrowUpRight className='right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200'
-                        />
-                </button>
-            </Link>
         </section>
         </>
     )

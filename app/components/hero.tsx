@@ -60,7 +60,7 @@ export default function Hero() {
                         </form>
                     </div>
                 </div>
-                <Image src="/herobg.png" width={1280} height={853} alt="happy-team" className="absolute xl:-bottom-[.05em] lg:-bottom-[.5em] md:-bottom-[.65em] -bottom-[.65em] right-1/2 translate-x-1/2 min-w-[1280px] h-auto"/>
+                <Image src="/herobg.png" width={1280} height={853} alt="happy-team" className="absolute -bottom-[1.5em] right-1/2 translate-x-1/2 min-w-[1280px] h-auto"/>
             </section>
             </>
     )
