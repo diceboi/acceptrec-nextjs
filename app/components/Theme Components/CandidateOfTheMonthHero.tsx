@@ -4,7 +4,7 @@ interface CandidateOfTheMonthHeroProps {
     classname: string;
   }
 
-  const CandidateOfTheMonthHeroHero: React.FC<CandidateOfTheMonthHeroProps> = ({ title, subtitle, classname}) => {
+  const CandidateOfTheMonthHero: React.FC<CandidateOfTheMonthHeroProps> = ({ title, subtitle, classname}) => {
     return(
         <>
         <div className={classname}>
@@ -19,4 +19,4 @@ interface CandidateOfTheMonthHeroProps {
     )
 }
 
-export default CandidateOfTheMonthHeroHero;
+export default CandidateOfTheMonthHero;
