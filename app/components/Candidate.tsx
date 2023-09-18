@@ -1,9 +1,11 @@
 import Image from "next/image";
 
 interface CandidateProps {
-    title: string;
-    subtitle: string;
-    classname: string;
+    image: string;
+    alt: string;
+    name: string;
+    date: string;
+    description: string;
   }
 
   const Candidate: React.FC<CandidateProps> = ({ image, alt, name, date, description}) => {
