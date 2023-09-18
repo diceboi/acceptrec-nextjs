@@ -17,23 +17,23 @@ export default function Footer() {
                 <div className="flex flex-col gap-2">
                     <h4 className="text-[#00afaa] text-lg">For candidates</h4>
                     <ul className="grid xl:grid-cols-2 lg:grid-cols-1 gap-2 text-white text-xs">
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbRosetteNumber1 className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Candidate of the month</p></Link>
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbFriends className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all">Refer a friend</p></Link>
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbQuestionMark className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">First Job in the UK</p></Link>
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbPower className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Sign-in / Registration</p></Link>
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbListSearch className="w-5 h-5 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Jobs</p></Link>
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbWeight className="w-5 h-5 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Manual handling</p></Link>
+                        <Link href="/candidate-of-the-month" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbRosetteNumber1 className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Candidate of the month</p></Link>
+                        <Link href="/refer-a-friend" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbFriends className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all">Refer a friend</p></Link>
+                        <Link href="/blog/first-job-in-the-uk" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbQuestionMark className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">First Job in the UK</p></Link>
+                        <Link href="/registration" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbPower className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Sign-in / Registration</p></Link>
+                        <Link href="/jobs" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbListSearch className="w-5 h-5 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Jobs</p></Link>
+                        <Link href="/manual-handling" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbWeight className="w-5 h-5 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Manual handling</p></Link>
                     </ul>
                 </div>
                 <div className="flex flex-col gap-2">
                     <h4 className="text-[#00afaa] text-lg">For clients</h4>
                     <ul className="grid xl:grid-cols-2 lg:grid-cols-1 gap-2 text-white text-xs">
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbUsers className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Shortlisted candidates</p></Link>
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbMessages className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all">Consultancy</p></Link>
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbPencil className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Writing a good job description</p></Link>
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbMoodPlus className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Interview Techniques</p></Link>
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbCheckupList className="w-5 h-5 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Onboarding process</p></Link>
-                        <Link href="/" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbBuildingFactory2 className="w-5 h-5 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Industries</p></Link>
+                        <Link href="/for-employers/shortlisted-candidates" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbUsers className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Shortlisted candidates</p></Link>
+                        <Link href="/consultancy" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbMessages className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all">Consultancy</p></Link>
+                        <Link href="/blog/how-to-write-a-successful-job-description" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbPencil className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Writing a good job description</p></Link>
+                        <Link href="/blog/interview-techniques" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbMoodPlus className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Interview Techniques</p></Link>
+                        <Link href="/onboarding-process" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbCheckupList className="w-5 h-5 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Onboarding process</p></Link>
+                        <Link href="/industries" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbBuildingFactory2 className="w-5 h-5 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Industries</p></Link>
                     </ul>
                 </div>
             </div>
@@ -44,15 +44,15 @@ export default function Footer() {
                 <h3 className="text-[#00afaa] text-xl font-bold">Important links</h3>
                 </div>
                 <ul className="flex flex-col text-white text-sm gap-2">
-                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">Privacy Policy</li></Link>
-                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">GDPR</li></Link>
-                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">COVID-19</li></Link>
-                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">Modern Slavery Statement</li></Link>
-                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">Hidden Labour Exploitation</li></Link>
-                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">New Immigration Law</li></Link>
-                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">Pay query</li></Link>
-                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">Work for us</li></Link>
-                    <Link href="/"><li className="hover:text-[#00afaa] transition-all">Complaints Policy</li></Link>
+                    <Link href="/privacy-policy"><li className="hover:text-[#00afaa] transition-all">Privacy Policy</li></Link>
+                    <Link href="/gdpr"><li className="hover:text-[#00afaa] transition-all">GDPR</li></Link>
+                    <Link href="/covid-19"><li className="hover:text-[#00afaa] transition-all">COVID-19</li></Link>
+                    <Link href="/modern-slavery-statement"><li className="hover:text-[#00afaa] transition-all">Modern Slavery Statement</li></Link>
+                    <Link href="/hidden-labour-exploitation"><li className="hover:text-[#00afaa] transition-all">Hidden Labour Exploitation</li></Link>
+                    <Link href="/new-immigration-law"><li className="hover:text-[#00afaa] transition-all">New Immigration Law</li></Link>
+                    <Link href="/pay-query"><li className="hover:text-[#00afaa] transition-all">Pay query</li></Link>
+                    <Link href="/career"><li className="hover:text-[#00afaa] transition-all">Work for us</li></Link>
+                    <Link href="/complains-policy"><li className="hover:text-[#00afaa] transition-all">Complaints Policy</li></Link>
                 </ul>
             </div>            
 

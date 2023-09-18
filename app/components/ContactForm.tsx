@@ -1,8 +1,20 @@
+"use client"
+
 import React from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import { PiPaperPlaneTiltBold } from 'react-icons/pi'
 
+type Inputs = {
+  name: string,
+  phone: string,
+  email: string,
+  location: string,
+  message: string,
+};
+
+
 export default function ContactForm() {
+
   return (
     <>
     <section className='flex justify-center w-full h-auto'>
