@@ -6,9 +6,10 @@ interface CandidateProps {
     name: string;
     date: string;
     description: string;
+    classname: string;
   }
 
-  const Candidate: React.FC<CandidateProps> = ({ image, alt, name, date, description}) => {
+  const Candidate: React.FC<CandidateProps> = ({ image, alt, name, date, description, classname}) => {
     return(
         <>
         <div className="flex flex-col gap-4 justify-start items-start w-full rounded-3xl p-4 shadow-special">
