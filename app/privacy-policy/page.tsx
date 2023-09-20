@@ -1,10 +1,10 @@
 import PrivacyPolicy from "../components/PrivacyPolicy";
-import PrivacyPolicyHero from "../components/Theme Components/PrivacyPolicyHero";
+import SecondaryHero from "../components/Theme Components/SecondaryPageHero";
 
 export default function PrivacyPolicyPage() {
   return (
     <>
-    <PrivacyPolicyHero title={"Privacy Policy"} subtitle={""} classname={"bg-gradient-to-br from-white to-neutral-100 pb-10"}/>
+    <SecondaryHero title={"Privacy Policy"} classname={"bg-gradient-to-br from-white to-neutral-100 pb-10"}/>
     <PrivacyPolicy />
     </>
   )

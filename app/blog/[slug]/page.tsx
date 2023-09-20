@@ -114,12 +114,12 @@ export default function Blog() {
         <>
         <BlogPostHero featuredimage={post.node.featuredImage.node.link} title={post.node.title} authorimage={post.node.author.node.avatar.url} authorname={post.node.author.node.name} postdate={formattedDate} category={post.node.categories.nodes[0].name} slug={""}/>
         <div className='flex lg:flex-row flex-col lg:gap-20 w-full lg:w-8/12 m-auto'>
-          <article className='flex text-lg flex-col gap-20 w-full lg:w-2/3 px-4 lg:px-0 py-20'>
+          <article className='flex text-lg flex-col gap-8 w-full lg:w-2/3 px-4 lg:px-0 py-8 lg:py-20'>
           <h1 className="text-4xl lg:text-6xl font-bold tracking-tighter z-10">{post.node.title}</h1>
           {post.node.blocks.map((block, index) => (
             <div
               key={index}
-              className=""
+              className="flex flex-col gap-2"
               dangerouslySetInnerHTML={{ __html: block.saveContent }}
             />
           ))}

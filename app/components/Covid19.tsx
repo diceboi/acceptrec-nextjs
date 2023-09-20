@@ -3,9 +3,9 @@
 import { gql } from "@apollo/client";
 import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
 
-const GET_PRIVACY_POLICY = gql`
-query getPrivacyPolicy {
-  pages(where: {name: "Privacy Policy"}) {
+const GET_COVID19 = gql`
+query getCovid19 {
+  pages(where: {name: "Covid 19"}) {
     edges {
       node {
         slug
@@ -28,11 +28,11 @@ interface Pages {
     saveContent: string;
   }
 
-  export default function PrivacyPolicy() {
-    const { data } = useSuspenseQuery(GET_PRIVACY_POLICY); // Execute the query
-
-    const pageData = (data as { pages?: { edges: { node: Pages }[] } })?.pages?.edges[0]?.node;
+  export default function Covid19() {
+    const { data } = useSuspenseQuery(GET_COVID19);
   
+    const pageData = (data as { pages?: { edges: { node: Pages }[] } })?.pages?.edges[0]?.node;
+
     if (!pageData) {
       return <div>No data available</div>;
     }

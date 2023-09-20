@@ -1,12 +1,11 @@
 "use client"
 
-interface PrivacyPolicyHeroProps {
+interface Covid19HeroProps {
     title: string;
-    subtitle: string;
     classname: string;
   }
 
-  const PrivacyPolicyHero: React.FC<PrivacyPolicyHeroProps> = ({ title, classname}) => {
+  const Covid19Hero: React.FC<Covid19HeroProps> = ({ title, classname}) => {
     return(
         <>
         
@@ -21,4 +20,4 @@ interface PrivacyPolicyHeroProps {
     )
 }
 
-export default PrivacyPolicyHero;
+export default Covid19Hero;

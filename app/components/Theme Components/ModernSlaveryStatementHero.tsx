@@ -1,12 +1,11 @@
 "use client"
 
-interface PrivacyPolicyHeroProps {
+interface ModernSlaveryStatementProps {
     title: string;
-    subtitle: string;
     classname: string;
   }
 
-  const PrivacyPolicyHero: React.FC<PrivacyPolicyHeroProps> = ({ title, classname}) => {
+  const ModernSlaveryStatementHero: React.FC<ModernSlaveryStatementProps> = ({ title, classname}) => {
     return(
         <>
         
@@ -21,4 +20,4 @@ interface PrivacyPolicyHeroProps {
     )
 }
 
-export default PrivacyPolicyHero;
+export default ModernSlaveryStatementHero;
