@@ -5,7 +5,7 @@ import { FiArrowDown } from "react-icons/fi";
 
 interface CareerJobProps {
     name: string;
-    description: string;
+    description: React.ReactNode;
     key: string;
   }
 
