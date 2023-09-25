@@ -16,10 +16,10 @@ export default function ManagedServicesPage() {
         </section>
         <ManagedServices />
         <section className='flex justify-center items-center w-full'>
-            <div className='flex gap-20 w-11/12 lg:w-8/12 py-20'>
-                <div className="w-1/2 bg-[url('/commercial-inner.webp')] bg-cover bg-center bg-no-repeat rounded-3xl">
+            <div className='flex flex-col lg:flex-row gap-8 lg:gap-20 w-11/12 lg:w-8/12 py-20'>
+                <div className="lg:w-1/2 min-h-[50vh] bg-[url('/commercial-inner.webp')] bg-cover bg-center bg-no-repeat rounded-3xl">
                 </div>
-                <div className="flex flex-col w-1/2 gap-8">
+                <div className="flex flex-col lg:w-1/2 gap-8">
                 <h3 className='text-5xl font-black tracking-tighter'>Your ultimate Managed Services solution</h3>
                 <p>At Accept, we provide a range of workforce solutions which employers in any sector can benefit from. Working with senior level Logistics, Warehousing and Distribution professionals within an organisation, we are able to design and implement highly customisable solutions which optimise the performance and productivity of its workforce.
 
@@ -31,7 +31,7 @@ export default function ManagedServicesPage() {
         </section>
 
         <section className="flex flex-col lg:flex-row w-11/12 lg:w-8/12 gap-8 py-20 m-auto">
-                <div className="flex flex-col gap-4 w-full lg:w-1/2 justify-start bg-[url('/helping-hands.webp')] bg-contain bg-left bg-no-repeat">
+                <div className="flex flex-col gap-4 w-full lg:w-1/2 justify-start lg:bg-[url('/helping-hands.webp')] bg-contain bg-left bg-no-repeat">
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         Cost saving
                     </h3>

@@ -5,7 +5,7 @@ import { ApolloNextAppProvider, NextSSRInMemoryCache, NextSSRApolloClient, SSRMu
 
 function makeClient() {
   const httpLink = new HttpLink({
-      uri: "https://fakultatief.de/graphql",
+      uri: "https://cms.arpusz.hu/graphql",
   });
 
   return new NextSSRApolloClient({

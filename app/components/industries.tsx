@@ -1,8 +1,7 @@
 "use client"
 
-import { useState, useEffect, useRef } from 'react';
-import { FiArrowRight, FiArrowUpRight } from 'react-icons/fi'
-import { BiSearchAlt } from 'react-icons/bi';
+import { useState } from 'react';
+import { FiArrowUpRight } from 'react-icons/fi'
 import Link from 'next/link';
 
 export default function Industries() {
@@ -30,7 +29,7 @@ export default function Industries() {
                         Specialising within niche industries, we use our expertise and systems to source the staff you need. We provide both temporary staffing and permanent solutions.
                     </p>                    
                 </div>
-                <div className='flex flex-wrap justify-start items-end w-full gap-4 pb-8'>
+                <div className='flex flex-wrap justify-start items-end w-full gap-1 lg:gap-4 pb-8'>
                     <button onClick={() => handleButtonClick('warehouse')} onMouseEnter={() => setActiveButton('warehouse')} onMouseLeave={() => setActiveButton(selectedDiv)} className={`font-bold w-auto p-2 px-2 border border-neutral-300 hover:shadow-special hover:bg-neutral-200 hover:border-neutral-200 focus:bg-neutral-200 focus:border-neutral-200 ease-in-out duration-200 rounded-full ${activeButton === 'warehouse' ? 'bg-neutral-200 border-neutral-200' : ''}`}>Warehousing & Industrial</button>
                     <button onClick={() => handleButtonClick('commercial')} className=' font-bold w-auto p-2 px-2 border border-neutral-300 hover:shadow-special hover:bg-neutral-200 hover:border-neutral-200 focus:bg-neutral-200 focus:border-neutral-200 active:bg-neutral-200 active:border-neutral-200 ease-in-out duration-200 rounded-full'>Commerical</button>
                     <button onClick={() => handleButtonClick('driving')} className=' font-bold w-auto p-2 px-2 border border-neutral-300 hover:shadow-special hover:bg-neutral-200 hover:border-neutral-200 focus:bg-neutral-200 focus:border-neutral-200 active:bg-neutral-200 active:border-neutral-200 ease-in-out duration-200 rounded-full'>Driving & Logistics</button>
@@ -43,10 +42,10 @@ export default function Industries() {
             </div>
             <div id='warhouse' className={`group relative flex bg-[url('/warhouse-industries.webp')] bg-cover bg-center gap-8 w-11/12 lg:w-8/12 h-[60vh] m-auto p-8 rounded-3xl ease-in-out duration-200 cursor-pointer ${selectedDiv === 'warehouse' ? 'visible' : 'hidden'}`}>
                 <div className='absolute bottom-0 left-0 h-full w-full bg-gradient-to-r from-[#312252c9] to-[#00afaa00] opacity-100 ease-out duration-200 rounded-3xl'></div>
-                <div className='flex flex-col justify-between h-full'>
+                <div className='flex flex-col justify-start lg:justify-between gap-4 h-full'>
                     <div className='flex flex-col gap-4'>
                         <h3 className='text-4xl font-black tracking-tight text-white z-10'>Warehousing & Industrial</h3>
-                        <p className="text-sm lg:text-lg font-medium tracking-widest uppercase text-white z-10 w-1/2">Picking, Packing, Operatives & FLT</p>
+                        <p className="text-sm lg:text-lg font-medium tracking-widest uppercase text-white z-10 lg:w-1/2">Picking, Packing, Operatives & FLT</p>
                     </div>
                     <div className='flex flex-col'>
                         <p className="text-neutral-200 text-md font-medium z-10 lg:w-1/2">We understand that recruiting a temporary warehouse workforce might be one of the most complex parts of your business.</p>
