@@ -1,6 +1,7 @@
 "use client"
 
 import ContactMarkPearce from "@/app/components/ContactTeam"
+import TeamInside from "@/app/components/TeamInside"
 import Image from "next/image"
 
 export default function MonikaLoj() {
@@ -36,6 +37,7 @@ export default function MonikaLoj() {
 
                 </div>
             </div>
+            <TeamInside />
         </section>
         </>
     )
