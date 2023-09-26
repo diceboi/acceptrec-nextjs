@@ -33,5 +33,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-next-swc.win32-x64-msvc.node
+.node
