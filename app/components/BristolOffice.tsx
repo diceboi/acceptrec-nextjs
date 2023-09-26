@@ -41,7 +41,7 @@ export default function BristolOffice() {
                     Living in Bristol and surrounding area
                 </h3>
                 <p className='lg:text-lg'>
-                    Bristol is a great city for anyone looking for a place to reside. There are plenty of job opportunities, and the cost of living is relatively low. Bristol has a lot to offer, from its vibrant music scene to its beautiful parks and waterways. Whether you're looking for excitement or relaxation, Bristol is sure to deliver. So if you're thinking about making a move, Bristol should definitely be at the top of your list!
+                    Bristol is a great city for anyone looking for a place to reside. There are plenty of job opportunities, and the cost of living is relatively low. Bristol has a lot to offer, from its vibrant music scene to its beautiful parks and waterways. Whether you&apos;re looking for excitement or relaxation, Bristol is sure to deliver. So if you&apos;re thinking about making a move, Bristol should definitely be at the top of your list!
                 </p>
             </div>
             <div className='flex flex-col gap-8 py-8'>
@@ -49,7 +49,7 @@ export default function BristolOffice() {
                     Jobs in Bristol
                 </h3>
                 <p className='lg:text-lg'>
-                    There are plenty of job opportunities available, making it perfect for anyone looking for a new career. Whether you're looking for something in the tech industry or you're interested in administration, there are definitely jobs out there that will suit your needs. Plus, with its vibrant culture and friendly atmosphere, Bristol is a great place to settle down and start your career. Keep an eye on the job market in Bristol; you won't be disappointed!
+                    There are plenty of job opportunities available, making it perfect for anyone looking for a new career. Whether you&apos;re looking for something in the tech industry or you&apos;re interested in administration, there are definitely jobs out there that will suit your needs. Plus, with its vibrant culture and friendly atmosphere, Bristol is a great place to settle down and start your career. Keep an eye on the job market in Bristol; you won&apos;t be disappointed!
                 </p>
             </div>
         </div>
