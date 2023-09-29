@@ -1,6 +1,6 @@
 "use client"
 
-import ContactMarkPearce from "@/app/components/ContactTeam"
+import ContactTeam from "@/app/components/ContactTeam"
 import TeamInside from "@/app/components/TeamInside"
 import Image from "next/image"
 
@@ -33,7 +33,7 @@ export default function MonikaLoj() {
                 </div>
                 <div className="flex flex-col w-11/12 lg:w-1/2 lg:p-16 gap-8 pt-28">
                     <h2 className="text-4xl font-black tracking-tighter text-[#312252]">Contact Monika directly</h2>
-                    <ContactMarkPearce />
+                    <ContactTeam contactname={"monika"} />
 
                 </div>
             </div>

@@ -1,11 +1,8 @@
 "use client"
 
-export const dynamic = "force-dynamic";
-
 import Link from "next/link";
 
 import {PiMapPinLineBold} from "react-icons/pi"
-import {PiPenNibBold} from "react-icons/pi"
 import {RiMoneyPoundCircleLine} from "react-icons/ri"
 import { FiArrowRight } from "react-icons/fi"
 
@@ -21,21 +18,6 @@ interface JobData {
 }
 
 export default function JobTile({ jobData }: { jobData: JobData }) {
-
-    const formatDateDifference = (dateString: string | number | Date) => {
-      const postDate = new Date(dateString);
-
-      // Ensure proper parsing of the date string format
-      const dateParts = postDate.toString().split(' ');
-      const formattedDateString = `${dateParts[1]} ${dateParts[2]}, ${dateParts[3]}`;
-      const parsedDate = new Date(formattedDateString);
-
-      const currentDate = new Date();
-      const timeDifference = currentDate.getTime() - parsedDate.getTime();
-      const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
-
-      return `${daysDifference} days ago`;
-    };
 
     const extractFirstSentence = (description: string) => {
       if (description.length <= 150) {
@@ -77,7 +59,7 @@ export default function JobTile({ jobData }: { jobData: JobData }) {
                 </div>
                 <div className="flex items-center gap-1">
                     <p>Posted: </p>
-                    <h5 className="font-bold text-[#312252]">{formatDateDifference(new Date(jobData.date[0]))}</h5>
+                    <h5 className="font-bold text-[#312252]">{jobData.date}</h5>
                 </div>                 
             </div>
         </div>

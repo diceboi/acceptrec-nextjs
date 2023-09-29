@@ -15,6 +15,7 @@ export default function MainNav() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [submenu1Open, setSubmenu1Open] = useState(false);
     const [submenu2Open, setSubmenu2Open] = useState(false);
+    const [submenu3Open, setSubmenu3Open] = useState(false);
     const mobileMenuRef = useRef(null);
 
     const closeMobileMenu = () => {
@@ -53,6 +54,10 @@ export default function MainNav() {
 
     const toggleSubmenu2 = () => {
         setSubmenu2Open(!submenu2Open);
+    };
+
+    const toggleSubmenu3 = () => {
+        setSubmenu3Open(!submenu3Open);
     };
 
     useEffect(() => {
@@ -102,7 +107,7 @@ export default function MainNav() {
             <div className='flex justify-between items-center gap-8 w-full min-[1919px]:w-8/12'>
                 <div id="logo" className="flex shrink-0 items-center">
                     <Link href="/">
-                        <Image src="/Accept-Stacked-Logo-with-Strapline-RGB300.webp" id='acceptrec-logo' alt="logo" width={200} height={150} className=" w-[200px] ease-in-out duration-200" />
+                        <Image src="/Accept-Stacked-Logo-with-Strapline-RGB300.webp" id='acceptrec-logo' alt="logo" width={200} height={150} priority className="w-[200px] h-auto ease-in-out duration-200" />
                     </Link>
                 </div>
                 
@@ -190,14 +195,12 @@ export default function MainNav() {
                 <menu className=' flex justify-center items-center gap-4'>
                     <button onClick={toggleMobileMenu}><TbMenu2 className={`h-8 w-auto cursor-pointe ${mobileMenuOpen ? ' hidden' : ''}`}/><MdClose className={`h-8 w-auto cursor-pointe ${mobileMenuOpen ? '' : ' hidden'}`}/></button>
                     <ul className={`menu-mobile absolute top-[64px] right-0 grid grid-cols-1 justify-start items-center w-screen sm:w-96 bg-white shadow-special${mobileMenuOpen ? ' active' : ''}`}>
+                        <div className={`absolute w-full h-full bg-[#312252] opacity-80 ${submenu1Open ? '' : ' hidden'} `}></div>
                         <li className='flex justify-between border-t border-neutral-300'>
                             <Link href="/jobs" className='w-full p-2 font-black text-xl'>Jobs</Link>
                         </li>
                         <li className='flex justify-between border-t border-neutral-300'>
                             <Link href="/about-us" className='w-full p-2 font-black text-xl'>About Us</Link>
-                        </li>
-                        <li className='flex justify-between border-t border-neutral-300'>
-                            <Link href="/for-employers" className='w-full p-2 font-black text-xl'>For Employers</Link>
                             <div onClick={toggleSubmenu1} className='flex justify-center items-center border-l border-neutral-300 p-1 w-14 cursor-pointer'>
                                 <TbChevronRight className="w-6 h-6 " />
                             </div>
@@ -207,28 +210,15 @@ export default function MainNav() {
                                     <TbChevronLeft className="w-6 h-6"/>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/jobs" className='w-full p-2 font-black text-xl'>Shortlisted candidates</Link>
+                                    <Link href="/about-us/team" className='w-full p-2 font-black text-xl'>Meet the team</Link>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/about-us" className='w-full p-2 font-black text-xl'>Consultancy</Link>
-                                </li>
-                                <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/for-employers" className='w-full p-2 font-black text-xl'>Writing a good job description</Link>
-                                </li>
-                                <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/for-candidates" className='w-full p-2 font-black text-xl'>Interview Techniques</Link>
-                                </li>
-                                <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/blog" className='w-full p-2 font-black text-xl'>Onboarding process</Link>
-                                </li>
-                                <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/jobs" className='w-full p-2 font-black text-xl'>Industries</Link>
+                                    <Link href="/blog/national-temporary-worker-day" className='w-full p-2 font-black text-xl'>National Temporary Worker Day</Link>
                                 </li>
                             </ul>
-
                         </li>
                         <li className='flex justify-between border-t border-neutral-300'>
-                            <Link href="/for-candidates" className='w-full p-2 font-black text-xl'>For Candidates</Link>
+                            <Link href="/for-employers" className='w-full p-2 font-black text-xl'>For Employers</Link>
                             <div onClick={toggleSubmenu2} className='flex justify-center items-center border-l border-neutral-300 p-1 w-14 cursor-pointer'>
                                 <TbChevronRight className="w-6 h-6 " />
                             </div>
@@ -238,22 +228,53 @@ export default function MainNav() {
                                     <TbChevronLeft className="w-6 h-6"/>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/jobs" className='w-full p-2 font-black text-xl'>Candidate of the month</Link>
+                                    <Link href="/for-employers/shortlisted-candidates" className='w-full p-2 font-black text-xl'>Shortlisted candidates</Link>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/about-us" className='w-full p-2 font-black text-xl'>Refer a friend</Link>
+                                    <Link href="/about-us" className='w-full p-2 font-black text-xl'>Consultancy</Link>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/for-employers" className='w-full p-2 font-black text-xl'>First Job in the UK</Link>
+                                    <Link href="/blog/how-to-write-a-successful-job-description" className='w-full p-2 font-black text-xl'>Writing a good job description</Link>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/for-candidates" className='w-full p-2 font-black text-xl'>Sign-in / Registration</Link>
+                                    <Link href="/blog/interview-techniques" className='w-full p-2 font-black text-xl'>Interview Techniques</Link>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/blog" className='w-full p-2 font-black text-xl'>Jobs</Link>
+                                    <Link href="/onboarding-process" className='w-full p-2 font-black text-xl'>Onboarding process</Link>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/jobs" className='w-full p-2 font-black text-xl'>Manual handling</Link>
+                                    <Link href="/industries" className='w-full p-2 font-black text-xl'>Industries</Link>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li className='flex justify-between border-t border-neutral-300'>
+                            <Link href="/for-candidates" className='w-full p-2 font-black text-xl'>For Candidates</Link>
+                            <div onClick={toggleSubmenu3} className='flex justify-center items-center border-l border-neutral-300 p-1 w-14 cursor-pointer'>
+                                <TbChevronRight className="w-6 h-6 " />
+                            </div>
+
+                            <ul className={`mobilesubmenu absolute top-0 right-0 grid grid-cols-1 justify-start items-center w-screen sm:w-96 bg-white shadow-special${submenu3Open ? ' active' : ''}`}>
+                                <li onClick={toggleSubmenu3} className='flex justify-between items-center border-t border-neutral-300 h-[45px] p-2 cursor-pointer'>
+                                    <TbChevronLeft className="w-6 h-6"/>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/candidate-of-the-month" className='w-full p-2 font-black text-xl'>Candidate of the month</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/refer-a-friend" className='w-full p-2 font-black text-xl'>Refer a friend</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/blog/first-job-in-the-uk" className='w-full p-2 font-black text-xl'>First Job in the UK</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/registration" className='w-full p-2 font-black text-xl'>Sign-in / Registration</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/jobs" className='w-full p-2 font-black text-xl'>Jobs</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/manual-handling" className='w-full p-2 font-black text-xl'>Manual handling</Link>
                                 </li>
                             </ul>
 
@@ -262,10 +283,10 @@ export default function MainNav() {
                             <Link href="/blog" className='w-full p-2 font-black text-xl'>Blog</Link>
                         </li>
                         <li className='flex justify-between border-t border-neutral-300'>
-                            <Link href="/jobs" className='w-full p-2 font-black text-xl'>Contact Us</Link>
+                            <Link href="/contact-us" className='w-full p-2 font-black text-xl'>Contact Us</Link>
                         </li>
                         <li className='flex justify-between bg-[#312252]'>
-                            <Link href="/jobs" className='w-full p-2 font-black text-xl text-white'>Sign Up / Register</Link>
+                            <Link href="/registration" className='w-full p-2 font-black text-xl text-white'>Sign Up / Register</Link>
                         </li>
                     </ul>
                 </menu>

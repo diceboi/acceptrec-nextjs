@@ -2,82 +2,138 @@
 
 import React, {useEffect, useState} from "react";
 import {useRouter, useSearchParams} from "next/navigation";
+import { IoIosClose } from 'react-icons/io'
 
 interface JobFilterProps {
-  uniqueCategories: string[];
-  states: string[];
-  jobTypes: string[];
-  contractTypes: string[];
+  uniqueCategories: any;
+  states: any;
+  jobTypes: any;
+  contractTypes: any;
+  jobsData: any;
 }
 
 interface JobTypeMapping {
+  key: any;
+  fulltime: string;
+  parttime: string;
   [key: string]: string;
 }
 
 interface ContractTypeMapping {
+  key: any;
+  temp: string;
+  temp2perm: string;
+  perm: string;
   [key: string]: string;
 }
 
-const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobTypes, contractTypes }) => {
+const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobTypes, contractTypes, jobsData }) => {
+
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string }>({});
 
   const jobTypeMapping: JobTypeMapping = {
     fulltime: "Full Time",
     parttime: "Part Time",
+    key: "",
   };
   
   const contractTypeMapping: ContractTypeMapping = {
     temp: "Temporary",
     temp2perm: "Temporary (going to be permanent)",
     perm: "Permanent",
+    key: "",
   };
 
+  const [selectedRegion, setSelectedRegion] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(""); // State for selected category
   const [selectedJobType, setSelectedJobType] = useState(""); // State for selected job type
   const [selectedContractType, setSelectedContractType] = useState(""); // State for selected contract type
 
-  const jobTypesDisplay = jobTypes.map(type => jobTypeMapping[type] || type);
-  const contractTypesDisplay = contractTypes.map(contracttype => contractTypeMapping[contracttype] || contracttype);
-
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const [filter, setFilter] = useState("");
+  const jobTypesDisplay = jobTypes.map((type: string | number) => jobTypeMapping[type] || type);
+  const contractTypesDisplay = contractTypes.map((contracttype: string | number) => contractTypeMapping[contracttype] || contracttype);
 
   useEffect(() => {
-    const queryParams = [];
+    const regionQuery = searchParams.get('region');
+    const categoryQuery = searchParams.get('category');
+    const typeQuery = searchParams.get('type');
+    const contracttypeQuery = searchParams.get('contracttype');
 
-    if (filter) {
-      queryParams.push(`region=${filter}`);
+    // Update the state with the URL parameters
+    setSelectedRegion(regionQuery || '');
+    setSelectedCategory(categoryQuery || '');
+    setSelectedJobType(typeQuery || '');
+    setSelectedContractType(contracttypeQuery || '');
+  }, [searchParams])
+
+  const handleRegionChange = (event: { target: { value: any; }; }) => {
+    const regionValue = event.target.value;
+    setSelectedRegion(regionValue);
+    updateUrlParams({ region: regionValue });
+    setSelectedFilters({ ...selectedFilters, region: regionValue });
+  };
+
+  const handleCategoryChange = (event: { target: { value: any; }; }) => {
+    const categoryValue = event.target.value;
+    setSelectedCategory(categoryValue);
+    updateUrlParams({ category: categoryValue });
+    setSelectedFilters({ ...selectedFilters, category: categoryValue });
+
+  };
+
+  const handleJobTypeChange = (event: { target: { value: any; }; }) => {
+    const jobTypeValue = event.target.value;
+    setSelectedJobType(jobTypeValue);
+    updateUrlParams({ type: jobTypeValue });
+    setSelectedFilters({ ...selectedFilters, type: jobTypeValue });
+  };
+
+  const handleContractTypeChange = (event: { target: { value: any; }; }) => {
+    const contractTypeValue = event.target.value;
+    setSelectedContractType(contractTypeValue);
+    updateUrlParams({ contracttype: contractTypeValue });
+    setSelectedFilters({ ...selectedFilters, contracttype: contractTypeValue });
+  };
+
+  const handleFilterRemove = (filterName: string) => {
+    // Remove the filter from selectedFilters
+    const { [filterName]: removedFilter, ...restFilters } = selectedFilters;
+    setSelectedFilters(restFilters);
+  
+    // Update the URL and remove the filter from the query parameter
+    updateUrlParams({ [filterName]: null });
+  };
+
+  
+
+  const updateUrlParams = (newParams: { [x: string]: any; region?: any; category?: any; type?: any; contracttype?: any; }) => {
+    const currentParams = new URLSearchParams(window.location.search);
+  
+    for (const key in newParams) {
+      if (newParams[key]) {
+        currentParams.set(key, newParams[key]);
+      } else {
+        currentParams.delete(key);
+      }
     }
-
-    // Modify the following sections to include selected values in queryParams
-    if (selectedCategory) {
-      queryParams.push(`category=${selectedCategory}`);
-    }
-
-    if (selectedJobType) {
-      queryParams.push(`type=${selectedJobType}`);
-    }
-
-    if (selectedContractType) {
-      queryParams.push(`contracttype=${selectedContractType}`);
-    }
-
-    // Combine queryParams to form the final URL
-    const query = queryParams.join("&");
-    const url = query ? `/jobs?${query}` : "/jobs";
-
-    router.push(url);
-  }, [filter, selectedCategory, selectedJobType, selectedContractType, router]);
+  
+    const newSearch = currentParams.toString();
+    const newUrl = `${window.location.pathname}${newSearch ? `?${newSearch}` : ''}`;
+  
+    router.push(newUrl);
+  };
 
   return (
     <>  
-      <div id="jobfilter" className="flex flex-wrap lg:flex-nowrap gap-4 w-11/12 lg:w-8/12 m-auto mt-16 lg:-mt-16">
+      <div id="jobfilter" className="flex flex-wrap lg:flex-nowrap gap-4 w-11/12 lg:w-8/12 m-auto mt-16 lg:-mt-16 ">
+        
           <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
               <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Region</label>
-              <select onChange={(event) => setFilter(event.target.value)} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer ">
+              <select onChange={handleRegionChange} value={selectedRegion} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
                 {
-                  states.map((state) => (
-                    <option key={state} value={state}>{state}</option>                       
+                  states.map((state: any) => (
+                    <option key={state} value={state} className="font-bold">{state}</option>                       
                   ))
                 }
                 
@@ -86,10 +142,10 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
 
           <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
               <label htmlFor="job-category" className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Category</label>
-              <select onChange={(event) => setSelectedCategory(event.target.value)} value={selectedCategory} id="job-category" className="p-4 shadow-special rounded-full  hover:bg-neutral-50 cursor-pointer">
+              <select onChange={handleCategoryChange} value={selectedCategory} id="job-category" className="p-4 shadow-special rounded-full  hover:bg-neutral-50 cursor-pointer font-bold">
                 {
-                  uniqueCategories.map((category) => (
-                    <option key={category} value={category}>{category}</option>                       
+                  uniqueCategories.map((category: any) => (
+                    <option key={category} value={category} className="font-bold">{category}</option>                       
                   ))
                 }                            
               </select>
@@ -97,9 +153,9 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
 
           <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
               <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Type</label>
-              <select onChange={(event) => setSelectedJobType(event.target.value)} value={selectedJobType} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer ">
-                {jobTypes.map((jobtype, index) => (
-                <option key={jobtype} value={jobtype}>
+              <select onChange={handleJobTypeChange} value={selectedJobType} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
+                {jobTypes.map((jobtype: any, index: string | number) => (
+                <option key={jobtype} value={jobtype} className="font-bold">
                   {jobTypesDisplay[index]}
                 </option>
                 ))}                 
@@ -108,15 +164,28 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
 
           <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
               <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Contract type</label>
-              <select onChange={(event) => setSelectedContractType(event.target.value)} value={selectedContractType} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer ">
-                {contractTypes.map((contracttype, index) => (
-                <option key={contracttype} value={contracttype}>
+              <select onChange={handleContractTypeChange} value={selectedContractType} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
+                {contractTypes.map((contracttype: any, index: string | number) => (
+                <option key={contracttype} value={contracttype} className="font-bold">
                   {contractTypesDisplay[index]}
                 </option>
                 ))} 
               </select>
-          </div>          
+          </div>        
       </div>
+      <div className="flex flex-wrap gap-4 w-11/12 lg:w-8/12 m-auto mt-4">
+            {Object.entries(selectedFilters).map(([filterName, filterValue]) => (
+              <div className="flex flex-nowrap gap-4 px-2 py-1 bg-[#312252] text-white rounded-full max-h-min" key={filterName}>
+                {filterValue}
+                <button
+                  className="filter-remove"
+                  onClick={() => handleFilterRemove(filterName)}
+                >
+                  <IoIosClose />
+                </button>
+              </div>
+            ))}
+          </div> 
     </>
   );
 };
