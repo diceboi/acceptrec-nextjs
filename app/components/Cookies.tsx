@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CookieModal from '../components/CookieModal';
 
 export default function Cookies() {
@@ -15,12 +15,17 @@ export default function Cookies() {
     setIsCookieModalOpen(false);
   };
 
-  const isCookieAccepted = document.cookie.includes('cookieConsent=accepted');
+  useEffect(() => {
+    // Check for the 'cookieConsent' cookie on the client side
+    const isCookieAccepted = document.cookie.includes('cookieConsent=accepted');
+    if (isCookieAccepted) {
+      setIsCookieModalOpen(false);
+    }
+  }, []); // Empty dependency array ensures this code runs once on the client side
 
   return (
     <div>
-    {isCookieAccepted ? null : <CookieModal isOpen={isCookieModalOpen} onRequestClose={handleAcceptCookie}/>}
-    
+      {isCookieModalOpen ? <CookieModal isOpen={isCookieModalOpen} onRequestClose={handleAcceptCookie} /> : null}
     </div>
   );
 }
