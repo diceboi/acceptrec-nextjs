@@ -3,7 +3,7 @@ import { TbPhone } from 'react-icons/tb'
 import LeicesterHQMap from './LeicesterHQMap'
 import ContactForm from './ContactForm'
 
-export default function CoventryOffice() {
+export default function LeicesterHqOffice() {
   return (
     <>
     <section className='w-full py-20'>
