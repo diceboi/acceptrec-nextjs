@@ -3,6 +3,8 @@ import { Raleway } from 'next/font/google'
 import MainNav from './components/mainnav'
 import { ApolloWrapper } from './lib/apollo-wrapper'
 import Footer from './components/footer'
+import MainCTA from './components/MainCTA'
+import Cookies from './components/Cookies'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -20,10 +22,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
       </head>
-      <body className={`overflow-x-hidden ${raleway.className}`}>
+      <body className={raleway.className} id='__next'>
           <ApolloWrapper>
+            <Cookies />
             <MainNav/>
             {children}
+            <MainCTA/>
             <Footer/>
           </ApolloWrapper>
       </body>

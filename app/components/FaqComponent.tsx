@@ -3,6 +3,7 @@
 import { useState } from "react";
 import FAQItem from "./FaqItem";
 import Link from "next/link";
+import { TbPlus, TbMinus } from 'react-icons/tb';
 
 const FAQComponent = () => {
     const faqData = [
@@ -19,7 +20,7 @@ const FAQComponent = () => {
         answer: `To register online with us, click to ${<Link href="/jobs" className=" underline text-[#00afaa]">Registration</Link>}, or visit your local, please find all our locations on our contact us page`,
       },
       {
-        question: 'What documents do I need to send in order to start working?',
+        question: 'What documents do I need to send in order to start working?',  
         answer: 'We following the government guidelines regarding eligibility to work, and it can be found at https://www.gov.uk/government/publications/right-to-work-checks-employers-guide',
       },
       {
@@ -69,16 +70,15 @@ const FAQComponent = () => {
   
     const toggleItem = (index: number) => {
       if (openItems.includes(index)) {
-        setOpenItems(openItems.filter((itemIndex) => itemIndex !== index));
+        setOpenItems([]);
       } else {
-        setOpenItems([...openItems, index]);
+        setOpenItems([index]);
       }
     };
   
     return (
-      <div className="container mx-auto py-8">
-        <h1 className="text-2xl font-bold mb-4">Frequently Asked Questions</h1>
-        <div className="space-y-4">
+      <section className="w-full py-20">
+        <div className="flex flex-col gap-4 w-11/12 lg:w-6/12 m-auto">
           {faqData.map((item, index) => (
             <FAQItem
               key={index}
@@ -86,10 +86,12 @@ const FAQComponent = () => {
               answer={item.answer}
               isOpen={openItems.includes(index)}
               toggleItem={() => toggleItem(index)}
+              toogleClassName={`relative flex items-center justify-between cursor-pointer transition-all ${openItems.includes(index) ? " faq-item-content-open" : ""}`}
+              icon={openItems.includes(index) ? <TbMinus className="absolute top-1 right-1 w-6 h-6 text-[#00afaa]"/> : <TbPlus className="absolute top-1 right-1 w-6 h-6 text-[#00afaa]"/>}
             />
           ))}
         </div>
-      </div>
+      </section>
     );
   };
   

@@ -172,6 +172,8 @@ export default function MainNav() {
                             </ul>
                         </li>
 
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/faq" className="flex items-center gap-2 ">FAQ</Link></li>
+
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/blog" className="flex items-center gap-2 ">Blog</Link></li>
                     
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/contact-us" className="flex items-center gap-2 ">Contact Us</Link></li>
@@ -278,6 +280,9 @@ export default function MainNav() {
                                 </li>
                             </ul>
 
+                        </li>
+                        <li className='flex justify-between border-t border-neutral-300'>
+                            <Link href="/faq" className='w-full p-2 font-black text-xl'>FAQ</Link>
                         </li>
                         <li className='flex justify-between border-t border-neutral-300'>
                             <Link href="/blog" className='w-full p-2 font-black text-xl'>Blog</Link>

@@ -6,32 +6,22 @@ interface FAQItemProps {
   question: string;
   answer: string;
   isOpen: boolean;
+  icon: any;
+  toogleClassName: any;
   toggleItem: () => void;
 }
 
-const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, toggleItem }) => {
+const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, icon, toogleClassName, toggleItem}) => {
   return (
-    <div className="mb-4">
+    <div className="p-4 shadow-special rounded-3xl">
       <div
-        className="flex items-center justify-between cursor-pointer transition-all"
+        className={toogleClassName}
         onClick={toggleItem}
       >
-        <p className="text-lg font-medium">{question}</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className={`h-5 w-5 transition-transform transform ${
-            isOpen ? 'rotate-180' : ''
-          }`}
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10 2C5.03 2 2 5.03 2 10a8 8 0 1 0 16 0 8 8 0 0 0-8-8zM9 14a1 1 0 0 1 2 0v1a1 1 0 0 1-2 0v-1zm2-5a1 1 0 0 1-2 0V6a1 1 0 1 1 2 0v3z"
-          />
-        </svg>
+        <p className="text-lg font-medium w-10/12">{question}</p>
+        {icon}
       </div>
-      {isOpen && <p className="mt-2 transition-all">{answer}</p>}
+      {isOpen && <p className="mt-2 transition-all w-10/12">{answer}</p>}
     </div>
   );
 };

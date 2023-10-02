@@ -14,7 +14,7 @@ export default function AgainstViolance() {
                     <p className="text-lg">
                     We have a zero-tolerance policy for compulsory labour, and we can ensure you that modern slavery does not exist in any area of our or our clients&apos; businesses.
                     </p>
-                    <Link href="/registration" className='w-fit'>
+                    <Link href="/modern-slavery-statement" className='w-fit'>
                         <button 
                             type="submit" 
                             className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white text-xl hover:shadow-[#00afa93b] hover:w-fit p-4 rounded-full transition-all duration-200 gap-2"

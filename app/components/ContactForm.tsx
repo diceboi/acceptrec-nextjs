@@ -6,7 +6,7 @@ function isInputNamedElement(e: Element): e is HTMLInputElement & { name: string
   return 'value' in e && 'name' in e
 }
 
-export default function ContactForm() {
+export default function ContactForm({ classname }:any) {
 
   async function handleOnSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -32,8 +32,8 @@ export default function ContactForm() {
 
   return (
     <>
-    <section className='flex justify-center w-full h-auto'>
-            <form className='flex flex-col items-center gap-8 w-full' onSubmit={handleOnSubmit}>
+    <section className="w-full py-20 m-auto">
+            <form className={classname} onSubmit={handleOnSubmit}>
                 <input required placeholder='Name' type='name' name="name" className=' rounded-full p-4 text-lg shadow-special w-full'></input>
                 <input required placeholder='Phone number' type='tel' name="tel" className=' rounded-full p-4 text-lg shadow-special w-full'></input>
                 <input required placeholder='Email' type='email' name="email" className=' rounded-full p-4 text-lg shadow-special w-full'></input>

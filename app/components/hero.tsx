@@ -8,8 +8,8 @@ import Image from "next/image"
 export default function Hero() {
     return(
         <>
-            <section className="relative flex flex-col w-full overflow-hidden bg-gradient-to-br from-white to-neutral-200 h-[92vh]">
-                <div id="jobsearch" className="flex flex-col justify-evenly w-10/12 lg:w-8/12 mx-auto p-4 lg:p-2 z-10">
+            <section className="relative flex flex-col justify-center w-full overflow-hidden bg-gradient-to-br from-white to-neutral-200 h-[92vh]">
+                <div id="jobsearch" className="flex flex-col justify-center w-10/12 lg:w-8/12 mx-auto p-4 lg:p-2 z-10">
                     <div id="hero-title" className="flex flex-col gap-4 lg:pt-32 w-full justify-center items-center ">
                     <div className="flex items-center justify-center gap-1 text-sm"><span className="flex gap-1 items-center"><AiFillStar className=" text-amber-400"/><b>4.8</b> stars by</span><b><GoogleReviewNumber/></b><span className="flex gap-1 items-center"> +<FcGoogle /> Google reviews</span></div>
                         <h1 className="hero-title text-6xl lg:text-8xl font-black tracking-tighter text-center p-2">Looking for work?</h1>
@@ -60,7 +60,7 @@ export default function Hero() {
                         </form>
                     </div>
                 </div>
-                <Image src="/herobg.png" width={1280} height={853} alt="happy-team" className="absolute -bottom-[1.5em] right-1/2 translate-x-1/2 min-w-[1280px] h-auto opacity-30 lg:opacity-100"/>
+                
             </section>
             </>
     )

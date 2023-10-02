@@ -18,10 +18,10 @@ function Map() {
     return (
         <GoogleMap
             zoom={8}
-            center={{ lat: 52.63275478907056, lng: -1.1822038331883487 }}
+            center={{ lat: 52.63158948482873, lng: -1.1822885893721826 }}
             mapContainerClassName="map-container"
         >
-            <Marker position={{ lat: 52.63275478907056, lng: -1.1822038331883487 }} />
+            <Marker position={{ lat: 52.63158948482873, lng: -1.1822885893721826 }} />
 
         </GoogleMap>
     );

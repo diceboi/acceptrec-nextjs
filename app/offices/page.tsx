@@ -67,7 +67,7 @@ interface Pages {
     return (
       <>
         <PrimaryHero title="Offices" bgimage="/officehero.webp" classname="bg-gradient-to-br from-white to-neutral-100 pb-10" />
-        <Offices pages={data.pages}/>
+        <Offices pages={data.pages} classname={'grid grid-cols-2 gap-8 w-11/12 lg:w-8/12 m-auto py-20'}/>
       </>
     );
   }
