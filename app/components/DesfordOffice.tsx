@@ -8,7 +8,7 @@ export default function DesfordOffice() {
     <>
     <section className='w-full py-20'>
         <div className='flex flex-col w-11/12 lg:w-8/12 m-auto'>            
-            <div className='flex justify-center gap-8 lg:gap-20 w-full pb-20'>
+            <div className='flex flex-col-reverse lg:flex-row justify-center gap-16 lg:gap-20 w-full pb-20'>
                 <div className='flex flex-col gap-8 w-full lg:w-1/2'>
                     <div className='flex flex-col gap-8'>
                         <h3 className='text-6xl font-black'>

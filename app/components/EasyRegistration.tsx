@@ -6,12 +6,12 @@ export default function EasyRegistration() {
   return (
     <>
         <section className="flex justify-center items-center w-full">
-            <div className="flex flex-col lg:flex-row w-11/12 lg:w-8/12 gap-16 py-8">
+            <div className="flex flex-col-reverse lg:flex-row w-11/12 lg:w-8/12 gap-16 lg:py-8 pb-20">
                 <div className="w-11/12 lg:w-1/2 flex justify-center flex-col gap-8">
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         Registration
                     </h3>
-                    <h1 className="text-5xl font-black tracking-tighter ">Quick and easy registration process</h1>
+                    <h1 className="text-4xl font-black tracking-tighter ">Quick and easy registration process</h1>
                     <p className="text-lg">
                         Have you found the job you’re looking for on our website? Great! Now is the time to register. There is a number of different ways you can apply for a job. Through our website, via the job board, social media or by sending your CV to our consultants.
                     </p>
@@ -26,7 +26,7 @@ export default function EasyRegistration() {
                         </button>
                     </Link>
                 </div>
-                <div className="w-11/12 lg:w-1/2 h-[60vh] bg-[url('/easy-registration.webp')] bg-contain bg-center bg-no-repeat"></div>
+                <div className="w-11/12 lg:w-1/2 lg:h-[60vh] min-h-[40vh] bg-[url('/easy-registration.webp')] bg-contain bg-center bg-no-repeat"></div>
             </div>
         </section>
     </>

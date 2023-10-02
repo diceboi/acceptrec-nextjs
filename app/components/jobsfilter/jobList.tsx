@@ -20,6 +20,7 @@ interface Job {
 export default function JobList({regionQuery, categoryQuery, typeQuery, contracttypeQuery}: any) {
 
     const [jobData, setJobData] = useState<Job[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
       async function fetchData() {
@@ -52,6 +53,8 @@ export default function JobList({regionQuery, categoryQuery, typeQuery, contract
           setJobData(data);
         } catch (error) {
           console.error('Failed to fetch jobs');
+        } finally {
+          setLoading(false); // Set loading to false after the fetch (whether it's successful or not)
         }
       }
   
@@ -61,13 +64,17 @@ export default function JobList({regionQuery, categoryQuery, typeQuery, contract
     return(
         <>
         <div className="flex flex-col w-11/12 lg:w-8/12 m-auto gap-8 py-20">
+          {loading ? (
+            <p>Loading...</p>
+          ) : jobData.length === 0 ? (
+            <p>No jobs matching the selected criteria. Try some other filters.</p>
+          ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 w-full">
-              {
-                  jobData.map((job: Job) => (
-                    <JobTile key={job.id} jobData={job} />
-                  ))
-              }
+              {jobData.map((job: Job) => (
+                <JobTile key={job.id} jobData={job} />
+              ))}
             </div>
+          )}
         </div>
         </>
     )

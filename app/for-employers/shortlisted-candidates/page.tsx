@@ -7,7 +7,7 @@ export default function ShortlistedCandidatesPage() {
     <>
       <ShortlistedHero title={"Shortlisted Candidates"} subtitle={"Every week, we choose a number of candidates with great skills and even better potential to grow in the warehousing, logistics or commercial industries and post their short profiles here. Let us know who sounds like an interesting fit to your team and we will send you their CV free of charge."} classname={"bg-gradient-to-br from-white to-[#00afa917] pb-10"}/>
       <section className="w-full py-20">
-        <div className="flex gap-16 w-11/12 lg:w-8/12 m-auto">
+        <div className="grid lg:grid-cols-2 gap-16 w-11/12 lg:w-8/12 m-auto">
           <ShortlistedCandidateTile 
               name={"Chris"} 
               description={"Chris is looking for an Operations Supervisor/Contract support Manager Job in Leeds"} 

@@ -5,12 +5,12 @@ export default function AgainstViolance() {
   return (
     <>
         <section className="flex justify-center items-center w-full">
-            <div className="flex flex-col lg:flex-row w-11/12 lg:w-8/12 gap-16 py-8">
+            <div className="flex flex-col-reverse lg:flex-row w-11/12 lg:w-8/12 gap-16 lg:py-8 py-20">
                 <div className="w-11/12 lg:w-1/2 flex justify-center flex-col gap-8">
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         Modern Slavery Statment
                     </h3>
-                    <h1 className="text-5xl font-black tracking-tighter ">We are strongly against workplace violence</h1>
+                    <h1 className="text-4xl font-black tracking-tighter ">We are strongly against workplace violence</h1>
                     <p className="text-lg">
                     We have a zero-tolerance policy for compulsory labour, and we can ensure you that modern slavery does not exist in any area of our or our clients&apos; businesses.
                     </p>
@@ -25,7 +25,7 @@ export default function AgainstViolance() {
                         </button>
                     </Link>
                 </div>
-                <div className="w-11/12 lg:w-1/2 h-[60vh] bg-[url('/against-violance.webp')] bg-contain bg-center bg-no-repeat"></div>
+                <div className="w-11/12 lg:w-1/2 lg:h-[60vh] min-h-[40vh] bg-[url('/against-violance.webp')] bg-contain bg-center bg-no-repeat"></div>
             </div>
         </section>
     </>

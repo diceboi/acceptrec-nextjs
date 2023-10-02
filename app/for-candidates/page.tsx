@@ -7,6 +7,7 @@ import FilterJobs from '../components/FilterJobs'
 import AgainstViolance from '../components/AgainstViolance'
 import CandidateSuccessStories from '../components/CandidateSuccessStories'
 import JobsInYourArea from '../components/JobsInYourArea'
+import Offices from '../components/Offices'
 
 export default function ForCandidates() {
   return (
@@ -18,7 +19,7 @@ export default function ForCandidates() {
     <AgainstViolance />
     <OurServices />
     <CandidateSuccessStories />
-    <JobsInYourArea />
+    <Offices classname={'grid grid-cols-2 gap-8 w-11/12 lg:w-8/12 m-auto py-20'} />
     </>
   )
 }

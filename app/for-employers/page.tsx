@@ -124,7 +124,7 @@ export default function ForEmployers() {
         <Standards />
         <ShortlistedCandidates />
         <Team />
-        <div className='w-8/12 m-auto py-20 border-y border-neutral-300'>
+        <div className='w-full m-auto py-20 border-y border-neutral-300'>
             <div className='flex flex-col gap-8 w-11/12 lg:w-full m-auto'>
                 <div className='flex flex-col gap-4 w-11/12 lg:w-8/12 justify-start pb-20'>
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
@@ -135,7 +135,7 @@ export default function ForEmployers() {
                     </h2>                    
                 </div>                
             </div>
-            <div className="grid lg:grid-cols-3 gap-8 w-full h-auto">
+            <div className="grid lg:grid-cols-3 gap-8 w-11/12 lg:w-8/12 h-auto m-auto">
                 {latest3Posts?.map((post, index) => (
                     
                     <Blogtile

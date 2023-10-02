@@ -4,7 +4,7 @@ import Candidate from './Candidate'
 export default function CandidatesOfTheMonth() {
   return (
     <> 
-        <section className='grid grid-cols-2 gap-8 w-11/12 lg:w-8/12 m-auto py-20'>
+        <section className='grid lg:grid-cols-2 gap-8 w-11/12 lg:w-8/12 m-auto py-20'>
             <Candidate classname={'col-span-2'} image={"/wisdom.webp"} alt={"Wisdom"} name={"Wisdom"} date={"Candidate of November 2022"} description={"We have chosen Wisdom as our Candidate of the Month due to his constant commitment and determination he has demonstrated whilst working with us. There has not been a time in which Wisdom did not save the day! Although he is a student, this does not prevent him from giving his all when it comes to work. He has helped us in and outside of Leicester, always willing to go that extra mile to help us out (literally speaking!). Overall, Wisdom is one of the kindest, most hardworking candidates we have had the pleasure to work with and for these reasons he has been rewarded with £20 Love2Shop voucher."}/>
 
             <Candidate classname={''} image={"/zorica-burcin.webp"} alt={"Zoica-Burcin"} name={"Zoica Burcin"} date={"Candidate of April 2021"} description={"Zoica has been put forward for employee of the month due to her reliability, hard work and determination. She was hitting record-breaking numbers for one of our busiest clients this month, and we couldn't be more proud of her."}/>
