@@ -5,6 +5,7 @@ import { LiaFistRaisedSolid } from 'react-icons/lia'
 import { LuHelpingHand } from 'react-icons/lu'
 import { FiSmile } from 'react-icons/fi'
 import { TbUsersGroup } from 'react-icons/tb'
+import Link from "next/link"
 
 import Abouthero from "../components/Theme Components/AboutHero"
 import Team from "../components/team"
@@ -260,14 +261,13 @@ export default function AboutUs() {
                     <p className="text-lg">
                     By helping people to build their future based on trust and integrity, we create long-lasting relationships and the environment of choice for many talented recruiters. Together, we make our candidates and clients’ life successful and trouble-free wherever they might be. Our goal is to become the most transparent and technologically advanced recruitment agency in the UK and we are constantly on the look-out for likeminded people. We have superpowers, because we have each other. Does this sound like you? If yes, then send us your CV!
                     </p>
-                    <button 
-                        type="submit" 
+                    <Link href="/career"
                         className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white text-xl hover:shadow-[#00afa93b] hover:w-fit p-4 rounded-full transition-all duration-200 gap-2"
                         >
                         Read more
                         <FiArrowUpRight className='right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200'
                         />
-                    </button>
+                    </Link>
                 </div>
                 <div className="w-11/12 lg:w-1/2 lg:h-[60vh] min-h-[40vh] bg-[url('/join-us.webp')] bg-contain bg-center bg-no-repeat"></div>
             </div>
