@@ -146,7 +146,6 @@ export default function MainNav() {
                                     </Link>
                                 </li>
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/for-employers/shortlisted-candidates" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbUsers className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Shortlisted Candidates</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/read-first" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbMessages className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Consultancy</span></Link></li>
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blog/how-to-write-a-successful-job-description" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbPencil className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Writing a good job description</span></Link></li>
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blog/interview-techniques" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbMoodPlus className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Interview Techniques</span></Link></li>
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/onboarding-process" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbCheckupList className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Onboarding process</span></Link></li>
@@ -231,9 +230,6 @@ export default function MainNav() {
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
                                     <Link href="/for-employers/shortlisted-candidates" className='w-full p-2 font-black text-xl'>Shortlisted candidates</Link>
-                                </li>
-                                <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/about-us" className='w-full p-2 font-black text-xl'>Consultancy</Link>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
                                     <Link href="/blog/how-to-write-a-successful-job-description" className='w-full p-2 font-black text-xl'>Writing a good job description</Link>
