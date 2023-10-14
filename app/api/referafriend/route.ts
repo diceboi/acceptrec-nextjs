@@ -1,13 +1,13 @@
 import { Resend } from "resend";
 
-import ContactUsUser from "@/emails/ContactUsUser";
-import ConstactUsCompany from "@/emails/ContactUsCompany";
+import ReferAFriendUser from "@/emails/ReferAFriendUser";
+import ReferAFriendCompany from "@/emails/ReferAFriendCompany";
 import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
-  const { name, tel, email, location, message  } = await request.json();
+  const { name, email, refername, refercontact, location, message  } = await request.json();
 
   try {
 
@@ -15,10 +15,11 @@ export async function POST(request: Request) {
     from: 'Zen from Acceptrec <hello@acceptrec.co.uk>',
     to: email,
     subject: `Hello ${name}`,
-    react: ContactUsUser({
+    react: ReferAFriendUser({
       name,
-      tel,
       email,
+      refername,
+      refercontact,
       location,
       message
     })
@@ -28,12 +29,13 @@ export async function POST(request: Request) {
     from: 'Acceptrec.co.uk <hello@acceptrec.co.uk>',
     to: 'admin@acceptrec.co.uk',
     subject: 'New contact from the website',
-    react: ConstactUsCompany({
-      name,
-      tel,
-      email,
-      location,
-      message
+    react: ReferAFriendCompany({
+        name,
+        email,
+        refername,
+        refercontact,
+        location,
+        message
     })
   });
   return NextResponse.json({

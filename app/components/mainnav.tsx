@@ -130,7 +130,7 @@ export default function MainNav() {
                                     </Link>
                                 </li>
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/about-us/team" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbUsers className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Meet the team</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blog/national-temporary-worker-day" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbBriefcase className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>National Temporary Worker Day</span></Link></li>                        
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/national-temporary-worker-day" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbBriefcase className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>National Temporary Worker Day</span></Link></li>                        
                             </ul>
                         </li>
                     
@@ -214,7 +214,7 @@ export default function MainNav() {
                                     <Link href="/about-us/team" className='w-full p-2 font-black text-xl'>Meet the team</Link>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/blog/national-temporary-worker-day" className='w-full p-2 font-black text-xl'>National Temporary Worker Day</Link>
+                                    <Link href="/national-temporary-worker-day" className='w-full p-2 font-black text-xl'>National Temporary Worker Day</Link>
                                 </li>
                             </ul>
                         </li>

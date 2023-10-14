@@ -14,7 +14,7 @@ export default function LeicesterHqOffice() {
                         <h3 className='text-6xl font-black'>
                             Contact Us
                         </h3>
-                        <ContactForm />
+                        <ContactForm classname={'flex flex-col gap-4'}/>
                     </div>                  
                 </div>
                 <div className='flex flex-col  gap-8 lg:w-1/2'>

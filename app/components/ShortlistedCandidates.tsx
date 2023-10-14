@@ -78,7 +78,7 @@ export default function ShortlistedCandidates() {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <Link href="/for-employers/shortlisted-candiates" className='flex justify-center w-fit m-auto pt-16'>
+            <Link href="/for-employers/shortlisted-candidates" className='flex justify-center w-fit m-auto pt-16'>
                 <button  
                         className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                         >

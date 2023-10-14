@@ -126,7 +126,7 @@ export default function ForEmployers() {
         <Team />
         <div className='w-full m-auto py-20 border-y border-neutral-300'>
             <div className='flex flex-col gap-8 w-11/12 lg:w-full m-auto'>
-                <div className='flex flex-col gap-4 w-11/12 lg:w-8/12 justify-start pb-20'>
+                <div className='flex flex-col gap-4 w-11/12 lg:w-8/12 justify-start pb-20 m-auto'>
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         Recent blogs
                     </h3>
@@ -139,7 +139,7 @@ export default function ForEmployers() {
                 {latest3Posts?.map((post, index) => (
                     
                     <Blogtile
-                    classname={`group relative flex flex-col w-full bg-white border border-neutral-300 gap-4 h-[400px] p-4 rounded-3xl hover:shadow-special hover:border-transparent transition-all ${index === 0 ? " after:content-['Recent'] after:p-2 after:w-auto after:h-auto after:bg-white after:absolute after:top-4 after:left-4 after:text-sm after:uppercase after:tracking-widest after:font-bold" : "flex-col" }`}
+                    classname={`group relative flex flex-col w-full bg-white border border-neutral-300 gap-4 h-[450px] p-4 rounded-3xl hover:shadow-special hover:border-transparent transition-all ${index === 0 ? " after:content-['Recent'] after:p-2 after:w-auto after:h-auto after:bg-white after:absolute after:top-4 after:left-4 after:text-sm after:uppercase after:tracking-widest after:font-bold" : "flex-col" }`}
                     href={`/blog/${post.node.slug}`}
                     key={post.node.slug}
                     featuredimage={post.node.featuredImage?.node.link}
