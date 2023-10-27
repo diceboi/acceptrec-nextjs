@@ -5,7 +5,7 @@ import Image from "next/image"
 import { useParams } from "next/navigation"
 import { FiArrowUpRight } from "react-icons/fi"
 import { gql } from "@apollo/client"
-import { useSuspenseQuery } from "@apollo/client"
+import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr"
 
 const query = gql`
 query getBanners {
