@@ -52,7 +52,7 @@ type QueryResult = {
   };
 };
 
-export default function route() {
+export default function Bannerslug() {
 
   const { data } = useSuspenseQuery<QueryResult>(query);
   const { bannerslug } = useParams();
