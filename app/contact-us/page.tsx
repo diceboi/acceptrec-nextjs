@@ -9,7 +9,7 @@ import ContactUsMap from '../components/ContactUsMap'
 import Offices from '../components/Offices'
 
 const GET_OFFICES = gql`
-query getPayQuery {
+query getOffices {
   pages(where: {parent: "cG9zdDozMDY="}) {
     edges {
       node {
