@@ -1,12 +1,15 @@
 "use client"
 
 import { PiPaperPlaneTiltBold } from 'react-icons/pi'
+import { usePathname } from 'next/navigation';
 
 function isInputNamedElement(e: Element): e is HTMLInputElement & { name: string } {
   return 'value' in e && 'name' in e
 }
 
 export default function ContactTeam({contactname}: any) {
+
+  const pathname = usePathname();
 
   async function handleOnSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -26,6 +29,7 @@ export default function ContactTeam({contactname}: any) {
         email: formData.email,
         location: formData.location,
         message: formData.message,
+        path: pathname
       })
     })
   }
