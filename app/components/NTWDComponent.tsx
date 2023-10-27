@@ -6,7 +6,7 @@ export default function NTWDComponent() {
   return (
     <section className='w-full py-20'>
         <div className='flex flex-col w-11/12 lg:w-6/12 gap-8 m-auto'>
-            <Image src="/NTWD.webp" width={1280} height={853} alt=""/>
+            <Image src="/NTWD-new.webp" width={1280} height={853} alt=""/>
             <article className="flex flex-col gap-4">
                 <p>There are currently around 1.6 million temporary workers in the UK according to latest statistics. As a society we need to celebrate and thank temporary employees that work alongside both the biggest and smallest companies along the width and breadth of the country. The contribution they provide to the companies they work for, the flexibility they gladly give and the positive impact on the economy cannot be understated.</p>
                 <p>There are many types of workers who currently work on a temporary basis. These include Teachers, Lorry Drivers, Fruit Pickers, Warehouse Workers, Nurses, Admin Staff, Receptionists amongst so many more. Without these people working on a daily basis, our loved ones would not be cared for properly, shelves in supermarkets would be empty and industry in general would grind to a halt.</p>

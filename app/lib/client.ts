@@ -10,7 +10,7 @@ export const { getClient } = registerApolloClient(() => {
     cache: new NextSSRInMemoryCache(),
     link: new HttpLink({
       // https://studio.apollographql.com/public/spacex-l4uc6p/
-      uri: "https://main--spacex-l4uc6p.apollographos.net/graphql",
+      uri: "https://admin.acceptrec.co.uk/graphql",
       // you can disable result caching here if you want to
       // (this does not work if you are rendering your page with `export const dynamic = "force-static"`)
       // fetchOptions: { cache: "no-store" },

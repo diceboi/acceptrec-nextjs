@@ -7,6 +7,7 @@ import Rated from './components/rated'
 import Team from './components/team'
 import FacebookMsg from './components/FacebookMsg'
 import getJobs from './api/getJobs'
+import HomeBanner from './components/HomeBanner'
 
 
 export default async function Home() {
@@ -15,7 +16,8 @@ export default async function Home() {
 
   return (
     <>
-      <Hero/> 
+      <Hero/>
+      <HomeBanner classname={'w-full -translate-y-1/2'}/> 
       <Industries /> 
       <Recruitment/>
       <Advantages />

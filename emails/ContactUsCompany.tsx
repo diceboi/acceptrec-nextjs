@@ -17,9 +17,10 @@ import {
     email: string;
     location: string;
     message: string;
+    path: string;
   }
   
-  export const ContactUsCompany = ({ name, tel, email, location, message }: WelcomeEmailProps) => (
+  export const ContactUsCompany = ({ name, tel, email, location, message, path }: WelcomeEmailProps) => (
     <Html>
       <Head />
       <Preview>{name} is waiting for the response.</Preview>
@@ -38,6 +39,7 @@ import {
             <b>Email:</b> {email}<br></br>
             <b>Location:</b> {location}<br></br>
             <b>Message:</b> {message}<br></br>
+            <b>From:</b> {path}<br></br>
           </Text>
           <Img
             src="https://cms.arpusz.hu/wp-content/uploads/2023/09/Accept-Stacked-Logo-with-Strapline-RGB300.png"

@@ -25,7 +25,7 @@ query getPosts {
         }
         featuredImage {
           node {
-            link
+            sourceUrl
           }
         }
         categories {
@@ -57,7 +57,7 @@ interface Post {
       };
       featuredImage: {
         node: {
-          link: string;
+          sourceUrl: string;
         };
       };
       categories: {
@@ -107,12 +107,12 @@ export default function Blog() {
 
   // If the post is not found, you might want to show a loading or error message
   if (!post) {
+    
       return <p>Loading...</p>;
   }
-
     return(
         <>
-        <BlogPostHero featuredimage={post.node.featuredImage.node.link} title={post.node.title} authorimage={post.node.author.node.avatar.url} authorname={post.node.author.node.name} postdate={formattedDate} category={post.node.categories.nodes[0].name} slug={""}/>
+        <BlogPostHero featuredimage={post.node.featuredImage.node.sourceUrl} title={post.node.title} authorimage={post.node.author.node.avatar.url} authorname={post.node.author.node.name} postdate={formattedDate} category={post.node.categories.nodes[0].name} slug={""}/>
         <div className='flex lg:flex-row flex-col lg:gap-20 w-full lg:w-8/12 m-auto'>
           <article className='flex text-lg flex-col gap-8 w-full lg:w-2/3 px-4 lg:px-0 py-8 lg:py-20'>
           <h1 className="text-4xl lg:text-6xl font-bold tracking-tighter z-10">{post.node.title}</h1>
@@ -133,7 +133,7 @@ export default function Blog() {
               classname={"group relative flex flex-col w-full bg-white border border-neutral-300 gap-4 h-[430px] p-4 rounded-3xl hover:shadow-special hover:border-transparent transition-all"}
               href={`/blog/${posts.node.slug}`}
               key={posts.node.slug}
-              featuredimage={posts.node.featuredImage?.node.link}
+              featuredimage={posts.node.featuredImage?.node.sourceUrl} 
               title={posts.node.title}
               authorimage={posts.node.author.node.avatar.url}
               authorname={posts.node.author.node.name}

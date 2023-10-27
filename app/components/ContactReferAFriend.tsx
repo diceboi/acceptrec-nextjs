@@ -3,12 +3,15 @@
 import React from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import { PiPaperPlaneTiltBold } from 'react-icons/pi'
+import { usePathname } from 'next/navigation';
 
 function isInputNamedElement(e: Element): e is HTMLInputElement & { name: string } {
   return 'value' in e && 'name' in e
 }
 
 export default function ContactReferAFriend({ classname }:any) {
+
+  const pathname = usePathname();
 
   async function handleOnSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -29,6 +32,7 @@ export default function ContactReferAFriend({ classname }:any) {
         refercontact: formData.refercontact,
         location: formData.referlocation,
         message: formData.message,
+        path: pathname,
       })
     })
   }
@@ -40,14 +44,14 @@ export default function ContactReferAFriend({ classname }:any) {
             <form className={classname} onSubmit={handleOnSubmit}>
                 <h2 className='text-4xl font-black'>Refer a friend</h2>
                 <input required placeholder='Your name' type='name' name='name' className=' rounded-full p-4 text-lg shadow-special w-full'></input>
-                <input required placeholder='Contact details (of you)' type='email' name='email' className=' rounded-full p-4 text-lg shadow-special w-full'></input>
+                <input required placeholder='Email (of you)' type='email' name='email' className=' rounded-full p-4 text-lg shadow-special w-full'></input>
                 <input required placeholder='Who do you refer? (Full name)' type='text' name='refername' className=' rounded-full p-4 text-lg shadow-special w-full'></input>
-                <input required placeholder='Contact details (of your referee)' type='email' name='refercontact' className=' rounded-full p-4 text-lg shadow-special w-full'></input>
+                <input required placeholder='Email (of your referee)' type='email' name='refercontact' className=' rounded-full p-4 text-lg shadow-special w-full'></input>
                 <input required placeholder='Location (of the referee)' type='text' name='referlocation' className=' rounded-full p-4 text-lg shadow-special w-full'></input>
                 <textarea required placeholder='Message' name='message' rows={5} className='col-span-2 row-span-2 rounded-3xl p-4 text-lg shadow-special w-full'></textarea>
                 <div className='flex gap-2'>
                     <input required id='friendaccept' type='checkbox'></input>
-                    <label htmlFor='friendaccept'>Have you informed your referee of that you sharing their details with Accept?*</label>
+                    <label htmlFor='friendaccept'>Have you informed your referee of that you sharing their details with Accept?</label>
                 </div>
                 <div className='flex gap-2'>
                     <input id='friendaccept' type='checkbox'></input>

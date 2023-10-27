@@ -1,5 +1,5 @@
-import NTWDHero from "../components/Theme Components/NTWDHero"
-import NTWDComponent from "../components/NTWDComponent"
+import NTWDHero from "../../components/Theme Components/NTWDHero"
+import NTWDComponent from "../../components/NTWDComponent"
 
 export default function Faqpage() {
   return (

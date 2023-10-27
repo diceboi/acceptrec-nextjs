@@ -25,7 +25,7 @@ query getPosts {
         }
         featuredImage {
           node {
-            link
+            sourceUrl
           }
         }
         categories(where: {exclude: 1}) {
@@ -73,7 +73,7 @@ interface Post {
       };
       featuredImage: {
         node: {
-          link: string;
+          sourceUrl: string;
         };
       };
       categories: {
@@ -172,7 +172,7 @@ export default function BlogArchive() {
                                 classname={`group relative flex flex-col w-full bg-white border border-neutral-300 gap-4 h-[500px] p-4 rounded-3xl hover:shadow-special hover:border-transparent transition-all ${index === 0 ? "lg:col-span-2 lg:flex-row after:content-['Recent'] after:p-2 after:w-auto after:h-auto after:bg-white after:absolute after:top-4 after:left-4 after:text-sm after:uppercase after:tracking-widest after:font-bold" : "flex-col" }`}
                                 href={`/blog/${post.node.slug}`}
                                 key={post.node.slug}
-                                featuredimage={post.node.featuredImage?.node.link}
+                                featuredimage={post.node.featuredImage?.node.sourceUrl}
                                 title={post.node.title}
                                 authorimage={post.node.author.node.avatar.url}
                                 authorname={post.node.author.node.name}

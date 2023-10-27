@@ -7,7 +7,7 @@ import { NextResponse } from "next/server";
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
-  const { name, email, refername, refercontact, location, message  } = await request.json();
+  const { name, email, refername, refercontact, location, message, path  } = await request.json();
 
   try {
 
@@ -27,7 +27,7 @@ export async function POST(request: Request) {
 
   const companyMail = await resend.sendEmail({
     from: 'Acceptrec.co.uk <hello@acceptrec.co.uk>',
-    to: 'admin@acceptrec.co.uk',
+    to: 'szabolcs@profiteto.hu',
     subject: 'New contact from the website',
     react: ReferAFriendCompany({
         name,
@@ -35,7 +35,8 @@ export async function POST(request: Request) {
         refername,
         refercontact,
         location,
-        message
+        message,
+        path
     })
   });
   return NextResponse.json({

@@ -24,7 +24,7 @@ query getPosts {
         }
         featuredImage {
           node {
-            link
+            sourceUrl
           }
         }
         categories {
@@ -72,7 +72,7 @@ interface Post {
       };
       featuredImage: {
         node: {
-          link: string;
+          sourceUrl: string;
         };
       };
       categories: {

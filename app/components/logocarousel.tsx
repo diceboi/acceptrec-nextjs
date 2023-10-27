@@ -17,7 +17,7 @@ export default function Logocarousel() {
               <Image src="/logocarousel/disability-confident.webp" width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/logocarousel/gangmasters.webp" width={150} height={100} alt="" className=""/>
+              <Image src="/logocarousel/glaa.webp" width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
               <Image src="/logocarousel/google-review.webp" width={150} height={100} alt="" className=""/>
@@ -26,7 +26,7 @@ export default function Logocarousel() {
               <Image src="/logocarousel/iso.webp" width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
-              <Image src="/logocarousel/national-temporary-worker-day.webp" width={150} height={100} alt="" className=""/>
+              <Image src="/logocarousel/ntwd.webp" width={150} height={100} alt="" className=""/>
             </div>
             <div className="flex justify-center items-center w-1/5">
               <Image src="/logocarousel/rainbows.webp" width={150} height={100} alt="" className=""/>
