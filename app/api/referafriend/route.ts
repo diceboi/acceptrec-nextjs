@@ -27,8 +27,8 @@ export async function POST(request: Request) {
 
   const companyMail = await resend.sendEmail({
     from: 'Acceptrec.co.uk <hello@acceptrec.co.uk>',
-    to: 'szabolcs@profiteto.hu',
-    subject: 'New contact from the website',
+    to: 'admin@acceptrec.co.uk',
+    subject: 'New friend recommendation from the website',
     react: ReferAFriendCompany({
         name,
         email,

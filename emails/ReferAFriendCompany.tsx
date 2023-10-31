@@ -27,7 +27,7 @@ import {
       <Preview>{name} is recommending a friend.</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>{name} just recommended a friend in the website.</Heading>
+          <Heading style={h1}>{name} just recommended a friend on the website.</Heading>
           <Text style={{ ...text, marginBottom: '24px'}}>
             Please respond as soon as you have time.
           </Text>

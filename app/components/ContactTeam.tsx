@@ -21,7 +21,7 @@ export default function ContactTeam({contactname}: any) {
       formData[field.name] = field.value;
     });
 
-    await fetch(`api/${contactname}`, {
+    await fetch(`../../api/${contactname}`, {
       method: 'POST',
       body: JSON.stringify({
         name: formData.name,

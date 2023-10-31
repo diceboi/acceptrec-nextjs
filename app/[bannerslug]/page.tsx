@@ -71,7 +71,7 @@ export default function Bannerslug() {
             </article>
 
             {banner.node.heroBanner.buttonLinkIfAButtonIsNeeded && ( // Check if it's not null
-              <Link href={banner.node.heroBanner.buttonLinkIfAButtonIsNeeded} target="_blank" className="w-fit m-auto">
+              <Link href={banner.node.heroBanner.buttonLinkIfAButtonIsNeeded} target="_blank" className="w-11/12 lg:w-8/12 m-auto">
                 <button
                   type="submit"
                   className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white text-xl hover:shadow-[#00afa93b] hover:w-fit p-4 rounded-full transition-all duration-200 gap-2"
