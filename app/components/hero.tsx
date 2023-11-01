@@ -1,6 +1,8 @@
 "use client"
 
 import GoogleReviewNumber from "./googlereviewnumber"
+
+import HomeBanner from "./HomeBanner"
 import {BiSearchAlt} from 'react-icons/bi'
 import { FcGoogle } from 'react-icons/fc'
 import { AiFillStar } from 'react-icons/ai'
@@ -65,6 +67,7 @@ export default function Hero() {
     return(
         <>
             <section className="relative flex flex-col justify-center w-full overflow-hidden bg-gradient-to-br from-white to-neutral-200 lg:h-[92vh]">
+                <HomeBanner className="w-11/12 lg:8/12" />
                 <div id="jobsearch" className="flex flex-col justify-center w-10/12 lg:w-8/12 mx-auto p-4 lg:p-2 z-10">
                     <div id="hero-title" className="flex flex-col gap-4 lg:pt-32 w-full justify-center items-center ">
                     <div className="flex items-center justify-center gap-1 text-sm"><span className="flex gap-1 items-center"><AiFillStar className=" text-amber-400"/><b>4.8</b> stars by</span><b><GoogleReviewNumber/></b><span className="flex gap-1 items-center"> +<FcGoogle /> Google reviews</span></div>

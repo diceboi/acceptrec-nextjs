@@ -17,7 +17,6 @@ export default async function Home() {
   return (
     <>
       <Hero/>
-      <HomeBanner classname={'w-full -translate-y-1/2'}/> 
       <Industries /> 
       <Recruitment/>
       <Advantages />

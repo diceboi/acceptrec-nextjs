@@ -46,7 +46,7 @@ export default function HomeBanner({ classname }:any) {
   return (
     <section className={classname}>
         <Link href={bannerdata.banners.edges[0].node.slug}>
-        <div className="relative w-11/12 lg:w-8/12 h-[300px] m-auto rounded-3xl -mb-[150px]">
+        <div className="relative w-11/12 lg:w-8/12 h-[300px] m-auto rounded-3xl ">
             <Image 
                 src={banner.heroBanner.bannerPicture.sourceUrl}  
                 fill
