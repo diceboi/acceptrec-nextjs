@@ -44,7 +44,7 @@ export default function Recruitment() {
                     </div>
                 </Link>
 
-                <Link href="/register" className="group flex flex-col w-full lg:w-1/3 rounded-3xl shadow-special hover:lg:shadow-special hover:bg-white cursor-pointer ease-out duration-200">
+                <Link href="/registration" className="group flex flex-col w-full lg:w-1/3 rounded-3xl shadow-special hover:lg:shadow-special hover:bg-white cursor-pointer ease-out duration-200">
                     <div className="relative flex flex-col justify-end border-b-8 border-[#312252] bg-[url('/truck-driver.avif')] bg-cover bg-center bg-opacity-40 group-hover:bg-opacity-100 h-64 p-4 group-hover:bg-[#312252] rounded-t-3xl ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <h3 className="text-4xl font-black tracking-tighter text-white">Register</h3>
