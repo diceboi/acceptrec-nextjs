@@ -196,7 +196,7 @@ export default function MainNav2() {
             
         </nav> 
 
-        <div id="mobile-menu" className={`fixed top-0 xl:hidden flex justify-between items-center w-full h-[64px] p-4 bg-white z-50 ${isOpen ? '' : ''}`}>
+        <div id="mobile-menu" className={`sticky top-0 xl:hidden flex justify-between items-center w-full h-[64px] p-4 bg-white z-50 ${isOpen ? '' : ''}`}>
             <Link href="/">
                 <Image src="/Accept-Stacked-Logo-with-Strapline-RGB300.webp" alt="logo" width={150} height={40} />
             </Link>
