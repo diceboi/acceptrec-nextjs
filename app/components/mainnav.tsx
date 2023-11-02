@@ -99,7 +99,8 @@ export default function MainNav() {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, []); 
+
  
     return (
         <>
@@ -186,7 +187,7 @@ export default function MainNav() {
             
         </nav> 
 
-        <nav className='xl:hidden sticky top-0 z-50 min-h-16 w-full overflow-x-clip' ref={mobileMenuRef}>
+        <nav className={`xl:hidden fixed top-0 z-50 min-h-16 w-full overflow-x-clip`}>
             <div className='flex justify-between items-center h-16 px-4 shadow-lg bg-white'>
                 <div id="logo" className="flex shrink-0 items-center w-40 h-14">
                     <Link href="/">
