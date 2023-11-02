@@ -16,7 +16,7 @@ export default function AlionaCozacenco() {
                             Aliona Cozacenco
                         </h2>
                         <p>
-                            Branch Manager
+                            Industrial Manager
                         </p>                    
                     </div>
                     <Image src="/Aliona_Cozacenco_f.webp" width={1000} height={800} alt="aliiona-cozacenco" className="w-full h-auto"/>

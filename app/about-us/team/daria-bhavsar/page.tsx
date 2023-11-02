@@ -16,7 +16,7 @@ export default function DariaBhavsar() {
                             Daria Bhavsar
                         </h2>
                         <p>
-                            General Manager
+                            General Manager of Branch Network
                         </p>                    
                     </div>
                     <Image src="/Daria_Bhavsar.jpg" width={1000} height={800} alt="daria-bhavsar" className="w-full h-auto"/>
