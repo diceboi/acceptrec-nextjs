@@ -51,8 +51,6 @@ export default function HomeBanner({ classname }:any) {
                 src={banner.heroBanner.bannerPicture.sourceUrl}  
                 fill
                 className="w-full"
-                placeholder="blur"
-                blurDataURL={banner.heroBanner.bannerPicture.sourceUrl}
                 style={{
                     objectFit: 'contain'
                 }}
