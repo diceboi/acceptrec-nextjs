@@ -19,9 +19,11 @@ import {
     location: string;
     message: string;
     path: string;
+    informed: string;
+    workforaccept: string;
   }
   
-  export const ContactUsCompany = ({ name, email, refername, refercontact, location, message, path }: WelcomeEmailProps) => (
+  export const ContactUsCompany = ({ name, email, refername, refercontact, location, message, path, informed, workforaccept }: WelcomeEmailProps) => (
     <Html>
       <Head />
       <Preview>{name} is recommending a friend.</Preview>
@@ -39,9 +41,11 @@ import {
             <b>Recommender email:</b> {email}<br></br>
             <b>Recommended friend:</b> {refername}<br></br>
             <b>Recommended friend&apos;s email:</b> {refercontact}<br></br>
-            <b>Friend&apos; Location:</b> {location}<br></br>
+            <b>Friend&apos;s Location:</b> {location}<br></br>
             <b>Message:</b> {message}<br></br>
             <b>From:</b> {path}<br></br>
+            <b>Have you informed your referee of that you sharing their details with Accept?</b> {informed}<br></br>
+            <b>Do you work through Accept?</b> {workforaccept} <br></br>
           </Text>
           <Img
             src="https://cms.arpusz.hu/wp-content/uploads/2023/09/Accept-Stacked-Logo-with-Strapline-RGB300.png"

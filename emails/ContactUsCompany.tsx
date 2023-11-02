@@ -18,9 +18,10 @@ import {
     location: string;
     message: string;
     path: string;
+    policy: string;
   }
   
-  export const ContactUsCompany = ({ name, tel, email, location, message, path }: WelcomeEmailProps) => (
+  export const ContactUsCompany = ({ name, tel, email, location, message, path, policy }: WelcomeEmailProps) => (
     <Html>
       <Head />
       <Preview>{name} is waiting for the response.</Preview>
@@ -40,6 +41,7 @@ import {
             <b>Location:</b> {location}<br></br>
             <b>Message:</b> {message}<br></br>
             <b>From:</b> {path}<br></br>
+            <b>Did you understand, and accept the Privacy policy of Acceptrec?</b> {policy}<br></br>
           </Text>
           <Img
             src="https://cms.arpusz.hu/wp-content/uploads/2023/09/Accept-Stacked-Logo-with-Strapline-RGB300.png"

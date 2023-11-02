@@ -12,7 +12,7 @@ export async function POST(request: Request) {
   try {
 
   const userMail = await resend.sendEmail({
-    from: 'Natalia from Acceptrec <natalia@acceptrec.co.uk>',
+    from: 'Zen from Acceptrec <hello@acceptrec.co.uk>',
     to: email,
     subject: `Hello ${name}`,
     react: ContactUsUser({
@@ -20,13 +20,13 @@ export async function POST(request: Request) {
       tel,
       email,
       location,
-      message
+      message,
     })
   });
 
   const companyMail = await resend.sendEmail({
     from: 'Acceptrec.co.uk <hello@acceptrec.co.uk>',
-    to: 'natalia@acceptrec.co.uk',
+    to: 'admin@acceptrec.co.uk',
     subject: 'New contact from the website',
     react: ConstactUsCompany({
       name,
