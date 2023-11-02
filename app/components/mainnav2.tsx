@@ -1,40 +1,20 @@
 "use client"
 
-import { TbHome2, TbMenu2, TbPhone } from 'react-icons/tb'
+import { TbBriefcase, TbBuildingFactory2, TbCheckupList, TbChevronLeft, TbChevronRight, TbFriends, TbHome2, TbListSearch, TbMenu2, TbMoodPlus, TbPencil, TbPhone, TbPower, TbQuestionMark, TbRosetteNumber1, TbUsers, TbWeight } from 'react-icons/tb'
 import { MdClose } from 'react-icons/md'
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';
+import { FiArrowUpRight } from 'react-icons/fi';
+import { BiChevronDown } from 'react-icons/bi';
 
 
-function isOpenNow() {
-  const now = new Date();
-  const dayOfWeek = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-  const hour = now.getHours();
-  const minute = now.getMinutes();
-
-  if (dayOfWeek >= 1 && dayOfWeek <= 5) {
-    // Monday to Friday: 09:00 - 21:00
-    const isOpenWeekday =
-      (hour > 8 || (hour === 8 && minute >= 0)) &&
-      (hour < 21 || (hour === 21 && minute <= 0));
-    return isOpenWeekday;
-  } else if (dayOfWeek === 6) {
-    // Saturday: 10:00 - 21:00
-    const isOpenSaturday =
-      (hour > 9 || (hour === 9 && minute >= 0)) &&
-      (hour < 21 || (hour === 21 && minute <= 0));
-    return isOpenSaturday;
-  }
-
-  // Sunday: Closed
-  return false;
-}
-
-
-export default function MainNav() {
+export default function MainNav2() {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [submenu1Open, setSubmenu1Open] = useState(false);
+    const [submenu2Open, setSubmenu2Open] = useState(false);
+    const [submenu3Open, setSubmenu3Open] = useState(false);
     const mobileMenuRef = useRef(null);
 
     const closeMobileMenu = () => {
@@ -67,33 +47,49 @@ export default function MainNav() {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
+    const toggleSubmenu1 = () => {
+        setSubmenu1Open(!submenu1Open);
+    };
+
+    const toggleSubmenu2 = () => {
+        setSubmenu2Open(!submenu2Open);
+    };
+
+    const toggleSubmenu3 = () => {
+        setSubmenu3Open(!submenu3Open);
+    };
+
     useEffect(() => {
         function handleScroll() {
             const menu = document.getElementById("desktop-menu");
-            const innerMenu = document.getElementById("menu");
-            const menucontainer = document.getElementById("menucontainer");
+            const menuInner = document.getElementById("menu");
             const logo = document.getElementById("acceptrec-logo");
+            const submenu1 = document.getElementById("submenu1");
+            const submenu2 = document.getElementById("submenu2");
+            const submenu3 = document.getElementById("submenu3");
             const scrollY = window.scrollY;
     
             if (menu) {
                 if (scrollY > 75) {
                     menu.style.height = "55px";
-                    menu.style.paddingTop = "0px";
-                    menu.style.backgroundColor = "var(--navy)";
-                    if (innerMenu) innerMenu.style.justifyContent = "space-evenly";
-                    if (innerMenu) innerMenu.style.marginLeft = "100px";
-                    if (menucontainer) menucontainer.style.borderBottom = "0px solid var(--lightnavy)";
-                    if (logo) logo.style.width = "75px";
-                    if (logo) logo.style.opacity = "100";
+                    menu.style.boxShadow = "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)";
+                    menu.style.backgroundColor = "#ffffffd5";
+                    menu.style.borderBottom = "1px solid #d4d4d4";
+                    if (logo) logo.style.width = "100px";
+                    if (menuInner) menuInner.style.height = "55px";
+                    if (submenu1) submenu1.style.top = "40px";
+                    if (submenu2) submenu2.style.top = "40px";
+                    if (submenu3) submenu3.style.top = "40px";
                 } else {
-                    menu.style.height = "55x";
-                    menu.style.paddingTop = "75px";
-                    menu.style.backgroundColor = "transparent";
-                    if (innerMenu) innerMenu.style.justifyContent = "space-between";
-                    if (innerMenu) innerMenu.style.marginLeft = "0px";
-                    if (menucontainer) menucontainer.style.borderBottom = "1px solid var(--lightnavy)";   
-                    if (logo) logo.style.width = "0px";
-                    if (logo) logo.style.opacity = "0"; 
+                    menu.style.height = "96px";
+                    menu.style.boxShadow = "0 0 0 0";
+                    menu.style.backgroundColor = "#ffffff00";
+                    menu.style.borderBottom = "0px solid #d4d4d4";
+                    if (logo) logo.style.width = "200px";
+                    if (menuInner) menuInner.style.height = "96px";
+                    if (submenu1) submenu1.style.top = "60px";
+                    if (submenu2) submenu2.style.top = "60px";
+                    if (submenu3) submenu3.style.top = "60px"; 
                 }
             }
         }
@@ -114,103 +110,194 @@ export default function MainNav() {
     const handleLinkClick = () => {
       setIsOpen(false);
     };
-
-    const [isRestaurantOpen, setIsRestaurantOpen] = useState(isOpenNow());
-
-  useEffect(() => {
-    // Update the isOpen state every minute
-    const timer = setInterval(() => {
-      setIsRestaurantOpen(isOpenNow());
-    }, 60000); // 60000 milliseconds = 1 minute
-
-    return () => {
-      clearInterval(timer); // Clean up the interval on unmount
-    };
-  }, []);
  
     return (
         <>
-        <nav id='desktop-menu' style={{ height: "55px", backgroundColor: "transparent", marginBottom: "-75px", paddingTop: "75px" }} className="hidden xl:flex flex-wrap justify-center px-4 w-full mx-auto z-50 sticky top-0 ease-in-out duration-200">
-            <div id='menucontainer' style={{ borderBottom: "1px solid var(--lightnavy)", }} className='relative container flex items-center justify-between gap-8 w-full'>
-                <div id="logo" className="absolute flex shrink-0 items-center">
+        <nav id='desktop-menu' style={{ height: "75px", backgroundColor: "#ffffff00" }} className="hidden xl:flex flex-wrap justify-center px-4 w-full mx-auto z-50 sticky top-0 backdrop-blur-sm ease-in-out duration-200">
+            <div className='flex justify-between items-center gap-8 w-full min-[1919px]:w-8/12'>
+                <div id="logo" className="flex shrink-0 items-center">
                     <Link href="/">
-                        <Image src="https://admin.peboetterem.hu/wp-content/uploads/2023/10/pebo-typo-logo-white.svg" id='acceptrec-logo' alt="logo" width={0} height={0} priority className="ease-in-out duration-200" />
+                        <Image src="/Accept-Stacked-Logo-with-Strapline-RGB300.webp" id='acceptrec-logo' alt="logo" width={200} height={150} priority className="w-[200px] h-auto ease-in-out duration-200" />
                     </Link>
                 </div>
                 
                 
-                <ul id="menu" className='flex justify-between items-center text-md w-1/2 text-[--grey]'>
+                <ul id="menu" className='flex items-center gap-2 text-md font-bold h-24'>
 
-                        <li id='mainlink' className='flex items-center border border-transparent hover:bg-[--okker] hover:text-[--navy] active:bg-[--okker] active:text-[--navy] focus:bg-[--okker] focus:text-[--navy] px-2 py-2 '><Link href="#napimenu" className="flex items-center gap-2"><span>Napi menü</span></Link></li>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 '><Link href="/" className="flex items-center gap-2"><span className='flex flex-nowrap items-center gap-1'><TbHome2 />Home</span></Link></li>
 
-                        <li id='mainlink' className='flex items-center border border-transparent hover:bg-[--okker] hover:text-[--navy] active:bg-[--okker] active:text-[--navy] focus:bg-[--okker] focus:text-[--navy] px-2 py-2'><Link href="#etlap" className="flex items-center gap-2"><span>Étlap</span></Link></li>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 '><Link href="/jobs" className="flex items-center gap-2"><span>Jobs</span></Link></li>
                                         
-                        <li id='mainlink' className='flex items-center border border-transparent hover:bg-[--okker] hover:text-[--navy] active:bg-[--okker] active:text-[--navy] focus:bg-[--okker] focus:text-[--navy] px-2 py-2'><Link href="#rolunk" className="flex items-center gap-2"><span>Rólunk</span></Link></li>
-                                       
-                        <li id='mainlink' className='flex items-center border border-transparent hover:bg-[--okker] hover:text-[--navy] active:bg-[--okker] active:text-[--navy] focus:bg-[--okker] focus:text-[--navy] px-2 py-2'><Link href="#kapcsolat" className="flex items-center gap-2"><span>Kapcsolat</span></Link>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/about-us" className="flex items-center gap-2"><span>About Us</span></Link>
+                        <BiChevronDown className='text-2xl'/>
+                            <ul id='submenu1' className='hidden absolute grid-cols-2 grid-rows-2 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 w-[350px] transition-all'>
+                                <li className='group relative row-span-3 flex w-full rounded-lg text-white text-xl transition-all '>
+                                    
+                                    <Link href="/about-us" className=' w-full h-full px-2 py-3 rounded-xl bg-[url("/about-us.webp")] bg-center bg-cover bg-no-repeat'>
+                                        <p className='absolute bottom-2 text-xl z-10'>About us</p>
+                                        <FiArrowUpRight className="absolute text-white top-2 right-2 z-10" />
+                                        <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-[#312252] to-[#31225283] rounded-xl group-hover:opacity-70 transition-all'></div>
+                                    </Link>
+                                </li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/about-us/team" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbUsers className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Meet the team</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-travnsparent transition-all'><Link href="/clients/national-temporary-worker-day" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbBriefcase className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>National Temporary Worker Day</span></Link></li>                        
+                            </ul>
                         </li>
+                    
+                    
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/for-employers" className="flex items-center gap-2"><span>For Employers</span></Link><BiChevronDown className='text-2xl'/>
+                            <ul id='submenu2' className='hidden absolute grid-cols-3 grid-rows-3 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 w-[550px] transition-all'>
+                                <li className='group relative row-span-3 flex w-full rounded-lg text-white text-xl transition-all '>
+                                    
+                                    <Link href="/for-employers" className=' w-full h-full px-2 py-3 rounded-xl bg-[url("/accepted-job.webp")] bg-center bg-cover bg-no-repeat'>
+                                        <p className='absolute bottom-2 text-xl z-10'>For Employers</p>
+                                        <FiArrowUpRight className="absolute text-white top-2 right-2 z-10" />
+                                        <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-[#312252] to-[#31225283] rounded-xl group-hover:opacity-70 transition-all'></div>
+                                    </Link>
+                                </li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/for-employers/shortlisted-candidates" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbUsers className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Shortlisted Candidates</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blog/how-to-write-a-successful-job-description" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbPencil className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Writing a good job description</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blog/interview-techniques" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbMoodPlus className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Interview Techniques</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/onboarding-process" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbCheckupList className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Onboarding process</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/industries" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbBuildingFactory2 className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Industries</span></Link></li>
+                            </ul>
+                        </li>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/for-employers" className="flex items-center gap-2"><span>For Candidates</span></Link><BiChevronDown className='text-2xl'/>
+                            <ul id='submenu3' className='hidden absolute grid-cols-3 grid-rows-3 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 w-[450px] transition-all'>
+                                <li className='group relative row-span-3 flex w-full rounded-lg text-white text-xl transition-all '>
+                                    
+                                    <Link href="/for-candidates" className=' w-full h-full px-2 py-3 rounded-xl bg-[url("/for-candidates.webp")] bg-center bg-cover bg-no-repeat'>
+                                        <p className='absolute bottom-2 text-xl z-10'>For Candidates</p>
+                                        <FiArrowUpRight className="absolute text-white top-2 right-2 z-10" />
+                                        <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-[#28a19d] to-[#00afa936] rounded-xl group-hover:opacity-70 transition-all'></div>
+                                    </Link>
+                                </li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/candidate-of-the-month" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbRosetteNumber1 className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Candidate of the month</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/refer-a-friend" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbFriends className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Refer a friend</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blog/first-job-in-the-uk" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbQuestionMark className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>First Job in the UK</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/registration" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbPower className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Sign-in / Registration</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/jobs" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbListSearch className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Jobs</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/manual-handling" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbWeight className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Manual handling</span></Link></li>
+                            </ul>
+                        </li>
+
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/faq" className="flex items-center gap-2 ">FAQ</Link></li>
+
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/blog" className="flex items-center gap-2 ">Blog</Link></li>
+                    
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/contact-us" className="flex items-center gap-2 ">Contact Us</Link></li>
+
+                        <li id='mainlink' className='flex items-center button-85 bg-[#312252] hover:bg-[#4e3780] hover:shadow-md text-white hover:shadow-[#3122523b] px-3 py-2 rounded-full transition-all'><Link href="/registration" className="flex items-center gap-2 ">Sign in / Register</Link></li>
+                    
                 </ul>
-                <div className='flex flex-nowrap gap-16'>
-                    <div className='flex flex-nowrap items-center gap-2 w-max'>
-                        <div className='flex'>
-                            <TbPhone className="text-[--okker] w-7 h-7"/>
-                        </div>
-                        <div className='flex flex-col gap-1'>
-                            <Link href="tel:+3682310663"><p className="footerparagraph">+36 82 310 663</p></Link>
-                            <Link href="tel:+36304940959"><p className="footerparagraph">+36 30 494 0959</p></Link>
-                        </div>
-                    </div>
-                    <div className='flex flex-col'>
-                        <p className="footerparagraph">Jelenleg:</p>
-                        <p className={isRestaurantOpen ? "open text-2xl" : "close text-2xl"}>
-                        {isRestaurantOpen ? "Nyitva" : "Zárva"}
-                        </p>
-                      
-                        
-                    </div> 
-                </div>
                 
-            </div>    
+            </div>
+
+            
         </nav> 
 
-        <div id="mobile-menu" className={`fixed top-0 xl:hidden flex justify-between items-center w-full h-[64px] p-4 bg-[--navy] z-50 ${isOpen ? '' : ''}`}>
-              <Link href="/"><Image src="https://admin.peboetterem.hu/wp-content/uploads/2023/10/pebo-typo-logo-white.svg" alt="logo" width={75} height={40} /></Link>
-                <div className='flex flex-nowrap gap-4'>
-                <div className='flex flex-nowrap gap-2 items-center'>
-                        <p className="footerparagraph">Jelenleg:</p>
-                        <p className={isRestaurantOpen ? "open text-2xl" : "close text-2xl"}>
-                        {isRestaurantOpen ? "Nyitva" : "Zárva"}
-                        </p>
-                    </div> 
-              <div className="flex gap-2">
-                <button className="p-2" onClick={toggleMenu} aria-label="Menu"><TbMenu2 className={`h-8 w-auto cursor-pointe text-[--grey] ${isOpen ? ' hidden' : ''}`}/><MdClose className={`h-8 w-auto cursor-pointe text-[--grey] ${isOpen ? '' : ' hidden'}`}/></button>
-                <div id="toggle-menu" className={`absolute top-[64px] right-0 bg-[--navy] h-auto w-full p-4 text-[--grey] transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} lg:translate-x-0 transition-transform duration-200 ease-in-out`}>
-                  <ul className="relative flex flex-col items-end gap-4">
-                    <li className="relative group">
-                      <Link href="#napimenu" onClick={handleLinkClick}>Napi menü</Link>
-                      <span className="absolute inset-x-0 bottom-0 h-[1px] bg-black transition-all duration-200 transform origin-left scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100"></span>
-                    </li>
-                    <li className="relative group">
-                      <Link href="#etlap" onClick={handleLinkClick}>Étlap</Link>
-                      <span className="absolute inset-x-0 bottom-0 h-[1px] bg-black transition-all duration-200 transform origin-left scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100"></span>
-                    </li>
-                    <li className="relative group">
-                      <Link href="#rolunk" onClick={handleLinkClick}>Rólunk</Link>
-                      <span className="absolute inset-x-0 bottom-0 h-[1px] bg-black transition-all duration-200 transform origin-left scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100"></span>
-                    </li>
-                    <li className="relative group">
-                      <Link href="#kapcsolat" onClick={handleLinkClick}>Kapcsolat</Link>
-                      <span className="absolute inset-x-0 bottom-0 h-[1px] bg-black transition-all duration-200 transform origin-left scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100"></span>
-                    </li>
-                    <div className='flex flex-nowrap items-center justify-between gap-2 w-full p-4'>
-                            <TbPhone className="text-[--okker] w-7 h-7"/>
-                            <Link href="tel:+3682310663"><p className="footerparagraph">+36 82 310 663</p></Link>
-                            <Link href="tel:+36304940959"><p className="footerparagraph">+36 30 494 0959</p></Link>
-                    </div>  
-                  </ul>
-                </div>
-              </div>
-              </div>
+        <div id="mobile-menu" className={`fixed top-0 xl:hidden flex justify-between items-center w-full h-[64px] p-4 bg-white z-50 ${isOpen ? '' : ''}`}>
+            <Link href="/">
+                <Image src="/Accept-Stacked-Logo-with-Strapline-RGB300.webp" alt="logo" width={150} height={40} />
+            </Link>
+            <menu className=' flex justify-center items-center gap-4'>
+                    <button onClick={toggleMobileMenu}><TbMenu2 className={`h-8 w-auto cursor-pointe ${mobileMenuOpen ? ' hidden' : ''}`}/><MdClose className={`h-8 w-auto cursor-pointe ${mobileMenuOpen ? '' : ' hidden'}`}/></button>
+                    <ul className={`menu-mobile absolute top-[64px] right-0 grid grid-cols-1 justify-start items-center w-screen sm:w-96 bg-white shadow-special${mobileMenuOpen ? ' active' : ''}`}>
+                        <div className={`absolute w-full h-full bg-[#312252] opacity-80 ${submenu1Open ? '' : ' hidden'} `}></div>
+                        <li className='flex justify-between border-t border-neutral-300'>
+                            <Link href="/jobs" className='w-full p-2 font-black text-xl'>Jobs</Link>
+                        </li>
+                        <li className='flex justify-between border-t border-neutral-300'>
+                            <Link href="/about-us" className='w-full p-2 font-black text-xl'>About Us</Link>
+                            <div onClick={toggleSubmenu1} className='flex justify-center items-center border-l border-neutral-300 p-1 w-14 cursor-pointer'>
+                                <TbChevronRight className="w-6 h-6 " />
+                            </div>
+
+                            <ul className={`mobilesubmenu absolute top-0 right-0 grid grid-cols-1 justify-start items-center w-screen sm:w-96 bg-white shadow-special${submenu1Open ? ' active' : ''}`}>
+                                <li onClick={toggleSubmenu1} className='flex justify-between items-center border-t border-neutral-300 h-[45px] p-2 cursor-pointer'>
+                                    <TbChevronLeft className="w-6 h-6"/>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/about-us/team" className='w-full p-2 font-black text-xl'>Meet the team</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/clients/national-temporary-worker-day" className='w-full p-2 font-black text-xl'>National Temporary Worker Day</Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li className='flex justify-between border-t border-neutral-300'>
+                            <Link href="/for-employers" className='w-full p-2 font-black text-xl'>For Employers</Link>
+                            <div onClick={toggleSubmenu2} className='flex justify-center items-center border-l border-neutral-300 p-1 w-14 cursor-pointer'>
+                                <TbChevronRight className="w-6 h-6 " />
+                            </div>
+
+                            <ul className={`mobilesubmenu absolute top-0 right-0 grid grid-cols-1 justify-start items-center w-screen sm:w-96 bg-white shadow-special${submenu2Open ? ' active' : ''}`}>
+                                <li onClick={toggleSubmenu2} className='flex justify-between items-center border-t border-neutral-300 h-[45px] p-2 cursor-pointer'>
+                                    <TbChevronLeft className="w-6 h-6"/>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/for-employers/shortlisted-candidates" className='w-full p-2 font-black text-xl'>Shortlisted candidates</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/blog/how-to-write-a-successful-job-description" className='w-full p-2 font-black text-xl'>Writing a good job description</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/blog/interview-techniques" className='w-full p-2 font-black text-xl'>Interview Techniques</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/onboarding-process" className='w-full p-2 font-black text-xl'>Onboarding process</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/industries" className='w-full p-2 font-black text-xl'>Industries</Link>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li className='flex justify-between border-t border-neutral-300'>
+                            <Link href="/for-candidates" className='w-full p-2 font-black text-xl'>For Candidates</Link>
+                            <div onClick={toggleSubmenu3} className='flex justify-center items-center border-l border-neutral-300 p-1 w-14 cursor-pointer'>
+                                <TbChevronRight className="w-6 h-6 " />
+                            </div>
+
+                            <ul className={`mobilesubmenu absolute top-0 right-0 grid grid-cols-1 justify-start items-center w-screen sm:w-96 bg-white shadow-special${submenu3Open ? ' active' : ''}`}>
+                                <li onClick={toggleSubmenu3} className='flex justify-between items-center border-t border-neutral-300 h-[45px] p-2 cursor-pointer'>
+                                    <TbChevronLeft className="w-6 h-6"/>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/candidate-of-the-month" className='w-full p-2 font-black text-xl'>Candidate of the month</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/refer-a-friend" className='w-full p-2 font-black text-xl'>Refer a friend</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/blog/first-job-in-the-uk" className='w-full p-2 font-black text-xl'>First Job in the UK</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/registration" className='w-full p-2 font-black text-xl'>Sign-in / Registration</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/jobs" className='w-full p-2 font-black text-xl'>Jobs</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/manual-handling" className='w-full p-2 font-black text-xl'>Manual handling</Link>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li className='flex justify-between border-t border-neutral-300'>
+                            <Link href="/faq" className='w-full p-2 font-black text-xl'>FAQ</Link>
+                        </li>
+                        <li className='flex justify-between border-t border-neutral-300'>
+                            <Link href="/blog" className='w-full p-2 font-black text-xl'>Blog</Link>
+                        </li>
+                        <li className='flex justify-between border-t border-neutral-300'>
+                            <Link href="/contact-us" className='w-full p-2 font-black text-xl'>Contact Us</Link>
+                        </li>
+                        <li className='flex justify-between bg-[#312252]'>
+                            <Link href="/registration" className='w-full p-2 font-black text-xl text-white'>Sign Up / Register</Link>
+                        </li>
+                    </ul>
+                </menu>
             </div>
         </>    
     );
