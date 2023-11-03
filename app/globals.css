@@ -119,6 +119,7 @@
   }
 }
 
+@media (min-width: 600px) {
 .logos:before,
 .logos:after {
   position: absolute;
@@ -128,6 +129,19 @@
   content: "";
   z-index: 2;
 }
+}
+
+@media (max-width: 600px) {
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  }
 
 .logos:before {
   left: 0;
