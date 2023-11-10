@@ -187,7 +187,7 @@ export default function MainNav() {
             
         </nav> 
 
-        <nav className={`xl:hidden fixed top-0 z-50 min-h-16 w-full overflow-x-clip`}>
+        <nav className={`xl:hidden fixed top-0 z-50 min-h-16 w-full`}>
             <div className='flex justify-between items-center h-16 px-4 shadow-lg bg-white'>
                 <div id="logo" className="flex shrink-0 items-center w-40 h-14">
                     <Link href="/">

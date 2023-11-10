@@ -1,6 +1,6 @@
 import './globals.css'
 import { Raleway } from 'next/font/google'
-import MainNav2 from './components/mainnav2'
+import MainNav from './components/mainnav'
 import { ApolloWrapper } from './lib/apollo-wrapper'
 import Footer from './components/footer'
 import MainCTA from './components/MainCTA'
@@ -59,7 +59,7 @@ export default function RootLayout({
       <body className={raleway.className} id='__next'>
           <ApolloWrapper>
             <Cookies />
-            <MainNav2/>
+            <MainNav/>
             {children}
             <MainCTA/>
             <Footer/>
