@@ -1,0 +1,14 @@
+POST https://acceptrec.co.uk/api/botpress
+Content-Type: application/json
+
+{
+    "name": "szabi",
+    "tel": "06303068676",
+    "email": "szabi@gmail.com",
+    "summary": "summary etc.",
+    "transcript": "transcript something"
+}
+
+#####
+
+POST http://localhost

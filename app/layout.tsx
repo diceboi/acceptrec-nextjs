@@ -23,6 +23,23 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script 
+        async 
+        src="https://www.googletagmanager.com/gtag/js?id=G-W6M20W55E1" 
+        />
+        <Script
+        id='Analytics'
+        strategy='beforeInteractive'
+        dangerouslySetInnerHTML={{
+          __html:
+          `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-W6M20W55E1');`
+        }}
+        >
+        </Script>
+        <Script 
         id='Hotjar' 
         strategy='afterInteractive' 
         dangerouslySetInnerHTML={{

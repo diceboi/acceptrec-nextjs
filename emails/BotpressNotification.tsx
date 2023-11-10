@@ -25,7 +25,7 @@ import {
       <Preview>{name} is waiting for a chat response.</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>{name} just asked for a human in chat.</Heading>
+          <Heading style={h1}>{name} is waiting for a human in chat.</Heading>
           <Text style={{ ...text, marginBottom: '24px'}}>
             Please make sure, to join the conversation in messenger.
           </Text>
