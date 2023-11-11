@@ -6,7 +6,7 @@ import Team from "@/app/components/team";
 export default function TeamPage() {
   return (
     <>
-        <TeamHero title={"Meet the team"} subtitle={"our team"} classname={"bg-gradient-to-br from-white to-[#00afa917] pb-10"}/>
+        <TeamHero title={"Meet the team"} subtitle={"our team"} classname={"bg-gradient-to-br from-white to-[#00afa917] pb-10 pt-16 lg:pt-0"}/>
         <TeamInner />
     </>
   )

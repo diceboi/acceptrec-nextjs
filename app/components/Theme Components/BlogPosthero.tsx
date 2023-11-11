@@ -16,7 +16,7 @@ interface BlogPostHeroProps {
 const BlogPostHero: React.FC<BlogPostHeroProps> = ({ title, authorimage, authorname, postdate, category, featuredimage, slug}) => {
   return (
     <>
-    <div className="flex justify-center items-end ">
+    <div className="flex justify-center items-end pt-16 lg:pt-0">
       <div style={{backgroundImage:`url("${featuredimage}")`}} className="relative flex flex-col justify-end gap-4 w-11/12 lg:w-8/12 min-h-[50vh] lg:min-h-[50vh] m-auto p-4 mt-4 bg-auto lg:bg-cover bg-center bg-no-repeat rounded-t-3xl">
                
         <div className='flex items-center gap-4 w-full z-10 text-white pt-8'>

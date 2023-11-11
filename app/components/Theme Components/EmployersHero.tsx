@@ -5,7 +5,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 export default function EmployersHero() {
   return (
     <>        
-        <div className="overflow-hidden flex flex-col justify-center relative h-[70vh] pb-10 bg-[url('/accepted-job.webp')] bg-center bg-cover bg-no-repeat bg-opacity-20">
+        <div className="overflow-hidden flex flex-col justify-center relative h-[70vh] pb-10 bg-[url('/accepted-job.webp')] bg-center bg-cover bg-no-repeat bg-opacity-20 pt-16 lg:pt-0">
             <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-[#312252] to-[#31225283]'></div>
             <div className="relative flex flex-col gap-4 w-11/12 lg:w-8/12 m-auto ">
               <div className="flex flex-col justify-center gap-4 lg:w-1/2 h-full text-white">

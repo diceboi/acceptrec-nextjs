@@ -7,7 +7,7 @@ export default function Abouthero() {
     return(
         <>
         
-        <div className="relative h-[50vh] pb-10 bg-[url('/team.webp')] bg-cover bg-bottom bg-no-repeat ">
+        <div className="relative h-[50vh] pb-10 bg-[url('/team.webp')] bg-cover bg-bottom bg-no-repeat pt-16 lg:pt-0">
             <div className='absolute top-0 right-0 w-full h-full bg-[#312252] opacity-75'></div>
             <div className="relative flex flex-col justify-between gap-4 w-11/12 lg:w-8/12 h-[50vh] m-auto ">
               <div className="flex flex-col gap-4 justify-center w-full h-full text-white">

@@ -5,7 +5,7 @@ import ShortlistedHero from "@/app/components/Theme Components/ShortlistedHero";
 export default function ShortlistedCandidatesPage() {
   return (
     <>
-      <ShortlistedHero title={"Shortlisted Candidates"} subtitle={"Every week, we choose a number of candidates with great skills and even better potential to grow in the warehousing, logistics or commercial industries and post their short profiles here. Let us know who sounds like an interesting fit to your team and we will send you their CV free of charge."} classname={"bg-gradient-to-br from-white to-[#00afa917] pb-10"}/>
+      <ShortlistedHero title={"Shortlisted Candidates"} subtitle={"Every week, we choose a number of candidates with great skills and even better potential to grow in the warehousing, logistics or commercial industries and post their short profiles here. Let us know who sounds like an interesting fit to your team and we will send you their CV free of charge."} classname={"bg-gradient-to-br from-white to-[#00afa917] pb-10 pt-16 lg:pt-0"}/>
       <section className="w-full py-20">
         <div className="grid lg:grid-cols-2 gap-16 w-11/12 lg:w-8/12 m-auto">
           <ShortlistedCandidateTile 

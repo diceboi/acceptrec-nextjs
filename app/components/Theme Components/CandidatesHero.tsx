@@ -5,7 +5,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 export default function CandidatesHero() {
   return (
     <>        
-        <div className="overflow-hidden flex flex-col justify-center relative min-h-[70vh] pb-10 bg-[url('/for-candidates.webp')] bg-center bg-cover bg-no-repeat bg-opacity-20">
+        <div className="overflow-hidden flex flex-col justify-center relative min-h-[70vh] pb-10 bg-[url('/for-candidates.webp')] bg-center bg-cover bg-no-repeat bg-opacity-20 pt-16 lg:pt-0">
             <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-[#28a19d] to-[#00afa936]'></div>
             <div className="relative flex flex-col gap-4 w-11/12 lg:w-8/12 m-auto ">
               <div className="flex flex-col justify-center gap-4 lg:w-1/2 h-full text-white">
