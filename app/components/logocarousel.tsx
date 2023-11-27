@@ -7,6 +7,9 @@ export default function Logocarousel() {
         <div className="absolute flex w-[900%] lg:w-[300%]">
 
           <div className="logos-slide inline-flex justify-between w-[150%] gap-8">
+            <div className="flex justify-center items-center w-1/3 lg:w-1/5 ml-8">
+              <Image src="/logocarousel/leicestershire-awards.webp" width={150} height={100} alt="" className=""/>
+            </div>
             <div className="flex justify-center items-center w-1/3 lg:w-1/5">
               <Image src="/logocarousel/armed-forces-covenant.webp" width={150} height={100} alt="" className=""/>
             </div>
@@ -40,6 +43,9 @@ export default function Logocarousel() {
           </div>
 
           <div className="logos-slide inline-flex justify-between w-[150%] gap-8">
+            <div className="flex justify-center items-center w-1/3 lg:w-1/5 ml-8">
+              <Image src="/logocarousel/leicestershire-awards.webp" width={150} height={100} alt="" className=""/>
+            </div>
             <div className="flex justify-center items-center w-1/3 lg:w-1/5">
               <Image src="/logocarousel/armed-forces-covenant.webp" width={150} height={100} alt="" className=""/>
             </div>

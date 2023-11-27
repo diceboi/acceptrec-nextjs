@@ -5,7 +5,6 @@ import Logocarousel from './components/logocarousel'
 import Industries from './components/industries'
 import Rated from './components/rated'
 import Team from './components/team'
-import FacebookMsg from './components/FacebookMsg'
 import getJobs from './api/getJobs'
 import HomeBanner from './components/HomeBanner'
 
@@ -23,7 +22,6 @@ export default async function Home() {
       <Rated />
       <Team />
       <Logocarousel/>
-      <FacebookMsg />
     </>
   )
 }

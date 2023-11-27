@@ -6,6 +6,7 @@ import Footer from './components/footer'
 import MainCTA from './components/MainCTA'
 import Cookies from './components/Cookies'
 import Script from 'next/script'
+import FacebookMsg from './components/FacebookMsg'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -63,6 +64,7 @@ export default function RootLayout({
             {children}
             <MainCTA/>
             <Footer/>
+            <FacebookMsg />
           </ApolloWrapper>
       </body>
     </html>
