@@ -36,11 +36,10 @@ import {
             <b>Name:</b> {name}<br></br>
             <b>Phone number:</b> {tel}<br></br>
             <b>Email:</b> {email}<br></br>
-            <b>Summary of the conversation:</b> {summary}<br></br>
             <b>Script of the conversation:</b> {transcript}<br></br>
           </Text>
           <Img
-            src="https://cms.arpusz.hu/wp-content/uploads/2023/09/Accept-Stacked-Logo-with-Strapline-RGB300.png"
+            src="http://admin.acceptrec.co.uk/wp-content/uploads/2023/10/Accept-Stacked-Logo-with-Strapline-RGB300-scaled.webp"
             width="auto"
             height="50"
             alt="Acceptrec's logo"

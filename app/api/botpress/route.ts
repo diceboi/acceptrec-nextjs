@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   const companyMail = await resend.sendEmail({
     from: 'Acceptrec.co.uk <hello@acceptrec.co.uk>',
     to: 'szasz.szabolcs1995@gmail.com',
-    subject: `[Chat] ${name} is waiting for a human`,
+    subject: `[Chat] ${name} is waiting for a human in Messenger`,
     react: BotpressNotification({
         name,
         tel,
