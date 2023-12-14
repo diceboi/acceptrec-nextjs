@@ -6,20 +6,20 @@ import { NextResponse } from "next/server";
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
-  const { name, tel, email, summary, transcript } = await request.json();
+  const { name, tel, email, summary } = await request.json();
 
   try {
 
   const companyMail = await resend.sendEmail({
     from: 'Acceptrec.co.uk <hello@acceptrec.co.uk>',
-    to: 'szasz.szabolcs1995@gmail.com',
-    subject: `[Chat] ${name} is waiting for a human in Messenger`,
+    to: 'admin@acceptrec.co.uk',
+    subject: `[Chat] a User is waiting for a human in Messenger`,
+    bcc: "peter@acceptrec.co.uk",
     react: BotpressNotification({
         name,
         tel,
         email,
         summary,
-        transcript,
     })
   });
   return NextResponse.json({

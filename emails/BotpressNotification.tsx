@@ -16,27 +16,17 @@ import {
     tel: string;
     email: string;
     summary: string;
-    transcript: string;
   }
   
-  export const ContactUsCompany = ({ name, tel, email, summary, transcript }: WelcomeEmailProps) => (
+  export const ContactUsCompany = ({ name, tel, email, summary }: WelcomeEmailProps) => (
     <Html>
       <Head />
-      <Preview>{name} is waiting for a chat response.</Preview>
+      <Preview>A User is waiting for a chat response.</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>{name} is waiting for a human in chat.</Heading>
+          <Heading style={h1}>A User is waiting for a human in chat.</Heading>
           <Text style={{ ...text, marginBottom: '24px'}}>
             Please make sure, to join the conversation in messenger.
-          </Text>
-          <Text style={{...text}}>
-            The chat contained the following:
-          </Text>
-            <Text style={{...text}}>
-            <b>Name:</b> {name}<br></br>
-            <b>Phone number:</b> {tel}<br></br>
-            <b>Email:</b> {email}<br></br>
-            <b>Script of the conversation:</b> {transcript}<br></br>
           </Text>
           <Img
             src="http://admin.acceptrec.co.uk/wp-content/uploads/2023/10/Accept-Stacked-Logo-with-Strapline-RGB300-scaled.webp"
