@@ -151,11 +151,11 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
 
   return (
     <><section className="sticky top-[64px] lg:top-[55px] p-4 lg:-mt-7 bg-white border-b border-neutra-300 z-40">
-      <div className="w-full pt-1 pb-4 lg:pb-8 lg:overflow-auto overflow-x-scroll">
+      <div className="w-full pt-1 pb-4 px-2 lg:pb-8 lg:overflow-auto overflow-x-scroll">
         <div id="jobfilter" className="flex justify-center gap-2 min-w-max m-auto">
           
             <div className="items-center min-w-max">
-                <select onChange={handleRegionChange} value={selectedRegion} id="job-region" className="p-2 lg:p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
+                <select onChange={handleRegionChange} value={selectedRegion} id="job-region" className="p-2 lg:p-3 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
                   <option className="font-bold">Select a region</option>
                   {
                     states.map((state: any) => (
@@ -167,7 +167,7 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
             </div>
 
             <div className="items-center min-w-max">
-                <select onChange={handleCategoryChange} value={selectedCategory} id="job-category" className="p-2 lg:p-4 shadow-special rounded-full  hover:bg-neutral-50 cursor-pointer font-bold">
+                <select onChange={handleCategoryChange} value={selectedCategory} id="job-category" className="p-2 lg:p-3 shadow-special rounded-full  hover:bg-neutral-50 cursor-pointer font-bold">
                 <option className="font-bold">Select a category</option>
                   {
                     uniqueCategories.map((category: any) => (
@@ -178,7 +178,7 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
             </div>
 
             <div className="items-center min-w-max">
-                <select onChange={handleJobTypeChange} value={selectedJobType} id="job-region" className="p-2 lg:p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
+                <select onChange={handleJobTypeChange} value={selectedJobType} id="job-region" className="p-2 lg:p-3 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
                 <option className="font-bold">Select a job type</option>
                   {jobTypes.map((jobtype: any, index: string | number) => (
                   <option key={jobtype} value={jobtype} className="font-bold">
@@ -189,7 +189,7 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
             </div>
 
             <div className="items-center min-w-max">
-                <select onChange={handleContractTypeChange} value={selectedContractType} id="job-region" className="p-2 lg:p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
+                <select onChange={handleContractTypeChange} value={selectedContractType} id="job-region" className="p-2 lg:p-3 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
                 <option className="font-bold">Select a contract type</option>
                   {contractTypes.map((contracttype: any, index: string | number) => (
                   <option key={contracttype} value={contracttype} className="font-bold">
@@ -201,7 +201,7 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
         </div>
       </div> 
         {Object.keys(selectedFilters).length > 0 && (
-          <div className="flex flex-wrap gap-4 w-11/12 lg:w-8/12 m-auto mt-4">
+          <div className="flex justify-center flex-wrap gap-4 w-11/12 lg:w-8/12 m-auto pb-1 pt-4 lg:pt-0">
               <button
                 className="flex flex-nowrap items-center gap-4 px-2 py-1 bg-[#00afaa] text-white rounded-full max-h-min"
                 onClick={resetAllFilters}
