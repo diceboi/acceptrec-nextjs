@@ -8,7 +8,7 @@ export default function MainCTA() {
     <section className="w-full py-20 bg-neutral-50">
         <div className="w-11/12 lg:w-8/12 m-auto">
             <div className="flex flex-col w-full gap-20">
-                <h2 className="text-5xl font-black">Get in touch</h2>
+                <h2 className="text-5xl text-[#312252] font-black">Get in touch</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-8 lg:gap-20">
                     <div className="flex flex-col gap-4 lg:border-r lg:border-neutral-300 lg:pr-10">
                         <div className="flex flex-nowrap gap-2">

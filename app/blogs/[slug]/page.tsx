@@ -131,7 +131,7 @@ export default function Blog() {
             {otherRecentPosts?.slice(0, 4).map((posts) => (
             <Blogtile
               classname={"group relative flex flex-col w-full bg-white border border-neutral-300 gap-4 h-[430px] p-4 rounded-3xl hover:shadow-special hover:border-transparent transition-all"}
-              href={`/blog/${posts.node.slug}`}
+              href={`/blogs/${posts.node.slug}`}
               key={posts.node.slug}
               featuredimage={posts.node.featuredImage?.node.sourceUrl} 
               title={posts.node.title}

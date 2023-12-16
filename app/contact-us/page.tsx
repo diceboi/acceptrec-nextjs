@@ -68,7 +68,7 @@ export default function ContactUs() {
   return (
     <>
     <ContactUsHero title={"Contact us"} subtitle={"Please complete the contact form and one of our team will be in touch as soon as possible."} classname={"bg-gradient-to-br from-white to-[#00afa917] pb-10 pt-16 lg:pt-0"}/>
-    <ContactForm classname={'flex flex-col w-8/12 gap-4 m-auto py-10'}/>
+    <ContactForm classname={'flex flex-col lg:w-1/2 w-11/12 gap-4 m-auto py-10'}/>
     <Offices pages={data.pages} classname={'grid lg:grid-cols-3 gap-8 w-11/12 lg:w-8/12 m-auto py-20'}/>
     </>
   )

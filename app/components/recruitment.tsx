@@ -14,10 +14,10 @@ export default function Recruitment() {
                     Recruitment
                 </h2>
             </div>
-            <div className="flex flex-col lg:flex-row justify-center items-center gap-8 w-11/12 lg:w-8/12 m-auto">
+            <div className="flex flex-col lg:flex-row justify-center items-start gap-8 w-11/12 lg:w-8/12 m-auto">
 
                 <Link href="/for-employers" className="group flex flex-col w-full lg:w-1/3 rounded-3xl shadow-special hover:lg:shadow-special hover:bg-white cursor-pointer ease-out duration-200">
-                    <div className="relative flex flex-col justify-end border-b-8 border-[#ff914d] bg-[url('/accepted-job.webp')] bg-cover bg-center bg-opacity-40 group-hover:bg-opacity-100 h-64 p-4 group-hover:bg-[#ff914d] rounded-t-3xl ease-out duration-200">
+                    <div className="relative flex flex-col justify-end border-b-8 border-[#312252] bg-[url('/accepted-job.webp')] bg-cover bg-center bg-opacity-40 group-hover:bg-opacity-100 h-64 p-4 group-hover:bg-[#ff914d] rounded-t-3xl ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10">
                             <h3 className="text-4xl font-black tracking-tighter text-white">For Clients</h3>
                             <FiArrowRight className='absolute right-8 text-white w-8 h-8 lg:opacity-0 group-hover:opacity-100 group-hover:right-4 ease-out duration-200'/>
@@ -45,7 +45,7 @@ export default function Recruitment() {
                 </Link>
 
                 <Link href="/registration" className="group flex flex-col w-full lg:w-1/3 rounded-3xl shadow-special hover:lg:shadow-special hover:bg-white cursor-pointer ease-out duration-200">
-                    <div className="relative flex flex-col justify-end border-b-8 border-[#312252] bg-[url('/truck-driver.avif')] bg-cover bg-center bg-opacity-40 group-hover:bg-opacity-100 h-64 p-4 group-hover:bg-[#312252] rounded-t-3xl ease-out duration-200">
+                    <div className="relative flex flex-col justify-end border-b-8 border-[#ff914d] bg-[url('/truck-driver.avif')] bg-cover bg-center bg-opacity-40 group-hover:bg-opacity-100 h-64 p-4 group-hover:bg-[#312252] rounded-t-3xl ease-out duration-200">
                         <div className="flex flex-nowrap justify-between w-full z-10 ">
                             <h3 className="text-4xl font-black tracking-tighter text-white">Register</h3>
                             <FiArrowRight className='absolute right-8 text-white w-8 h-8 lg:opacity-0 group-hover:opacity-100 group-hover:right-4 ease-out duration-200'/>

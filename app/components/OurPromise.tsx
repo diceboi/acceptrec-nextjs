@@ -5,15 +5,15 @@ export default function OurPromise() {
     <>
         <section className="flex flex-col lg:flex-row w-11/12 lg:w-8/12  gap-8 py-20 m-auto">
             <div className="flex flex-col gap-4 w-full lg:w-1/2 justify-start bg-[url('/helping-hand.webp')] bg-contain bg-no-repeat bg-right lg:bg-bottom">
-                <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
+                <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase text-[#312252]'>
                     Our promise
                 </h3>
-                <h2 className="flex flex-wrap gap-3 text-6xl lg:text-6xl font-black tracking-tighter z-10 ">
+                <h2 className="flex flex-wrap gap-3 text-6xl lg:text-6xl font-black tracking-tighter z-10 text-[#312252]">
                     We are <p className='text-[#00afaa] underline'>listening</p>
                 </h2>
                 
             </div>
-            <div className="grid grid-cols-2 grid-rows-3 gap-8 w-full lg:w-1/2">
+            <div className="grid grid-cols-2 grid-rows-3 gap-8 w-full lg:w-1/2 text-[#312252]">
                 <div className='flex flex-col gap-2 w-full lg:p-3'>
                     <div className='flex flex-col lg:flex-row items-left gap-2 '>
                         <TbBook className='w-10 h-10 text-[#00afaa]'/>

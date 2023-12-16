@@ -29,7 +29,7 @@ export default function Industries() {
                         Specialising within niche industries, we use our expertise and systems to source the staff you need. We provide both temporary staffing and permanent solutions.
                     </p>                    
                 </div>
-                <div className='flex flex-wrap justify-start items-end w-full gap-1 lg:gap-4 pb-8'>
+                <div className='flex flex-wrap justify-start items-end text-[#312252] w-full gap-1 lg:gap-4 pb-8'>
                     <button onClick={() => handleButtonClick('warehouse')} onMouseEnter={() => setActiveButton('warehouse')} onMouseLeave={() => setActiveButton(selectedDiv)} className={`font-bold w-auto p-2 px-2 border border-neutral-300 hover:shadow-special hover:bg-neutral-200 hover:border-neutral-200 focus:bg-neutral-200 focus:border-neutral-200 ease-in-out duration-200 rounded-full ${activeButton === 'warehouse' ? 'bg-neutral-200 border-neutral-200' : ''}`}>Warehousing & Industrial</button>
                     <button onClick={() => handleButtonClick('commercial')} className=' font-bold w-auto p-2 px-2 border border-neutral-300 hover:shadow-special hover:bg-neutral-200 hover:border-neutral-200 focus:bg-neutral-200 focus:border-neutral-200 active:bg-neutral-200 active:border-neutral-200 ease-in-out duration-200 rounded-full'>Commerical</button>
                     <button onClick={() => handleButtonClick('driving')} className=' font-bold w-auto p-2 px-2 border border-neutral-300 hover:shadow-special hover:bg-neutral-200 hover:border-neutral-200 focus:bg-neutral-200 focus:border-neutral-200 active:bg-neutral-200 active:border-neutral-200 ease-in-out duration-200 rounded-full'>Driving & Logistics</button>

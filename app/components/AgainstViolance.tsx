@@ -6,7 +6,7 @@ export default function AgainstViolance() {
     <>
         <section className="flex justify-center items-center w-full">
             <div className="flex flex-col-reverse lg:flex-row w-11/12 lg:w-8/12 gap-16 lg:py-8 py-20">
-                <div className="w-11/12 lg:w-1/2 flex justify-center flex-col gap-8">
+                <div className="w-11/12 lg:w-1/2 flex justify-center flex-col gap-8 text-[#312252]">
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         Modern Slavery Statment
                     </h3>

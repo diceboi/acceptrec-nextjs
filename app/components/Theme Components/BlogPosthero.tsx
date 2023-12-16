@@ -32,7 +32,7 @@ const BlogPostHero: React.FC<BlogPostHeroProps> = ({ title, authorimage, authorn
             </div>
             <div className='flex flex-col items-center gap-2'>
               <h4 className='text-xs lg:text-sm font-medium uppercase'>Category</h4>
-              <p className='text-xs lg:-text-sm rounded-full border border-white px-2 cursor-pointer hover:bg-white hover:text-black ease duration-200'><Link href={`/blog?category=${category}`}>{category}</Link></p>
+              <p className='text-xs lg:-text-sm rounded-full border border-white px-2 cursor-pointer hover:bg-white hover:text-black ease duration-200'><Link href={`/blogs?category=${category}`}>{category}</Link></p>
             </div>
           </div>
           
@@ -41,7 +41,7 @@ const BlogPostHero: React.FC<BlogPostHeroProps> = ({ title, authorimage, authorn
         <ul className="flex flex-wrap gap-2 w-full text-white z-10 uppercase text-xs underline pt-4">
           <li><Link href={`/`}>Home page</Link></li>
           <FiChevronRight className='text-[#00afaa]' />
-          <li><Link href={`/blog`}>Blog</Link></li>
+          <li><Link href={`/blogs`}>Blog</Link></li>
           <FiChevronRight className='text-[#00afaa]' />
           <li>{title}</li>
         </ul>

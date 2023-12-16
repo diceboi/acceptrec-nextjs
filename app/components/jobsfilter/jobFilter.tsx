@@ -150,58 +150,56 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
   };
 
   return (
-    <>  
-      <div id="jobfilter" className="flex flex-wrap lg:flex-nowrap gap-4 w-11/12 lg:w-8/12 m-auto mt-16 lg:-mt-16 ">
-        
-          <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
-              <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Region</label>
-              <select onChange={handleRegionChange} value={selectedRegion} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
-                <option className="font-bold">Select a region</option>
-                {
-                  states.map((state: any) => (
-                    <option key={state} value={state} className="font-bold">{state}</option>                       
-                  ))
-                }
-                
-              </select>
-          </div>
+    <><section className="sticky top-[64px] lg:top-[55px] p-4 lg:-mt-7 bg-white border-b border-neutra-300 z-40">
+      <div className="w-full pt-1 pb-4 lg:pb-8 lg:overflow-auto overflow-x-scroll">
+        <div id="jobfilter" className="flex justify-center gap-2 min-w-max m-auto">
+          
+            <div className="items-center min-w-max">
+                <select onChange={handleRegionChange} value={selectedRegion} id="job-region" className="p-2 lg:p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
+                  <option className="font-bold">Select a region</option>
+                  {
+                    states.map((state: any) => (
+                      <option key={state} value={state} className="font-bold">{state}</option>                       
+                    ))
+                  }
+                  
+                </select>
+            </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
-              <label htmlFor="job-category" className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Category</label>
-              <select onChange={handleCategoryChange} value={selectedCategory} id="job-category" className="p-4 shadow-special rounded-full  hover:bg-neutral-50 cursor-pointer font-bold">
-              <option className="font-bold">Select a category</option>
-                {
-                  uniqueCategories.map((category: any) => (
-                    <option key={category} value={category} className="font-bold">{category}</option>                       
-                  ))
-                }                            
-              </select>
-          </div>
+            <div className="items-center min-w-max">
+                <select onChange={handleCategoryChange} value={selectedCategory} id="job-category" className="p-2 lg:p-4 shadow-special rounded-full  hover:bg-neutral-50 cursor-pointer font-bold">
+                <option className="font-bold">Select a category</option>
+                  {
+                    uniqueCategories.map((category: any) => (
+                      <option key={category} value={category} className="font-bold">{category}</option>                       
+                    ))
+                  }                            
+                </select>
+            </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
-              <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Type</label>
-              <select onChange={handleJobTypeChange} value={selectedJobType} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
-              <option className="font-bold">Select a job type</option>
-                {jobTypes.map((jobtype: any, index: string | number) => (
-                <option key={jobtype} value={jobtype} className="font-bold">
-                  {jobTypesDisplay[index]}
-                </option>
-                ))}                 
-              </select>
-          </div>
+            <div className="items-center min-w-max">
+                <select onChange={handleJobTypeChange} value={selectedJobType} id="job-region" className="p-2 lg:p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
+                <option className="font-bold">Select a job type</option>
+                  {jobTypes.map((jobtype: any, index: string | number) => (
+                  <option key={jobtype} value={jobtype} className="font-bold">
+                    {jobTypesDisplay[index]}
+                  </option>
+                  ))}                 
+                </select>
+            </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-1 items-center w-full">
-              <label className="text-sm lg:text-md uppercase font-medium tracking-widest py-2">Contract type</label>
-              <select onChange={handleContractTypeChange} value={selectedContractType} id="job-region" className="p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
-              <option className="font-bold">Select a contract type</option>
-                {contractTypes.map((contracttype: any, index: string | number) => (
-                <option key={contracttype} value={contracttype} className="font-bold">
-                  {contractTypesDisplay[index]}
-                </option>
-                ))} 
-              </select>
-          </div>        
-      </div>
+            <div className="items-center min-w-max">
+                <select onChange={handleContractTypeChange} value={selectedContractType} id="job-region" className="p-2 lg:p-4 shadow-special rounded-full hover:bg-neutral-50 cursor-pointer font-bold">
+                <option className="font-bold">Select a contract type</option>
+                  {contractTypes.map((contracttype: any, index: string | number) => (
+                  <option key={contracttype} value={contracttype} className="font-bold">
+                    {contractTypesDisplay[index]}
+                  </option>
+                  ))} 
+                </select>
+            </div>        
+        </div>
+      </div> 
         {Object.keys(selectedFilters).length > 0 && (
           <div className="flex flex-wrap gap-4 w-11/12 lg:w-8/12 m-auto mt-4">
               <button
@@ -223,6 +221,7 @@ const Jobfilter: React.FC<JobFilterProps> = ({ uniqueCategories, states, jobType
               ))}
             </div> 
         )}
+        </section> 
     </>
   );
 };

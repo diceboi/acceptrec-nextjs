@@ -10,7 +10,7 @@ export default function OurServices() {
     <>
         <section className="flex flex-col w-full gap-8 bg-neutral-100 py-20">
             <div className='flex flex-col gap-8 w-11/12 lg:w-8/12 m-auto justify-start'>
-                <div className="flex flex-col gap-4 w-full justify-start ">
+                <div className="flex flex-col gap-4 w-full justify-start text-[#312252]">
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         Services
                     </h3>

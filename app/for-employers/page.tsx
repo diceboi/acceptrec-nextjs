@@ -122,7 +122,6 @@ export default function ForEmployers() {
         <Onboarding />
         <Industries />
         <Standards />
-        <ShortlistedCandidates />
         <Team />
         <div className='w-full m-auto py-20 border-y border-neutral-300'>
             <div className='flex flex-col gap-8 w-11/12 lg:w-full m-auto'>
@@ -140,7 +139,7 @@ export default function ForEmployers() {
                     
                     <Blogtile
                     classname={`group relative flex flex-col w-full bg-white border border-neutral-300 gap-4 h-[450px] p-4 rounded-3xl hover:shadow-special hover:border-transparent transition-all ${index === 0 ? " after:content-['Recent'] after:p-2 after:w-auto after:h-auto after:bg-white after:absolute after:top-4 after:left-4 after:text-sm after:uppercase after:tracking-widest after:font-bold" : "flex-col" }`}
-                    href={`/blog/${post.node.slug}`}
+                    href={`/blogs/${post.node.slug}`}
                     key={post.node.slug}
                     featuredimage={post.node.featuredImage?.node.link}
                     title={post.node.title}
@@ -159,7 +158,7 @@ export default function ForEmployers() {
                 ))}
             </div>
             <div className='flex justify-center w-full py-16'> 
-            <Link href="/blog?category=Employers" className='w-fit '>
+            <Link href="/blogs?category=Employers" className='w-fit '>
                 <button  
                         className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                         >

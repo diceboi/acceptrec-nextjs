@@ -63,7 +63,7 @@ export default function JobList({regionQuery, categoryQuery, typeQuery, contract
 
     return(
         <>
-        <div className="flex flex-col w-11/12 lg:w-8/12 m-auto gap-8 py-20">
+        <div className="flex flex-col w-11/12 lg:w-8/12 m-auto gap-8 py-8 lg:py-20">
           {loading ? (
             <p>Loading...</p>
           ) : jobData.length === 0 ? (

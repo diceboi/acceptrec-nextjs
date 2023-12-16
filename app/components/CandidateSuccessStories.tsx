@@ -17,7 +17,7 @@ export default function CandidateSuccessStories() {
     <>
         <section className="w-full py-20 bg-neutral-100">
             <div className='flex flex-col gap-8 w-11/12 lg:w-8/12 m-auto'>
-                <div className='flex flex-col gap-4 w-11/12 lg:w-1/2 justify-start lg:py-16'>
+                <div className='flex flex-col gap-4 w-11/12 lg:w-1/2 justify-start lg:py-16 text-[#312252]'>
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         Candidate Success Stories
                     </h3>
@@ -27,7 +27,7 @@ export default function CandidateSuccessStories() {
                 </div>
             </div>
 
-            <div className='relative w-11/12 h-max lg:w-8/12 m-auto py-10'>
+            <div className='relative w-11/12 h-max lg:w-8/12 m-auto py-10 text-[#312252]'>
                 <Swiper modules={[Navigation, Pagination, Scrollbar, A11y]}
                         spaceBetween={40}
                         breakpoints={{

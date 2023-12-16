@@ -72,7 +72,7 @@ const Offices: React.FC<OfficesProps> = ({ classname }) => {
   return (
     <>
     <div className='w-full pt-20'>
-      <div className="flex flex-col gap-4 w-11/12 lg:w-8/12 justify-start m-auto">
+      <div className="flex flex-col gap-4 w-11/12 lg:w-8/12 justify-start m-auto text-[#312252]">
         <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
             Offices
         </h3>

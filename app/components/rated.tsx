@@ -71,7 +71,7 @@ export default function Rated() {
                         <h3 className='text-2xl font-medium tracking-tight text-white'>Invoice Accuracy</h3>
                     </div>
                     <div>
-                        <ProgressBar percentage={100} color="blue" delay={400}/>
+                        <ProgressBar percentage={100} color="#00afaa" delay={400}/>
                     </div>
                     
                 </div>
