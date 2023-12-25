@@ -9,15 +9,27 @@ const FAQComponent = () => {
     const faqData = [
       {
         question: 'How do I apply for a job with Accept Recruitment?',
-        answer: `To apply for a job with Accept Recruitment, simply visit our ${<Link href="/jobs" className=" underline text-[#00afaa]">Jobs</Link>} page. Browse through the available positions and click on the one you are interested in. Follow the instructions to submit your application online. Alternatively, get in touch with our National Resourcing Centre at 0845 353 3237, and they can guide you through the application process. `,
+        answer: (
+          <>
+          To apply for a job with Accept Recruitment, simply visit our <Link href="/jobs" className=" underline text-[#00afaa]">Jobs</Link> page. Browse through the available positions and click on the one you are interested in. Follow the instructions to submit your application online. Alternatively, get in touch with our National Resourcing Centre at 0845 353 3237, and they can guide you through the application process.
+          </>
+          ),
       },
       {
         question: 'What types of positions does Accept Recruitment offer?',
-        answer: `Accept Recruitment offers a wide range of job opportunities across various industries. We specialise in sectors such as manufacturing, logistics, warehousing, customer service, administration, and more. Click ${<Link href="/jobs" className=" underline text-[#00afaa]">here</Link>} to explore the current available positions and their specific requirements.`,
+        answer: (
+          <>
+          Accept Recruitment offers a wide range of job opportunities across various industries. We specialise in sectors such as manufacturing, logistics, warehousing, customer service, administration, and more. Click <Link href="/jobs" className=" underline text-[#00afaa]">here</Link> to explore the current available positions and their specific requirements.
+          </>
+          )
       },
       {
         question: 'How do I register with Accept Recruitment?',
-        answer: `To register online with us, click to ${<Link href="/jobs" className=" underline text-[#00afaa]">Registration</Link>}, or visit your local, please find all our locations on our contact us page`,
+        answer: (
+          <>
+          To register online with us, click to <Link href="/registration" className=" underline text-[#00afaa]">Registration</Link>, or visit your local, please find all our locations on our contact us page
+          </>
+          )
       },
       {
         question: 'What documents do I need to send in order to start working?',  

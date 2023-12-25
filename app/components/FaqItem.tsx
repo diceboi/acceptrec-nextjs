@@ -4,7 +4,7 @@ import { useState } from "react";
 
 interface FAQItemProps {
   question: string;
-  answer: string;
+  answer: string | JSX.Element;
   isOpen: boolean;
   icon: any;
   toogleClassName: any;
