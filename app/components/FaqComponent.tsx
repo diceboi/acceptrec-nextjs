@@ -21,7 +21,7 @@ const FAQComponent = () => {
           <>
           Accept Recruitment offers a wide range of job opportunities across various industries. We specialise in sectors such as manufacturing, logistics, warehousing, customer service, administration, and more. Click <Link href="/jobs" className=" underline text-[#00afaa]">here</Link> to explore the current available positions and their specific requirements.
           </>
-          )
+          ),
       },
       {
         question: 'How do I register with Accept Recruitment?',
@@ -29,7 +29,7 @@ const FAQComponent = () => {
           <>
           To register online with us, click to <Link href="/registration" className=" underline text-[#00afaa]">Registration</Link>, or visit your local, please find all our locations on our contact us page
           </>
-          )
+          ),
       },
       {
         question: 'What documents do I need to send in order to start working?',  
@@ -50,7 +50,7 @@ const FAQComponent = () => {
           Once you have completed your registration, you can update your details via the registration portal <Link href="https://accept.iqxanywhere.net/login" className="underline text-[#00afaa]">here</Link>. Alternatively, give our National Resourcing Centre a call on 0845 353 3237.
           </>
           
-          )
+          ),
       },
       {
         question: 'I have forgotten my password for the registration portal, can you reset it for me?',
@@ -59,7 +59,7 @@ const FAQComponent = () => {
           Sure! You can reset your password, click <Link href="https://accept.iqxanywhere.net/resetpassword" className="underline text-[#00afaa]">here</Link> or send an email request to <Link href="mailto:admin@acceptrec.co.uk" className="underline text-[#00afaa]">admin@acceptrec.co.uk</Link> and we will assist you.
           </>
           
-          )
+          ),
       },
       {
         question: 'I have registered online, what will happen next?',
@@ -71,7 +71,7 @@ const FAQComponent = () => {
           <>
           Click <Link href="contact-us" className="underline text-[#00afaa]">here</Link> to fill out the contact form, and we will get back to you as soon as possible. If you want a quick answer or you want to chat with us, just click on the chat icon, in the bottom right corner of the website.
           </>
-          )
+          ),
       },
       {
         question: 'How can I stay updated on new job openings at Accept Recruitment? ',
@@ -80,7 +80,7 @@ const FAQComponent = () => {
           To stay informed about new job openings at Accept Recruitment, we recommend visiting our website regularly and checking the <Link href="/jobs" className="underline text-[#00afaa]">Jobs section</Link>. Additionally, you can subscribe to our newsletter or follow our social media channels where we often share updates on new job opportunities, company news, and industry insights.
           </>
           
-          )
+          ),
       },
       {
         question: 'Are you available to speak about current vacancies via online chat?',
