@@ -45,11 +45,21 @@ const FAQComponent = () => {
       },
       {
         question: 'How can I update my registration profile?',
-        answer: 'Once you have completed your registration, you can update your details via the registration portal here. Alternatively, give our National Resourcing Centre a call on 0845 353 3237.',
+        answer: (
+          <>
+          Once you have completed your registration, you can update your details via the registration portal <Link href="https://accept.iqxanywhere.net/login" className="underline text-[#00afaa]">here</Link>. Alternatively, give our National Resourcing Centre a call on 0845 353 3237.
+          </>
+          
+          )
       },
       {
         question: 'I have forgotten my password for the registration portal, can you reset it for me?',
-        answer: 'Sure! You can reset your password, click here or send an email request to admin@acceptrec.co.uk and we will assist you.',
+        answer: (
+          <>
+          Sure! You can reset your password, click <Link href="https://accept.iqxanywhere.net/resetpassword" className="underline text-[#00afaa]">here</Link> or send an email request to <Link href="mailto:admin@acceptrec.co.uk" className="underline text-[#00afaa]">admin@acceptrec.co.uk</Link> and we will assist you.
+          </>
+          
+          )
       },
       {
         question: 'I have registered online, what will happen next?',
@@ -57,15 +67,24 @@ const FAQComponent = () => {
       },
       {
         question: 'How can I contact Accept Recruitment for further inquiries?',
-        answer: 'Click here to find our contact details, including phone numbers and email addresses or scroll down to fill out the contact form, and we will get back to you as soon as possible.',
+        answer: (
+          <>
+          Click <Link href="contact-us" className="underline text-[#00afaa]">here</Link> to fill out the contact form, and we will get back to you as soon as possible. If you want a quick answer or you want to chat with us, just click on the chat icon, in the bottom right corner of the website.
+          </>
+          )
       },
       {
         question: 'How can I stay updated on new job openings at Accept Recruitment? ',
-        answer: 'To stay informed about new job openings at Accept Recruitment, we recommend visiting our website regularly and checking the Jobs section. Additionally, you can subscribe to our newsletter or follow our social media channels where we often share updates on new job opportunities, company news, and industry insights.',
+        answer: (
+          <>
+          To stay informed about new job openings at Accept Recruitment, we recommend visiting our website regularly and checking the <Link href="/jobs" className="underline text-[#00afaa]">Jobs section</Link>. Additionally, you can subscribe to our newsletter or follow our social media channels where we often share updates on new job opportunities, company news, and industry insights.
+          </>
+          
+          )
       },
       {
         question: 'Are you available to speak about current vacancies via online chat?',
-        answer: 'Yes! Our National Resourcing Team is available to chat with you via our online chatbot throughout the working week (Monday to Friday, 08:00 - 17:00). The online chat will pop up on your screen during the first 10 seconds of the website opening. Alternatively, you can click here and scroll down to ‘Online Chat’.',
+        answer: 'Yes! Our National Resourcing Team is available to chat with you via our online chatbot throughout the working week (Monday to Friday, 08:00 - 17:00). The online chat is in the bottom right corner of the website.',
       },
       {
         question: 'How do I unsubscribe from job alerts or email notifications? ',
