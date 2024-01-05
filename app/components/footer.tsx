@@ -50,7 +50,7 @@ export default function Footer() {
                     <Link href="/hidden-labour-exploitation"><li className="hover:text-[#00afaa] transition-all">Hidden Labour Exploitation</li></Link>
                     <Link href="https://workdrive.zohoexternal.com/external/9hHGLB2uZhU-MRmoZ" target="_blank"><li className="hover:text-[#00afaa] transition-all">New Immigration Law</li></Link>
                     <Link href="/pay-query"><li className="hover:text-[#00afaa] transition-all">Pay query</li></Link>
-                    <Link href="/career"><li className="hover:text-[#00afaa] transition-all">Work for us</li></Link>
+                    <Link href="/join-our-team"><li className="hover:text-[#00afaa] transition-all">Work for us</li></Link>
                     <Link href="/complaints-policy"><li className="hover:text-[#00afaa] transition-all">Complaints Policy</li></Link>
                 </ul>
             </div>            

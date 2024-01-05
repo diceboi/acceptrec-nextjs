@@ -261,7 +261,7 @@ export default function AboutUs() {
                     <p className="text-lg">
                     By helping people to build their future based on trust and integrity, we create long-lasting relationships and the environment of choice for many talented recruiters. Together, we make our candidates and clients’ life successful and trouble-free wherever they might be. Our goal is to become the most transparent and technologically advanced recruitment agency in the UK and we are constantly on the look-out for likeminded people. We have superpowers, because we have each other. Does this sound like you? If yes, then send us your CV!
                     </p>
-                    <Link href="/career"
+                    <Link href="/join-our-team"
                         className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white text-xl hover:shadow-[#00afa93b] hover:w-fit p-4 rounded-full transition-all duration-200 gap-2"
                         >
                         Read more
