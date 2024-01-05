@@ -52,7 +52,7 @@ export const ConstactUsUser = ({ name, tel, email, location, message }: WelcomeE
           If you didn&apos;t try to contact us in our webpage, you can safely ignore this email.
         </Text>
         <Img
-          src="https://cms.arpusz.hu/wp-content/uploads/2023/09/Accept-Stacked-Logo-with-Strapline-RGB300.png"
+          src="http://admin.acceptrec.co.uk/wp-content/uploads/2024/01/Accept-Stacked-Logo-with-Strapline-RGB300.png"
           width="auto"
           height="50"
           alt="Acceptrec's logo"

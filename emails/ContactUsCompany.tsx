@@ -44,7 +44,7 @@ import {
             <b>Did you understand, and accept the Privacy policy of Acceptrec?</b> {policy}<br></br>
           </Text>
           <Img
-            src="https://cms.arpusz.hu/wp-content/uploads/2023/09/Accept-Stacked-Logo-with-Strapline-RGB300.png"
+            src="http://admin.acceptrec.co.uk/wp-content/uploads/2024/01/Accept-Stacked-Logo-with-Strapline-RGB300.png"
             width="auto"
             height="50"
             alt="Acceptrec's logo"

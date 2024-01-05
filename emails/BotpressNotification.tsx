@@ -29,7 +29,7 @@ import {
             Please make sure, to join the conversation in messenger.
           </Text>
           <Img
-            src="http://admin.acceptrec.co.uk/wp-content/uploads/2023/10/Accept-Stacked-Logo-with-Strapline-RGB300-scaled.webp"
+            src="http://admin.acceptrec.co.uk/wp-content/uploads/2024/01/Accept-Stacked-Logo-with-Strapline-RGB300.png"
             width="auto"
             height="50"
             alt="Acceptrec's logo"
