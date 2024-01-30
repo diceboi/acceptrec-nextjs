@@ -1,73 +1,53 @@
-"use client"
-
 import { gql } from "@apollo/client";
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
-import { useRouter } from "next/navigation";
+import { getClient } from "../lib/client";
 import PrimaryHero from "../components/Theme Components/PrimaryHero";
 import Offices from "../components/Offices";
+import MainHero from "../components/Theme Components/MainHero";
 
-const GET_OFFICES = gql`
-query getPayQuery {
-  pages(where: {parent: "cG9zdDozMDY="}) {
-    edges {
-      node {
-        slug
-        title
-        id
-        offices {
-          aboutTheCity
-          jobsInTheCity
-          livingInTheCity
-          phoneNumber
-        }
-        featuredImage {
-          node {
-            altText
-            sourceUrl
-          }
-        }
+const query = gql`
+query getOfficesPage {
+  page(id: "306", idType: DATABASE_ID) {
+    seo {
+      metaDesc
+      title
+    }
+    officespage {
+      heroTitle
+      heroSubtitle
+      heroImage {
+        altText
+        sourceUrl
       }
+      officesTitle
+      officesSubtitle
     }
   }
 }`
 
-interface QueryResult {
-  pages?: {
-    edges: {
-      node: Pages;
-    }[];
-  };
-}
+export const revalidate = 5;
 
-interface Pages {
-  id: string; // Add the missing 'id' property
-  slug: string;
-  title: string;
-  featuredImage: {
-    node: {
-      sourceUrl: string;
-    };
-  };
-  // Add other properties as needed
+export async function generateMetadata() {
+
+  const { data: officespagedata }:any = await getClient().query({query});
+
+  return {
+    title: officespagedata.page.seo.title,
+    description: officespagedata.page.seo.metaDesc
+  }
+  
 }
 
   
-  export default function OfficesPage() {
+  export default async function OfficesPage() {
 
-    const router = useRouter();
+    const { data: officespagedata } = await getClient().query({query});
 
-    const { data } = useSuspenseQuery<QueryResult>(GET_OFFICES);
+    const officespage = officespagedata?.page?.officespage;
 
-    const pageData = data?.pages?.edges[0]?.node;
-  
-    if (!pageData) {
-      return <div>No data available</div>;
-    }
-  
     return (
       <>
-        <PrimaryHero title="Offices" bgimage="/officehero.webp" classname="bg-gradient-to-br from-white to-neutral-100 pb-10" />
-        <Offices pages={data.pages} classname={'grid grid-cols-2 gap-8 w-11/12 lg:w-8/12 m-auto py-20'}/>
+        <MainHero MainTitle={officespage.heroTitle} SmallTitle={officespage.heroSubtitle} Text={''} BackgroundImage={officespage.heroImage?.sourceUrl} BackgroundImageAltText={officespage.heroImage?.altText} />
+        <Offices title={officespage.officesTitle} subtitle={officespage.officesSubtitle} text={''}/>
       </>
     );
   }

@@ -5,19 +5,19 @@ import { TbChartInfographic } from 'react-icons/tb'
 import { TbBuildingSkyscraper } from 'react-icons/tb'
 import { TbUsersGroup } from 'react-icons/tb'
 
-export default function Advantages() {
+export default function Advantages({advantagesIntroduction, advantagesMainTitle, advantagesSmallTitle}:any) {
     return(
         <>
         <section className="flex flex-col lg:flex-row w-11/12 lg:w-8/12  gap-8 py-20 m-auto">
             <div className="flex flex-col gap-4 w-full lg:w-1/2 justify-start ">
                 <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
-                    The accept difference
+                    {advantagesSmallTitle}
                 </h3>
                 <h2 className="flex flex-wrap gap-3 text-6xl lg:text-6xl font-black tracking-tighter z-10  text-[#312252]">
-                    A <p className='text-[#00afaa] underline'>fresh</p> approach
+                    {advantagesMainTitle}
                 </h2>
                 <p className='font-medium w-full lg:w-2/3'>
-                    As a tech based recruitment company we leverage the latest innovation to deliver outstanding results. Fresh ideas are the forefront of a collaborative approach, your success is our success!
+                    {advantagesIntroduction}
                 </p>
             </div>
             <div className="grid grid-cols-2 grid-rows-3 gap-8 w-full lg:w-1/2">

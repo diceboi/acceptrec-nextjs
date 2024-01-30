@@ -1,13 +1,41 @@
 "use client"
 
-import JobsHero from "../components/Theme Components/JobsHero";
 import Jobfilter from "../components/jobsfilter/jobFilter";
 import JobList from "../components/jobsfilter/jobList";
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
+import { gql } from "@apollo/client";
+import { useSuspenseQuery } from "@apollo/client";
+import MainHero from "../components/Theme Components/MainHero";
+import { Metadata } from "next";
 
+
+const query = gql`
+query getHomePage {
+  page(id: "1389", idType: DATABASE_ID) {
+    title
+    seo {
+      metaDesc
+      focuskw
+      title
+    }
+    jobs {
+      jobsSmallTitle
+      jobsMainTitle
+      jobsBackgroundImage {
+        sourceUrl
+        altText
+      }
+    }
+  }
+}
+`
 
 export default function Jobs() {
+
+  const { data: jobspagedata }:any = useSuspenseQuery(query);
+
+  const jobs = jobspagedata?.page?.jobs || {};
 
   const [jobsData, setJobsData] = useState([]);
   const searchParams = useSearchParams()
@@ -47,7 +75,7 @@ export default function Jobs() {
 
     return(
         <>
-        <JobsHero title={"Jobs"} subtitle={"Find the job that's most suitable for you"} classname={"bg-gradient-to-br from-white to-[#00afa917] pb-10"}/>
+        <MainHero MainTitle={jobs.jobsMainTitle} SmallTitle={jobs.jobsSmallTitle} BackgroundImage={jobs.jobsBackgroundImage?.sourceUrl} BackgroundImageAltText={jobs.jobsBackgroundImage?.altText}/>
         <Jobfilter
           uniqueCategories={uniqueCategories}
           states={states}

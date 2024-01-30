@@ -1,12 +1,54 @@
-import React from 'react'
-import OnboardingHero from '../components/Theme Components/OnboardingHero'
-import OnboardingInner from '../components/OnboardingInner'
+import Onboarding from '../components/Onboarding'
+import MainHero from '../components/Theme Components/MainHero'
 
-export default function OnboardingProcess() {
+import { gql } from '@apollo/client'
+import { getClient } from '../lib/client'
+
+const query = gql`
+query getOnboardingPage {
+  page(id: "1497", idType: DATABASE_ID) {
+    onboardingProcesspage {
+      heroTitle
+      heroSubtitle
+      heroText
+      heroImage {
+        altText
+        sourceUrl
+      }
+      onboardingTitle
+      onboardingText
+    }
+    seo {
+      metaDesc
+      title
+    }
+  }
+}
+`
+
+export const revalidate = 5;
+
+export async function generateMetadata() {
+
+  const { data: onboardingdata }:any = await getClient().query({query});
+
+  return {
+    title: onboardingdata.page.seo.title,
+    description: onboardingdata.page.seo.metaDesc
+  }
+  
+}
+
+export default async function OnboardingProcess() {
+
+  const { data: onboardingdata }:any = await getClient().query({query})
+
+  const onboarding = onboardingdata?.page?.onboardingProcesspage || {};
+
   return (
     <>
-        <OnboardingHero title={"Onboarding Process"} subtitle={"To ensure that our recruitment process is a marketing leading experience for both Clients and Candidates alike, we always evaluate essential feedback to make the process as smooth, efficient and rewarding as possible."} classname={"bg-gradient-to-br from-white to-[#00afa917] pb-10 pt-16 lg:pt-0"}/>
-        <OnboardingInner />
+        <MainHero MainTitle={onboarding.heroTitle} SmallTitle={onboarding.heroSubtitle} Text={onboarding.heroText} BackgroundImage={onboarding.heroImage?.sourceUrl} BackgroundImageAltText={onboarding.heroImage?.altText}/>
+        <Onboarding title={onboarding.onboardingTitle} text={onboarding.onboardingText}/>
     </>
   )
 }

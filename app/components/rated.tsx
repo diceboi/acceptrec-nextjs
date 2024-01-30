@@ -5,7 +5,7 @@ import ProgressBar from './progressbar/progressbar';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 
-export default function Rated() {
+export default function Rated({strengthsIntroduction, strengthsMainTitle, strengthsSmallTitle}:any) {
 
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
@@ -33,13 +33,13 @@ export default function Rated() {
         <section className="flex flex-col items-center justify-center py-20 w-full bg-gradient-to-br from-[#312252] to-[#1f1635] overflow-hidden">
             <div className='relative flex flex-col gap-4 w-11/12 lg:w-8/12 justify-start m-auto pb-16'>
                 <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase text-white'>
-                    Rated by established clients
+                    {strengthsSmallTitle}
                 </h3>
                 <h2 className='text-6xl lg:text-6xl font-black tracking-tighter  text-white'>
-                    Our Strengths
+                    {strengthsMainTitle}
                 </h2>
                 <p className="font-medium text-neutral-300">
-                    Take a look at how our established clients rank some of our recruitment services.
+                    {strengthsIntroduction}
                 </p>
                 <Image src="/rated.webp" width={400} height={300} alt="" className='absolute -top-32 right-[15%] opacity-20'/>
             </div>

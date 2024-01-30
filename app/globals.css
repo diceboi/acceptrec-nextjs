@@ -286,7 +286,7 @@
 @media (min-width: 1024px) {
   #highlights-list-right::after {
     position: absolute;
-    top: 71%;
+    top: 67%;
     left: 100px;
     display: inline-block;
     border-top: 14px solid transparent;

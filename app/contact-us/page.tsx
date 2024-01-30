@@ -1,75 +1,53 @@
-"use client"
-
 import { gql } from "@apollo/client";
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
-import { useRouter } from "next/navigation";
-import ContactUsHero from '../components/Theme Components/ContactUsHero'
+import { getClient } from "../lib/client";
 import ContactForm from '../components/ContactForm'
-import ContactUsMap from '../components/ContactUsMap'
 import Offices from '../components/Offices'
+import MainHero from "../components/Theme Components/MainHero";
 
-const GET_OFFICES = gql`
-query getOffices {
-  pages(where: {parent: "cG9zdDozMDY="}) {
-    edges {
-      node {
-        slug
-        title
-        id
-        offices {
-          aboutTheCity
-          jobsInTheCity
-          livingInTheCity
-          phoneNumber
-        }
-        featuredImage {
-          node {
-            altText
-            sourceUrl
-          }
-        }
+const query = gql`
+query getContactPage {
+  page(id: "1602", idType: DATABASE_ID) {
+    seo {
+      metaDesc
+      title
+    }
+    contactUs {
+      heroTitle
+      heroSubtitle
+      heroImage {
+        altText
+        sourceUrl
       }
+      officesTitle
+      officesSubtitle
     }
   }
 }`
 
-interface QueryResult {
-  pages?: {
-    edges: {
-      node: Pages;
-    }[];
-  };
-}
+export const revalidate = 5;
 
-interface Pages {
-  id: string; // Add the missing 'id' property
-  slug: string;
-  title: string;
-  featuredImage: {
-    node: {
-      sourceUrl: string;
-    };
-  };
-  // Add other properties as needed
-}
+export async function generateMetadata() {
 
-export default function ContactUs() {
+  const { data: contactpagedata }:any = await getClient().query({query});
 
-  const router = useRouter();
-
-  const { data } = useSuspenseQuery<QueryResult>(GET_OFFICES);
-
-  const pageData = data?.pages?.edges[0]?.node;
-
-  if (!pageData) {
-    return <div>No data available</div>;
+  return {
+    title: contactpagedata.page.seo.title,
+    description: contactpagedata.page.seo.metaDesc
   }
+  
+}
+
+export default async function ContactUs() {
+
+  const { data: contactpagedata } = await getClient().query({query});
+
+  const contactpage = contactpagedata?.page?.contactUs;
 
   return (
     <>
-    <ContactUsHero title={"Contact us"} subtitle={"Please complete the contact form and one of our team will be in touch as soon as possible."} classname={"bg-gradient-to-br from-white to-[#00afa917] pb-10 pt-16 lg:pt-0"}/>
+    <MainHero MainTitle={contactpage.heroTitle} SmallTitle={contactpage.heroSubtitle} Text={''} BackgroundImage={contactpage.heroImage?.sourceUrl} BackgroundImageAltText={contactpage.heroImage?.altText}/>
     <ContactForm classname={'flex flex-col lg:w-1/2 w-11/12 gap-4 m-auto py-10'}/>
-    <Offices pages={data.pages} classname={'grid lg:grid-cols-3 gap-8 w-11/12 lg:w-8/12 m-auto py-20'}/>
+    <Offices title={contactpage.officesTitle} subtitle={contactpage.officesSubtitle} text={''}/>
     </>
   )
 }

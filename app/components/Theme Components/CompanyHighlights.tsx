@@ -1,26 +1,29 @@
+"use client"
+
 import { gql } from "@apollo/client"
-import { getClient } from "../lib/client"
+import { useSuspenseQuery } from "@apollo/client"
 
 const query = gql`
-query getOnboardingProcess {
-  onboardingProcesses(where: {orderby: {order: ASC, field: MENU_ORDER}}) {
+query getCompanyhighlights {
+  companyHighlights (first:100) {
     edges {
       node {
-        onboardingProcessComponent {
-          text
-          title
+        companyHighlights {
+          companyHighlightsText
+          companyHighlightsTitle
         }
+        title
       }
     }
   }
 }
 `
 
-export default async function Onboarding({ title, text }:any) {
+export default function CompanyHighlights({title, text}:any) {
 
-    const { data: onboardingprocessdata }:any = await getClient().query({query});
+const { data: companyHighlightsdata }:any = useSuspenseQuery(query);
 
-    const onboardingprocess = onboardingprocessdata?.onboardingProcesses?.edges || {};
+const companyHighlights = companyHighlightsdata?.companyHighlights?.edges;
 
   return (
     <section className="relative py-20 bg-neutral-100">
@@ -35,7 +38,7 @@ export default async function Onboarding({ title, text }:any) {
                 </div>
                 <ul className="grid lg:grid-cols-2 w-full">
 
-                    {onboardingprocess.map(({ node }: any, index: number) => (
+                    {companyHighlights.map(({ node }: any, index: number) => (
 
                         <li 
                         key={index} 
@@ -51,13 +54,13 @@ export default async function Onboarding({ title, text }:any) {
                         }`}
                         >
                             <span 
-                                className={`absolute w-10 text-center ${index % 2 === 0 ? 'right-4 lg:-right-5 -top-5 lg:top-24' : 'left-4 lg:-left-5 top-14 lg:top-72'} rounded-full font-bold text-white bg-[#00afaa] py-2 px-4`}
+                                className={`absolute w-40 text-center ${index % 2 === 0 ? 'right-4 lg:-right-20 -top-4 lg:top-24' : 'left-4 lg:-left-20 top-16 lg:top-72'} rounded-full font-bold text-white bg-[#00afaa] py-1 px-2`}
                                 >
-                                    {index + 1}
+                                    {node.title}
                             </span>
                             <div className="flex flex-col justify-center p-4 w-full min-h-[20vh] bg-white rounded-3xl shadow-highlights">
-                                <h2 className="text-2xl font-black tracking-tighter text-[#312252]">{node.onboardingProcessComponent.title}</h2>
-                                <p>{node.onboardingProcessComponent.text}</p>
+                                <h2 className="text-2xl font-black tracking-tighter text-[#312252]">{node.companyHighlights.companyHighlightsTitle}</h2>
+                                <p>{node.companyHighlights.companyHighlightsText}</p>
                             </div>
                         </li>
 

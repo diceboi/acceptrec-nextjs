@@ -1,10 +1,83 @@
-import Image from "next/image"
 import Link from "next/link"
 
-export default function ReferAFriend() {
+import { gql } from "@apollo/client"
+import { getClient } from "../lib/client"
+import LeftRightCollumn from "./Theme Components/LeftRightCollumn"
+
+const query = gql`
+query getReferAFriend {
+    page(id: "1549", idType: DATABASE_ID) {
+    referAFriend {
+      heroTitle
+      heroSubtitle
+      heroImage {
+        altText
+        sourceUrl
+      }
+      paragraph1Text
+      paragraph1Title
+      paragraph2Text
+      paragraph2Title
+      paragraph3Text
+      paragraph3Title
+      recommendationImage {
+        altText
+        sourceUrl
+      }
+      recommendationText
+      recommendationTitle
+      referBlockImage {
+        altText
+        sourceUrl
+      }
+      referBlockText
+      referBlockTitle
+      referralBonus1
+      referralBonus1Text
+      referralBonus2
+      referralBonus2Text
+      referralBonusesTitle
+      recommendationButtonLink
+      recommendationButtonText
+      recommendationImagePosition
+      recommendationIntroduction
+      recommendationSubtitle
+      referBlockButtonLink
+      referBlockButtonTitle
+      referBlockImagePosition
+      referBlockIntroduction
+      referBlockSubtitle
+    }
+    seo {
+      metaDesc
+      title
+    }
+  }
+}
+`
+
+export default async function ReferAFriend() {
+
+const { data: referpagedata } = await getClient().query({query});
+
+const referpage = referpagedata?.page?.referAFriend;    
+
   return (
     <section className="w-full py-20">
         <div className="flex flex-col gap-8 w-11/12 lg:w-8/12 m-auto">
+
+            <LeftRightCollumn 
+                title={referpage.referBlockTitle} 
+                subtitle={referpage.referBlockSubtitle} 
+                introduction={referpage.referBlockIntroduction} 
+                text={referpage.referBlockText} 
+                image={referpage.referBlockImage?.sourceUrl} 
+                imagealt={referpage.referBlockImage?.altText} 
+                imageposition={referpage.referBlockImagePosition} 
+                link={referpage.referBlockButtonLink} 
+                buttontitle={referpage.referBlockButtonTitle}
+            />
+
             <div className="flex flex-col lg:flex-row items-center gap-20 pb-20">
                 <div className="lg:w-1/2 w-full h-[40vh] bg-[url('/referafriendinner.webp')] bg-center bg-cover bg-no-repeat rounded-3xl">
                 </div>

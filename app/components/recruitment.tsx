@@ -1,17 +1,17 @@
 import Link from 'next/link'
 import { FiArrowRight } from 'react-icons/fi'
 
-export default function Recruitment() {
+export default function Recruitment({recruitmentMainTitle, recruitmentSmallTitle}:any) {
     
     return(
         <>
         <section className="w-full py-20 bg-gradient-to-b from-white to-neutral-100">
             <div className='flex flex-col gap-4 w-11/12 lg:w-8/12 justify-start m-auto pb-16'>
                 <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
-                    It begins with people
+                    {recruitmentSmallTitle}
                 </h3>
                 <h2 className='text-6xl lg:text-6xl font-black tracking-tighter text-[#312252]'>
-                    Recruitment
+                    {recruitmentMainTitle}
                 </h2>
             </div>
             <div className="flex flex-col lg:flex-row justify-center items-start gap-8 w-11/12 lg:w-8/12 m-auto">

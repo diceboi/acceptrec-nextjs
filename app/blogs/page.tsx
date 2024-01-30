@@ -1,11 +1,11 @@
 "use client"
 
-import BlogArchiveHero from "../components/Theme Components/BlogArchiveHero";
 import Blogtile from "../components/Theme Components/BlogTile";
 import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
 import { useRouter, useSearchParams } from "next/navigation";
 import he from "he";
 import { gql } from "@apollo/client";
+import MainHero from "../components/Theme Components/MainHero";
 
 const query1 = gql`
 query getPosts {
@@ -52,6 +52,25 @@ query getCategories {
     }
   }
 }`
+
+const query3 = gql`
+query getBlogPage {
+  page(id: "1592", idType: DATABASE_ID) {
+    blogs {
+      heroTitle
+      heroSubtitle
+      heroImage {
+        altText
+        sourceUrl
+      }
+    }
+    seo {
+      metaDesc
+      title
+    }
+  }
+}
+`
 
 interface Category {
   categoryId: string;
@@ -107,6 +126,9 @@ export default function BlogArchive() {
 
   const { data: postsdata } = useSuspenseQuery<QueryResponse>(query1);
   const { data: categoriesdata } = useSuspenseQuery<QueryResponse>(query2);
+  const { data: blogpagedata }:any = useSuspenseQuery(query3);
+
+  const blogpage = blogpagedata.page.blogs;
 
   const categoryFromQuery = searchParams.get("category"); // Retrieve the category from the query parameter
 
@@ -131,10 +153,12 @@ export default function BlogArchive() {
 
     return(
         <>
-            <BlogArchiveHero 
-                title={"Blog"} 
-                subtitle={"Advices, Stories, News, everything you need"} 
-                className={"bg-gradient-to-br from-white to-[#00afa917] pb-10"}
+            <MainHero 
+                MainTitle={blogpage.heroTitle} 
+                SmallTitle={blogpage.heroSubtitle} 
+                Text={''} 
+                BackgroundImage={blogpage.heroImage?.sourceUrl} 
+                BackgroundImageAltText={blogpage.heroImage?.altText}
             />
             <section className="w-full">
                 <div className="flex flex-col w-11/12 lg:w-8/12 m-auto">

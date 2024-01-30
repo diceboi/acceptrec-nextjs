@@ -1,6 +1,17 @@
 import RegistrationInner from "../components/RegistrationInner"
 import RegistrationHero from "../components/Theme Components/RegistrationHero"
 
+export const revalidate = 5;
+
+export async function generateMetadata() {
+
+  return {
+    title: 'Registration - Accept Recruitment',
+    description: ''
+  }
+  
+}
+
 export default function RegistrationPage() {
   return (
     <>

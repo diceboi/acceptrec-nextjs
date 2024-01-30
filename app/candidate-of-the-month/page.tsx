@@ -1,11 +1,52 @@
-import React from 'react'
-import CandidateOfTheMonthHero from '../components/Theme Components/CandidateOfTheMonthHero'
 import CandidatesOfTheMonth from '../components/CandidatesOfTheMonth'
+import MainHero from '../components/Theme Components/MainHero'
 
-export default function CandidateOfTheMonth() {
+import { gql } from '@apollo/client'
+import { getClient } from '../lib/client'
+
+const query = gql`
+query getCandidatePage {
+  page(id: "1545", idType: DATABASE_ID) {
+    candidateOfTheMonth {
+      heroTitle
+      heroSubtitle
+      heroIntroduction
+      heroImage {
+        altText
+        sourceUrl
+      }
+    }
+    seo {
+      metaDesc
+      title
+    }
+  }
+}
+`
+
+export const revalidate = 5;
+
+export async function generateMetadata() {
+
+  const { data: candidatepagedata }:any = await getClient().query({query});
+
+  return {
+    title: candidatepagedata.page.seo.title,
+    description: candidatepagedata.page.seo.metaDesc
+  }
+  
+}
+
+
+export default async function CandidateOfTheMonth() {
+
+  const { data: candidatepagedata } = await getClient().query({query});
+
+  const candidatepage = candidatepagedata?.page?.candidateOfTheMonth;
+
   return (
     <>
-        <CandidateOfTheMonthHero title={"Candidate of the month"} subtitle={"Every month, we select the Candidate of the month, thereby recognizing the value of their work."} classname={"bg-gradient-to-br from-white to-[#00afa917] pb-10 pt-16 lg:pt-0"}/>
+        <MainHero MainTitle={candidatepage.heroTitle} SmallTitle={''} Text={candidatepage.heroIntroduction} BackgroundImage={candidatepage.heroImage?.sourceUrl} BackgroundImageAltText={candidatepage.heroImage?.altText}/>
         <CandidatesOfTheMonth />
     </>
   )
