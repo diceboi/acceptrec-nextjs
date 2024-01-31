@@ -2,6 +2,7 @@ import React from 'react'
 import { TbPhone } from 'react-icons/tb'
 import ContactForm from '../ContactForm'
 import OfficeMap from './Officemap'
+import Link from 'next/link'
 
 export default function Office({phonenumber, about, living, jobs, coordinates}:any) {
   return (
@@ -11,9 +12,14 @@ export default function Office({phonenumber, about, living, jobs, coordinates}:a
             <div className='flex flex-col-reverse lg:flex-row justify-center gap-16 lg:gap-20 w-full pb-20'>
                 <div className='flex flex-col gap-8 w-full lg:w-1/2'>
                     <div className='flex flex-col gap-8'>
-                        <h3 className='text-6xl font-black'>
+                        <h3 className='text-6xl font-black text-[#312252]'>
                             Contact Us
                         </h3>
+                        <div className='flex gap-2 text-lg'>
+                            <p>Call Us directly:</p>
+                                <TbPhone className="w-6 h-6 text-[#00afaa]"/>
+                            <Link href={`tel:${phonenumber}`}><p className='font-bold hover:underline text-[#00afaa]'>{phonenumber}</p></Link>
+                        </div> 
                         <ContactForm classname={'flex flex-col gap-4'}/>
                     </div>                  
                 </div>
@@ -21,15 +27,10 @@ export default function Office({phonenumber, about, living, jobs, coordinates}:a
                     <div className='w-full h-[50vh]  rounded-3xl overflow-hidden'>
                         <OfficeMap coordinates={coordinates} />
                     </div>
-                    <div className='flex gap-2'>
-                        <p>Call Us directly:</p>
-                        <TbPhone className="w-6 h-6 text-[#00afaa]"/>
-                        <p>{phonenumber}</p>
-                    </div> 
                 </div>
             </div>
             <div className={`${about? 'flex':'hidden'} flex-col gap-8 py-8`}>
-                <h3 className='text-4xl font-black'>
+                <h3 className='text-4xl font-black text-[#312252]'>
                     About the city
                 </h3>
                 <p className='lg:text-lg'>
@@ -37,7 +38,7 @@ export default function Office({phonenumber, about, living, jobs, coordinates}:a
                 </p>
             </div>
             <div className={`${living? 'flex':'hidden'} flex-col gap-8 py-8`}>
-                <h3 className='text-4xl font-black'>
+                <h3 className='text-4xl font-black text-[#312252]'>
                     Living and surrounding area
                 </h3>
                 <p className='lg:text-lg'>
@@ -45,7 +46,7 @@ export default function Office({phonenumber, about, living, jobs, coordinates}:a
                 </p>
             </div>
             <div className={`${jobs? 'flex':'hidden'} flex-col gap-8 py-8`}>
-                <h3 className='text-4xl font-black'>
+                <h3 className='text-4xl font-black text-[#312252]'>
                     Jobs
                 </h3>
                 <p className='lg:text-lg'>

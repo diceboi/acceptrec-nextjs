@@ -3,6 +3,8 @@
 import ContactTeam from "@/app/components/ContactTeam"
 import TeamInside from "@/app/components/TeamInside"
 import Image from "next/image"
+import Link from "next/link"
+import { FaLinkedin } from "react-icons/fa"
 
 export default function AgnieszkaJasinska() {
     
@@ -19,7 +21,8 @@ export default function AgnieszkaJasinska() {
                             Regional Manager - Managed Services
                         </p>                    
                     </div>
-                    <Image src="/Aggie-Jasinska-f.webp" width={1000} height={800} alt="agnieszka-jsinska" className="w-full h-auto"/>
+                    <Image src="/Aggie-Jasinska-f.webp" width={1000} height={800} alt="agnieszka-jsinska" className="w-full h-auto rounded-3xl"/>
+                    <Link href='https://www.linkedin.com/in/aggie-j-76739890/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Follow me in LinkedIn</p></button></Link>
                     <div className="flex flex-col gap-4 py-16">
                             <p>Hi! My name is Aggie and I am a multilingual professional with 7 years of experience in recruitment industry. During those years I have been promoted multiple times and exposed to the opportunity of learning recruitment in many aspects from On-Site to Branch based positions. Being a Divisional Manager of Construction and Technical department has affected in gaining extensive knowledge and experience in sales and business development. At Accept, we all work towards the same goal. Mine is to ensure the business is moving forward in a more structured and efficient way. I believe that having a successful recruitment business is not only about employing the right people but, once they are employed, looking after their journey and support them along the way. I work for the best recruitment agency in Leicester and I am here to help, should you need it.</p> 
 

@@ -3,6 +3,8 @@
 import ContactTeam from "@/app/components/ContactTeam"
 import TeamInside from "@/app/components/TeamInside"
 import Image from "next/image"
+import Link from "next/link"
+import { FaLinkedin } from "react-icons/fa"
 
 export default function JamieEllis() {
     
@@ -19,7 +21,8 @@ export default function JamieEllis() {
                             Marketing Team Leader
                         </p>                    
                     </div>
-                    <Image src="/Jamie-Ellis.webp" width={1000} height={800} alt="Jamie Ellis" className="w-full h-auto"/>
+                    <Image src="/Jamie-Ellis.webp" width={1000} height={800} alt="Jamie Ellis" className="w-full h-auto rounded-3xl"/>
+                    <Link href='https://www.linkedin.com/in/jamie-ellis-6b1764201/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Follow me in LinkedIn</p></button></Link>
                     <div className="flex flex-col gap-4 py-16">
                             <p>
                                 Jamie is our Marketing Team Leader at Accept Recruitment. He joined the Accept team in

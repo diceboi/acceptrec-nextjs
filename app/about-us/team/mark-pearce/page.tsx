@@ -3,6 +3,8 @@
 import ContactTeam from "@/app/components/ContactTeam"
 import Image from "next/image"
 import TeamInside from "@/app/components/TeamInside"
+import Link from "next/link"
+import { FaLinkedin } from "react-icons/fa"
 
 export default function MarkPierce() {
     
@@ -19,7 +21,8 @@ export default function MarkPierce() {
                             Managing Director
                         </p>                    
                     </div>
-                    <Image src="/Mark-front.webp" width={1000} height={800} alt="mark-pierce" className="w-full h-auto"/>
+                    <Image src="/Mark-front.webp" width={1000} height={800} alt="mark-pierce" className="w-full h-auto rounded-3xl"/>
+                    <Link href='https://www.linkedin.com/in/markpearce1/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Follow me in LinkedIn</p></button></Link>
                     <div className="flex flex-col gap-4 py-16">
                         <p>I have been involved in the recruitment industry for over 20 years. Being a member of the Recruitment and Employment Confederation (REC), I have gained extensive national experience in sales and operations within the recruitment industry prior to founding Accept in 2015 together with Chris. Since then, Accept Recruitment supported more than 100 clients from 4 offices and 8 onsite operations, and found employment for more than 6700 people in the Leicestershire, West Midlands, and Yorkshire area.</p> 
 

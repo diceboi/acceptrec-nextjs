@@ -5,7 +5,7 @@ import { getClient } from '../lib/client';
 
 const query = gql`
   query getOffices {
-  offices {
+  offices(where: {orderby: {field: MENU_ORDER, order: ASC}}) {
     edges {
       node {
         officesNew {

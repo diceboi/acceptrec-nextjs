@@ -3,6 +3,8 @@
 import ContactTeam from "@/app/components/ContactTeam"
 import TeamInside from "@/app/components/TeamInside"
 import Image from "next/image"
+import Link from "next/link"
+import { FaLinkedin } from "react-icons/fa"
 
 export default function KimBlackburn() {
     
@@ -19,7 +21,8 @@ export default function KimBlackburn() {
                             Commercial Director
                         </p>                    
                     </div>
-                    <Image src="/Kim-Blackburn.webp" width={1000} height={800} alt="Kim Blackburn" className="w-full h-auto"/>
+                    <Image src="/Kim-Blackburn.webp" width={1000} height={800} alt="Kim Blackburn" className="w-full h-auto rounded-3xl"/>
+                    <Link href='https://www.linkedin.com/in/monika-loj-beldycka-223a3414/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Follow me in LinkedIn</p></button></Link>
                     <div className="flex flex-col gap-4 py-16">
                             <p>
                                 Kim, our Commercial Director, joined Accept Recruitment in November 2024. With an

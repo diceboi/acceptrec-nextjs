@@ -46,8 +46,8 @@ export default async function ContactUs() {
   return (
     <>
     <MainHero MainTitle={contactpage.heroTitle} SmallTitle={contactpage.heroSubtitle} Text={''} BackgroundImage={contactpage.heroImage?.sourceUrl} BackgroundImageAltText={contactpage.heroImage?.altText}/>
-    <ContactForm classname={'flex flex-col lg:w-1/2 w-11/12 gap-4 m-auto py-10'}/>
     <Offices title={contactpage.officesTitle} subtitle={contactpage.officesSubtitle} text={''}/>
+    <ContactForm classname={'flex flex-col lg:w-1/2 w-11/12 gap-4 m-auto py-10'}/>
     </>
   )
 }

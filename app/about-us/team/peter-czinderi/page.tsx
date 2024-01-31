@@ -3,6 +3,8 @@
 import ContactTeam from "@/app/components/ContactTeam"
 import TeamInside from "@/app/components/TeamInside"
 import Image from "next/image"
+import Link from "next/link"
+import { FaLinkedin } from "react-icons/fa"
 
 export default function PeterCzinderi() {
     
@@ -19,7 +21,8 @@ export default function PeterCzinderi() {
                             IT Manager
                         </p>                    
                     </div>
-                    <Image src="/Peter-turkus.webp" width={1000} height={800} alt="peter-czinderi" className="w-full h-auto"/>
+                    <Image src="/Peter-turkus.webp" width={1000} height={800} alt="peter-czinderi" className="w-full h-auto rounded-3xl"/>
+                    <Link href='https://www.linkedin.com/in/peter-czinderi-ba393b251/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Follow me in LinkedIn</p></button></Link>
                     <div className="flex flex-col gap-4 py-16">
                             <p>My passion has always been IT and my journey began in the industry when I was 16. With over 12 years of experience, I have acquired a wealth of knowledge working in a variety of positions such as IT manager to running an IT store. This has required me to think innovatively and take an analytical approach to problem-solving, which results in high-quality solutions. Using my IT background I push the use of technology within the recruitment sector, which drives the company forward and creates engaging, innovative applications.</p> 
                         </div>                

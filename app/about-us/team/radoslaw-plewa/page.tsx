@@ -3,6 +3,8 @@
 import ContactTeam from "@/app/components/ContactTeam"
 import TeamInside from "@/app/components/TeamInside"
 import Image from "next/image"
+import Link from "next/link"
+import { FaLinkedin } from "react-icons/fa"
 
 export default function RadoslawPlewa() {
     
@@ -19,7 +21,8 @@ export default function RadoslawPlewa() {
                             Assistant Regional Manager
                         </p>                    
                     </div>
-                    <Image src="/Radoslaw-Plewa.webp" width={1000} height={800} alt="Radoslaw Plewa" className="w-full h-auto"/>
+                    <Image src="/Radoslaw-Plewa.webp" width={1000} height={800} alt="Radoslaw Plewa" className="w-full h-auto rounded-3xl"/>
+                    <Link href='https://www.linkedin.com/in/radoslaw-plewa-17257922a/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Follow me in LinkedIn</p></button></Link>
                     <div className="flex flex-col gap-4 py-16">
                              <p>
                                 Radoslaw, our Assistant Regional Manager, joined Accept in July 2021 as a Contracts Manager and swiftly climbed the professional ladder, earning a well-deserved promotion in January 2023. With a background in recruitment spanning many years, Radoslaw has proven his dedication, commitment, and adaptability. His journey at Accept has been marked by a continuous demonstration of drive and engagement, tackling every challenge, project, and team management opportunity with enthusiasm.
