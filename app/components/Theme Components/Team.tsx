@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client"
-import { getClient } from "../lib/client"
+import { getClient } from "../../lib/client"
 import Link from "next/link"
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi"
-import TeamMemberTile from "./TeamMemberTile"
+import TeamMemberTile from "../TeamMemberTile"
 
 const query = gql`
 query getTeams  {

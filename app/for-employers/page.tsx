@@ -1,7 +1,7 @@
 import ManagedServices from '../components/ManagedServices'
 import Onboarding from '../components/Onboarding'
 import Industries from '../components/industries'
-import Team from '../components/Team'
+import Team from '../components/Theme Components/Team'
 import { gql } from '@apollo/client'
 import { getClient } from '../lib/client'
 import Standards from '../components/standards'

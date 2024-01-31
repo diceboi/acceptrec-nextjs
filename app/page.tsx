@@ -4,7 +4,7 @@ import Advantages from './components/advantages'
 import Logocarousel from './components/logocarousel'
 import Industries from './components/industries'
 import Rated from './components/rated'
-import Team from './components/Team'
+import Team from './components/Theme Components/Team'
 
 import { gql } from '@apollo/client'
 import { getClient } from './lib/client'

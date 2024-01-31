@@ -1,4 +1,4 @@
-import Team from "@/app/components/Team";
+import Team from "@/app/components/Theme Components/Team";
 import MainHero from "@/app/components/Theme Components/MainHero";
 
 import { gql } from "@apollo/client";

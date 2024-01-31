@@ -1,4 +1,4 @@
-import Team from "../components/Team"
+import Team from "../components/Theme Components/Team"
 import MainHero from "../components/Theme Components/MainHero"
 import LeftRightCollumn from "../components/Theme Components/LeftRightCollumn"
 import LeftRightGrid from "../components/Theme Components/LeftRightGrid"
