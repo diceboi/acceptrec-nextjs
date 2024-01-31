@@ -1,5 +1,3 @@
-import TeamInner from "@/app/components/TeamInner";
-import TeamHero from "@/app/components/Theme Components/TeamHero";
 import Team from "@/app/components/Team";
 import MainHero from "@/app/components/Theme Components/MainHero";
 
