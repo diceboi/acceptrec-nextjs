@@ -1,7 +1,5 @@
-"use client"
-
 import { gql } from "@apollo/client"
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr"
+import { getClient } from "../lib/client"
 import Link from "next/link"
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi"
 import TeamMemberTile from "./TeamMemberTile"
@@ -28,9 +26,9 @@ query getTeams  {
 }
 `
 
-export default function Team({teamSmallTitle, teamMainTitle, teamCtaButtonText, teamText}:any) {
+export default async function Team({teamSmallTitle, teamMainTitle, teamCtaButtonText, teamText}:any) {
 
-    const { data: teamData }:any = useSuspenseQuery(query);
+    const { data: teamData }:any = await getClient().query({query})
 
     const teamMembers = teamData?.teams?.edges;
     
