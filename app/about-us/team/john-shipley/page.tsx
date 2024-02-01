@@ -29,16 +29,16 @@ export default function JohnShipley() {
                                 recruitment and a prior fourteen-year tenure in Warehouse and Logistics Management, John
                                 possesses a comprehensive understanding of diverse operational landscapes. His role at
                                 Accept revolves around spearheading the development and nurturing of the new and upcoming
-                                sales team, crucial for driving the company's growth and expansion initiatives. Leveraging his
+                                sales team, crucial for driving the company&apos;s growth and expansion initiatives. Leveraging his
                                 extensive background, John aims not only to achieve personal sales targets but also to cultivate
                                 a vibrant and competitive culture within the sales department.
                             </p> 
 
                             <p>
-                                In his capacity, John harbours ambitious goals for Accept's trajectory, aspiring to foster its
+                                In his capacity, John harbours ambitious goals for Accept&apos;s trajectory, aspiring to foster its
                                 footprint across multiple locations while maintaining a positive and dynamic work environment.
                                 His ethos encapsulates relentless forward momentum, driven by an inherent competitiveness
-                                that propels him and his team towards excellence. John's unwavering energy permeates the
+                                that propels him and his team towards excellence. John&apos;s unwavering energy permeates the
                                 workplace, inspiring colleagues to share in his fervour and drive for continuous improvement.
                                 With an unwavering commitment to progress and a keen eye on the horizon, John stands as a
                                 catalyst for innovation and growth within Accept, poised to lead the company towards
