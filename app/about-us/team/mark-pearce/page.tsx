@@ -1,10 +1,9 @@
-"use client"
-
 import ContactTeam from "@/app/components/ContactTeam"
 import Image from "next/image"
 import TeamInside from "@/app/components/TeamInside"
 import Link from "next/link"
 import { FaLinkedin } from "react-icons/fa"
+import Team from "@/app/components/Theme Components/Team"
 
 export default function MarkPierce() {
     
@@ -40,7 +39,7 @@ export default function MarkPierce() {
                     <ContactTeam contactname={"mark"} />
                 </div>
             </div>
-            <TeamInside />
+            <Team teamSmallTitle={''} teamMainTitle={'Awesome team members'} teamCtaButtonText={null} teamText={''}/>
         </section>
         </>
     )

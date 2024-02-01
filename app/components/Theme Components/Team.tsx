@@ -66,7 +66,7 @@ export default async function Team({teamSmallTitle, teamMainTitle, teamCtaButton
                 </Link>
                 
             </div>
-            <Link href="/about-us/team" className={`${teamCtaButtonText === null ? 'hidden' : 'flex'} justify-center w-fit m-auto py-16`}>
+            <Link href="/about-us/team" className={`${teamCtaButtonText === null || '' ? 'hidden' : 'flex'} justify-center w-fit m-auto py-16`}>
                 <button  
                         className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                         >

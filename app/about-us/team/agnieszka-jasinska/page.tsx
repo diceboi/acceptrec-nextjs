@@ -1,7 +1,6 @@
-"use client"
-
 import ContactTeam from "@/app/components/ContactTeam"
 import TeamInside from "@/app/components/TeamInside"
+import Team from "@/app/components/Theme Components/Team"
 import Image from "next/image"
 import Link from "next/link"
 import { FaLinkedin } from "react-icons/fa"
@@ -40,7 +39,7 @@ export default function AgnieszkaJasinska() {
 
                 </div>
             </div>
-            <TeamInside />
+            <Team teamSmallTitle={''} teamMainTitle={'Awesome team members'} teamCtaButtonText={null} teamText={''}/>
         </section>
         </>
     )

@@ -1,7 +1,6 @@
-"use client"
-
 import ContactTeam from "@/app/components/ContactTeam"
 import TeamInside from "@/app/components/TeamInside"
+import Team from "@/app/components/Theme Components/Team"
 import Image from "next/image"
 
 export default function DariaBhavsar() {
@@ -37,7 +36,7 @@ export default function DariaBhavsar() {
 
                 </div>
             </div>
-            <TeamInside />
+            <Team teamSmallTitle={''} teamMainTitle={'Awesome team members'} teamCtaButtonText={null} teamText={''}/>
         </section>
         </>
     )
