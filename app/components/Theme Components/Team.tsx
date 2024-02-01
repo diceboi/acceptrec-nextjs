@@ -61,7 +61,7 @@ export default async function Team({teamSmallTitle, teamMainTitle, teamCtaButton
             ))}
 
                 <Link href="/join-our-team" className="recruitment-tile lg:h-[450px] h-[250px] group flex flex-col cursor-pointer ease-out duration-200">
-                    <div className="relative flex flex-col justify-end bg-[url('/join-our-team.webp')] bg-cover bg-center bg-opacity-40 h-full  p-4 ease-out duration-200">
+                    <div className="relative flex flex-col justify-end bg-[url('/join-our-team-purple.png')] bg-cover bg-center bg-opacity-40 h-full  p-4 ease-out duration-200">
                     </div>                    
                 </Link>
                 

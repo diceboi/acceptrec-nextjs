@@ -22,7 +22,7 @@ export default function MonikaLoj() {
                         </p>                    
                     </div>
                     <Image src="/Monika-Beldycka-f.webp" width={1000} height={800} alt="monika-loj" className="w-full h-auto rounded-3xl"/>
-                    <Link href='https://www.linkedin.com/in/monika-loj-beldycka-223a3414/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Follow me in LinkedIn</p></button></Link>
+                    <Link href='https://www.linkedin.com/in/monika-loj-beldycka-223a3414/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Connect with me on LinkedIn</p></button></Link>
                     <div className="flex flex-col gap-4 py-16">
                             <p>Monika joined Accept Recruitment Industrial & Driving Branch in Leicester at the beginning of 2016 as a Branch Manager. Through hard work Monika achieved some great wins for the company by developing and growing client&apos;s portfolio and recruiting team of extremely talented recruiters. Monika looked after new business development, site implementations and projects, existing client delivery models and the welfare and development of the infrastructure of the business. Her dedication, understanding of client&apos;s needs and care about their business helped Accept Recruitment achieving 40% year on year growth.</p> 
 

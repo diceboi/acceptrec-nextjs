@@ -22,7 +22,7 @@ export default function MagdaObraczka() {
                         </p>                    
                     </div>
                     <Image src="/Magda-Obraczka.webp" width={1000} height={800} alt="Magda Obraczka" className="w-full h-auto rounded-3xl"/>
-                    <Link href='https://www.linkedin.com/in/magdalena-obraczka-40b88ba5/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Follow me in LinkedIn</p></button></Link>
+                    <Link href='https://www.linkedin.com/in/magdalena-obraczka-40b88ba5/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Connect with me on LinkedIn</p></button></Link>
                     <div className="flex flex-col gap-4 py-16">
                             <p>
                                 I&#39;m Magda, a Senior Account Manager at Accept Recruitment. My journey in recruitment began

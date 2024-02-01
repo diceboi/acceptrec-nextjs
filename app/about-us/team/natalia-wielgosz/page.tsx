@@ -22,7 +22,7 @@ export default function NataliaWielgosz() {
                         </p>                    
                     </div>
                     <Image src="/Talki_New.webp" width={1000} height={800} alt="natalia-wielgosz" className="w-full h-auto rounded-3xl"/>
-                    <Link href='https://linkedin.com/in/natalia-wielgosz-b52b22163/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Follow me in LinkedIn</p></button></Link>
+                    <Link href='https://linkedin.com/in/natalia-wielgosz-b52b22163/' target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Connect with me on LinkedIn</p></button></Link>
                     <div className="flex flex-col gap-4 py-16">
                             <p>Natalia has a deep understanding of payroll procedures and systems. She is ruthless when it comes to details and knows that even the smallest of errors can have major consequences. She has a strong mathematical ability is comfortable dealing with numbers and finances. Payroll technology is constantly changing and Natalia ensures she is up to date with the latest.</p> 
 
