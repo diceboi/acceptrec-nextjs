@@ -67,6 +67,7 @@ export default function RootLayout({
             {children}
             <MainCTA/>
             <Footer/>
+            <FacebookMsg />
           </ApolloWrapper>
       </body>
     </html>
