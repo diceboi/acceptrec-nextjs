@@ -27,12 +27,12 @@ import {
           <Heading style={h1}>A {name} is contacted via ChatBot.</Heading>
           <Text style={{ ...text, marginBottom: '24px'}}>
             Please respond to {name} as soon as you can.
-            
-            Name:{name}
-            Phone number: {tel}
-            Email adress: {email}
-            Summary of the conversation: {summary}
-            
+            <br></br><br></br>
+            <b>Name:</b>{name}<br></br><br></br>
+            <b>Phone number:</b> {tel}<br></br><br></br>
+            <b>Email adress:</b> {email}<br></br><br></br>
+            <b>Conversation with the bot:</b> {summary}<br></br><br></br>
+
           </Text>
           <Img
             src="http://admin.acceptrec.co.uk/wp-content/uploads/2024/01/Accept-Stacked-Logo-with-Strapline-RGB300.png"
