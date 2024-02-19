@@ -58,7 +58,15 @@ export default function RootLayout({
         }}>
 
         </Script>
-       
+        <Script
+        strategy='afterInteractive'
+        src='https://cdn.botpress.cloud/webchat/v1/inject.js'
+        ></Script>
+        <Script
+        strategy='afterInteractive'
+        src='https://mediafiles.botpress.cloud/aebf386b-9551-4c6e-99e5-ecf802f04519/webchat/config.js'
+        defer
+        ></Script>
       </head>
       <body className={raleway.className} id='__next'>
           <ApolloWrapper>
@@ -67,7 +75,6 @@ export default function RootLayout({
             {children}
             <MainCTA/>
             <Footer/>
-            <FacebookMsg />
           </ApolloWrapper>
       </body>
     </html>
