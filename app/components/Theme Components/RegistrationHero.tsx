@@ -18,13 +18,13 @@ interface RegistrationProps {
             <div className="flex flex-col justify-center items-center gap-4 w-full h-full text-white">
               <h2 className="text-sm lg:text-md font-bold tracking-widest uppercase">Registration</h2>
               <h1 className="text-6xl lg:text-8xl font-black tracking-tighter">Register or Sign in</h1>
-              <p>You need to be registered with us to apply for jobs. Click here to <strong>login</strong> or <strong>sign up</strong>.</p>
+              <p>You need to be registered with us to apply for jobs. Click here to <strong>Sing in</strong> or <strong>Register</strong>.</p>
               <div className="flex flex-nowrap gap-4">
                 <Link href="https://accept.iqxanywhere.net/" className='w-fit'>
                 <button  
                         className="group flex justify-between items-center w-fit bg-[#fff] hover:bg-[#e5e5e5] hover:shadow-xl hover:gap-4 shadow-lg text-black hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                         >
-                        Login
+                        Sing in
                         <FiArrowUpRight className='right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200'
                         />
                 </button>
@@ -33,7 +33,7 @@ interface RegistrationProps {
                 <button  
                         className="group flex justify-between items-center w-fit bg-[#fff] hover:bg-[#e5e5e5] hover:shadow-xl hover:gap-4 shadow-lg text-black hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                         >
-                        Sign up
+                        Register
                         <FiArrowUpRight className='right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200'
                         />
                 </button>
