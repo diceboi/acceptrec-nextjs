@@ -5,7 +5,7 @@ export default function RegistrationInner() {
     <section className="w-full py-20">
         <div className='flex flex-col gap-20 w-11/12 lg:w-8/12 m-auto pt-10'>
             <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase text-center'>
-                Important informations
+                What you need to know
             </h3>
             <div className='w-full grid lg:grid-cols-2 gap-8 '>
                 <ul className='flex flex-col gap-2 p-4 list-disc'>                       
