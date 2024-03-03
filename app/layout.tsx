@@ -65,7 +65,7 @@ export default function RootLayout({
         src='https://cdn.botpress.cloud/webchat/v1/inject.js'
         ></Script>
         <Script
-        src='https://mediafiles.botpress.cloud/aebf386b-9551-4c6e-99e5-ecf802f04519/webchat/config.js'
+        src='https://mediafiles.botpress.cloud/5c404966-a856-4ccc-a11f-d1ae4eb4d233/webchat/config.js'
         ></Script>
         
           <ApolloWrapper>
