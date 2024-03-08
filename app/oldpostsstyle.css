@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+article a {
+    font-weight: 500;
+}
+
+.wp-block-buttons {
+    display: flex!important;
+    justify-content: space-between!important;
+    justify-items: center!important;
+    background: #00afaa!important;
+    color: #fff!important;
+    padding: 5px 20px 5px 20px!important;
+    border-radius: 30px!important;
+    transition: all!important;
+    width: fit-content!important;
+    font-size: x-large!important;
+    cursor: pointer!important;
+}
+
+.wp-block-buttons:hover {
+    background: #00a39e!important;
+}
+
+article h2 {
+    font-size: x-large;
+    font-weight: 700;
+}
+
