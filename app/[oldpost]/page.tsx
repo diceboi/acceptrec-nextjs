@@ -1,11 +1,8 @@
-"use client"
-
 import Link from "next/link"
 import Image from "next/image"
-import { useParams } from "next/navigation"
 import { FiArrowUpRight } from "react-icons/fi"
 import { gql } from "@apollo/client"
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr"
+import { getClient } from "../lib/client"
 
 const query = gql`
 query getOldPosts {
@@ -25,42 +22,42 @@ query getOldPosts {
         slug
         title
         date
+        seo {
+          title
+          metaDesc
+        }
       }
     }
   }
 }`
 
-type Oldpost = {
-  node: {
-    blocks: {
-      saveContent: string;
-      order: string;
-    }[];
-    featuredImage: {
-      node: {
-        altText: string;
-        sourceUrl: string;
-      };
-    };
-    slug: string;
-    title: string;
-    date: string;
-  };
-};
+export const revalidate = 5;
 
-type QueryResult = {
-  oldPosts: {
-    edges: Oldpost[];
-  };
-};
+export async function generateMetadata({ params }:any) {
 
-export default function OldPosts() {
-  const { data } = useSuspenseQuery<QueryResult>(query);
-  const { oldpost } = useParams();
+  const { oldpost } = params;
 
-  console.log(data)
+  const { data: oldpostdata }:any = await getClient().query({query});
 
-  const foundOldpost = data?.oldPosts?.edges?.find((post) => post.node.slug === oldpost);
+  const posts = oldpostdata?.oldPosts?.edges || {};
+
+  const foundOldpost = posts.find((post: { node: { slug: string | string[] } }) => post.node.slug === oldpost);
+
+  return {
+    title: foundOldpost?.node.seo?.title,
+    description: foundOldpost?.node.seo?.metaDesc
+  }
+}
+
+export default async function OldPosts({ params }:any) {
+
+  const { oldpost } = params;
+
+  const { data: oldpostdata }:any = await getClient().query({query})
+
+  const posts = oldpostdata?.oldPosts?.edges || {};
+
+  const foundOldpost = posts.find((post: { node: { slug: string | string[] } }) => post.node.slug === oldpost);
 
   if (foundOldpost) {
     return (
@@ -81,7 +78,7 @@ export default function OldPosts() {
 
         <article className="flex flex-col w-11/12 lg:w-6/12 m-auto gap-4">
           {/* Adjust the field name accordingly */}
-          {foundOldpost.node.blocks.map((block, index) => (
+          {foundOldpost.node.blocks.map((block: any, index: any) => (
           <div
             key={index}
             className="flex flex-col gap-2"
