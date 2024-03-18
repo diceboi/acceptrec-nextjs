@@ -30,3 +30,8 @@ article h2 {
     font-weight: 700;
 }
 
+.wp-block-columns {
+    display: flex;
+    flex-direction: row;
+}
+
