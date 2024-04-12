@@ -5,7 +5,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function BgImageTile({title, uri, subtitle, text, bgimage, bgimagealt, show}:any) {
   return (
-    <div id='commercial' className={`group relative ${show === true ? 'flex' : 'hidden'} bg-[url('/commercial-industries.webp')] bg-cover bg-center gap-8 w-11/12 lg:w-8/12 h-[60vh] m-auto p-8 rounded-3xl ease-in-out duration-200  cursor-pointer visible`}>
+    <div id='commercial' className={`group relative ${show === true ? 'flex' : 'hidden'} bg-cover bg-center gap-8 w-11/12 lg:w-8/12 h-[60vh] m-auto p-8 rounded-3xl ease-in-out duration-200  cursor-pointer visible`}>
         <Image 
         src={bgimage} 
         alt={bgimagealt}

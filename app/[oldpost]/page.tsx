@@ -6,7 +6,7 @@ import { getClient } from "../lib/client"
 
 const query = gql`
 query getOldPosts {
-  oldPosts {
+  oldPosts (first: 1000) {
     edges {
       node {
         blocks {
