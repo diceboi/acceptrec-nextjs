@@ -7,7 +7,7 @@ export default function MainHero({ MainTitle, SmallTitle, Text, BackgroundImage,
     return(
         <>
         
-        <div className="bg-gradient-to-br from-white to-[#00afa917] pb-10">
+        <div className="bg-gradient-to-br from-white to-[#00afa917] pb-10 lg:pt-0 pt-16">
             <div className="relative flex flex-col justify-end gap-4 w-11/12 lg:w-8/12 min-h-[30vh] m-auto  ">
                 <Image 
                     src={BackgroundImage}
