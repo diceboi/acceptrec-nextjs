@@ -26,6 +26,8 @@ export default function ContactTeam({contactname}: any) {
 
     const formData: Record<string, string> = {};
 
+    
+
     Array.from(e.currentTarget.elements).filter(isInputNamedElement).forEach((field) => {
       if (!field.name) return;
       // Handle checkboxes to set 'yes' or 'no' values
@@ -54,7 +56,6 @@ export default function ContactTeam({contactname}: any) {
         setFormStatus('error');
       }
     }
-
 
   return (
     <>
