@@ -4,6 +4,8 @@ import Team from "@/app/components/Theme Components/Team"
 import { gql } from "@apollo/client"
 import  { getClient } from "@/app/lib/client"
 import Image from "next/image"
+import { FaLinkedin } from "react-icons/fa"
+import Link from "next/link"
 
 const query = gql`
 query getTeams  {
@@ -18,6 +20,7 @@ query getTeams  {
           profilepicture {
             sourceUrl
           }
+          linkedinLink
         }
         slug
         title
@@ -55,7 +58,10 @@ export default async function Teammember({params}:any) {
                             {foundTeamMember.node.team.position}
                         </p>
                     </div>
-                    <Image src={foundTeamMember.node.team.profilepicture.sourceUrl} width={1000} height={800} alt={foundTeamMember.node.team.profilepicture.altText} className="w-full h-auto"/>
+                    <Image src={foundTeamMember.node.team.profilepicture.sourceUrl} width={1000} height={800} alt={foundTeamMember.node.team.profilepicture.altText} className="w-full h-auto rounded-3xl"/>
+                    {foundTeamMember.node.team.linkedinLink && (
+                    <Link href={foundTeamMember.node.team.linkedinLink} target="_blank" className="w-fit"><button className="bg-[#0077b5] pl-1 pr-2 py-1 text-white font-bold rounded-md flex flex-nowrap items-center gap-2 hover:gap-3 transition-all"><FaLinkedin className="w-8 h-full"/><p>Connect with me on LinkedIn</p></button></Link>
+                    )}
                         <div
                             className="flex flex-col gap-2 py-16"
                             dangerouslySetInnerHTML={{ __html: inttroduction  }}
