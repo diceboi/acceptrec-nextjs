@@ -24,7 +24,7 @@ interface RegistrationProps {
                 <button  
                         className="group flex justify-between items-center w-fit bg-[#fff] hover:bg-[#e5e5e5] hover:shadow-xl hover:gap-4 shadow-lg text-black hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2"
                         >
-                        Sing in
+                        Sign in
                         <FiArrowUpRight className='right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200'
                         />
                 </button>
