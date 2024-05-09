@@ -6,6 +6,8 @@ import  { getClient } from "@/app/lib/client"
 import Image from "next/image"
 import { FaLinkedin } from "react-icons/fa"
 import Link from "next/link"
+import next from "next"
+import { revalidate } from "../page"
 
 const query = gql`
 query getTeams  {
@@ -34,14 +36,23 @@ export default async function Teammember({params}:any) {
 
     const { teammember } = params;
 
-    const { data: teammemberData }:any = await getClient().query({query})
+    const { data: teammemberData }:any = await getClient().query({
+      query,
+      context: {
+        fetchOptions: {
+          next: { revalidate: 5 }
+        }
+      }
+    })
 
     const members = teammemberData?.teams?.edges || {};
 
     const foundTeamMember = members.find((member: { node: { slug: string | string[] } }) => member.node.slug === teammember);
 
-    const emailAddress = foundTeamMember.node.team.emailAdress;
-    const inttroduction = foundTeamMember.node.team.introduction;
+    const emailAddress = foundTeamMember?.node?.team?.emailAdress
+    const inttroduction = foundTeamMember?.node?.team?.introduction;
+
+    console.log(foundTeamMember?.node?.team?.emailAdress) 
 
     console.log (emailAddress.split('@')[0])
     
