@@ -3,13 +3,7 @@
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 
-interface JobsHeroProps {
-    title: string;
-    subtitle: string;
-    classname: string;
-  }
-
-  const JobsHero: React.FC<JobsHeroProps> = ({ MainTitle, SmallTitle, Text, BackgroundImage, BackgroundImageAltText}:any) => {
+  export default function MainHero({ MainTitle, SmallTitle, Text, BackgroundImage, BackgroundImageAltText}:any){
     return(
         <>
         <div className="bg-white pb-10 lg:pt-0 pt-16">
@@ -31,5 +25,3 @@ interface JobsHeroProps {
         </>
     )
 }
-
-export default JobsHero;
