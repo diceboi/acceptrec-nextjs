@@ -10,7 +10,7 @@ import BgImageTile from './Theme Components/BgImageTile';
 
 const query = gql`
 query getIndustries {
-  industries {
+  industries(first:100, where: {orderby: {field: MENU_ORDER, order: ASC}}) {
     edges {
       node {
         title

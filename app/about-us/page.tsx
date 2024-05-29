@@ -6,6 +6,7 @@ import CompanyHighlights from "../components/Theme Components/CompanyHighlights"
 
 import { gql } from "@apollo/client"
 import { getClient } from "../lib/client"
+import Abouthero from "../components/Theme Components/AboutHero"
 
 const query = gql`
 query getAboutUsPage {
@@ -88,7 +89,7 @@ const aboutUs = aboutuspagedata?.page?.aboutUs || {};
 
     return(
         <>
-            <MainHero 
+            <Abouthero
                 MainTitle={aboutUs.aboutUsTitle} 
                 SmallTitle={aboutUs.aboutUsSubtitle} 
                 BackgroundImage={aboutUs.aboutUsHeroImage?.sourceUrl} 

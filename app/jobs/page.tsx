@@ -8,6 +8,7 @@ import { gql } from "@apollo/client";
 import { useSuspenseQuery } from "@apollo/client";
 import MainHero from "../components/Theme Components/MainHero";
 import { Metadata } from "next";
+import JobsHero from "../components/Theme Components/JobsHero";
 
 
 const query = gql`
@@ -75,7 +76,7 @@ export default function Jobs() {
 
     return(
         <>
-        <MainHero MainTitle={jobs.jobsMainTitle} SmallTitle={jobs.jobsSmallTitle} BackgroundImage={jobs.jobsBackgroundImage?.sourceUrl} BackgroundImageAltText={jobs.jobsBackgroundImage?.altText}/>
+        <JobsHero MainTitle={jobs.jobsMainTitle} SmallTitle={jobs.jobsSmallTitle} BackgroundImage={jobs.jobsBackgroundImage?.sourceUrl} BackgroundImageAltText={jobs.jobsBackgroundImage?.altText}/>
         <Jobfilter
           uniqueCategories={uniqueCategories}
           states={states}

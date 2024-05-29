@@ -3,16 +3,23 @@
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 
-export default function Abouthero() {
+export default function Abouthero({ MainTitle, SmallTitle, Text, BackgroundImage, BackgroundImageAltText}:any) {
     return(
         <>
         
-        <div className="relative h-[50vh] pb-10 bg-[url('/team.webp')] bg-cover bg-bottom bg-no-repeat pt-16 lg:pt-0">
-            <div className='absolute top-0 right-0 w-full h-full bg-[#312252] opacity-75'></div>
-            <div className="relative flex flex-col justify-between gap-4 w-11/12 lg:w-8/12 h-[50vh] m-auto ">
-              <div className="flex flex-col gap-4 justify-center w-full h-full text-white">
-                <h1 className="text-6xl lg:text-8xl font-black tracking-tighter text-center">About us</h1>
-                <h2 className="text-sm lg:text-lg font-medium tracking-widest uppercase text-center">Recruitment - Our love</h2>
+        <div className="bg-white pb-10 lg:pt-0 pt-16">
+            <div className="relative flex flex-col justify-end gap-4 w-full min-h-[30vh] m-auto  ">
+                <Image 
+                    src={BackgroundImage}
+                    alt={BackgroundImageAltText}
+                    className={'bg-img'}
+                    fill={true}
+                    style={{objectFit: "cover", objectPosition: "center"}}
+                /> 
+              <div className="flex flex-col gap-4 justify-center items-center min-h-[30vh] w-full z-10">
+                <h1 className="text-6xl lg:text-8xl font-black tracking-tighter  text-white ">{MainTitle}</h1>
+                <h2 className="text-sm lg:text-md font-bold tracking-widest text-center uppercase text-white">{SmallTitle}</h2>
+                <p className="text-lg text-center font-bold">{Text}</p>
               </div>
             </div>             
         </div>
