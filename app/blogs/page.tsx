@@ -122,7 +122,6 @@ interface QueryResponse {
 
 export default function BlogArchive() {
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   const { data: postsdata } = useSuspenseQuery<QueryResponse>(query1);
   const { data: categoriesdata } = useSuspenseQuery<QueryResponse>(query2);
@@ -130,23 +129,13 @@ export default function BlogArchive() {
 
   const blogpage = blogpagedata.page.blogs;
 
-  const categoryFromQuery = searchParams.get("category"); // Retrieve the category from the query parameter
-
-  const filteredPosts = categoryFromQuery
-    ? postsdata?.posts.edges.filter(
-        (post) => post.node.categories.nodes[0].name === categoryFromQuery
-      )
-    : postsdata?.posts.edges;
-
   const formatDate = (inputDate: string) => {
     const date = new Date(inputDate);
     const day = date.getDate();
     const month = date.getMonth() + 1; // Month is 0-indexed
     const year = date.getFullYear();
 
-    return `${day < 10 ? "0" : ""}${day}.${
-      month < 10 ? "0" : ""
-    }${month}.${year}`;
+    return `${day < 10 ? "0" : ""}${day}.${month < 10 ? "0" : ""}${month}.${year}`;
   };
 
   function stripHtmlTags(html: string): string {
