@@ -12,9 +12,9 @@ const raleway = Raleway({ subsets: ['latin'] })
 
 export const metadata = {
   title: {
-    default: 'Best Recruitment Agency in Leicester | Driving and Warehouse Specialists',
+    default: 'Highest Rated Recruitment Agency in Leicester | Driving and Warehouse Specialists',
   },
-  description: 'Accept Recruitment are one of the best recruitment agencies in Leicester. As a specialist driving and industrial agency we are able to react quickly to client demands. with jobs in leicester, jobs in leeds and jobs in bristol we can cater for all your job needs.',
+  description: 'As one of the best recruitment agencies in Leicester, we specialise in Warehouse Work, Driving Work, and Technical Work. Find your ideal job or hire top talent with us today!',
 }
 
 export default function RootLayout({
