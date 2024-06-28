@@ -1,15 +1,16 @@
 "use client";
 
-import { ApolloClient, ApolloLink, HttpLink } from "@apollo/client";
-import { ApolloNextAppProvider, NextSSRInMemoryCache, NextSSRApolloClient, SSRMultipartLink } from "@apollo/experimental-nextjs-app-support/ssr";
+import { ApolloLink, HttpLink, } from "@apollo/client";
+import { ApolloNextAppProvider, SSRMultipartLink, ApolloClient, InMemoryCache} from "@apollo/experimental-nextjs-app-support";
 
 function makeClient() {
   const httpLink = new HttpLink({
       uri: "https://admin.acceptrec.co.uk/graphql",
+      fetchOptions: { cache: "no-store" },
   });
 
-  return new NextSSRApolloClient({
-    cache: new NextSSRInMemoryCache() ,
+  return new ApolloClient({
+    cache: new InMemoryCache() ,
     link:
       typeof window === "undefined"
         ? ApolloLink.from([

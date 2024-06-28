@@ -1,13 +1,10 @@
 import ContactTeam from "@/app/components/ContactTeam"
-import TeamInside from "@/app/components/TeamInside"
 import Team from "@/app/components/Theme Components/Team"
 import { gql } from "@apollo/client"
 import  { getClient } from "@/app/lib/client"
 import Image from "next/image"
 import { FaLinkedin } from "react-icons/fa"
 import Link from "next/link"
-import next from "next"
-import { revalidate } from "../page"
 
 const query = gql`
 query getTeams  {
@@ -48,7 +45,6 @@ export default async function Teammember({params}:any) {
     const members = teammemberData?.teams?.edges || {};
 
     const foundTeamMember = members.find((member: { node: { slug: string | string[] } }) => member.node.slug === teammember);
-
     const emailAddress = foundTeamMember?.node?.team?.emailAdress
     const inttroduction = foundTeamMember?.node?.team?.introduction;
 

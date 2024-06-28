@@ -1,8 +1,8 @@
 "use client"
 
 import BlogPostHero from "@/app/components/Theme Components/BlogPosthero"
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
-import { useParams, useRouter } from "next/navigation";
+import { useSuspenseQuery } from "@apollo/client";
+import { useParams } from "next/navigation";
 import { gql } from "@apollo/client";
 import he from "he";
 import Blogtile from "@/app/components/Theme Components/BlogTile";
@@ -79,7 +79,6 @@ interface Post {
 
 export default function Blog() {
 
-  const router = useRouter(); // Use the useRouter hook
   const { data } = useSuspenseQuery<QueryResponse>(query);
 
   // Get the slug from the router query
