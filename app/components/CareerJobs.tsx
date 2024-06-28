@@ -2,7 +2,7 @@
 
 import CareerJob from "./CareerJob";
 import { gql } from "@apollo/client";
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
+import { useSuspenseQuery } from "@apollo/client";
 import { Key } from "react";
 
 const GET_CAREER_JOBS = gql`
@@ -38,7 +38,7 @@ interface Pages {
     const pages = data?.pages?.edges;
   
     if (!careerJobsData) {
-      return <div>No data available</div>;
+      return <div className="flex flex-col items-center justify-center w-full py-20 bg-[#00afaa]"><p className="text-raliway text-xl font-bold text-white">There are currently no job opportunities for Acceptrec, please check back later.</p></div>;
     }
 
     function stripHtmlTags(html: string): string {
