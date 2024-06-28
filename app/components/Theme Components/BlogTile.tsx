@@ -1,6 +1,6 @@
 "use client"
 
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
+import { useSuspenseQuery } from "@apollo/client";
 import { gql } from "@apollo/client";
 import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";

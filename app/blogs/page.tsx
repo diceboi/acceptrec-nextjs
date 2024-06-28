@@ -1,7 +1,7 @@
 "use client"
 
 import Blogtile from "../components/Theme Components/BlogTile";
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
+import { useSuspenseQuery } from "@apollo/client";
 import { useRouter, useSearchParams } from "next/navigation";
 import he from "he";
 import { gql } from "@apollo/client";

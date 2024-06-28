@@ -1,7 +1,7 @@
 "use client"
 
 import { gql } from "@apollo/client";
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
+import { useSuspenseQuery } from "@apollo/client";
 
 const GET_COVID19 = gql`
 query getCovid19 {

@@ -1,7 +1,7 @@
 "use client"
 
 import { gql } from "@apollo/client";
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
+import { useSuspenseQuery } from "@apollo/client";
 
 const GET_MODERN_SLAVERY_STATEMENT = gql`
 query getModernSlaveryStatement {
