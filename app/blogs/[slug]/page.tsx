@@ -3,6 +3,7 @@
 import BlogPostHero from "@/app/components/Theme Components/BlogPosthero"
 import { useSuspenseQuery } from "@apollo/client";
 import { useParams } from "next/navigation";
+import { Suspense } from "react";
 import { gql } from "@apollo/client";
 import he from "he";
 import Blogtile from "@/app/components/Theme Components/BlogTile";
@@ -111,6 +112,7 @@ export default function Blog() {
   }
     return(
         <>
+        <Suspense>
         <BlogPostHero featuredimage={post.node.featuredImage.node.sourceUrl} title={post.node.title} authorimage={post.node.author.node.avatar.url} authorname={post.node.author.node.name} postdate={formattedDate} category={post.node.categories.nodes[0].name} slug={""}/>
         <div className='flex lg:flex-row flex-col lg:gap-20 w-full lg:w-8/12 m-auto'>
           <article className='flex text-lg flex-col gap-8 w-full lg:w-2/3 px-4 lg:px-0 py-8 lg:py-20'>
@@ -149,6 +151,7 @@ export default function Blog() {
             ))}
           </div>
       </div>
+      </Suspense>
         </>
     )
 }

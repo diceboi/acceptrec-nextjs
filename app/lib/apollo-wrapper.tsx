@@ -6,7 +6,6 @@ import { ApolloNextAppProvider, SSRMultipartLink, ApolloClient, InMemoryCache} f
 function makeClient() {
   const httpLink = new HttpLink({
       uri: "https://admin.acceptrec.co.uk/graphql",
-      fetchOptions: { cache: "no-store" },
   });
 
   return new ApolloClient({
