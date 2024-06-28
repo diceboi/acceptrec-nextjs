@@ -11,7 +11,7 @@ export async function POST(request: Request) {
 
   try {
 
-  const userMail = await resend.sendEmail({
+  const userMail = await resend.emails.send({
     from: 'Zen from Acceptrec <hello@acceptrec.co.uk>',
     to: email,
     subject: `Hello ${name}`,

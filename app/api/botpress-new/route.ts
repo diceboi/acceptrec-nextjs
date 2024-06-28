@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
   try {
 
-  const companyMail = await resend.sendEmail({
+  const companyMail = await resend.emails.send({
     from: 'Acceptrec.co.uk <hello@acceptrec.co.uk>',
     to: 'szasz.szabolcs1995@gmail.com',
     subject: `[Chat] ${name} is contacted via ChatBot`,

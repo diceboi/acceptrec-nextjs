@@ -11,7 +11,7 @@ export async function POST(request: Request) {
 
   try {
 
-  const userMail = await resend.sendEmail({
+  const userMail = await resend.emails.send({
     from: 'Radoslaw from Acceptrec <radoslaw@acceptrec.co.uk>',
     to: email,
     subject: `Hello ${name}`,
@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     })
   });
 
-  const companyMail = await resend.sendEmail({
+  const companyMail = await resend.emails.send({
     from: 'Acceptrec.co.uk <hello@acceptrec.co.uk>',
     to: 'radoslaw@acceptrec.co.uk',
     subject: 'New contact from the website',

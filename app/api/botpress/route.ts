@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
   try {
 
-  const companyMail = await resend.sendEmail({
+  const companyMail = await resend.emails.send({
     from: 'Acceptrec.co.uk <hello@acceptrec.co.uk>',
     to: 'admin@acceptrec.co.uk',
     subject: `[Chat] a User is waiting for a human in Messenger`,
