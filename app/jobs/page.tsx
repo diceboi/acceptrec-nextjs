@@ -70,25 +70,53 @@ export default function Jobs() {
   const contractTypes = [...new Set(jobsData.flatMap((job: { contracttype: any; }) => job.contracttype).filter(Boolean))];
   const ids = jobsData.flatMap((job: { id: any; }) => job.id).filter(Boolean);
 
-    const regionQuery = searchParams.get('region')
-    const categoryQuery = searchParams.get('category')
-    const typeQuery = searchParams.get('type')
-    const contracttypeQuery = searchParams.get('contracttype')
-
-    return(
-        <>
-        <Suspense>
-        <JobsHero MainTitle={jobs.jobsMainTitle} SmallTitle={jobs.jobsSmallTitle} BackgroundImage={jobs.jobsBackgroundImage?.sourceUrl} BackgroundImageAltText={jobs.jobsBackgroundImage?.altText}/>
-        <Jobfilter
-          uniqueCategories={uniqueCategories}
-          states={states}
-          jobTypes={jobTypes}
-          contractTypes={contractTypes}
-          jobsData={jobsData}
+  return (
+    <>
+      <Suspense>
+        <JobsHero
+          MainTitle={jobs.jobsMainTitle}
+          SmallTitle={jobs.jobsSmallTitle}
+          BackgroundImage={jobs.jobsBackgroundImage?.sourceUrl}
+          BackgroundImageAltText={jobs.jobsBackgroundImage?.altText}
         />
-        <JobList regionQuery={regionQuery} categoryQuery={categoryQuery} typeQuery={typeQuery} contracttypeQuery={contracttypeQuery}/>
+        <Suspense>
+          <JobContentSection
+            uniqueCategories={uniqueCategories}
+            states={states}
+            jobTypes={jobTypes}
+            contractTypes={contractTypes}
+            jobsData={jobsData}
+          />
         </Suspense>
-        </>
-    )
-};
+      </Suspense>
+    </>
+  );
+}
+
+function JobContentSection({ uniqueCategories, states, jobTypes, contractTypes, jobsData }:any) {
+  const searchParams = useSearchParams();
+
+  const regionQuery = searchParams.get('region');
+  const categoryQuery = searchParams.get('category');
+  const typeQuery = searchParams.get('type');
+  const contracttypeQuery = searchParams.get('contracttype');
+
+  return (
+    <>
+      <Jobfilter
+        uniqueCategories={uniqueCategories}
+        states={states}
+        jobTypes={jobTypes}
+        contractTypes={contractTypes}
+        jobsData={jobsData}
+      />
+      <JobList
+        regionQuery={regionQuery}
+        categoryQuery={categoryQuery}
+        typeQuery={typeQuery}
+        contracttypeQuery={contracttypeQuery}
+      />
+    </>
+  );
+}
 
