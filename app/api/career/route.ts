@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     })
   });
 
-  const companyMail = await resend.sendEmail({
+  const companyMail = resend.emails.send({
     from: 'Acceptrec.co.uk <hello@acceptrec.co.uk>',
     to: 'admin@acceptrec.co.uk',
     subject: 'New contact from the website',
