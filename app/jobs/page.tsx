@@ -4,6 +4,7 @@ import Jobfilter from "../components/jobsfilter/jobFilter";
 import JobList from "../components/jobsfilter/jobList";
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
+import { Suspense } from "react";
 import { gql } from "@apollo/client";
 import { useSuspenseQuery } from "@apollo/client";
 import MainHero from "../components/Theme Components/MainHero";
@@ -76,6 +77,7 @@ export default function Jobs() {
 
     return(
         <>
+        <Suspense>
         <JobsHero MainTitle={jobs.jobsMainTitle} SmallTitle={jobs.jobsSmallTitle} BackgroundImage={jobs.jobsBackgroundImage?.sourceUrl} BackgroundImageAltText={jobs.jobsBackgroundImage?.altText}/>
         <Jobfilter
           uniqueCategories={uniqueCategories}
@@ -85,6 +87,7 @@ export default function Jobs() {
           jobsData={jobsData}
         />
         <JobList regionQuery={regionQuery} categoryQuery={categoryQuery} typeQuery={typeQuery} contracttypeQuery={contracttypeQuery}/>
+        </Suspense>
         </>
     )
 };
