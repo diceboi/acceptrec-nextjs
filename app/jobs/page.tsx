@@ -9,7 +9,7 @@ import { gql } from "@apollo/client";
 import { useSuspenseQuery } from "@apollo/client";
 import JobsHero from "../components/Theme Components/JobsHero";
 
-const query1 = gql`
+const query = gql`
   query getHomePage {
     page(id: "1389", idType: DATABASE_ID) {
       title
@@ -30,75 +30,38 @@ const query1 = gql`
   }
 `;
 
-const query2 = gql`
-query getJoblist {
-  joblists(first: 1000, where: {orderby: {field: MENU_ORDER, order: ASC}}) {
-    edges {
-      node {
-        id
-        joblists {
-          shortDescription
-          longDescription
-          requiredSkills
-          dailyDuties
-          benefits
-          shift
-          location
-          category
-          jobType
-          contractType
-          salary {
-            fix
-            from
-            to
-          }
-        }
-        title
-        slug
-        seo {
-          metaDesc
-          title
-        }
-        databaseId
-      }
-    }
-  }
-}`
-
 export default function Jobs() {
-  const { data: jobspagedata }: any = useSuspenseQuery(query1);
-  const { data: joblistdata }: any = useSuspenseQuery(query2);
+  const { data: jobspagedata }: any = useSuspenseQuery(query);
   const jobs = jobspagedata?.page?.jobs || {};
 
-  // Transform the joblistdata to match the expected format
-  const transformedJobsData = joblistdata.joblists.edges.map((edge: any) => {
-    const job = edge.node.joblists;
-    return {
-      category: job.category.join(", "),
-      contracttype: job.contractType.toLowerCase(),
-      date: "", // No date information in the new data
-      description: job.longDescription,
-      jobtype: job.jobType.replace(" ", "").toLowerCase(),
-      salarymax: job.salary.to ? job.salary.to.toString() : null,
-      salarymin: job.salary.from ? job.salary.from.toString() : null,
-      salaryfix: job.salary.fix ? job.salary.fix.toString() : null,
-      state: job.location,
-      title: edge.node.title,
-      town: "", // No town information in the new data
-      url: "", // No URL information in the new data
+  const [jobsData, setJobsData] = useState([]);
+
+  useEffect(() => {
+    const getJobs = async () => {
+      try {
+        const response = await fetch('/api/jobfetch');
+        if (!response.ok) {
+          throw new Error('Failed to fetch jobs');
+        }
+        const { jobsData } = await response.json();
+        setJobsData(jobsData);
+      } catch (error) {
+        console.error("Failed to fetch jobs");
+      }
     };
-  });
+    getJobs();
+  }, []);
 
   const uniqueCategories = [
     ...new Set(
-      transformedJobsData
+      jobsData
         .flatMap((job: { category: any }) => job.category.split(',').map((category: string) => category.trim()))
         .filter(Boolean)
     ),
   ];
-  const states = [...new Set(transformedJobsData.flatMap((job: { state: any }) => job.state).filter(Boolean))];
-  const jobTypes = [...new Set(transformedJobsData.flatMap((job: { jobtype: any }) => job.jobtype).filter(Boolean))];
-  const contractTypes = [...new Set(transformedJobsData.flatMap((job: { contracttype: any }) => job.contracttype).filter(Boolean))];
+  const states = [...new Set(jobsData.flatMap((job: { state: any }) => job.state).filter(Boolean))];
+  const jobTypes = [...new Set(jobsData.flatMap((job: { jobtype: any }) => job.jobtype).filter(Boolean))];
+  const contractTypes = [...new Set(jobsData.flatMap((job: { contracttype: any }) => job.contracttype).filter(Boolean))];
 
   return (
     <>
@@ -114,14 +77,14 @@ export default function Jobs() {
           states={states}
           jobTypes={jobTypes}
           contractTypes={contractTypes}
-          jobsData={transformedJobsData}
+          jobsData={jobsData}
         />
       </Suspense>
     </>
   );
 }
 
-function JobContentSection({ uniqueCategories, states, jobTypes, contractTypes, jobsData }: any) {
+function JobContentSection({ uniqueCategories, states, jobTypes, contractTypes, jobsData }:any) {
   const searchParams = useSearchParams();
 
   const regionQuery = searchParams.get('region');

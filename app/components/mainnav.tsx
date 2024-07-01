@@ -124,7 +124,7 @@ export default function MainNav() {
                             <ul id='submenu1' className='hidden absolute grid-cols-2 grid-rows-2 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 w-[350px] transition-all'>
                                 <li className='group relative row-span-3 flex w-full rounded-lg text-white text-xl transition-all '>
                                     
-                                    <Link href="/about-us" className=' w-full h-full px-2 py-3 rounded-xl bg-[url("/about-us.webp")] bg-center bg-cover bg-no-repeat'>
+                                    <Link href="/about-us" className=' w-full h-full px-2 py-3 rounded-xl bg-[url("/about-us-menu.png")] bg-center bg-cover bg-no-repeat'>
                                         <p className='absolute bottom-2 text-xl z-10'>About us</p>
                                         <FiArrowUpRight className="absolute text-white top-2 right-2 z-10" />
                                         <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-[#312252] to-[#31225283] rounded-xl group-hover:opacity-70 transition-all'></div>

@@ -13,8 +13,6 @@ interface JobData {
   town: string;
   state: string;
   salarymin: number;
-  salarymax: number;
-  salaryfix: number;
   date: string[]; // Assuming an array of date strings
   url: string; // Assuming the URL to the job details
 }
@@ -49,7 +47,7 @@ export default function JobTile({ jobData }: { jobData: JobData }) {
             )}
 
             </div>
-            <div className="py-2 font-medium" dangerouslySetInnerHTML={{__html:extractFirstSentence(jobData.description)}}></div>
+            <p className="py-2 font-medium">{extractFirstSentence(jobData.description)}</p>
             <div className="flex flex-wrap items-center gap-2 border-t border-neutral-300 pt-3 mt-2 text-sm">
                 <div className="flex items-center gap-1">
                     <PiMapPinLineBold className="text-[#312252] w-6 h-6"/>
@@ -57,13 +55,7 @@ export default function JobTile({ jobData }: { jobData: JobData }) {
                 </div>
                 <div className="flex items-center gap-1">
                     <RiMoneyPoundCircleLine className="text-[#312252] w-6 h-6"/>
-                    {jobData.salarymin && (
-                      <h5 className="font-bold text-[#312252]">£ {jobData.salarymin} - {jobData.salarymax}</h5>
-                    )}
-                    {jobData.salaryfix && (
-                      <h5 className="font-bold text-[#312252]">£ {jobData.salaryfix}</h5>
-                    )}
-                    
+                    <h5 className="font-bold text-[#312252]">£ {jobData.salarymin}</h5>
                 </div>
                 <div className="flex items-center gap-1">
                     <p>Posted: </p>
