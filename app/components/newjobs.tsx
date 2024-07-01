@@ -26,6 +26,8 @@ interface Job {
   town: string;
   state: string;
   salarymin: number;
+  salarymax: number;
+  salaryfix: number;
   date: string[];
   url: string;
 }

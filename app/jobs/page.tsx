@@ -81,6 +81,7 @@ export default function Jobs() {
       jobtype: job.jobType.replace(" ", "").toLowerCase(),
       salarymax: job.salary.to ? job.salary.to.toString() : null,
       salarymin: job.salary.from ? job.salary.from.toString() : null,
+      salaryfix: job.salary.fix ? job.salary.fix.toString() : null,
       state: job.location,
       title: edge.node.title,
       town: "", // No town information in the new data
