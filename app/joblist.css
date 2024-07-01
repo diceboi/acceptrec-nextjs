@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.joblist li{
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+h1, h2, h3, h4 {
+    color:#312252;
+}
