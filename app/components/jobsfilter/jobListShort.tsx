@@ -87,7 +87,7 @@ export default function JobListShort({
             navigation
             >
             {jobData.map((job: Job) => (
-                <SwiperSlide className="px-[1px]">
+                <SwiperSlide key={job.id} className="px-[1px]">
                     <JobTile key={job.id} jobData={job} />
                 </SwiperSlide>
             ))}
@@ -100,7 +100,7 @@ export default function JobListShort({
             slidesPerView={1.5}
             >
             {jobData.map((job: Job) => (
-                <SwiperSlide className="px-[1px]">
+                <SwiperSlide key={job.id} className="px-[1px]">
                     <JobTile key={job.id} jobData={job} />
                 </SwiperSlide>
             ))}
