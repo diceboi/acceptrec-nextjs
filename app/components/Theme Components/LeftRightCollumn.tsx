@@ -6,7 +6,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 export default function LeftRightCollumn({title, subtitle, introduction, text, image, imagealt, imageposition, link, buttontitle}:any) {
   return (
     <>
-        <section className="flex justify-center items-center w-full py-8 lg:py-20">
+        <section className="flex justify-center items-center w-full py-8 lg:py-10">
             <div className={`flex ${imageposition === 'left' ? 'flex-col lg:flex-row-reverse' : 'flex-col-reverse lg:flex-row'} w-11/12 lg:w-8/12 gap-16 lg:py-8 pb-20`}>
                 <div className="w-11/12 lg:w-1/2 flex justify-center flex-col gap-8 text-[#312252]">
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
