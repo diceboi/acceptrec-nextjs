@@ -25,8 +25,8 @@ export default function Recruitment({recruitmentMainTitle, recruitmentSmallTitle
                         <div className='absolute bottom-0 left-0 h-full w-full bg-gradient-to-t from-[#000000c0] to-[#0000] opacity-100 ease-out duration-200'>
                         </div>
                     </div>
-                    <div className="p-4">
-                        <p className=" text-md font-medium">We offer a range of services tailored to your need, so please get in touch with one of our professional team.</p>
+                    <div className="p-4 h-36">
+                        <p className=" text-md font-medium">We offer a diverse range of services tailored specifically to your needs, get in touch with one of our dedicated and experienced team members.</p>
                     </div>
                 </Link>
 
@@ -39,7 +39,7 @@ export default function Recruitment({recruitmentMainTitle, recruitmentSmallTitle
                         <div className='absolute bottom-0 left-0 h-full w-full bg-gradient-to-t from-[#000000c0] to-[#0000] opacity-100 ease-out duration-200'>
                         </div>
                     </div>
-                    <div className="p-4">
+                    <div className="p-4 h-36">
                         <p className=" text-md font-medium">With over 950+ reviews we are the highest-rated agency in the UK, so you know that we will go above and beyond to help you!</p>
                     </div>
                 </Link>
@@ -53,7 +53,7 @@ export default function Recruitment({recruitmentMainTitle, recruitmentSmallTitle
                         <div className='absolute bottom-0 left-0 h-full w-full bg-gradient-to-t from-[#000000c0] to-[#0000] opacity-100 ease-out duration-200'>
                         </div>
                     </div>
-                    <div className="p-4">
+                    <div className="p-4 h-36">
                         <p className=" text-md font-medium">Choose a job you love from our wide range of vacancies. From warehouse roles to driving jobs, you are sure to find the perfect one for you!</p>
                     </div>
                 </Link>

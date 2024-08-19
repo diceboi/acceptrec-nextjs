@@ -66,7 +66,7 @@ export default function Hero() {
 
     return(
         <>
-            <section className="relative flex flex-col justify-center w-full overflow-hidden bg-gradient-to-br from-white to-neutral-200 lg:h-[92vh] lg:pt-0 pt-16">
+            <section className="relative flex flex-col justify-center w-full overflow-hidden bg-gradient-to-br from-white to-neutral-200 lg:h-[60vh] lg:pt-0 pt-16">
                 <HomeBanner className="w-11/12 lg:8/12" />
                 <div id="jobsearch" className="flex flex-col justify-center w-10/12 lg:w-8/12 mx-auto p-4 lg:p-2 z-10">
                     <div id="hero-title" className="flex flex-col gap-4 lg:pt-32 w-full justify-center items-center ">

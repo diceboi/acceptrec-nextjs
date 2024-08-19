@@ -7,6 +7,7 @@ import MainCTA from './components/MainCTA'
 import Cookies from './components/Cookies'
 import Script from 'next/script'
 import FacebookMsg from './components/FacebookMsg'
+import ChatMessage from './components/ChatMessage'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -72,6 +73,7 @@ export default function RootLayout({
             <Cookies />
             <MainNav/>
             {children}
+            <ChatMessage />
             <MainCTA/>
             <Footer/>
           </ApolloWrapper>

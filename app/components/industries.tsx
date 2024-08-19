@@ -36,7 +36,7 @@ export default function Industries({industriesMainTitle, industriesSmallIntroduc
 
     const industries = industriesdata?.industries?.edges || {};
 
-    const [activeButton, setActiveButton] = useState('manufacturing');
+    const [activeButton, setActiveButton] = useState('warehousing & industrial');
 
     const handleButtonClick = (node: any) => {
       console.log('activeButton:', activeButton);
