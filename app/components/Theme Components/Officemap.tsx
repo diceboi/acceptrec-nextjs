@@ -5,7 +5,7 @@ import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api"
 
 export default function OfficeMap({ coordinates }: any) {
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: process.env.NEXT_GOOGLE_MAPS_API_KEY as string,
+        googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
     });
 
     if (!isLoaded) return <div>Loading...</div>;
