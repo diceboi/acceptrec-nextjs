@@ -73,7 +73,7 @@ export default function RootLayout({
             <Cookies />
             <MainNav/>
             {children}
-            <ChatMessage />
+
             <MainCTA/>
             <Footer/>
           </ApolloWrapper>
