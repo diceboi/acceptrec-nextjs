@@ -70,10 +70,10 @@ export default function RootLayout({
         ></Script>
         
           <ApolloWrapper>
+            <ChatMessage />
             <Cookies />
             <MainNav/>
             {children}
-
             <MainCTA/>
             <Footer/>
           </ApolloWrapper>
