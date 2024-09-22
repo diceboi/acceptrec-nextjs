@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: post.node.seo.title,
     description: post.node.seo.metaDesc,
     alternates: {
-      canonical: `https://acceptrec.co.uk/blogs/${post.node.slug}`,
+      canonical: `https://www.acceptrec.co.uk/blogs/${post.node.slug}`,
     },
   };
 }
