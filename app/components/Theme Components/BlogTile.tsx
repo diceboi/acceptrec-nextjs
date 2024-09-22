@@ -122,7 +122,7 @@ interface Post {
                             <p className="text-sm border border-neutral-300 rounded-full px-2">{category}</p>
                         </div>                    
                         <h2 className="text-xl font-black tracking-tight text-[#312252]">{title}</h2>
-                        <p className="text-sm">{content}</p>
+                        <p dangerouslySetInnerHTML={{ __html: content }} className="text-sm" />
                     </div>
                     <div className="relative h-8">
                         <FiArrowRight className='absolute right-4 bottom-0 recruitment-icon w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:right-0 ease-out duration-200'/>
