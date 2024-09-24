@@ -15,9 +15,9 @@ const industriesQuery = gql`
   }
 `;
 
-const oldPostsQuery = gql`
-  query getOldPosts {
-    oldPosts(first: 1000) {
+const PostsQuery = gql`
+  query getPosts {
+    posts(first: 1000) {
       edges {
         node {
           slug
@@ -27,12 +27,25 @@ const oldPostsQuery = gql`
   }
 `;
 
+const OfficesQuery = gql`
+query getOffices {
+  offices(first: 1000) {
+    edges {
+      node {
+        slug
+      }
+    }
+  }
+}`
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fetch the industries data
   const { data: industriesData }: any = await getClient().query({ query: industriesQuery });
   
   // Fetch the old posts data
-  const { data: oldPostsData }: any = await getClient().query({ query: oldPostsQuery });
+  const { data: PostsData }: any = await getClient().query({ query: PostsQuery });
+
+  const { data: OfficesData }: any = await getClient().query({ query: OfficesQuery });
 
   // Map the industries data to generate sitemap entries
   const industryPages: MetadataRoute.Sitemap = industriesData.industries.edges.map(({ node }: any) => ({
@@ -40,8 +53,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Map the old posts data to generate sitemap entries
-  const oldPostPages: MetadataRoute.Sitemap = oldPostsData.oldPosts.edges.map(({ node }: any) => ({
-    url: `https://acceptrec.co.uk/${node.slug}`,
+  const PostPages: MetadataRoute.Sitemap = PostsData.posts.edges.map(({ node }: any) => ({
+    url: `https://acceptrec.co.uk/blogs/${node.slug}`,
+  }));
+
+  // Map the offices data to generate sitemap entries
+  const OfficePages: MetadataRoute.Sitemap = OfficesData.offices.edges.map(({ node }: any) => ({
+    url: `https://acceptrec.co.uk/offices/${node.slug}`,
   }));
 
   // Define the static URLs
@@ -73,5 +91,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   // Combine static URLs with dynamically generated industry and old post URLs
-  return [...staticUrls, ...industryPages, ...oldPostPages];
+  return [...staticUrls, ...industryPages, ...PostPages, ...OfficePages];
 }

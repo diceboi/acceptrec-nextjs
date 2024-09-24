@@ -6,7 +6,7 @@ import Office from "@/app/components/Theme Components/Office";
 
 const query = gql`
   query getOffices {
-  offices(where: {name: "Leicester"}) {
+  offices(where: {title: "Desford"}) {
     edges {
       node {
         officesNew {
@@ -45,7 +45,7 @@ export async function generateMetadata() {
 }
 
 
-export default async function BristolOfficePage() {
+export default async function DesfordOfficePage() {
 
     const { data: officespagedata } = await getClient().query({query});
   

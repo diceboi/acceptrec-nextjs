@@ -61,11 +61,11 @@ export default function Footer() {
                 <h3 className="text-[#00afaa] text-xl font-bold">Offices</h3>
                 </div>
                 <ul className="flex flex-col text-white text-sm gap-2">
-                    <Link href="/offices/leicester"><li className="hover:text-[#00afaa] transition-all">Leicester</li></Link>
-                    <Link href="/offices/tamworth"><li className="hover:text-[#00afaa] transition-all">Tamworth</li></Link>
-                    <Link href="/offices/desford"><li className="hover:text-[#00afaa] transition-all">Desford</li></Link>
-                    <Link href="/offices/coventry"><li className="hover:text-[#00afaa] transition-all">Coventry</li></Link>
-                    <Link href="/offices/bristol"><li className="hover:text-[#00afaa] transition-all">Bristol</li></Link>
+                    <Link href="/offices/leicester-recruitment"><li className="hover:text-[#00afaa] transition-all">Leicester</li></Link>
+                    <Link href="/offices/tamworth-recruitment"><li className="hover:text-[#00afaa] transition-all">Tamworth</li></Link>
+                    <Link href="/offices/desford-recruitment"><li className="hover:text-[#00afaa] transition-all">Desford</li></Link>
+                    <Link href="/offices/coventry-recruitment"><li className="hover:text-[#00afaa] transition-all">Coventry</li></Link>
+                    <Link href="/offices/bristol-recruitment"><li className="hover:text-[#00afaa] transition-all">Bristol</li></Link>
                 </ul>
             </div>
 

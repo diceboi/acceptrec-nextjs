@@ -6,7 +6,7 @@ import Office from "@/app/components/Theme Components/Office";
 
 const query = gql`
   query getOffices {
-  offices(where: {name: "Bristol"}) {
+  offices(where: {title: "Bristol"}) {
     edges {
       node {
         officesNew {
