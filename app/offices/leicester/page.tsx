@@ -6,7 +6,7 @@ import Office from "@/app/components/Theme Components/Office";
 
 const query = gql`
   query getOffices {
-  offices {
+  offices(where: {name: "Leicester"}) {
     edges {
       node {
         officesNew {
@@ -31,14 +31,11 @@ const query = gql`
 
 export const revalidate = 5;
 
-export async function generateMetadata({params}:any) {
+export async function generateMetadata() {
 
   const { data: officespagedata } = await getClient().query({query});
-
-  const officesPageSlug = params.office;
-  const edge = officespagedata.offices.edges.find((edge: { node: { slug: any; }; }) => edge.node.slug === officesPageSlug);
-
-  const office = edge ? edge.node : null;
+  
+  const office = officespagedata?.offices?.edges?.[0]?.node;
 
   return {
     title: office.title + ' - Offices - Accept Recruitment',
@@ -48,14 +45,11 @@ export async function generateMetadata({params}:any) {
 }
 
 
-export default async function OfficePage({params}:any) {
+export default async function BristolOfficePage() {
 
-  const { data: officespagedata } = await getClient().query({query});
-
-  const officesPageSlug = params.office;
-  const edge = officespagedata.offices.edges.find((edge: { node: { slug: any; }; }) => edge.node.slug === officesPageSlug);
-
-  const office = edge ? edge.node : null;
+    const { data: officespagedata } = await getClient().query({query});
+  
+    const office = officespagedata?.offices?.edges?.[0]?.node;
 
   return (
     <>
