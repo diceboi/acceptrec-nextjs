@@ -43,12 +43,9 @@ export const revalidate = 5;
 
 export async function generateMetadata() {
   return {
-    title: "Coventry Recruitment Agency - Offices - Accept Recruitment",
+    title: "Top #1 Rated Recruitment Agency in Coventry - Acceptrec",
     description:
-      "Looking for the best recruitment agency in Coventry? Our experts connect top talent with leading employers for tailored job placements.",
-    alternates: {
-      canonical: `https://www.acceptrec.co.uk/offices/coventry-recruitment`
-    }
+      "Looking for the best recruitment agency in Coventry? Our expert consultants provide tailored job placement services, connecting top talent with leading employers.",
   };
 }
 
