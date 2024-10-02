@@ -125,7 +125,7 @@ export default async function OfficesPage() {
       <LeftRightCollumn title={"Award-Winning Recruitment Agency"} subtitle={"Coventry and the West Midlands"} introduction={""} text={"We are incredibly proud to be recognised as the Best Recruitment Agency of the Year for Temporary Jobs in Coventry and the West Midlands. This prestigious award highlights the hard work and dedication of our team in providing top-notch recruitment services."} image={"/Best Recruitment Agency of the Year Award.jpg"} imagealt={"Award-Winning Recruitment Agency in Coventry"} imageposition={"left"} link={"/contact-us"} buttontitle={"Get in touch"}/>
       <Industries industriesMainTitle={"Industries"} industriesSmallIntroduction={"Specialising within niche industries, we use our expertise and systems to source the staff you need. We provide both temporary staffing and permanent solutions."} industriesSmallTitle={"What we cover"}/>
       <Team teamSmallTitle={"We are waiting for you"} teamMainTitle={"The team"} teamCtaButtonText={"Meet us"} teamText={""}/>
-      <Office phonenumber={"078463517581"} about={""} living={""} jobs={""} coordinates={"52.41295141399905,-1.5089104318743765"}/>
+      <Office phonenumber={"+442477180356"} about={""} living={""} jobs={""} coordinates={"52.41295141399905,-1.5089104318743765"}/>
     </>
   );
 }
