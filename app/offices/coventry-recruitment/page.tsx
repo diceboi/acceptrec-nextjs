@@ -60,7 +60,7 @@ export default async function OfficesPage() {
   return (
     <>
       <section className="py-20 w-full bg-[#312252] min-h-[80vh]">
-        <div className="flex lg:flex-row flex-col lg:w-8/12 w-11/12 gap-20 px-2 m-auto">
+        <div className="flex lg:flex-row flex-col items-center lg:w-8/12 w-11/12 gap-20 px-2 m-auto">
           <div className="flex flex-col gap-8 lg:w-1/2 w-full">
             <h1 className="lg:text-6xl text-4xl text-white font-black">
               Best rated Recruitment Agency in Coventry
@@ -84,11 +84,11 @@ export default async function OfficesPage() {
               agency in the UK, serving the vibrant community of Coventry.
             </p>
           </div>
-          <div className="flex flex-col items-center lg:w-1/2 w-full relative">
-            <h3 className="text-white text-start lg:text-3xl text-xl font-black -rotate-6 drop-shadow-2xl">
+          <div className="flex flex-col items-center justify-center lg:w-1/2 w-full relative">
+            <h3 className="text-white text-start lg:text-3xl text-xl font-black drop-shadow-2xl">
               Contact Aga for Staffing needs at <span className="text-[#00afaa]">078463517581</span> or <span className="text-[#00afaa]">aga.walasek@acceptrec.co.uk</span>
             </h3>
-            <IoArrowRedo className="w-24 h-24 rotate-90 text-[#00afaa] absolute right-0 top-[15%]"/>
+            <IoArrowRedo className="w-24 h-24 rotate-90 text-[#00afaa] absolute right-0 top-[20%]"/>
             <Image
               src="/aga-chair.webp"
               alt="aga coventry"

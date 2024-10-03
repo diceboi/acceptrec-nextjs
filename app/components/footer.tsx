@@ -17,7 +17,6 @@ export default function Footer() {
                 <div className="flex flex-col gap-2">
                     <h4 className="text-[#00afaa] text-lg">For candidates</h4>
                     <ul className="grid xl:grid-cols-2 lg:grid-cols-1 gap-2 text-white text-xs">
-                        <Link href="/candidate-of-the-month" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbRosetteNumber1 className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Candidate of the month</p></Link>
                         <Link href="/refer-a-friend" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbFriends className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all">Refer a friend</p></Link>
                         <Link href="/blogs/first-job-in-the-uk" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbQuestionMark className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">First Job in the UK</p></Link>
                         <Link href="/registration" className="group flex flex-nowrap justify-start items-center gap-2 border border-slate-500 hover:border-[#00afaa] rounded-xl py-1 px-2 transition-all"><TbPower className="w-6 h-6 text-white group-hover:text-[#00afaa] transition-all"/><p className="group-hover:text-[#00afaa] transition-all ">Sign-in / Registration</p></Link>
@@ -62,10 +61,7 @@ export default function Footer() {
                 </div>
                 <ul className="flex flex-col text-white text-sm gap-2">
                     <Link href="/offices/leicester-recruitment"><li className="hover:text-[#00afaa] transition-all">Leicester</li></Link>
-                    <Link href="/offices/tamworth-recruitment"><li className="hover:text-[#00afaa] transition-all">Tamworth</li></Link>
-                    <Link href="/offices/desford-recruitment"><li className="hover:text-[#00afaa] transition-all">Desford</li></Link>
                     <Link href="/offices/coventry-recruitment"><li className="hover:text-[#00afaa] transition-all">Coventry</li></Link>
-                    <Link href="/offices/bristol-recruitment"><li className="hover:text-[#00afaa] transition-all">Bristol</li></Link>
                 </ul>
             </div>
 
