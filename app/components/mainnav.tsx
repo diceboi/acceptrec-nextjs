@@ -105,7 +105,7 @@ export default function MainNav() {
     return (
         <>
         <nav id='desktop-menu' style={{ height: "75px", backgroundColor: "#ffffff00" }} className="hidden xl:flex flex-wrap justify-center px-4 w-full mx-auto z-50 sticky top-0 backdrop-blur-sm ease-in-out duration-200">
-            <div className='flex justify-between items-center gap-8 w-full min-[1919px]:w-8/12'>
+            <div className='flex justify-between items-center gap-8 w-full'>
                 <div id="logo" className="flex shrink-0 items-center">
                     <Link href="/">
                         <Image src="/Accept-Stacked-Logo-with-Strapline-RGB300.webp" id='acceptrec-logo' alt="logo" width={200} height={150} priority className="w-[200px] h-auto ease-in-out duration-200" />
@@ -170,6 +170,8 @@ export default function MainNav() {
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/manual-handling" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbWeight className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Manual handling</span></Link></li>
                             </ul>
                         </li>
+
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/our-locations" className="flex items-center gap-2 ">Our Locations</Link></li>
 
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/faq" className="flex items-center gap-2 ">FAQ</Link></li>
 

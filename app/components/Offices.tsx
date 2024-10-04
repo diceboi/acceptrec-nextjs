@@ -52,7 +52,7 @@ export default async function Offices({ title, subtitle, text }:any) {
     </div>
     <section className='grid grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 lg:w-8/12 m-auto py-20'>
       {offices.map(({ node }: any) => (
-        <Link href={`/offices/${node.slug}`} key={node.id}>
+        <Link href={`/our-locations/${node.slug}`} key={node.id}>
           <OfficeTile name={node.title} image={node.officesNew.officeImage?.sourceUrl} />
         </Link>
       ))}

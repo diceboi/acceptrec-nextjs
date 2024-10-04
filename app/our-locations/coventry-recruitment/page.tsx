@@ -47,7 +47,7 @@ export async function generateMetadata() {
     description:
       "Looking for the best recruitment agency in Coventry? Our experts connect top talent with leading employers for tailored job placements.",
     alternates: {
-      canonical: `https://www.acceptrec.co.uk/offices/coventry-recruitment`
+      canonical: `https://www.acceptrec.co.uk/our-locations/coventry-recruitment`
     }
   };
 }
@@ -61,7 +61,7 @@ export default async function OfficesPage() {
     <>
       <section className="py-20 w-full bg-[#312252] min-h-[80vh]">
         <div className="flex lg:flex-row flex-col items-center lg:w-8/12 w-11/12 gap-20 px-2 m-auto">
-          <div className="flex flex-col gap-8 lg:w-1/2 w-full">
+          <div className="flex flex-col gap-8 lg:w-1/2 w-full relative">
             <h1 className="lg:text-6xl text-4xl text-white font-black">
               Best rated Recruitment Agency in Coventry
             </h1>
@@ -83,12 +83,12 @@ export default async function OfficesPage() {
               outstanding service. We are proud to be the best-rated recruitment
               agency in the UK, serving the vibrant community of Coventry.
             </p>
-          </div>
-          <div className="flex flex-col items-center justify-center lg:w-1/2 w-full relative">
             <h3 className="text-white text-start lg:text-3xl text-xl font-black drop-shadow-2xl">
               Contact Aga for Staffing needs at <span className="text-[#00afaa]">078463517581</span> or <span className="text-[#00afaa]">aga.walasek@acceptrec.co.uk</span>
             </h3>
-            <IoArrowRedo className="w-24 h-24 rotate-90 text-[#00afaa] absolute right-0 top-[20%]"/>
+            <Image src="/arrow-down.webp" width={100} height={100} className="absolute lg:-right-10 right-0 lg:bottom-[5%] bottom-[-10%] lg:-rotate-12 rotate-[220deg] lg:scale-x-[1] scale-x-[-1]" alt={"arrow-down"}/>
+          </div>
+          <div className="flex flex-col items-center justify-center lg:w-1/2 w-full">
             <Image
               src="/aga-chair.webp"
               alt="aga coventry"
@@ -121,7 +121,7 @@ export default async function OfficesPage() {
           <JobListShort />
         </div>
       </section>
-      <LeftRightCollumnReadMore title={"A warm welcome from us"} subtitle={"Recruitment in Coventry"} introduction={""} text={"This friendly approach helps candidates to relax and open up about their experiences and the types of roles they seek. Many individuals transition to our clients' payrolls, demonstrating our dedication to matching the right person with the right job. We specialise in supplying warehouse, industrial, and food production staff to some of Coventry's largest and most renowned companies. We have a large range of day shift and night shift opportunities, full time and part time industrial jobs available in Nuneaton, Warwick, Daventry and Crick, postcodes CV2, CV10, CV11, CV35, NN6 and more.<br><br>Take a look at current vacancies in Coventry: Warehouse Jobs in Coventry, Food Production Jobs in Coventry, Industrial Jobs in Coventry, Technical Jobs in Coventry, Commercial Jobs in Coventry.<br><br>At Accept Recruitment, we accept challenges but remain strong in our commitment to providing exceptional service and finding the perfect fit for every role."} image={"/coventryofficehero.webp"} imagealt={"Award-Winning Recruitment Agency in Coventry"} imageposition={"right"} link={""} buttontitle={""} bgcolor={"bg-neutral-100"}/>
+      <LeftRightCollumnReadMore title={"A warm welcome from us"} subtitle={"Recruitment in Coventry"} introduction={""} text={"Welcome to our recruitment agency in Coventry, where we accept every challenge but remain dedicated to providing outstanding service. We are proud to be the best-rated recruitment agency in the UK, serving the vibrant community of Coventry.<br><br>This friendly approach helps candidates to relax and open up about their experiences and the types of roles they seek. Many individuals transition to our clients' payrolls, demonstrating our dedication to matching the right person with the right job. We specialise in supplying warehouse, industrial, and food production staff to some of Coventry's largest and most renowned companies.<br><br>We have a large range of day shift and night shift opportunities, full time and part time industrial jobs available in Nuneaton, Warwick, Daventry and Crick, postcodes CV2, CV10, CV11, CV35, NN6 and more.<br><br>Take a look at current vacancies in Coventry: Warehouse Jobs in Coventry, Food Production Jobs in Coventry, Industrial Jobs in Coventry, Technical Jobs in Coventry, Commercial Jobs in Coventry.<br><br>At Accept Recruitment, we accept challenges but remain strong in our commitment to providing exceptional service and finding the perfect fit for every role."} image={"/coventryofficehero.webp"} imagealt={"Award-Winning Recruitment Agency in Coventry"} imageposition={"right"} link={""} buttontitle={""} bgcolor={"bg-neutral-100"}/>
       <LeftRightCollumn title={"Award-Winning Recruitment Agency"} subtitle={"Coventry and the West Midlands"} introduction={""} text={"We are incredibly proud to be recognised as the Best Recruitment Agency of the Year for Temporary Jobs in Coventry and the West Midlands. This prestigious award highlights the hard work and dedication of our team in providing top-notch recruitment services."} image={"/Best Recruitment Agency of the Year Award.jpg"} imagealt={"Award-Winning Recruitment Agency in Coventry"} imageposition={"left"} link={"/contact-us"} buttontitle={"Get in touch"}/>
       <Industries industriesMainTitle={"Industries"} industriesSmallIntroduction={"Specialising within niche industries, we use our expertise and systems to source the staff you need. We provide both temporary staffing and permanent solutions."} industriesSmallTitle={"What we cover"}/>
       <Team teamSmallTitle={"We are waiting for you"} teamMainTitle={"The team"} teamCtaButtonText={"Meet us"} teamText={""}/>

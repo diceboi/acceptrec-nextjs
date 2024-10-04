@@ -41,7 +41,7 @@ export async function generateMetadata() {
     title: office.title + ' - Offices - Accept Recruitment',
     description: office.officesNew.aboutTheCity,
     alternates: {
-      canonical: `https://www.acceptrec.co.uk/offices/${office.slug}`
+      canonical: `https://www.acceptrec.co.uk/our-locations/${office.slug}`
     }
   }
   
