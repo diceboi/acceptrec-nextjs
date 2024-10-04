@@ -60,8 +60,8 @@ export default function Footer() {
                 <h3 className="text-[#00afaa] text-xl font-bold">Offices</h3>
                 </div>
                 <ul className="flex flex-col text-white text-sm gap-2">
-                    <Link href="/offices/leicester-recruitment"><li className="hover:text-[#00afaa] transition-all">Leicester</li></Link>
-                    <Link href="/offices/coventry-recruitment"><li className="hover:text-[#00afaa] transition-all">Coventry</li></Link>
+                    <Link href="/our-locations/leicester-recruitment"><li className="hover:text-[#00afaa] transition-all">Leicester</li></Link>
+                    <Link href="/our-locations/coventry-recruitment"><li className="hover:text-[#00afaa] transition-all">Coventry</li></Link>
                 </ul>
             </div>
 
