@@ -70,8 +70,9 @@ export default function Footer() {
                 <Image src="/acceptrec-white-logo.webp" width={200} height={200} alt="white-logo"/>
                     <div className="flex flex-col gap-1">
                         <TbPhone className="w-6 h-6 text-[#00afaa]"/>
-                        <Link href='tel:0116 218 2133'><p className="text-white">0116 218 2133</p></Link>
-                        <Link href='tel:0845 353 3237'><p className="text-white">0845 353 3237</p></Link>
+                        <Link href='tel:01162182133'><p className="text-white">0116 218 2133</p></Link>
+                        <Link href='tel:08453533237'><p className="text-white">0845 353 3237</p></Link>
+                        <Link href='tel:02477180356'><p className="text-white">0247 718 0356</p></Link>
                     </div>
                 </div>
                 <div className="flex flex-col gap-4">
