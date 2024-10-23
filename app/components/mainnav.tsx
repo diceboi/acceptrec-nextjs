@@ -16,6 +16,7 @@ export default function MainNav() {
     const [submenu1Open, setSubmenu1Open] = useState(false);
     const [submenu2Open, setSubmenu2Open] = useState(false);
     const [submenu3Open, setSubmenu3Open] = useState(false);
+    const [submenu4Open, setSubmenu4Open] = useState(false);
     const mobileMenuRef = useRef(null);
 
     const closeMobileMenu = () => {
@@ -60,6 +61,10 @@ export default function MainNav() {
         setSubmenu3Open(!submenu3Open);
     };
 
+    const toggleSubmenu4 = () => {
+        setSubmenu4Open(!submenu4Open);
+    };
+
     useEffect(() => {
         function handleScroll() {
             const menu = document.getElementById("desktop-menu");
@@ -68,6 +73,7 @@ export default function MainNav() {
             const submenu1 = document.getElementById("submenu1");
             const submenu2 = document.getElementById("submenu2");
             const submenu3 = document.getElementById("submenu3");
+            const submenu4 = document.getElementById("submenu4");
             const scrollY = window.scrollY;
     
             if (menu) {
@@ -81,6 +87,7 @@ export default function MainNav() {
                     if (submenu1) submenu1.style.top = "40px";
                     if (submenu2) submenu2.style.top = "40px";
                     if (submenu3) submenu3.style.top = "40px";
+                    if (submenu4) submenu4.style.top = "40px";
                 } else {
                     menu.style.height = "96px";
                     menu.style.boxShadow = "0 0 0 0";
@@ -91,6 +98,7 @@ export default function MainNav() {
                     if (submenu1) submenu1.style.top = "60px";
                     if (submenu2) submenu2.style.top = "60px";
                     if (submenu3) submenu3.style.top = "60px";
+                    if (submenu4) submenu4.style.top = "40px";
                 }
             }
         }
@@ -171,7 +179,12 @@ export default function MainNav() {
                             </ul>
                         </li>
 
-                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/our-locations" className="flex items-center gap-2 ">Our Locations</Link></li>
+                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/our-locations" className="flex items-center gap-2"><span>Our locations</span></Link><BiChevronDown className='text-2xl'/>
+                            <ul id='submenu2' className='hidden absolute grid-cols-2 grid-rows-1 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 transition-all'>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/leicester-recruitment" className='flex flex-nowrap gap-2 w-full px-2 py-3'><span>Leicester</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/coventry-recruitment" className='flex flex-nowrap gap-2 w-full px-2 py-3'><span>Coventry</span></Link></li>
+                            </ul>
+                        </li>
 
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2'><Link href="/faq" className="flex items-center gap-2 ">FAQ</Link></li>
 
@@ -198,7 +211,7 @@ export default function MainNav() {
                 <menu className=' flex justify-center items-center gap-4'>
                     <button onClick={toggleMobileMenu}><TbMenu2 className={`h-8 w-auto cursor-pointe ${mobileMenuOpen ? ' hidden' : ''}`}/><MdClose className={`h-8 w-auto cursor-pointe ${mobileMenuOpen ? '' : ' hidden'}`}/></button>
                     <ul className={`menu-mobile absolute top-[64px] right-0 grid grid-cols-1 justify-start items-center w-screen sm:w-96 bg-white shadow-special${mobileMenuOpen ? ' active' : ''}`}>
-                        <div className={`absolute w-full h-full bg-[#312252] opacity-80 ${submenu1Open ? '' : ' hidden'} `}></div>
+                        <div className={`absolute w-full h-full bg-[#312252] opacity-80 ${submenu1Open || submenu2Open || submenu3Open || submenu4Open ? '' : ' hidden'} `}></div>
                         <li className='flex justify-between border-t border-neutral-300'>
                             <Link href="/jobs" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Jobs</Link>
                         </li>
@@ -275,6 +288,25 @@ export default function MainNav() {
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
                                     <Link href="/manual-handling" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Manual handling</Link>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li className='flex justify-between border-t border-neutral-300'>
+                            <Link href="/our-locations" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Our locations</Link>
+                            <div onClick={toggleSubmenu4} className='flex justify-center items-center border-l border-neutral-300 p-1 w-14 cursor-pointer'>
+                                <TbChevronRight className="w-6 h-6 " />
+                            </div>
+
+                            <ul className={`mobilesubmenu absolute top-0 right-0 grid grid-cols-1 justify-start items-center w-screen sm:w-96 bg-white shadow-special${submenu4Open ? ' active' : ''}`}>
+                                <li onClick={toggleSubmenu4} className='flex justify-between items-center border-t border-neutral-300 h-[45px] p-2 cursor-pointer'>
+                                    <TbChevronLeft className="w-6 h-6"/>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/our-locations/leicester-recruitment" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Leicester</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/our-locations/coventry-recruitment" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Coventry</Link>
                                 </li>
                             </ul>
 
