@@ -182,9 +182,9 @@ export default function MainNav() {
                         </li>
 
                         <li id='mainlink' className='flex relative items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/our-locations" className="flex items-center gap-2"><span>Our locations</span></Link><BiChevronDown className='text-2xl'/>
-                            <ul id='submenu2' className='hidden absolute grid-cols-2 grid-rows-1 gap-2 flex-col top-[20px] p-2 shadow-special rounded-xl bg-white submenu z-10 transition-all min-w-fit'>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/leicester-recruitment" className='flex flex-nowrap gap-2 min-w-fit px-2 py-3'><span>Leicester</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/coventry-recruitment" className='flex flex-nowrap gap-2 min-w-fit px-2 py-3'><span>Coventry</span></Link></li>
+                            <ul id='submenu2' className='hidden absolute grid-cols-2 grid-rows-1 gap-2 flex-col top-[20px] p-2 shadow-special rounded-xl bg-white submenu z-10 transition-all min-w-[200px]'>
+                                <li className='row-span-1 flex w-fit rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/leicester-recruitment" className='flex flex-nowrap gap-2 min-w-fit px-2 py-3'><span>Leicester</span></Link></li>
+                                <li className='row-span-1 flex w-fit rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/coventry-recruitment" className='flex flex-nowrap gap-2 min-w-fit px-2 py-3'><span>Coventry</span></Link></li>
                             </ul>
                         </li>
 
