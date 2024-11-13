@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Office({phonenumber, about, living, jobs, coordinates}:any) {
   return (
     <>
-    <section className='w-full py-20'>
+    <section className='w-full py-20' id='contactus'>
         <div className='flex flex-col w-11/12 lg:w-8/12 m-auto'>            
             <div className='flex flex-col-reverse lg:flex-row justify-center gap-16 lg:gap-20 w-full pb-20'>
                 <div className='flex flex-col gap-8 w-full lg:w-1/2'>

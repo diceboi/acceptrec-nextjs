@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';
 import { TbBuildingFactory2, TbCheckupList, TbChevronLeft, TbChevronRight, TbFriends, TbListSearch, TbMessages, TbMoodPlus, TbPencil, TbPower, TbQuestionMark, TbRosetteNumber1, TbUsers, TbWeight } from 'react-icons/tb';
 import { FiArrowUpRight } from 'react-icons/fi';
+import { LuGlobe2 } from "react-icons/lu";
 
 
 export default function MainNav() {
@@ -159,6 +160,7 @@ export default function MainNav() {
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blogs/interview-techniques" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbMoodPlus className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Interview Techniques</span></Link></li>
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/onboarding-process" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbCheckupList className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Onboarding process</span></Link></li>
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/industries" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbBuildingFactory2 className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Industries</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/for-employers/our-locations" className='flex flex-nowrap gap-2 w-full px-2 py-3'><LuGlobe2 className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Our locations</span></Link></li>
                             </ul>
                         </li>
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/for-employers" className="flex items-center gap-2"><span>For Candidates</span></Link><BiChevronDown className='text-2xl'/>
@@ -179,10 +181,10 @@ export default function MainNav() {
                             </ul>
                         </li>
 
-                        <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/our-locations" className="flex items-center gap-2"><span>Our locations</span></Link><BiChevronDown className='text-2xl'/>
-                            <ul id='submenu2' className='hidden absolute grid-cols-2 grid-rows-1 gap-2 flex-col top-[60px] p-2 shadow-special rounded-xl bg-white submenu z-10 transition-all'>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/leicester-recruitment" className='flex flex-nowrap gap-2 w-full px-2 py-3'><span>Leicester</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/coventry-recruitment" className='flex flex-nowrap gap-2 w-full px-2 py-3'><span>Coventry</span></Link></li>
+                        <li id='mainlink' className='flex relative items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/our-locations" className="flex items-center gap-2"><span>Our locations</span></Link><BiChevronDown className='text-2xl'/>
+                            <ul id='submenu2' className='hidden absolute grid-cols-2 grid-rows-1 gap-2 flex-col top-[20px] p-2 shadow-special rounded-xl bg-white submenu z-10 transition-all min-w-fit'>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/leicester-recruitment" className='flex flex-nowrap gap-2 min-w-fit px-2 py-3'><span>Leicester</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/coventry-recruitment" className='flex flex-nowrap gap-2 min-w-fit px-2 py-3'><span>Coventry</span></Link></li>
                             </ul>
                         </li>
 
@@ -257,6 +259,9 @@ export default function MainNav() {
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
                                     <Link href="/industries" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Industries</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="for-employers/our-locations" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Our locations</Link>
                                 </li>
                             </ul>
 
