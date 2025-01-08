@@ -47,10 +47,6 @@ export default async function Teammember({params}:any) {
     const foundTeamMember = members.find((member: { node: { slug: string | string[] } }) => member.node.slug === teammember);
     const emailAddress = foundTeamMember?.node?.team?.emailAdress
     const inttroduction = foundTeamMember?.node?.team?.introduction;
-
-    console.log(foundTeamMember?.node?.team?.emailAdress) 
-
-    console.log (emailAddress.split('@')[0])
     
     return(
         <>

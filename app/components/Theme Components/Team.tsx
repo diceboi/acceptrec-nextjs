@@ -48,7 +48,7 @@ export default async function Team({teamSmallTitle, teamMainTitle, teamCtaButton
                     </p>                   
                 </div>                
             </div>
-            <div className='grid lg:grid-cols-3 sm:grid-cols-3 lg:grid-rows-2 grid-cols-2 w-11/12 lg:w-8/12 m-auto rounded-3xl overflow-hidden'>
+            <div className='grid lg:grid-cols-4 sm:grid-cols-4 lg:grid-rows-2 grid-cols-2 w-11/12 lg:w-8/12 m-auto rounded-3xl overflow-hidden'>
 
             {teamMembers.map(({ node }: any, index: number) => (
                 <TeamMemberTile

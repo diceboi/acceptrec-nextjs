@@ -62,6 +62,7 @@ export default function Footer() {
                 <ul className="flex flex-col text-white text-sm gap-2">
                     <Link href="/our-locations/leicester-recruitment"><li className="hover:text-[#00afaa] transition-all">Leicester</li></Link>
                     <Link href="/our-locations/coventry-recruitment"><li className="hover:text-[#00afaa] transition-all">Coventry</li></Link>
+                    <Link href="/our-locations/tamworth-recruitment"><li className="hover:text-[#00afaa] transition-all">Tamworth</li></Link>
                 </ul>
             </div>
 
