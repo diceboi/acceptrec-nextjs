@@ -17,9 +17,10 @@ import {
     tel: string;
     email: string;
     zip: string;
+    workname: string;
   }
   
-  export const ConstactUsUser = ({ firstname, lastname, tel, email, zip }: WelcomeEmailProps) => (
+  export const ConstactUsUser = ({ firstname, lastname, tel, email, zip, workname }: WelcomeEmailProps) => (
     <Html>
       <Head />
       <Preview>Thank you for applying!</Preview>
@@ -33,6 +34,7 @@ import {
             Your application contains the following:
           </Text>
             <Text style={{...text}}>
+            <b>You applied for:</b> {workname}<br></br>
             <b>Name:</b> {firstname} {lastname}<br></br>
             <b>Phone number:</b> {tel}<br></br>
             <b>Email:</b> {email}<br></br>

@@ -6,7 +6,7 @@ import Head from "next/head";
 
 const query = gql`
 query getPosts {
-  posts(first: 1000) {
+  posts(first: 2000) {
     edges {
       node {
         date
@@ -51,10 +51,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const post = data.posts.edges.find((post: any) => post.node.slug === params.slug);
   
   return {
-    title: post.node.seo.title,
-    description: post.node.seo.metaDesc,
+    title: post?.node.seo.title,
+    description: post?.node.seo.metaDesc,
     alternates: {
-      canonical: `https://www.acceptrec.co.uk/blogs/${post.node.slug}`,
+      canonical: `https://www.acceptrec.co.uk/blogs/${post?.node.slug}`,
     },
   };
 }

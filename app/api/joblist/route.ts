@@ -7,7 +7,7 @@ import { NextResponse } from "next/server";
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
-  const { firstname, lastname, tel, email, zip, file, path, policy  } = await request.json();
+  const { firstname, lastname, tel, email, zip, file, path, policy, workname  } = await request.json();
 
   try {
 
@@ -21,6 +21,7 @@ export async function POST(request: Request) {
       tel,
       email,
       zip,
+      workname
     })
   });
 
@@ -36,7 +37,8 @@ export async function POST(request: Request) {
       zip,
       file,
       path,
-      policy
+      policy,
+      workname
     })
   });
 

@@ -22,7 +22,7 @@ export default function MainCTA() {
                             <TbUserHeart className="w-6 h-6"/>
                             <h3 className="uppercase font-bold">Visit Us</h3>
                         </div>
-                        <p>Visit one of our <Link href="/offices" className="text-[#00afaa] underline">Offices</Link> and we will give you a warm welcome.</p>
+                        <p>Visit one of our <Link href="/our-locations" className="text-[#00afaa] underline">Offices</Link> and we will give you a warm welcome.</p>
                     </div>
                     <div className="flex flex-col gap-4">
                         <div className="relative flex flex-nowrap gap-2 after:absolute after:top-0 after:right-0 after:bg-[#FF914D] after:w-auto after:h-auto after:content-['New'] after:text-white after:font-bold after:uppercase after:px-1 after:shadow-special after:rounded-md">

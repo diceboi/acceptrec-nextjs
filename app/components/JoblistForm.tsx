@@ -11,7 +11,7 @@ function isInputNamedElement(e: Element): e is HTMLInputElement & { name: string
   return 'name' in e;
 }
 
-export default function JoblistForm({ classname }: any) {
+export default function JoblistForm({ classname, workname }: any) {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'submitted' | 'error'>('idle');
   const pathname = usePathname();
 
@@ -58,6 +58,7 @@ export default function JoblistForm({ classname }: any) {
               tel: formData.tel,
               email: formData.email,
               zip: formData.zip,
+              workname,
               file: formDataUrl,
               path: pathname,
               policy: formData.policy
@@ -75,6 +76,7 @@ export default function JoblistForm({ classname }: any) {
               tel: formData.tel,
               email: formData.email,
               zip: formData.zip,
+              workname,
               file: formDataUrl,
               path: `https://acceptrec.co.uk${pathname}`,
               policy: formData.policy

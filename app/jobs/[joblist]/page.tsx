@@ -52,7 +52,7 @@ export default async function Joblist({ params }:any) {
 
   return (
     <section className="w-full py-20 lg:px-0 px-2">
-      <div className="w-6/12 mx-auto px-8 py-10 shadow-special rounded-3xl">
+      <div className="lg:w-6/12 mx-auto px-8 py-10 shadow-special rounded-3xl">
         <div className=" border-b pb-10 border-neutral-300">
           <h1 className=" font-black text-5xl text-[#312252]">{foundJobs.node.title}</h1>
         </div>
@@ -107,7 +107,7 @@ export default async function Joblist({ params }:any) {
         <div className="py-4 text-lg" dangerouslySetInnerHTML={{ __html:foundJobs.node.joblists.longDescription }}></div>
         <div className="flex flex-col gap-8 py-4">
           <h2 className="font-black text-4xl text-center">Apply for this work</h2>
-          <JoblistForm />
+          <JoblistForm workname={foundJobs.node.title}/>
         </div>
         
       </div>
