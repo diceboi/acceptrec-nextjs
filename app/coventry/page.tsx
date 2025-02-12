@@ -4,7 +4,6 @@ import MainHero from "@/app/components/Theme Components/MainHero";
 import { AiFillStar } from "react-icons/ai";
 import GoogleReviewNumber from "@/app/components/googlereviewnumber";
 import { FcGoogle } from "react-icons/fc";
-import JobListShort from "@/app/components/jobsfilter/jobListShort";
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -115,7 +114,6 @@ export default async function OfficesPage() {
           <h2 className="text-3xl lg:text-6xl font-black tracking-tighter text-[#312252]">
             Available jobs
           </h2>
-          <JobListShort />
         </div>
       </section>
       <LeftRightCollumnReadMore title={"A warm welcome from us"} subtitle={"Recruitment in Coventry"} introduction={""} text={"This friendly approach helps candidates to relax and open up about their experiences and the types of roles they seek. Many individuals transition to our clients' payrolls, demonstrating our dedication to matching the right person with the right job. We specialise in supplying warehouse, industrial, and food production staff to some of Coventry's largest and most renowned companies. We have a large range of day shift and night shift opportunities, full time and part time industrial jobs available in Nuneaton, Warwick, Daventry and Crick, postcodes CV2, CV10, CV11, CV35, NN6 and more.<br><br>Take a look at current vacancies in Coventry: Warehouse Jobs in Coventry, Food Production Jobs in Coventry, Industrial Jobs in Coventry, Technical Jobs in Coventry, Commercial Jobs in Coventry.<br><br>At Accept Recruitment, we accept challenges but remain strong in our commitment to providing exceptional service and finding the perfect fit for every role."} image={"/coventryofficehero.webp"} imagealt={"Award-Winning Recruitment Agency in Coventry"} imageposition={"right"} link={""} buttontitle={""} bgcolor={"bg-neutral-100"}/>

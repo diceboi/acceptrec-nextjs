@@ -4,7 +4,6 @@ import MainHero from "@/app/components/Theme Components/MainHero";
 import { AiFillStar } from "react-icons/ai";
 import GoogleReviewNumber from "@/app/components/googlereviewnumber";
 import { FcGoogle } from "react-icons/fc";
-import JobListShort from "@/app/components/jobsfilter/jobListShort";
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
