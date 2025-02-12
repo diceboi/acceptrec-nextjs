@@ -9,6 +9,7 @@ query getJoblist {
       node {
         id
         joblists {
+          uniqueJobTitle
           shortDescription
           longDescription
           requiredSkills
@@ -107,7 +108,7 @@ export default async function Joblist({ params }:any) {
         <div className="py-4 text-lg" dangerouslySetInnerHTML={{ __html:foundJobs.node.joblists.longDescription }}></div>
         <div className="flex flex-col gap-8 py-4">
           <h2 className="font-black text-4xl text-center">Apply for this work</h2>
-          <JoblistForm workname={foundJobs.node.title}/>
+          <JoblistForm workname={foundJobs.node.title} uniquetitle={foundJobs.node.uniqueJobTitle}/>
         </div>
         
       </div>

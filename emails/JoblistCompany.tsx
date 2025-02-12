@@ -21,9 +21,10 @@ import {
     path: string;
     policy: string;
     workname: string;
+    uniquetitle: string;
   }
   
-  export const ContactUsCompany = ({ firstname, lastname, tel, email, zip, file, path, policy, workname }: WelcomeEmailProps) => (
+  export const ContactUsCompany = ({ firstname, lastname, tel, email, zip, file, path, policy, workname, uniquetitle }: WelcomeEmailProps) => (
     <Html>
       <Head />
       <Preview>{firstname} is applied to a job.</Preview>
@@ -43,6 +44,7 @@ import {
             <b>Zip:</b> {zip}<br></br>
             <b>CV:</b> <Link href={file}></Link>{file}<br></br>
             <b>Applied for:</b> {workname}<br></br>
+            <b>Unique job name:</b> {uniquetitle}<br></br>
             <b>From:</b> <Link href={`https://acceptrec.co.uk${path}`}>https://acceptrec.co.uk{path}</Link><br></br>
             <b>Did you understand, and accept the Privacy policy of Acceptrec?</b> {policy}<br></br>
           </Text>
