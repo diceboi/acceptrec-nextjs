@@ -1,4 +1,4 @@
-import { NextResponse, NextRequest } from 'next/server';
+{/*import { NextResponse, NextRequest } from 'next/server';
 import { parseStringPromise } from 'xml2js';
 
 async function fetchJobs() {
@@ -49,4 +49,4 @@ async function fetchJobs() {
 
       return NextResponse.json(filteredJobsData);
 
-    }
+    }*/}
