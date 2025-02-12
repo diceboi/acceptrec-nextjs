@@ -49,8 +49,11 @@ const GET_JOBLISTS = gql`
 
 export default function Hero() {
     const router = useRouter();
-  
     const { data, error } = useSuspenseQuery<{ joblists: { edges: { node: any }[] } }>(GET_JOBLISTS);
+  
+    // Állapotkezelés (state-eket mindig a komponens elején definiáljuk)
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const [selectedState, setSelectedState] = useState<string | null>(null);
   
     if (error) {
       console.error("GraphQL error:", error);
@@ -65,29 +68,20 @@ export default function Hero() {
       state: node.joblists.location || "",
     })) || [];
   
-    // State a kiválasztott értékekhez
-    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-    const [selectedState, setSelectedState] = useState<string | null>(null);
-  
-    // Egyedi helyek (államok, városok)
     const allStates = [...new Set(jobsData.map((job: any) => job.state).filter(Boolean))];
   
-    // Egyedi kategóriák (tömbösítés miatt flatMap)
     const allCategories = [
       ...new Set(jobsData.flatMap((job: { category: string[] }) => job.category).filter(Boolean)),
     ];
   
-    // Szűrt államok (helyek) az alapján, hogy van-e az adott kategóriában állás
     const filteredStates = selectedCategory
       ? [...new Set(jobsData.filter((job: any) => job.category.includes(selectedCategory)).map((job: any) => job.state))]
       : allStates;
   
-    // Szűrt kategóriák az alapján, hogy van-e az adott helyen állás
     const filteredCategories = selectedState
       ? [...new Set(jobsData.filter((job: any) => job.state === selectedState).flatMap((job: any) => job.category))]
       : allCategories;
   
-    // Keresési URL generálása és továbbnavigálás
     const handleFormSubmit = (e: { preventDefault: () => void }) => {
       e.preventDefault();
       if (selectedState || selectedCategory) {
@@ -121,7 +115,7 @@ export default function Hero() {
                     onChange={(e) => setSelectedState(e.target.value || null)}
                   >
                     <option value="">All regions</option>
-                    {filteredStates.map((state) => (
+                    {filteredStates.map((state: any) => (
                       <option key={state} value={state}>
                         {state}
                       </option>
@@ -141,7 +135,7 @@ export default function Hero() {
                     onChange={(e) => setSelectedCategory(e.target.value || null)}
                   >
                     <option value="">All categories</option>
-                    {filteredCategories.map((category) => (
+                    {filteredCategories.map((category: any) => (
                       <option key={category} value={category}>
                         {category}
                       </option>
