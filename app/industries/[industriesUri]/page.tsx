@@ -55,7 +55,7 @@ export async function generateMetadata({params}:any) {
   const industry = edge ? edge.node : null;
 
   return {
-    title: industry.title + '- Industries - Accept Recruitment',
+    title: industry.title + ' - Industries - Accept Recruitment',
     description: industry.industries.innerText
   }
   
@@ -75,6 +75,15 @@ export default async function IndustriesInner({params}:any) {
     if (!industry) {
       return <div>Industry not found.</div>;
     }
+
+    const items = [
+        { title: industry.industries.gridItem1Title, text: industry.industries.gridItem1Text },
+        { title: industry.industries.gridItem2Title, text: industry.industries.gridItem2Text },
+        { title: industry.industries.gridItem3Title, text: industry.industries.gridItem3Text },
+        { title: industry.industries.gridItem4Title, text: industry.industries.gridItem4Text },
+      ].filter(item => item.text); // Filter out items with no text
+    
+    const gridColsClass = items.length > 1 ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
 
   return (
     <>
@@ -113,7 +122,7 @@ export default async function IndustriesInner({params}:any) {
             </div>
         </section>
 
-        <section className="flex flex-col lg:flex-row w-11/12 lg:w-8/12  gap-8 py-20 m-auto">
+        <section className="flex flex-col lg:flex-row w-11/12 lg:w-8/12 lg:gap-16 gap-8 m-auto">
                 <div className="flex flex-col gap-4 w-full lg:w-1/2 justify-start bg-contain bg-left bg-no-repeat">
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase text-[#312252]'>
                         {industry.industries.gridSubtitle}
@@ -125,30 +134,30 @@ export default async function IndustriesInner({params}:any) {
                         {industry.industries.gridText}
                     </p>              
                 </div>
-                <div className="grid lg:grid-cols-2 lg:grid-rows-2 gap-8 w-full lg:w-1/2">
+                <div className={`grid ${gridColsClass} gap-8 lg:w-1/2 w-full`}>
                     <div className='flex flex-col gap-2 w-full lg:p-3'>
                         <div className='flex items-center gap-2 '>                            
                             <h3 className='text-2xl font-black tracking-tighter text-[#00afaa]'>{industry.industries.gridItem1Title}</h3>
                         </div>                        
-                        <ul className='font-medium list-disc' dangerouslySetInnerHTML={{ __html: industry.industries.gridItem1Text }}/>
+                        <ul className='space-y-8 font-medium list-disc marker:text-[#00afaa] lg:ml-0 ml-6' dangerouslySetInnerHTML={{ __html: industry.industries.gridItem1Text }}/>
                     </div>
                     <div className='flex flex-col gap-2 w-full lg:p-3'>
                         <div className='flex items-center gap-2 '>                            
                             <h3 className='text-2xl font-black tracking-tighter text-[#00afaa]'>{industry.industries.gridItem2Title}</h3>
                         </div>                        
-                        <ul className='font-medium list-disc' dangerouslySetInnerHTML={{ __html: industry.industries.gridItem2Text }}/>
+                        <ul className='space-y-8 font-medium list-disc marker:text-[#00afaa] lg:ml-0 ml-6' dangerouslySetInnerHTML={{ __html: industry.industries.gridItem2Text }}/>
                     </div>
                     <div className='flex flex-col gap-2 w-full lg:p-3'>
                         <div className='flex items-center gap-2 '>                            
                             <h3 className='text-2xl font-black tracking-tighter text-[#00afaa]'>{industry.industries.gridItem3Title}</h3>
                         </div>                        
-                        <ul className='font-medium list-disc' dangerouslySetInnerHTML={{ __html: industry.industries.gridItem3Text }}/>
+                        <ul className='space-y-8 font-medium list-disc marker:text-[#00afaa] lg:ml-0 ml-6' dangerouslySetInnerHTML={{ __html: industry.industries.gridItem3Text }}/>
                     </div>
                     <div className='flex flex-col gap-2 w-full lg:p-3'>
                         <div className='flex items-center gap-2 '>                            
                             <h3 className='text-2xl font-black tracking-tighter text-[#00afaa]'>{industry.industries.gridItem4Title}</h3>
                         </div>                        
-                        <ul className='font-medium list-disc' dangerouslySetInnerHTML={{ __html: industry.industries.gridItem4Text }}/>
+                        <ul className='space-y-8 font-medium list-disc marker:text-[#00afaa] lg:ml-0 ml-6' dangerouslySetInnerHTML={{ __html: industry.industries.gridItem4Text }}/>
                     </div>
                 </div>
         </section>

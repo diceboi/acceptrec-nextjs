@@ -155,12 +155,11 @@ export default function MainNav() {
                                         <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-[#312252] to-[#31225283] rounded-xl group-hover:opacity-70 transition-all'></div>
                                     </Link>
                                 </li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/for-employers/shortlisted-candidates" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbUsers className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Shortlisted Candidates</span></Link></li>
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blogs/how-to-write-a-successful-job-description" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbPencil className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Writing a good job description</span></Link></li>
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blogs/interview-techniques" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbMoodPlus className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Interview Techniques</span></Link></li>
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/onboarding-process" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbCheckupList className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Onboarding process</span></Link></li>
                                 <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/industries" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbBuildingFactory2 className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Industries</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/for-employers/our-locations" className='flex flex-nowrap gap-2 w-full px-2 py-3'><LuGlobe2 className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Our locations</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/for-employers/our-locations" className='flex flex-nowrap gap-2 w-full px-2 py-3'><LuGlobe2 className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Our Locations</span></Link></li>
                             </ul>
                         </li>
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/for-employers" className="flex items-center gap-2"><span>For Candidates</span></Link><BiChevronDown className='text-2xl'/>
@@ -181,7 +180,7 @@ export default function MainNav() {
                             </ul>
                         </li>
 
-                        <li id='mainlink' className='flex relative items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/our-locations" className="flex items-center gap-2"><span>Our locations</span></Link><BiChevronDown className='text-2xl'/>
+                        <li id='mainlink' className='flex relative items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/our-locations" className="flex items-center gap-2"><span>Our Locations</span></Link><BiChevronDown className='text-2xl'/>
                             <ul id='submenu2' className='hidden absolute grid-cols-2 grid-rows-1 gap-2 flex-col top-[20px] p-2 shadow-special rounded-xl bg-white submenu z-10 transition-all min-w-[200px]'>
                                 <li className='row-span-1 flex w-fit rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/leicester-recruitment" className='flex flex-nowrap gap-2 min-w-fit px-2 py-3'><span>Leicester</span></Link></li>
                                 <li className='row-span-1 flex w-fit rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/our-locations/coventry-recruitment" className='flex flex-nowrap gap-2 min-w-fit px-2 py-3'><span>Coventry</span></Link></li>
@@ -247,9 +246,6 @@ export default function MainNav() {
                                     <TbChevronLeft className="w-6 h-6"/>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="/for-employers/shortlisted-candidates" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Shortlisted candidates</Link>
-                                </li>
-                                <li className='flex justify-between border-t border-neutral-300'>
                                     <Link href="/blogs/how-to-write-a-successful-job-description" className='w-full p-2 font-black text-xl'>Writing a good job description</Link>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
@@ -262,7 +258,7 @@ export default function MainNav() {
                                     <Link href="/industries" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Industries</Link>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="for-employers/our-locations" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Our locations</Link>
+                                    <Link href="for-employers/our-locations" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Our Locations</Link>
                                 </li>
                             </ul>
 
@@ -299,7 +295,7 @@ export default function MainNav() {
 
                         </li>
                         <li className='flex justify-between border-t border-neutral-300'>
-                            <Link href="/our-locations" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Our locations</Link>
+                            <Link href="/our-locations" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Our Locations</Link>
                             <div onClick={toggleSubmenu4} className='flex justify-center items-center border-l border-neutral-300 p-1 w-14 cursor-pointer'>
                                 <TbChevronRight className="w-6 h-6 " />
                             </div>

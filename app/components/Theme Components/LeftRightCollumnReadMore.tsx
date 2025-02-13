@@ -22,7 +22,9 @@ export default function LeftRightCollumnReadMore({title, subtitle, introduction,
   return (
     <>
         <section className={`flex flex-col gap-8 justify-center items-center w-full py-20 lg:py-20 ${bgcolor}`}>
-            <div className='relative w-11/12 lg:w-8/12 h-[30vh]'>
+            
+            <div className={`flex ${imageposition === 'left' ? 'flex-col lg:flex-row-reverse' : 'flex-col-reverse lg:flex-row'} w-11/12 lg:w-8/12 gap-16 lg:py-8`}>
+            <div className='relative w-11/12 lg:w-8/12 h-[50vh]'>
                 <Image 
                     src={image}
                     alt={imagealt}
@@ -31,10 +33,8 @@ export default function LeftRightCollumnReadMore({title, subtitle, introduction,
                     style={{ objectFit: 'cover' }}
                 />
             </div>
-            
-            <div className={`flex ${imageposition === 'left' ? 'flex-col lg:flex-row-reverse' : 'flex-col-reverse lg:flex-row'} w-11/12 lg:w-8/12 gap-16 lg:py-8`}>
-                <div className="w-11/12 lg:w-full flex justify-center lg:flex-row flex-col gap-8 text-[#312252]">
-                <div className='flex flex-col gap-8 w-full lg:w-1/3'>
+                <div className="w-11/12 lg:w-full flex justify-center flex-col gap-8 text-[#312252]">
+                <div className='flex flex-col gap-8 w-full'>
                     {subtitle &&
                     <h3 className='text-sm lg:text-lg font-medium tracking-widest uppercase'>
                         {subtitle}
@@ -48,7 +48,7 @@ export default function LeftRightCollumnReadMore({title, subtitle, introduction,
                     }
                     
                 </div>
-                <div className='flex flex-col gap-8 w-full lg:w-2/3'>
+                <div className='flex flex-col gap-8 w-full'>
                     {text &&
                     <div className='text-lg text-black' dangerouslySetInnerHTML={{__html: isTextExpanded ? text : getTruncatedText(text)}}/>
                     }
