@@ -9,7 +9,6 @@ query getJoblist {
       node {
         id
         joblists {
-          uniqueJobTitle
           shortDescription
           longDescription
           requiredSkills
@@ -25,6 +24,7 @@ query getJoblist {
             from
             to
           }
+          uniqueJobTitle
         }
         title
         slug
@@ -50,6 +50,8 @@ export default async function Joblist({ params }:any) {
 
   const jobId = Number(joblist); // Convert joblist param to a number
   const foundJobs = jobs.find((job: { node: { databaseId: number } }) => job.node.databaseId === jobId);
+
+  console.log(foundJobs.node.joblists.uniqueJobTitle)
 
   return (
     <section className="w-full py-20 lg:px-0 px-2">
@@ -108,7 +110,7 @@ export default async function Joblist({ params }:any) {
         <div className="py-4 text-lg" dangerouslySetInnerHTML={{ __html:foundJobs.node.joblists.longDescription }}></div>
         <div className="flex flex-col gap-8 py-4">
           <h2 className="font-black text-4xl text-center">Apply for this work</h2>
-          <JoblistForm workname={foundJobs.node.title} uniquetitle={foundJobs.node.uniqueJobTitle}/>
+          <JoblistForm workname={foundJobs.node.title} uniquetitle={foundJobs.node.joblists.uniqueJobTitle}/>
         </div>
         
       </div>

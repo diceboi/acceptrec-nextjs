@@ -58,8 +58,8 @@ export default function JoblistForm({ classname, workname, uniquetitle }: any) {
               tel: formData.tel,
               email: formData.email,
               zip: formData.zip,
-              workname,
-              uniquetitle,
+              workname: workname,
+              uniquetitle: uniquetitle,
               file: formDataUrl,
               path: pathname,
               policy: formData.policy
@@ -77,8 +77,8 @@ export default function JoblistForm({ classname, workname, uniquetitle }: any) {
               tel: formData.tel,
               email: formData.email,
               zip: formData.zip,
-              workname,
-              uniquetitle,
+              workname: workname,
+              uniquetitle: uniquetitle,
               file: formDataUrl,
               path: `https://acceptrec.co.uk${pathname}`,
               policy: formData.policy

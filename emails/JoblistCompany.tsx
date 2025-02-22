@@ -42,7 +42,7 @@ import {
             <b>Phone number:</b> {tel}<br></br>
             <b>Email:</b> {email}<br></br>
             <b>Zip:</b> {zip}<br></br>
-            <b>CV:</b> <Link href={file}></Link>{file}<br></br>
+            <b>CV:</b> <Link href={encodeURI(file)}>{decodeURIComponent(file.split('/').pop() || '')}</Link><br></br>
             <b>Applied for:</b> {workname}<br></br>
             <b>Unique job name:</b> {uniquetitle}<br></br>
             <b>From:</b> <Link href={`https://acceptrec.co.uk${path}`}>https://acceptrec.co.uk{path}</Link><br></br>

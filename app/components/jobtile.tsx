@@ -13,6 +13,7 @@ interface JobData {
   town: string;
   state: string;
   salarymin: number;
+  salaryfix: number;
   date: string[]; // Assuming an array of date strings
   url: string; // Assuming the URL to the job details
 }
@@ -55,7 +56,7 @@ export default function JobTile({ jobData }: { jobData: JobData }) {
                 </div>
                 <div className="flex items-center gap-1">
                     <RiMoneyPoundCircleLine className="text-[#312252] w-6 h-6"/>
-                    <h5 className="font-bold text-[#312252] lg:text-md text-xs">£ {jobData.salarymin}</h5>
+                    <h5 className="font-bold text-[#312252] lg:text-md text-xs">£ {jobData.salarymin || jobData.salaryfix}</h5>
                 </div>
                 <div className="flex flex-col lg:flex-row lg:items-center items-start gap-1">
                     <p className="lg:text-md text-xs">Posted: </p>
