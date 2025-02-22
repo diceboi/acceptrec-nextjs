@@ -51,13 +51,34 @@ export default async function Joblist({ params }:any) {
   const jobId = Number(joblist); // Convert joblist param to a number
   const foundJobs = jobs.find((job: { node: { databaseId: number } }) => job.node.databaseId === jobId);
 
-  console.log(foundJobs.node.joblists.uniqueJobTitle)
+  console.log(foundJobs.node.joblists.jobType)
 
   return (
     <section className="w-full py-20 lg:px-0 px-2">
       <div className="lg:w-6/12 mx-auto px-8 py-10 shadow-special rounded-3xl">
         <div className=" border-b pb-10 border-neutral-300">
           <h1 className=" font-black text-5xl text-[#312252]">{foundJobs.node.title}</h1>
+        </div>
+        <div className="flex flex-col gap-4 border-b py-10 border-neutral-300">
+          <div className="flex flex-wrap gap-2 py-2 w-full">
+            {foundJobs.node.joblists.category.map((category:any, index:any) => (
+              <h4 key={index} className="flex-none px-2 py-1 text-sm lg:text-md bg-[#00afaa] text-white rounded-3xl">
+                {category}
+              </h4>
+            ))}
+          </div>
+          <div className="flex flex-row gap-4">
+          <p>Location: </p>
+          <p className=" font-black text-md text-[#312252]">{foundJobs.node.joblists.location}</p>
+          </div>
+          <div className="flex flex-row gap-4">
+          <p>Job type: </p>
+          <p className=" font-black text-md text-[#312252]">{foundJobs.node.joblists.jobType}</p>
+          </div>
+          <div className="flex flex-row gap-4">
+          <p>Contract type: </p>
+          <p className=" font-black text-md text-[#312252]">{foundJobs.node.joblists.contractType}</p>
+          </div>  
         </div>
         <div className="py-4">
           <p className="text-lg font-bold">{foundJobs.node.joblists.shortDescription}</p>
@@ -86,27 +107,35 @@ export default async function Joblist({ params }:any) {
           <div className="py-4 text-lg font-medium joblist marker:text-[#00afaa]" dangerouslySetInnerHTML={{ __html:foundJobs.node.joblists.shift }}></div>
         </div>
         )}
+        {foundJobs.node.joblists.salary && (
         <div className="py-4 ">
           <h2 className="font-black text-2xl">Salary:</h2>
           <div className="flex flex-nowrap items-center gap-2 py-4">
             {foundJobs.node.joblists.salary.from && (
               <>
               <p className="text-lg font-light">Approx.</p>
-              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.from} /hour</p>
+              {foundJobs.node.joblists.salary.from &&(
+              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.from} {foundJobs.node.joblists.jobType === 'full time'? '/annum':'/hour'}</p>
+              )}
+              {foundJobs.node.joblists.salary.to && (
+              <>
               <p className="text-lg font-bold"> - </p>
-              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.to} /hour</p>
+              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.to} {foundJobs.node.joblists.jobType === 'full time'? '/annum':'/hour'}</p>
+              </>
+              )}
               </>
             )}
             {foundJobs.node.joblists.salary.fix && (
               <>
               <p className="text-lg font-light">Fixed</p>
-              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.fix} /hour</p>
+              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.fix} {foundJobs.node.joblists.jobType === 'full time' ? '/annum':'/hour'}</p>
               </>
             )}
 
           </div>
           
         </div>
+        )}
         <div className="py-4 text-lg" dangerouslySetInnerHTML={{ __html:foundJobs.node.joblists.longDescription }}></div>
         <div className="flex flex-col gap-8 py-4">
           <h2 className="font-black text-4xl text-center">Apply for this work</h2>
