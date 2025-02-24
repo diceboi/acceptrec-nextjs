@@ -115,12 +115,12 @@ export default async function Joblist({ params }:any) {
               <>
               <p className="text-lg font-light">Approx.</p>
               {foundJobs.node.joblists.salary.from &&(
-              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.from} {foundJobs.node.joblists.jobType === 'full time'? '/annum':'/hour'}</p>
+              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.from} {foundJobs.node.joblists.contractType === 'Permanent'? '/annum':'/hour'}</p>
               )}
               {foundJobs.node.joblists.salary.to && (
               <>
               <p className="text-lg font-bold"> - </p>
-              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.to} {foundJobs.node.joblists.jobType === 'full time'? '/annum':'/hour'}</p>
+              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.to} {foundJobs.node.joblists.contractType === 'Permanent'? '/annum':'/hour'}</p>
               </>
               )}
               </>
@@ -128,7 +128,7 @@ export default async function Joblist({ params }:any) {
             {foundJobs.node.joblists.salary.fix && (
               <>
               <p className="text-lg font-light">Fixed</p>
-              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.fix} {foundJobs.node.joblists.jobType === 'full time' ? '/annum':'/hour'}</p>
+              <p className="text-lg font-bold">£ {foundJobs.node.joblists.salary.fix} {foundJobs.node.joblists.contractType === 'Permanent' ? '/annum':'/hour'}</p>
               </>
             )}
 

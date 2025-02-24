@@ -101,11 +101,11 @@ export default function JoblistForm({ classname, workname, uniquetitle }: any) {
   return (
     <>
       <form className="flex flex-col gap-4" onSubmit={handleOnSubmit}>
-        <input required placeholder='Firstname' type='text' name="firstname" className='rounded-full p-4 text-lg shadow-special w-full py-4' />
-        <input required placeholder='Lastname' type='text' name="lastname" className='rounded-full p-4 text-lg shadow-special w-full py-4' />
+        <input required placeholder='First name' type='text' name="firstname" className='rounded-full p-4 text-lg shadow-special w-full py-4' />
+        <input required placeholder='Last name' type='text' name="lastname" className='rounded-full p-4 text-lg shadow-special w-full py-4' />
         <input required placeholder='Phone number' type='tel' name="tel" className='rounded-full p-4 text-lg shadow-special w-full py-4' />
         <input required placeholder='Email' type='email' name="email" className='rounded-full p-4 text-lg shadow-special w-full py-4' />
-        <input required placeholder='Zip' type='text' name="zip" className='rounded-full p-4 text-lg shadow-special w-full py-4' />
+        <input required placeholder='Post code' type='text' name="zip" className='rounded-full p-4 text-lg shadow-special w-full py-4' />
         <label htmlFor="file">Upload your CV:</label>
         <input required type='file' name="file" className='rounded-full p-4 text-lg shadow-special w-full py-4' />
         <div className='flex gap-2'>
