@@ -5,9 +5,7 @@ export async function POST(request: Request) {
   if (request.method === 'POST') {
     try {
       const body = await request.json();
-      const { firstname, lastname, tel, email, zip, file, path, policy, uniquetitle, workname } = body;
-
-      console.log("Received data:", { firstname, lastname, tel, email, zip, file, path, policy, uniquetitle, workname });
+      const { firstname, lastname, tel, email, zip, file, path, policy, uniquetitle, workname, responsible } = body;
 
       const clientEmail = process.env.GOOGLE_CLIENT_EMAIL;
       const privateKey = process.env.GOOGLE_PRIVATE_KEY ? process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n') : undefined;
@@ -33,7 +31,7 @@ export async function POST(request: Request) {
         valueInputOption: 'USER_ENTERED',
         requestBody: {
           values: [
-            [firstname, lastname, tel, email, zip, file, path, policy, uniquetitle, workname],
+            [firstname, lastname, tel, email, zip, file, path, policy, uniquetitle, workname, responsible],
           ],
         },
       });

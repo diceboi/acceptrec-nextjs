@@ -7,13 +7,13 @@ import { NextResponse } from "next/server";
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
-  const { firstname, lastname, tel, email, zip, file, path, policy, workname, uniquetitle  } = await request.json();
+  const { firstname, lastname, tel, email, zip, file, path, policy, workname, uniquetitle, responsible } = await request.json();
 
   try {
 
   const companyMail = await resend.emails.send({
     from: 'Acceptrec.co.uk <hello@acceptrec.co.uk>',
-    to: 'admin@acceptrec.co.uk',
+    to: responsible,
     subject: 'New job application from the website',
     react: JoblistCompany({
       firstname,
