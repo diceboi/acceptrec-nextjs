@@ -17,7 +17,7 @@ export default function MainHero({ MainTitle, SmallTitle, Text, BackgroundImage,
                     style={{objectFit: "contain", objectPosition: "center"}}
                 /> 
               <div className="flex flex-col gap-4 justify-center items-center min-h-[30vh] w-full z-10">
-                <h1 className="text-6xl lg:text-8xl font-black tracking-tighter  text-[#312252] ">{MainTitle}</h1>
+                <h1 className="text-6xl lg:text-8xl text-center font-black tracking-tighter  text-[#312252] ">{MainTitle}</h1>
                 <h2 className="text-sm lg:text-md font-bold tracking-widest text-center uppercase">{SmallTitle}</h2>
                 <p className="text-lg text-center font-bold">{Text}</p>
               </div>
