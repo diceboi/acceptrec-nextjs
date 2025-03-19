@@ -87,29 +87,30 @@ export default async function TamworthOfficePage() {
             </h3>
             <Image src="/arrow-down.webp" width={100} height={100} className="absolute lg:-right-10 right-0 lg:bottom-[5%] bottom-[-10%] lg:-rotate-12 rotate-[220deg] lg:scale-x-[1] scale-x-[-1]" alt={"arrow-down"}/>
           </div>
+
           <div className="flex flex-col items-center justify-center lg:w-1/2 w-full">
-            <Image
-              src="/jack-kovacs.webp"
-              alt="aga coventry"
-              width={500}
-              height={500}
-              className="w-auto rounded-3xl"
-            />
-            <div className="flex flex-nowrap gap-4 mt-20">
-              <Link href="mailto:jack.kovacs@acceptrec.co.uk" className="w-fit">
-                <button className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2">
-                  Email
-                  <BiEnvelope  className="right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200" />
-                </button>
-              </Link>
-              <Link href="tel:07577393634" className="w-fit">
-                <button className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2">
-                  Call
-                  <TbPhone className="right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200" />
-                </button>
-              </Link>
-            </div>
-          </div>
+                      <Image
+                        src="/jack-image.webp"
+                        alt="jack tamworth"
+                        width={400}
+                        height={400}
+                        className="w-auto"
+                      />
+                      <div className="flex flex-nowrap gap-4 -mt-[20%]">
+                        <Link href="mailto:jack.kovacs@acceptrec.co.uk" className="w-fit">
+                          <button className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2">
+                            Email
+                            <BiEnvelope  className="right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200" />
+                          </button>
+                        </Link>
+                        <Link href="tel:07577393634" className="w-fit">
+                          <button className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2">
+                            Call
+                            <TbPhone className="right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200" />
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
         </div>
       </section>
       <LeftRightCollumnReadMore title={"A warm welcome from us"} subtitle={"Recruitment in Tamworth"} introduction={""} text={"Welcome to our recruitment agency in Tamworth, where we accept every challenge but remain dedicated to providing outstanding service. We are proud to be the best-rated recruitment agency in the UK, serving the vibrant community of Tamworth.<br><br>This friendly approach helps candidates to relax and open up about their experiences and the types of roles they seek. Many individuals transition to our clients' payrolls, demonstrating our dedication to matching the right person with the right job. We specialise in supplying warehouse, industrial, and food production staff to some of Tamworth's largest and most renowned companies.<br><br>We have a large range of day shift and night shift opportunities, full time and part time industrial jobs available in Nuneaton, Warwick, Daventry and Crick, postcodes CV2, CV10, CV11, CV35, NN6 and more.<br><br>Take a look at current vacancies in Leicester: Warehouse Jobs in Leicester, Food Production Jobs in Leicester, Industrial Jobs in Leicester, Technical Jobs in Leicester, Commercial Jobs in Leicester.<br><br>At Accept Recruitment, we accept challenges but remain strong in our commitment to providing exceptional service and finding the perfect fit for every role."} image={"/tamworthoffice.webp"} imagealt={"Award-Winning Recruitment Agency in Tamworth"} imageposition={"right"} link={""} buttontitle={""} bgcolor={"bg-neutral-100"}/>
