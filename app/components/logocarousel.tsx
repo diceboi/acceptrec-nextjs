@@ -83,7 +83,6 @@ export default function Logocarousel() {
               <Image src="/logocarousel/rec.webp" width={150} height={100} alt="" className=""/>
             </div>
           </div>
-
         </div>
       </div>
     </>
