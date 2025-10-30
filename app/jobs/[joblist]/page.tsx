@@ -1,6 +1,7 @@
 import JoblistForm from "@/app/components/JoblistForm";
 import { getClient } from "@/app/lib/client"
 import { gql } from "@apollo/client"
+import { notFound } from "next/navigation";
 
 const query = gql`
 query getJoblist {
@@ -41,16 +42,20 @@ query getJoblist {
 
 export const revalidate = 5;
 
-export default async function Joblist({ params }:any) {
+export default async function Joblist({ params }: any) {
+  const { joblist } = params;
+  const { data: joblistdata }: any = await getClient().query({ query });
+  const jobs = joblistdata?.joblists?.edges || [];
+  const jobId = Number(joblist);
 
-  const { joblist } = params
+  const foundJobs = jobs.find(
+    (job: { node: { databaseId: number } }) => job.node.databaseId === jobId
+  );
 
-  const { data: joblistdata }:any = await getClient().query({query});
-
-  const jobs = joblistdata?.joblists?.edges || {};
-
-  const jobId = Number(joblist); // Convert joblist param to a number
-  const foundJobs = jobs.find((job: { node: { databaseId: number } }) => job.node.databaseId === jobId);
+  // Ha nincs találat, jeleníts meg SEO-barát 404 oldalt
+  if (!foundJobs) {
+    notFound();
+  }
 
   return (
     <section className="w-full py-20 lg:px-0 px-2">

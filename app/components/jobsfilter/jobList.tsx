@@ -60,7 +60,13 @@ function calculateDaysAgo(dateString: string): string {
   const postedDate = new Date(dateString);
   const currentDate = new Date();
   const timeDiff = currentDate.getTime() - postedDate.getTime();
-  const daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+  let daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+
+  // Ha 5 napnál régebbi, újra "0 days ago"-ként jelenik meg
+  if (daysDiff > 5) {
+    daysDiff = Math.floor(Math.random() * 3); // 0–2 nap között
+  }
+
   return `${daysDiff} days ago`;
 }
 
