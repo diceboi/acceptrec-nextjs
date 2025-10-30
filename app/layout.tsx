@@ -32,7 +32,7 @@ export default function RootLayout({
         />
         <Script
         id='Analytics'
-        strategy='beforeInteractive'
+        strategy='afterInteractive'
         dangerouslySetInnerHTML={{
           __html:
           `window.dataLayer = window.dataLayer || [];

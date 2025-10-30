@@ -3,7 +3,7 @@ export default function NotFound() {
     <div className="text-center py-20">
       <h1 className="text-4xl font-bold text-[#312252]">Job not found</h1>
       <p className="text-lg text-neutral-600 mt-4">
-        The job you're looking for may have expired or been removed.
+        The job you&apos;re looking for may have expired or been removed.
       </p>
       <a
         href="/jobs"
