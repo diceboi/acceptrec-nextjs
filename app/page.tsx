@@ -5,6 +5,7 @@ import Logocarousel from './components/logocarousel'
 import Industries from './components/industries'
 import Rated from './components/rated'
 import Team from './components/Theme Components/Team'
+import RecentBlogs from './components/RecentBlogs'
 
 import { gql } from '@apollo/client'
 import { getClient } from './lib/client'
@@ -71,6 +72,7 @@ export default async function Home() {
       <Advantages advantagesIntroduction={homepage.advantagesIntroduction} advantagesMainTitle={homepage.advantagesMainTitle} advantagesSmallTitle={homepage.advantagesSmallTitle}/>
       <Rated strengthsIntroduction={homepage.strengthsIntroduction} strengthsMainTitle={homepage.strengthsMainTitle} strengthsSmallTitle={homepage.strengthsSmallTitle}/>
       <Team teamCtaButtonText={homepage.teamCtaButtonText} teamMainTitle={homepage.teamMainTitle} teamSmallTitle={homepage.teamSmallTitle}/>
+      <RecentBlogs />
       <Logocarousel/>
     </>
   )
