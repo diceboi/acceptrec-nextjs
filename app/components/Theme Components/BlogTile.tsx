@@ -118,7 +118,7 @@ interface Post {
                         <div className="flex flex-wrap items-center gap-2">
                             <Image src={authorimage} height={30} width={30} alt='author' className='rounded-full'/>
                             <p className="text-sm ">{authorname}</p>
-                            <p className="text-sm ">{postdate}</p>
+                            {/*<p className="text-sm ">{postdate}</p>*/}
                             <p className="text-sm border border-neutral-300 rounded-full px-2">{category}</p>
                         </div>                    
                         <h2 className="text-xl font-black tracking-tight text-[#312252]">{title}</h2>
