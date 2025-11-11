@@ -62,13 +62,8 @@ export default function RootLayout({
         
       </head>
       <body className={raleway.className} id='__next'>
-        <Script
-        src='https://cdn.botpress.cloud/webchat/v1/inject.js'
-        ></Script>
-        <Script
-        src='https://mediafiles.botpress.cloud/5c404966-a856-4ccc-a11f-d1ae4eb4d233/webchat/config.js'
-        ></Script>
-        
+        <Script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></Script>
+        <Script src="https://files.bpcontent.cloud/2025/10/28/10/20251028105037-FFVXZ8LT.js" defer></Script>
           <ApolloWrapper>
             <ChatMessage />
             <Cookies />
