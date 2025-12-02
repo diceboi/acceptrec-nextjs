@@ -83,33 +83,33 @@ export default async function TamworthOfficePage() {
               agency in the UK, serving the vibrant community of Tamworth.
             </p>
             <h3 className="text-white text-start lg:text-3xl text-xl font-black drop-shadow-2xl">
-              Contact Jack for Staffing needs at <span className="text-[#00afaa]">07577393634</span> or <span className="text-[#00afaa]">jack.kovacs@acceptrec.co.uk</span>
+              Contact Ryan for Staffing needs at <span className="text-[#00afaa]">07441369469</span> or <span className="text-[#00afaa]">ryan.gledhill@acceptrec.co.uk</span>
             </h3>
             <Image src="/arrow-down.webp" width={100} height={100} className="absolute lg:-right-10 right-0 lg:bottom-[5%] bottom-[-10%] lg:-rotate-12 rotate-[220deg] lg:scale-x-[1] scale-x-[-1]" alt={"arrow-down"}/>
           </div>
 
           <div className="flex flex-col items-center justify-center lg:w-1/2 w-full">
                       <Image
-                        src="/jack-image.webp"
-                        alt="jack tamworth"
-                        width={400}
-                        height={400}
-                        className="w-auto"
-                      />
-                      <div className="flex flex-nowrap gap-4 -mt-[20%]">
-                        <Link href="mailto:jack.kovacs@acceptrec.co.uk" className="w-fit">
-                          <button className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2">
-                            Email
-                            <BiEnvelope  className="right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200" />
-                          </button>
-                        </Link>
-                        <Link href="tel:07577393634" className="w-fit">
-                          <button className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2">
-                            Call
-                            <TbPhone className="right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200" />
-                          </button>
-                        </Link>
-                      </div>
+              src="/ryan-phone.webp"
+              alt="aga coventry"
+              width={400}
+              height={400}
+              className="w-auto"
+            />
+            <div className="flex flex-nowrap gap-4 -mt-[20%]">
+              <Link href="mailto:ryan.gledhill@acceptrec.co.uk" className="w-fit">
+                <button className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2">
+                  Email
+                  <BiEnvelope  className="right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200" />
+                </button>
+              </Link>
+              <Link href="tel:07441369469" className="w-fit">
+                <button className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2">
+                  Call
+                  <TbPhone className="right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200" />
+                </button>
+              </Link>
+            </div>
                     </div>
         </div>
       </section>
