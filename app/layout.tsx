@@ -66,8 +66,7 @@ export default function RootLayout({
 
       </head>
       <body className={raleway.className} id='__next'>
-        <Script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></Script>
-        <Script src="https://files.bpcontent.cloud/2025/10/28/10/20251028105037-FFVXZ8LT.js" defer></Script>
+        <Script src="https://widget.superchat.de/snippet.js?applicationKey=WCOzVqDdxywB4oPRE7ag28MkpX" referrerPolicy="no-referrer-when-downgrade"></Script>
         <ApolloWrapper>
           <ChatMessage />
           <Cookies />
