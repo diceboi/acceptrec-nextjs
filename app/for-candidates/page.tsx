@@ -83,72 +83,75 @@ export const revalidate = 5;
 
 export async function generateMetadata() {
 
-  const { data: forcandidatesdata }:any = await getClient().query({query})
+  const { data: forcandidatesdata }: any = await getClient().query({ query })
   const forcandidates = forcandidatesdata?.page?.forCandidates || {};
 
   return {
     title: forcandidatesdata.page.seo.title,
-    description: forcandidatesdata.page.seo.metaDesc
+    description: forcandidatesdata.page.seo.metaDesc,
+    alternates: {
+      canonical: '/for-candidates',
+    },
   }
-  
+
 }
 
 
 export default async function ForCandidates() {
 
-  const { data: forcandidatesdata }:any = await getClient().query({query})
+  const { data: forcandidatesdata }: any = await getClient().query({ query })
   const forcandidates = forcandidatesdata?.page?.forCandidates || {};
 
   return (
     <>
-    <CTAHero 
-          title={forcandidates.heroTitle} 
-          subtitle={forcandidates.heroSubtitle} 
-          text={forcandidates.heroText} 
-          link={forcandidates.heroCtaButtonLink} 
-          bgimage={forcandidates.heroBackgroundImage?.sourceUrl}
-          bgimagealt={forcandidates.heroBackgroundImage?.altText} 
-          buttontext={forcandidates.heroButtonText}
-          slidingtexts={forcandidates.heroSlidingTexts}
-    />
-    <OurPromise />
-    <LeftRightCollumn 
-      title={forcandidates.registrationTitle} 
-      subtitle={forcandidates.registrationSubtitle} 
-      introduction={forcandidates.registrationIntroduction} 
-      text={forcandidates.registrationText} 
-      image={forcandidates.registrationImage?.sourceUrl} 
-      imagealt={forcandidates.registrationImage?.altText} 
-      imageposition={forcandidates.registrationImagePosition} 
-      link={forcandidates.registrationButtonLink} 
-      buttontitle={forcandidates.registrationButtonText}
-    />
-    <LeftRightCollumn 
-      title={forcandidates.jobFilteringTitle} 
-      subtitle={forcandidates.jobFilteringSubtitle} 
-      introduction={forcandidates.jobFilteringIntroduction} 
-      text={forcandidates.jobFilteringText} 
-      image={forcandidates.jobFilteringImage?.sourceUrl} 
-      imagealt={forcandidates.jobFilteringImage?.altText} 
-      imageposition={forcandidates.jobFilteringImagePosition} 
-      link={forcandidates.jobFilteringButtonLink} 
-      buttontitle={forcandidates.jobFilteringButtonText}
-    />
-    <LeftRightCollumn 
-      title={forcandidates.slaveryTitle} 
-      subtitle={forcandidates.slaverySubtitle} 
-      introduction={forcandidates.slaveryIntroduction} 
-      text={forcandidates.slaveryText} 
-      image={forcandidates.slaveryImage?.sourceUrl} 
-      imagealt={forcandidates.slaveryImage?.altText} 
-      imageposition={forcandidates.slaveryImagePosition} 
-      link={forcandidates.slaveryButtonLink} 
-      buttontitle={forcandidates.slaveryButtonText}
-    />
-    <Services title={forcandidates.servicesTitle} subtitle={forcandidates.servicesSubtitle} text={forcandidates.servicesText}/>
-    <CandidateSuccessStories />
-    <Offices title={forcandidates.contactUsTitle} subtitle={forcandidates.contactUsSubtitle} text={forcandidates.contactUsText} />
-    <ShortBlogs title={forcandidates.blogsTitle} subtitle={forcandidates.blogsSubtitle} buttontext={forcandidates.blogsButtonText} blogtype={forcandidates.blogType}/>
+      <CTAHero
+        title={forcandidates.heroTitle}
+        subtitle={forcandidates.heroSubtitle}
+        text={forcandidates.heroText}
+        link={forcandidates.heroCtaButtonLink}
+        bgimage={forcandidates.heroBackgroundImage?.sourceUrl}
+        bgimagealt={forcandidates.heroBackgroundImage?.altText}
+        buttontext={forcandidates.heroButtonText}
+        slidingtexts={forcandidates.heroSlidingTexts}
+      />
+      <OurPromise />
+      <LeftRightCollumn
+        title={forcandidates.registrationTitle}
+        subtitle={forcandidates.registrationSubtitle}
+        introduction={forcandidates.registrationIntroduction}
+        text={forcandidates.registrationText}
+        image={forcandidates.registrationImage?.sourceUrl}
+        imagealt={forcandidates.registrationImage?.altText}
+        imageposition={forcandidates.registrationImagePosition}
+        link={forcandidates.registrationButtonLink}
+        buttontitle={forcandidates.registrationButtonText}
+      />
+      <LeftRightCollumn
+        title={forcandidates.jobFilteringTitle}
+        subtitle={forcandidates.jobFilteringSubtitle}
+        introduction={forcandidates.jobFilteringIntroduction}
+        text={forcandidates.jobFilteringText}
+        image={forcandidates.jobFilteringImage?.sourceUrl}
+        imagealt={forcandidates.jobFilteringImage?.altText}
+        imageposition={forcandidates.jobFilteringImagePosition}
+        link={forcandidates.jobFilteringButtonLink}
+        buttontitle={forcandidates.jobFilteringButtonText}
+      />
+      <LeftRightCollumn
+        title={forcandidates.slaveryTitle}
+        subtitle={forcandidates.slaverySubtitle}
+        introduction={forcandidates.slaveryIntroduction}
+        text={forcandidates.slaveryText}
+        image={forcandidates.slaveryImage?.sourceUrl}
+        imagealt={forcandidates.slaveryImage?.altText}
+        imageposition={forcandidates.slaveryImagePosition}
+        link={forcandidates.slaveryButtonLink}
+        buttontitle={forcandidates.slaveryButtonText}
+      />
+      <Services title={forcandidates.servicesTitle} subtitle={forcandidates.servicesSubtitle} text={forcandidates.servicesText} />
+      <CandidateSuccessStories />
+      <Offices title={forcandidates.contactUsTitle} subtitle={forcandidates.contactUsSubtitle} text={forcandidates.contactUsText} />
+      <ShortBlogs title={forcandidates.blogsTitle} subtitle={forcandidates.blogsSubtitle} buttontext={forcandidates.blogsButtonText} blogtype={forcandidates.blogType} />
     </>
   )
 }

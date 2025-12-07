@@ -54,39 +54,42 @@ query getForEmployers {
 
 export async function generateMetadata() {
 
-  const { data: foremployersdata }:any = await getClient().query({query})
+  const { data: foremployersdata }: any = await getClient().query({ query })
 
   return {
     title: foremployersdata.page.seo.title,
-    description: foremployersdata.page.seo.metaDesc
+    description: foremployersdata.page.seo.metaDesc,
+    alternates: {
+      canonical: '/for-employers',
+    },
   }
-  
+
 }
 
 export default async function ForEmployers() {
-  
-    const { data: foremployersdata }:any = await getClient().query({query})
 
-    const foremployers = foremployersdata?.page?.forEmployers || {};
+  const { data: foremployersdata }: any = await getClient().query({ query })
+
+  const foremployers = foremployersdata?.page?.forEmployers || {};
 
   return (
     <>
-        <CTAHero 
-          title={foremployers.heroTitle} 
-          subtitle={foremployers.heroSubtitle} 
-          text={foremployers.heroText} 
-          link={foremployers.heroCtaButtonLink} 
-          bgimage={foremployers.heroBackgroundImage?.sourceUrl}
-          bgimagealt={foremployers.heroBackgroundImage?.altText} 
-          buttontext={foremployers.heroCtaButtonText}
-          slidingtexts={foremployers.heroSlidingTexts}
-        />
-        <ManagedServices title={foremployers.managedServicesTitle} subtitle={foremployers.managedServicesSubtitle} text={foremployers.managedServicesText}/>
-        <Onboarding title={foremployers.onboardingTitle} text={foremployers.onboardingText}/>
-        <Industries industriesMainTitle={foremployers.industriesTitle} industriesSmallIntroduction={foremployers.industriesText}  industriesSmallTitle={foremployers.industriesSubtitle} />
-        <Standards title={foremployers.ourStandardsTitle} subtitle={foremployers.ourStandardsSubtitle} text={foremployers.ourStandardsText}/>
-        <Team teamSmallTitle={foremployers.teamSubtitle} teamMainTitle={foremployers.teamTitle} teamCtaButtonText={foremployers.teamButtonText} teamText={foremployers.teamText}/>
-        <ShortBlogs title={foremployers.blogsTitle} subtitle={foremployers.blogsSubtitle} buttontext={foremployers.blogsButtonText} blogtype={foremployers.blogType}/>
+      <CTAHero
+        title={foremployers.heroTitle}
+        subtitle={foremployers.heroSubtitle}
+        text={foremployers.heroText}
+        link={foremployers.heroCtaButtonLink}
+        bgimage={foremployers.heroBackgroundImage?.sourceUrl}
+        bgimagealt={foremployers.heroBackgroundImage?.altText}
+        buttontext={foremployers.heroCtaButtonText}
+        slidingtexts={foremployers.heroSlidingTexts}
+      />
+      <ManagedServices title={foremployers.managedServicesTitle} subtitle={foremployers.managedServicesSubtitle} text={foremployers.managedServicesText} />
+      <Onboarding title={foremployers.onboardingTitle} text={foremployers.onboardingText} />
+      <Industries industriesMainTitle={foremployers.industriesTitle} industriesSmallIntroduction={foremployers.industriesText} industriesSmallTitle={foremployers.industriesSubtitle} />
+      <Standards title={foremployers.ourStandardsTitle} subtitle={foremployers.ourStandardsSubtitle} text={foremployers.ourStandardsText} />
+      <Team teamSmallTitle={foremployers.teamSubtitle} teamMainTitle={foremployers.teamTitle} teamCtaButtonText={foremployers.teamButtonText} teamText={foremployers.teamText} />
+      <ShortBlogs title={foremployers.blogsTitle} subtitle={foremployers.blogsSubtitle} buttontext={foremployers.blogsButtonText} blogtype={foremployers.blogType} />
     </>
   )
 }

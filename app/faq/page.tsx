@@ -27,26 +27,29 @@ export const revalidate = 5;
 
 export async function generateMetadata() {
 
-  const { data: faqpagedata }:any = await getClient().query({query});
+  const { data: faqpagedata }: any = await getClient().query({ query });
 
   return {
     title: faqpagedata.page.seo.title,
-    description: faqpagedata.page.seo.metaDesc
+    description: faqpagedata.page.seo.metaDesc,
+    alternates: {
+      canonical: '/faq',
+    },
   }
-  
+
 }
 
 
 export default async function Faqpage() {
 
-  const { data: faqpagedata } = await getClient().query({query});
+  const { data: faqpagedata } = await getClient().query({ query });
 
   const faqpage = faqpagedata?.page?.faq;
 
   return (
     <>
-    <MainHero MainTitle={faqpage.heroTitle} SmallTitle={faqpage.heroSubtitle} Text={''} BackgroundImage={faqpage.heroImage?.sourceUrl} BackgroundImageAltText={faqpage.heroImage?.altText}/>
-    <FAQComponent />
+      <MainHero MainTitle={faqpage.heroTitle} SmallTitle={faqpage.heroSubtitle} Text={''} BackgroundImage={faqpage.heroImage?.sourceUrl} BackgroundImageAltText={faqpage.heroImage?.altText} />
+      <FAQComponent />
     </>
   )
 }

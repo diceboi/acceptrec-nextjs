@@ -31,26 +31,29 @@ export const revalidate = 5;
 
 export async function generateMetadata() {
 
-  const { data: meettheteampagedata }:any = await getClient().query({query});
+  const { data: meettheteampagedata }: any = await getClient().query({ query });
 
   return {
     title: meettheteampagedata.page.seo.title,
-    description: meettheteampagedata.page.seo.metaDesc
+    description: meettheteampagedata.page.seo.metaDesc,
+    alternates: {
+      canonical: '/about-us/team',
+    },
   }
-  
+
 }
 
 
 export default async function TeamPage() {
 
-const { data: meettheteampagedata }:any = await getClient().query({query});
+  const { data: meettheteampagedata }: any = await getClient().query({ query });
 
-const meettheteam = meettheteampagedata?.page?.meetTheTeam || {};
+  const meettheteam = meettheteampagedata?.page?.meetTheTeam || {};
 
   return (
     <>
-        <MainHero MainTitle={meettheteam.heroTitle} SmallTitle={meettheteam.heroSubtitle} BackgroundImage={meettheteam.heroPicture?.sourceUrl} BackgroundImageAltText={meettheteam.heroPicture?.altText} />
-        <Team teamSmallTitle={meettheteam.teamSubtitle} teamMainTitle={meettheteam.teamTitle} teamCtaButtonText={meettheteam.teamButtonText} teamText={meettheteam.teamText}/>
+      <MainHero MainTitle={meettheteam.heroTitle} SmallTitle={meettheteam.heroSubtitle} BackgroundImage={meettheteam.heroPicture?.sourceUrl} BackgroundImageAltText={meettheteam.heroPicture?.altText} />
+      <Team teamSmallTitle={meettheteam.teamSubtitle} teamMainTitle={meettheteam.teamTitle} teamCtaButtonText={meettheteam.teamButtonText} teamText={meettheteam.teamText} />
     </>
   )
 }

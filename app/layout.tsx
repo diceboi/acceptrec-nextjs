@@ -12,10 +12,14 @@ import ChatMessage from './components/ChatMessage'
 const raleway = Raleway({ subsets: ['latin'] })
 
 export const metadata = {
+  metadataBase: new URL('https://acceptrec.co.uk'),
   title: {
-    default: 'Highest Rated Recruitment Agency in Leicester | Driving and Warehouse Specialists',
+    default: 'Top Recruitment Agency in Leicester - Accept Recruitment',
   },
-  description: 'As one of the best recruitment agencies in Leicester, we specialise in Warehouse Work, Driving Work, and Technical Work. Find your ideal job or hire top talent with us today!',
+  description: "Leading recruitment agency in Leicester, Coventry & Tamworth. Specialising in Industrial, Warehouse & Driving roles. Find jobs or hire talent!",
+  alternates: {
+    canonical: '/',
+  },
 }
 
 export default function RootLayout({
@@ -26,29 +30,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script 
-        async 
-        src="https://www.googletagmanager.com/gtag/js?id=G-W6M20W55E1" 
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-W6M20W55E1"
         />
         <Script
-        id='Analytics'
-        strategy='afterInteractive'
-        dangerouslySetInnerHTML={{
-          __html:
-          `window.dataLayer = window.dataLayer || [];
+          id='Analytics'
+          strategy='afterInteractive'
+          dangerouslySetInnerHTML={{
+            __html:
+              `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
         
           gtag('config', 'G-W6M20W55E1');`
-        }}
+          }}
         >
         </Script>
-        <Script 
-        id='Hotjar' 
-        strategy='afterInteractive' 
-        dangerouslySetInnerHTML={{
-          __html:
-          `(function(h,o,t,j,a,r){
+        <Script
+          id='Hotjar'
+          strategy='afterInteractive'
+          dangerouslySetInnerHTML={{
+            __html:
+              `(function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
             h._hjSettings={hjid:3698579,hjsv:6};
             a=o.getElementsByTagName('head')[0];
@@ -56,22 +60,22 @@ export default function RootLayout({
             r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
-        }}>
+          }}>
 
         </Script>
-        
+
       </head>
       <body className={raleway.className} id='__next'>
         <Script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></Script>
         <Script src="https://files.bpcontent.cloud/2025/10/28/10/20251028105037-FFVXZ8LT.js" defer></Script>
-          <ApolloWrapper>
-            <ChatMessage />
-            <Cookies />
-            <MainNav/>
-            {children}
-            <MainCTA/>
-            <Footer/>
-          </ApolloWrapper>
+        <ApolloWrapper>
+          <ChatMessage />
+          <Cookies />
+          <MainNav />
+          {children}
+          <MainCTA />
+          <Footer />
+        </ApolloWrapper>
       </body>
     </html>
   )

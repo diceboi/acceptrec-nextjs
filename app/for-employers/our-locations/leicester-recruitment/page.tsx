@@ -46,7 +46,7 @@ export async function generateMetadata() {
     description:
       "Looking for the best recruitment agency in Leicester? Our experts connect top talent with leading employers for tailored job placements.",
     alternates: {
-      canonical: `https://www.acceptrec.co.uk/for-employers/our-locations/leicester`
+      canonical: `/for-employers/our-locations/leicester`
     }
   };
 }
@@ -85,7 +85,7 @@ export default async function LeicesterOfficePage() {
             <h3 className="text-white text-start lg:text-3xl text-xl font-black drop-shadow-2xl">
               Contact Ryan for Staffing needs at <span className="text-[#00afaa]">07441369469</span> or <span className="text-[#00afaa]">ryan.gledhill@acceptrec.co.uk</span>
             </h3>
-            <Image src="/arrow-down.webp" width={100} height={100} className="absolute lg:-right-10 right-0 lg:bottom-[5%] bottom-[-10%] lg:-rotate-12 rotate-[220deg] lg:scale-x-[1] scale-x-[-1]" alt={"arrow-down"}/>
+            <Image src="/arrow-down.webp" width={100} height={100} className="absolute lg:-right-10 right-0 lg:bottom-[5%] bottom-[-10%] lg:-rotate-12 rotate-[220deg] lg:scale-x-[1] scale-x-[-1]" alt={"arrow-down"} />
           </div>
           <div className="flex flex-col items-center justify-center lg:w-1/2 w-full">
             <Image
@@ -99,7 +99,7 @@ export default async function LeicesterOfficePage() {
               <Link href="mailto:ryan.gledhill@acceptrec.co.uk" className="w-fit">
                 <button className="group flex justify-between items-center w-fit bg-[#00afaa] hover:bg-[#00a39e] hover:shadow-xl hover:gap-4 shadow-lg text-white hover:shadow-[#00afa93b] hover:w-fit p-3 rounded-full transition-all duration-200 gap-2">
                   Email
-                  <BiEnvelope  className="right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200" />
+                  <BiEnvelope className="right-4 recruitment-icon w-6 h-6 group-hover:right-6 ease-out duration-200" />
                 </button>
               </Link>
               <Link href="tel:07441369469" className="w-fit">
@@ -112,10 +112,10 @@ export default async function LeicesterOfficePage() {
           </div>
         </div>
       </section>
-      <LeftRightCollumnReadMore title={"A warm welcome from us"} subtitle={"Recruitment in Leicester"} introduction={""} text={"Welcome to our recruitment agency in Leicester, where we accept every challenge but remain dedicated to providing outstanding service. We are proud to be the best-rated recruitment agency in the UK, serving the vibrant community of Leicester.<br><br>This friendly approach helps candidates to relax and open up about their experiences and the types of roles they seek. Many individuals transition to our clients' payrolls, demonstrating our dedication to matching the right person with the right job. We specialise in supplying warehouse, industrial, and food production staff to some of Leicester's largest and most renowned companies.<br><br>We have a large range of day shift and night shift opportunities, full time and part time industrial jobs available in Nuneaton, Warwick, Daventry and Crick, postcodes CV2, CV10, CV11, CV35, NN6 and more.<br><br>Take a look at current vacancies in Leicester: Warehouse Jobs in Leicester, Food Production Jobs in Leicester, Industrial Jobs in Leicester, Technical Jobs in Leicester, Commercial Jobs in Leicester.<br><br>At Accept Recruitment, we accept challenges but remain strong in our commitment to providing exceptional service and finding the perfect fit for every role."} image={"/leicesterhqofficehero.webp"} imagealt={"Award-Winning Recruitment Agency in Leicester"} imageposition={"right"} link={""} buttontitle={""} bgcolor={"bg-neutral-100"}/>
-      <LeftRightCollumn title={"Award-Winning Recruitment Agency"} subtitle={"Leicester"} introduction={""} text={"We are incredibly proud to be recognised as the Best Recruitment Agency of the Year for Temporary Jobs in Leicester. This prestigious award highlights the hard work and dedication of our team in providing top-notch recruitment services."} image={"/best-recruitment-agency-of-the-year-award.webp"} imagealt={"Award-Winning Recruitment Agency in Leicester"} imageposition={"left"} link={"/contact-us"} buttontitle={"Get in touch"}/>
-      <Industries industriesMainTitle={"Industries"} industriesSmallIntroduction={"Specialising within niche industries, we use our expertise and systems to source the staff you need. We provide both temporary staffing and permanent solutions."} industriesSmallTitle={"What we cover"}/>
-      <Office phonenumber={"01162182133"} about={""} living={""} jobs={""} coordinates={"52.63162232019635,-1.1825477558256041"}/>
+      <LeftRightCollumnReadMore title={"A warm welcome from us"} subtitle={"Recruitment in Leicester"} introduction={""} text={"Welcome to our recruitment agency in Leicester, where we accept every challenge but remain dedicated to providing outstanding service. We are proud to be the best-rated recruitment agency in the UK, serving the vibrant community of Leicester.<br><br>This friendly approach helps candidates to relax and open up about their experiences and the types of roles they seek. Many individuals transition to our clients' payrolls, demonstrating our dedication to matching the right person with the right job. We specialise in supplying warehouse, industrial, and food production staff to some of Leicester's largest and most renowned companies.<br><br>We have a large range of day shift and night shift opportunities, full time and part time industrial jobs available in Nuneaton, Warwick, Daventry and Crick, postcodes CV2, CV10, CV11, CV35, NN6 and more.<br><br>Take a look at current vacancies in Leicester: Warehouse Jobs in Leicester, Food Production Jobs in Leicester, Industrial Jobs in Leicester, Technical Jobs in Leicester, Commercial Jobs in Leicester.<br><br>At Accept Recruitment, we accept challenges but remain strong in our commitment to providing exceptional service and finding the perfect fit for every role."} image={"/leicesterhqofficehero.webp"} imagealt={"Award-Winning Recruitment Agency in Leicester"} imageposition={"right"} link={""} buttontitle={""} bgcolor={"bg-neutral-100"} />
+      <LeftRightCollumn title={"Award-Winning Recruitment Agency"} subtitle={"Leicester"} introduction={""} text={"We are incredibly proud to be recognised as the Best Recruitment Agency of the Year for Temporary Jobs in Leicester. This prestigious award highlights the hard work and dedication of our team in providing top-notch recruitment services."} image={"/best-recruitment-agency-of-the-year-award.webp"} imagealt={"Award-Winning Recruitment Agency in Leicester"} imageposition={"left"} link={"/contact-us"} buttontitle={"Get in touch"} />
+      <Industries industriesMainTitle={"Industries"} industriesSmallIntroduction={"Specialising within niche industries, we use our expertise and systems to source the staff you need. We provide both temporary staffing and permanent solutions."} industriesSmallTitle={"What we cover"} />
+      <Office phonenumber={"01162182133"} about={""} living={""} jobs={""} coordinates={"52.63162232019635,-1.1825477558256041"} />
     </>
   );
 }

@@ -29,26 +29,29 @@ export const revalidate = 5;
 
 export async function generateMetadata() {
 
-  const { data: officespagedata }:any = await getClient().query({query});
+  const { data: officespagedata }: any = await getClient().query({ query });
 
   return {
     title: officespagedata.page.seo.title,
-    description: officespagedata.page.seo.metaDesc
+    description: officespagedata.page.seo.metaDesc,
+    alternates: {
+      canonical: '/for-employers/our-locations',
+    },
   }
-  
+
 }
 
-  
-  export default async function EmployersLocationPage() {
 
-    const { data: officespagedata } = await getClient().query({query});
+export default async function EmployersLocationPage() {
 
-    const officespage = officespagedata?.page?.officespage;
+  const { data: officespagedata } = await getClient().query({ query });
 
-    return (
-      <>
-        <MainHero MainTitle={officespage.heroTitle} SmallTitle={officespage.heroSubtitle} Text={''} BackgroundImage={officespage.heroImage?.sourceUrl} BackgroundImageAltText={officespage.heroImage?.altText} />
-        <OfficesEmployers title={officespage.officesTitle} subtitle={officespage.officesSubtitle} text={''}/>
-      </>
-    );
-  }
+  const officespage = officespagedata?.page?.officespage;
+
+  return (
+    <>
+      <MainHero MainTitle={officespage.heroTitle} SmallTitle={officespage.heroSubtitle} Text={''} BackgroundImage={officespage.heroImage?.sourceUrl} BackgroundImageAltText={officespage.heroImage?.altText} />
+      <OfficesEmployers title={officespage.officesTitle} subtitle={officespage.officesSubtitle} text={''} />
+    </>
+  );
+}

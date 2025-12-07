@@ -30,25 +30,28 @@ export const revalidate = 5;
 
 export async function generateMetadata() {
 
-  const { data: onboardingdata }:any = await getClient().query({query});
+  const { data: onboardingdata }: any = await getClient().query({ query });
 
   return {
     title: onboardingdata.page.seo.title,
-    description: onboardingdata.page.seo.metaDesc
+    description: onboardingdata.page.seo.metaDesc,
+    alternates: {
+      canonical: `/onboarding-process`
+    }
   }
-  
+
 }
 
 export default async function OnboardingProcess() {
 
-  const { data: onboardingdata }:any = await getClient().query({query})
+  const { data: onboardingdata }: any = await getClient().query({ query })
 
   const onboarding = onboardingdata?.page?.onboardingProcesspage || {};
 
   return (
     <>
-        <MainHero MainTitle={onboarding.heroTitle} SmallTitle={onboarding.heroSubtitle} Text={onboarding.heroText} BackgroundImage={onboarding.heroImage?.sourceUrl} BackgroundImageAltText={onboarding.heroImage?.altText}/>
-        <Onboarding title={onboarding.onboardingTitle} text={onboarding.onboardingText}/>
+      <MainHero MainTitle={onboarding.heroTitle} SmallTitle={onboarding.heroSubtitle} Text={onboarding.heroText} BackgroundImage={onboarding.heroImage?.sourceUrl} BackgroundImageAltText={onboarding.heroImage?.altText} />
+      <Onboarding title={onboarding.onboardingTitle} text={onboarding.onboardingText} />
     </>
   )
 }
