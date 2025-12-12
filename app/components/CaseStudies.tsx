@@ -19,7 +19,7 @@ export default function CaseStudies({ title, text }: Props) {
                 Client and Candidate<br />Success Stories
               </h1>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Our success stories are what we're most proud of. We value our clients and candidates deeply, ensuring operations run smoothly whilst supporting workers to progress from the shop floor to management roles.
+                Our success stories are what we&apos;re most proud of. We value our clients and candidates deeply, ensuring operations run smoothly whilst supporting workers to progress from the shop floor to management roles.
               </p>
             </div>
             
@@ -190,7 +190,7 @@ export default function CaseStudies({ title, text }: Props) {
                     </div>
                     <div>
                       <h4 className="font-bold text-[#312252] mb-1">Final Result</h4>
-                      <p className="text-sm text-gray-600">Secured place on Vistry's PSL for permanent roles</p>
+                      <p className="text-sm text-gray-600">Secured place on Vistry&apos;s PSL for permanent roles</p>
                     </div>
                   </div>
                 </div>
@@ -378,11 +378,11 @@ export default function CaseStudies({ title, text }: Props) {
 
                 {/* Quote */}
                 <blockquote className="border-l-4 border-[#312252] pl-6 py-4 italic text-gray-700 text-sm md:text-base">
-                  "Even during challenging periods when driver numbers had to be reduced across the operation, Jacob's exceptional work ethic stood out. His commitment made such a positive impact that he was one of the few retained."
+                  &quot;Even during challenging periods when driver numbers had to be reduced across the operation, Jacob&apos;s exceptional work ethic stood out. His commitment made such a positive impact that he was one of the few retained.&quot;
                 </blockquote>
 
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  Jacob's adaptability and professionalism perfectly reflect our partnership values and the standards we strive for with every placement.
+                  Jacob&apos;s adaptability and professionalism perfectly reflect our partnership values and the standards we strive for with every placement.
                 </p>
               </div>
             </div>
@@ -441,7 +441,7 @@ export default function CaseStudies({ title, text }: Props) {
                   <div className="border-4 border-[#00afaa] p-6 rounded-lg">
                     <h4 className="font-bold text-lg text-[#312252] mb-2">Outstanding Impact & Recognition</h4>
                     <p className="text-sm text-gray-700">
-                      During one delivery to a major housing development, the site manager was so impressed with Lee's professionalism, attention to safety protocols, and helpful attitude that they contacted our agency directly requesting "another driver just like Lee". Lee's ability to handle complex deliveries, including navigating tight construction sites and coordinating with site teams, made him an invaluable asset.
+                      During one delivery to a major housing development, the site manager was so impressed with Lee&apos;s professionalism, attention to safety protocols, and helpful attitude that they contacted our agency directly requesting &quot;another driver just like Lee&quot;. Lee&apos;s ability to handle complex deliveries, including navigating tight construction sites and coordinating with site teams, made him an invaluable asset.
                     </p>
                   </div>
 
@@ -449,7 +449,7 @@ export default function CaseStudies({ title, text }: Props) {
                   <div className="border-4 border-[#00afaa] p-6 rounded-lg">
                     <h4 className="font-bold text-lg text-[#312252] mb-2">Preferred Driver Status</h4>
                     <p className="text-sm text-gray-700">
-                      After 8 months, the client offered Lee a permanent position, but he chose to remain with our agency to maintain flexibility whilst continuing to be their preferred driver. Lee's positive attitude, reliability, and commitment to excellence have made him feel like a true part of the company family, demonstrating the quality standards we deliver with every placement.
+                      After 8 months, the client offered Lee a permanent position, but he chose to remain with our agency to maintain flexibility whilst continuing to be their preferred driver. Lee&apos;s positive attitude, reliability, and commitment to excellence have made him feel like a true part of the company family, demonstrating the quality standards we deliver with every placement.
                     </p>
                   </div>
                 </div>
@@ -532,7 +532,7 @@ export default function CaseStudies({ title, text }: Props) {
                 </h2>
                 
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  Alex's journey at his employer, supported by Accept Recruitment, showcases dedication and rapid progression from warehouse operations to a leadership role.
+                  Alex&apos;s journey at his employer, supported by Accept Recruitment, showcases dedication and rapid progression from warehouse operations to a leadership role.
                 </p>
 
                 {/* Progress sections with green bars */}
@@ -566,7 +566,7 @@ export default function CaseStudies({ title, text }: Props) {
                 </div>
 
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  Alex's story is a testament to the growth opportunities at the company and the effective support provided by Accept Recruitment.
+                  Alex&apos;s story is a testament to the growth opportunities at the company and the effective support provided by Accept Recruitment.
                 </p>
               </div>
             </div>
@@ -592,11 +592,11 @@ export default function CaseStudies({ title, text }: Props) {
             
             <div className="space-y-6">
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Our clients' successes demonstrate our commitment and capabilities. We are eager to bring the same dedicated support to your business.
+                Our clients&apos; successes demonstrate our commitment and capabilities. We are eager to bring the same dedicated support to your business.
               </p>
               
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Let's discuss how we can partner to achieve your operational goals. We look forward to hearing from you.
+                Let&apos;s discuss how we can partner to achieve your operational goals. We look forward to hearing from you.
               </p>
             </div>
           </div>
