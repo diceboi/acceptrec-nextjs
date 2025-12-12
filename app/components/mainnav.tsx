@@ -6,7 +6,7 @@ import {BiChevronDown} from 'react-icons/bi'
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';
-import { TbBuildingFactory2, TbCheckupList, TbChevronLeft, TbChevronRight, TbFriends, TbListSearch, TbMessages, TbMoodPlus, TbPencil, TbPower, TbQuestionMark, TbRosetteNumber1, TbUsers, TbWeight } from 'react-icons/tb';
+import { TbBuildingFactory2, TbCheckupList, TbChevronLeft, TbChevronRight, TbFriends, TbListSearch, TbMessages, TbMoodPlus, TbPencil, TbPower, TbQuestionMark, TbRosetteNumber1, TbUsers, TbWeight, TbClipboardData } from 'react-icons/tb';
 import { FiArrowUpRight } from 'react-icons/fi';
 import { LuGlobe2 } from "react-icons/lu";
 
@@ -139,8 +139,8 @@ export default function MainNav() {
                                         <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-[#312252] to-[#31225283] rounded-xl group-hover:opacity-70 transition-all'></div>
                                     </Link>
                                 </li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/about-us/team" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbUsers className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Meet the team</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-travnsparent transition-all'><Link href="/clients/national-temporary-worker-day" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbBriefcase className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>National Temporary Worker Day</span></Link></li>                        
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/about-us/team" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbUsers className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>Meet the team</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-travnsparent transition-all'><Link href="/clients/national-temporary-worker-day" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbBriefcase className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>National Temporary Worker Day</span></Link></li>                        
                             </ul>
                         </li>
                     
@@ -155,11 +155,12 @@ export default function MainNav() {
                                         <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-[#312252] to-[#31225283] rounded-xl group-hover:opacity-70 transition-all'></div>
                                     </Link>
                                 </li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blogs/how-to-write-a-successful-job-description" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbPencil className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Writing a good job description</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blogs/interview-techniques" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbMoodPlus className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Interview Techniques</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/onboarding-process" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbCheckupList className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Onboarding process</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/industries" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbBuildingFactory2 className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Industries</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/for-employers/our-locations" className='flex flex-nowrap gap-2 w-full px-2 py-3'><LuGlobe2 className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Our Locations</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blogs/how-to-write-a-successful-job-description" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbPencil className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>Writing a good job description</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blogs/interview-techniques" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbMoodPlus className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>Interview Techniques</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/onboarding-process" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbCheckupList className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>Onboarding process</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/industries" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbBuildingFactory2 className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>Industries</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/for-employers/our-locations" className='flex flex-nowrap gap-2 w-full px-2 py-3'><LuGlobe2 className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>Our Locations</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/for-employers/case-studies" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbClipboardData className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>Case Studies</span></Link></li>
                             </ul>
                         </li>
                         <li id='mainlink' className='flex items-center border border-transparent hover:border-neutral-300 rounded-full hover:bg-[#0001] px-2 transition-all'><Link href="/for-employers" className="flex items-center gap-2"><span>For Candidates</span></Link><BiChevronDown className='text-2xl'/>
@@ -172,11 +173,11 @@ export default function MainNav() {
                                         <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-[#28a19d] to-[#00afa936] rounded-xl group-hover:opacity-70 transition-all'></div>
                                     </Link>
                                 </li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/refer-a-friend" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbFriends className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Refer a friend</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blogs/first-job-in-the-uk" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbQuestionMark className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>First Job in the UK</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/registration" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbPower className="w-6 h-6 group-hover:text-[#00afaa] transition-all"/><span>Sign-in / Registration</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/jobs" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbListSearch className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Jobs</span></Link></li>
-                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/manual-handling" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbWeight className="w-5 h-5 group-hover:text-[#00afaa] transition-all"/><span>Manual handling</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/refer-a-friend" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbFriends className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>Refer a friend</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/blogs/first-job-in-the-uk" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbQuestionMark className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>First Job in the UK</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/registration" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbPower className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>Sign-in / Registration</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/jobs" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbListSearch className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>Jobs</span></Link></li>
+                                <li className='row-span-1 flex w-full rounded-lg text-black border border-neutral-100 hover:border-transparent transition-all'><Link href="/manual-handling" className='flex flex-nowrap gap-2 w-full px-2 py-3'><TbWeight className="w-5 h-5 shrink-0 group-hover:text-[#00afaa] transition-all"/><span>Manual handling</span></Link></li>
                             </ul>
                         </li>
 
@@ -258,7 +259,10 @@ export default function MainNav() {
                                     <Link href="/industries" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Industries</Link>
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
-                                    <Link href="for-employers/our-locations" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Our Locations</Link>
+                                    <Link href="/for-employers/our-locations" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Our Locations</Link>
+                                </li>
+                                <li className='flex justify-between border-t border-neutral-300'>
+                                    <Link href="/for-employers/case-studies" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Case Studies</Link>
                                 </li>
                             </ul>
 
@@ -290,7 +294,7 @@ export default function MainNav() {
                                 </li>
                                 <li className='flex justify-between border-t border-neutral-300'>
                                     <Link href="/manual-handling" onClick={closeMobileMenu} className='w-full p-2 font-black text-xl'>Manual handling</Link>
-                                </li>
+                                </li>                                
                             </ul>
 
                         </li>
