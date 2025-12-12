@@ -296,7 +296,7 @@ export default function CaseStudies({ title, text }: Props) {
             {/* Right Image */}
             <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden">
               <Image 
-                src="/case-studies/2132.webp" 
+                src="/case-studies/13.webp" 
                 alt="Employee celebrating promotion" 
                 fill
                 className="object-cover"
@@ -405,7 +405,7 @@ export default function CaseStudies({ title, text }: Props) {
             {/* Left Image */}
             <div className="relative h-[400px] md:h-full min-h-[500px] rounded-lg overflow-hidden">
               <Image 
-                src="/case-studies/lee-payne.jpg" 
+                src="/case-studies/12.webp" 
                 alt="Lee Payne - Driver" 
                 fill
                 className="object-cover"
