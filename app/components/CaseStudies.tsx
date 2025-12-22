@@ -190,7 +190,7 @@ export default function CaseStudies({ title, text }: Props) {
                     </div>
                     <div>
                       <h4 className="font-bold text-[#312252] mb-1">Final Result</h4>
-                      <p className="text-sm text-gray-600">Secured place on Vistry&apos;s PSL for permanent roles</p>
+                      <p className="text-sm text-gray-600">Secured place on their PSL for permanent roles.</p>
                     </div>
                   </div>
                 </div>
