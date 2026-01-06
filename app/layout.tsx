@@ -64,6 +64,11 @@ export default function RootLayout({
 
         </Script>
 
+        <Script
+          src="https://t.contentsquare.net/uxa/c58cf60508cff.js"
+          strategy="afterInteractive"
+        />
+
       </head>
       <body className={raleway.className} id='__next'>
         <Script src="https://widget.superchat.de/snippet.js?applicationKey=WCOzVqDdxywB4oPRE7ag28MkpX" referrerPolicy="no-referrer-when-downgrade"></Script>
