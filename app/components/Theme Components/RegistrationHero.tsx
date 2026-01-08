@@ -18,7 +18,7 @@ interface RegistrationProps {
             <div className="flex flex-col justify-center items-center gap-4 w-full h-full text-white">
               <h2 className="text-sm lg:text-md font-bold tracking-widest uppercase">Registration</h2>
               <h1 className="text-6xl lg:text-8xl font-black tracking-tighter">Register or Sign in</h1>
-              <p>You need to be registered with us to apply for jobs. Click here to <strong>Sing in</strong> or <strong>Register</strong>.</p>
+              <p>You need to be registered with us to apply for jobs. Click here to <strong>Sign in</strong> or <strong>Register</strong>.</p>
               <div className="flex flex-nowrap gap-4">
                 <Link href="https://accept.iqxanywhere.net/" className='w-fit'>
                 <button  
