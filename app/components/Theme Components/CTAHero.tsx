@@ -8,7 +8,7 @@ export default function CTAHero({title, subtitle, text, link, bgimage, bgimageal
 
   return (
     <>        
-        <div className="overflow-hidden flex flex-col justify-center relative h-[70vh] pb-10 bg-opacity-20 pt-16 lg:pt-0">
+        <div className="overflow-hidden flex flex-col justify-center relative min-h-[100vh] pb-10 bg-opacity-20 pt-16 lg:pt-0">
             <Image 
                 src={bgimage}
                 alt={bgimagealt}
@@ -20,6 +20,21 @@ export default function CTAHero({title, subtitle, text, link, bgimage, bgimageal
               <div className="flex flex-col justify-center gap-4 lg:w-2/3 h-full text-white">
                 <h2 className="text-sm lg:text-md font-bold tracking-widest uppercase">{subtitle}</h2>
                 <h1 className="text-6xl lg:text-7xl font-black tracking-tighter">{title}</h1>
+                
+                {/* Video Section */}
+                <div className="w-full max-w-4xl my-6">
+                  <video 
+                    className="w-full rounded-lg shadow-2xl"
+                    controls
+                    preload="metadata"
+                    playsInline
+                    poster="/for-employers-hero-video-image.webp"
+                  >
+                    <source src="/for-employers-hero-video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                
                 <p>{text}</p>
                 <Link href={link} className='w-fit'>
                 <button  
