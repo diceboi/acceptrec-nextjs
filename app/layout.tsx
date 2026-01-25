@@ -74,7 +74,7 @@ export default function RootLayout({
       <body className={raleway.className} id='__next'>
         <Script src="https://widget.superchat.de/snippet.js?applicationKey=WCOzVqDdxywB4oPRE7ag28MkpX" referrerPolicy="no-referrer-when-downgrade"></Script>
         <ApolloWrapper>
-          <ChatMessage />
+          {/*<ChatMessage />*/}
           <Cookies />
           <MainNav />
           <FixedReviewBar />
