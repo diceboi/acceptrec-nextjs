@@ -114,19 +114,6 @@ export default async function LeicesterOfficePage() {
           <h1 className="lg:text-6xl text-4xl text-white font-black text-center lg:w-1/2">
             Best rated Recruitment Agency in Leicester
           </h1>
-          <div className="flex lg:flex-nowrap flex-nowrap gap-1 text-white lg:text-lg text-sm border border-white rounded-full py-2 px-4 w-fit">
-            <span className="flex gap-1 items-center">
-              <AiFillStar className=" text-amber-400" />
-              <b>4.8</b> stars by
-            </span>
-            <b>
-              <GoogleReviewNumber />
-            </b>
-            <span className="flex gap-1 items-center">
-              {" "}
-              +<FcGoogle /> Google reviews
-            </span>
-          </div>
           <p className="text-white lg:text-lg text-sm text-center lg:w-1/2">
             Where we accept every challenge but remain dedicated to providing
             outstanding service. We are proud to be the best-rated recruitment

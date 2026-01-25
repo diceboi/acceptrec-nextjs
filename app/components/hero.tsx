@@ -91,16 +91,22 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex flex-col justify-center w-full overflow-hidden bg-gradient-to-br from-white to-neutral-200 lg:h-[60vh] lg:pt-0 pt-16">
+    <section className="relative flex flex-col justify-center w-full overflow-hidden bg-gradient-to-br from-white to-neutral-200 lg:min-h-[70vh] nav-gap pb-16">
       <div id="jobsearch" className="flex flex-col justify-center w-10/12 lg:w-8/12 mx-auto p-4 lg:p-2 z-10">
-        <div id="hero-title" className="flex flex-col gap-4 lg:pt-32 w-full justify-center items-center">
+
+
+        {/* GOOGLE REVIEW - Moved to layout.tsx after navigation */}
+        {/* The component now follows the menu naturally */}
+
+
+        <div id="hero-title" className="flex flex-col gap-4 w-full justify-center items-center">
           <h1 className="hero-title text-6xl lg:text-8xl font-black tracking-tighter text-center p-2">
             Looking for work?
           </h1>
         </div>
 
         <div id="job-filter" className="flex gap-4 py-4 w-full justify-center items-center">
-          <form className="flex flex-col items-center max-w-5xl gap-8 mb-28" onSubmit={handleFormSubmit}>
+          <form className="flex flex-col items-center max-w-5xl gap-8 mb-8" onSubmit={handleFormSubmit}>
             <div className="flex flex-col justify-between lg:flex-row items-center lg:items-end gap-2">
 
               {/* Régió (hely) kiválasztása */}

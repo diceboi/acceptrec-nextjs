@@ -15,6 +15,9 @@ module.exports = {
       boxShadow: {
         'special': '0 0 0 1px rgba(0,0,0,.03), 0 2px 4px rgba(0,0,0,.05), 0 12px 24px rgba(0,0,0,.05);'
       },
+      animation: {
+        'gradient-x': 'gradient-x 8s ease infinite',
+      },
     },
   },
   plugins: [],

@@ -5,6 +5,16 @@
 
 /*Hero-title animation*/
 
+.nav-gap {
+  padding-top: 120px;
+}
+
+@media (min-width: 1280px) {
+  .nav-gap {
+    padding-top: 64px;
+  }
+}
+
 .hero-title {
   text-align: center;
   background: linear-gradient(to right, #00afaa 0%, #312252 40%, #312252 60%, #00afaa 80%);
@@ -14,12 +24,24 @@
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 8s linear infinite;  
+  animation: shine 8s linear infinite;
 }
 
 @keyframes shine {
   to {
     background-position: 200% center;
+  }
+}
+
+@keyframes gradient-x {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
   }
 }
 
@@ -54,21 +76,21 @@
 
 /*Menu dropdowns*/
 
-  nav li:hover > ul.submenu {
-    display: grid;
-  }
-  
-  nav ul.submenu li:hover > ul.submenu {
-    display: grid;
-  }
-  
-  nav ul.submenu li:hover {
-    box-shadow: 0 0 0 1px rgba(0,0,0,.03), 0 2px 4px rgba(0,0,0,.05), 0 12px 24px rgba(0,0,0,.05);
-    
-  }
+nav li:hover>ul.submenu {
+  display: grid;
+}
+
+nav ul.submenu li:hover>ul.submenu {
+  display: grid;
+}
+
+nav ul.submenu li:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .03), 0 2px 4px rgba(0, 0, 0, .05), 0 12px 24px rgba(0, 0, 0, .05);
+
+}
 
 
-  /* CSS for mobile menu */
+/* CSS for mobile menu */
 .menu-mobile {
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
@@ -93,9 +115,9 @@
 
 .ti-widget {
   width: fit-content;
-  display: flex!important;
+  display: flex !important;
   align-items: center;
-  justify-content: center ;
+  justify-content: center;
 }
 
 
@@ -105,6 +127,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-100%);
   }
@@ -114,24 +137,27 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
 }
 
 @media (min-width: 600px) {
-.logos:before,
-.logos:after {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  content: "";
-  z-index: 2;
-}
+
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
 }
 
 @media (max-width: 600px) {
+
   .logos:before,
   .logos:after {
     position: absolute;
@@ -141,7 +167,7 @@
     content: "";
     z-index: 2;
   }
-  }
+}
 
 .logos:before {
   left: 0;
@@ -176,7 +202,8 @@
   background-color: #00afaa;
   color: white;
   text-align: center;
-  transition: width .5s ease-out; /* Adjust the transition timing here */
+  transition: width .5s ease-out;
+  /* Adjust the transition timing here */
 }
 
 /*Hide default checkmark at jobfilters*/

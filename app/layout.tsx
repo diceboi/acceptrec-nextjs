@@ -1,6 +1,7 @@
 import './globals.css'
 import { Raleway } from 'next/font/google'
 import MainNav from './components/mainnav'
+import FixedReviewBar from './components/FixedReviewBar'
 import { ApolloWrapper } from './lib/apollo-wrapper'
 import Footer from './components/footer'
 import MainCTA from './components/MainCTA'
@@ -76,6 +77,7 @@ export default function RootLayout({
           <ChatMessage />
           <Cookies />
           <MainNav />
+          <FixedReviewBar />
           {children}
           <MainCTA />
           <Footer />

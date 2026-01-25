@@ -6,6 +6,7 @@ import Industries from './components/industries'
 import Rated from './components/rated'
 import Team from './components/Theme Components/Team'
 import RecentBlogs from './components/RecentBlogs'
+import FloatingReviewBadge from './components/FloatingReviewBadge'
 
 import { gql } from '@apollo/client'
 import { getClient } from './lib/client'
@@ -175,6 +176,12 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <Hero />
+
+      {/* GOOGLE REVIEW - Between Sections Position (Currently Inactive) */}
+      {/* To enable this position, uncomment the line below and comment out the one in hero.tsx */}
+      {/* <FloatingReviewBadge /> */}
+      {/* End of Google Review - Between Sections */}
+
       <Industries industriesMainTitle={homepage.industriesMainTitle} industriesSmallIntroduction={homepage.industriesSmallIntroduction} industriesSmallTitle={homepage.industriesSmallTitle} />
       <Recruitment recruitmentMainTitle={homepage.recruitmentMainTitle} recruitmentSmallTitle={homepage.recruitmentSmallTitle} />
       <Advantages advantagesIntroduction={homepage.advantagesIntroduction} advantagesMainTitle={homepage.advantagesMainTitle} advantagesSmallTitle={homepage.advantagesSmallTitle} />
