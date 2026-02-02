@@ -58,8 +58,8 @@ export default async function Joblist({ params }: any) {
   }
 
   return (
-    <section className="w-full py-20 lg:px-0 px-2">
-      <div className="lg:w-6/12 mx-auto px-8 py-10 shadow-special rounded-3xl">
+    <section className="w-full lg:px-0 px-2 nav-gap pb-20">
+      <div className="lg:w-6/12 mx-auto lg:px-8 px-4 py-10 shadow-special rounded-3xl mt-4 ">
         <div className=" border-b pb-10 border-neutral-300">
           <h1 className=" font-black text-5xl text-[#312252]">{foundJobs.node.title}</h1>
         </div>

@@ -7,7 +7,7 @@ export default function MainHero({ MainTitle, SmallTitle, Text, BackgroundImage,
   return (
     <>
       <div className="bg-white pb-10">
-        <div className="relative flex flex-col justify-end gap-4 w-full min-h-[30vh] m-auto nav-gap ">
+        <div className="relative flex flex-col justify-end gap-4 w-full min-h-[30vh] m-auto nav-gap pt-40">
           <Image
             src={BackgroundImage}
             alt={BackgroundImageAltText}

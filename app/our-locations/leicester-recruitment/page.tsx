@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 import { getClient } from "@/app/lib/client";
 import MainHero from "@/app/components/Theme Components/MainHero";
 import { AiFillStar } from "react-icons/ai";
-import GoogleReviewNumber from "@/app/components/googlereviewnumber";
+
 import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import Link from "next/link";

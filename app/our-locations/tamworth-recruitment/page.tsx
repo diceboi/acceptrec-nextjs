@@ -2,7 +2,9 @@ import { gql } from "@apollo/client";
 import { getClient } from "@/app/lib/client";
 import MainHero from "@/app/components/Theme Components/MainHero";
 import { AiFillStar } from "react-icons/ai";
-import GoogleReviewNumber from "@/app/components/googlereviewnumber";
+
+
+import DynamicReviewCount from "@/app/components/DynamicReviewCount";
 import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import Link from "next/link";
@@ -117,7 +119,7 @@ export default async function TamworthOfficePage() {
               <b>4.8</b> stars by
             </span>
             <b>
-              <GoogleReviewNumber />
+              <DynamicReviewCount />
             </b>
             <span className="flex gap-1 items-center">
               {" "}
