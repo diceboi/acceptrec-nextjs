@@ -25,6 +25,12 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // Átirányítás a Microsoft Bookings oldalra
+      {
+        source: '/demo',
+        destination: 'https://bookings.cloud.microsoft/book/ACCEPTECH@acceptrec.co.uk',
+        permanent: false, // 307 redirect, könnyebb változtatni ha később kell
+      },
       // Régi PHP/Joomla alapú útvonalak
       {
         source: '/index.php/:path*',
