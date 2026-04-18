@@ -31,6 +31,11 @@ const nextConfig = {
         destination: 'https://bookings.cloud.microsoft/book/ACCEPTECH@acceptrec.co.uk',
         permanent: false, // 307 redirect, könnyebb változtatni ha később kell
       },
+      {
+        source: '/discovery',
+        destination: 'https://bookings.cloud.microsoft/book/ACCEPTECH@acceptrec.co.uk/?ismsaljsauthenabled=true',
+        permanent: false,
+      },
       // Régi PHP/Joomla alapú útvonalak
       {
         source: '/index.php/:path*',
