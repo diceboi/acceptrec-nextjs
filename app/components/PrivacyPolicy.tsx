@@ -126,10 +126,10 @@ export default function PrivacyPolicy() {
 
           <section id="section-4">
             <h2 className="text-2xl font-bold border-l-4 border-[#312252] pl-4 text-[#312252]">4. AcceptPulse — workforce management platform</h2>
-            <p className="text-black">AcceptPulse is Accept's workforce management platform. It is used to manage shift scheduling, attendance recording, operational communications and related workforce activities. This section sets out the data we collect through AcceptPulse, other than facial recognition data which is covered in Section 5.</p>
+            <p className="text-black">AcceptPulse is Accept&apos;s workforce management platform. It is used to manage shift scheduling, attendance recording, operational communications and related workforce activities. This section sets out the data we collect through AcceptPulse, other than facial recognition data which is covered in Section 5.</p>
             
             <h3 className="text-lg font-semibold mt-6 mb-2 text-[#312252]">Geolocation data</h3>
-            <p className="text-black">When you clock in or clock out using AcceptPulse, the platform requests access to your device's GPS location. This is used solely to confirm that you are at or near the assigned work site. Location data is captured at the points of clock-in and clock-out only — AcceptPulse does not continuously track your location. You may decline location access on your device, although this may affect your ability to use the clock-in service and may require you to use an alternative method to record your attendance.</p>
+            <p className="text-black">When you clock in or clock out using AcceptPulse, the platform requests access to your device&apos;s GPS location. This is used solely to confirm that you are at or near the assigned work site. Location data is captured at the points of clock-in and clock-out only — AcceptPulse does not continuously track your location. You may decline location access on your device, although this may affect your ability to use the clock-in service and may require you to use an alternative method to record your attendance.</p>
             
             <h3 className="text-lg font-semibold mt-6 mb-2 text-[#312252]">Attendance and shift data</h3>
             <p className="text-black">AcceptPulse records clock-in times, clock-out times, break times, shift assignments, job roles and site locations. This information is used for attendance, payroll, billing and operational purposes.</p>
@@ -154,12 +154,12 @@ export default function PrivacyPolicy() {
               <li>Your hours, pay, tax and National Insurance contributions could end up wrong.</li>
             </ul>
             <p className="mt-4 text-black">It creates legal problems because both Accept and our clients have statutory duties to ensure that the person performing work is the person who has passed right-to-work, induction and other applicable checks. These duties arise under the Immigration, Asylum and Nationality Act 2006, the Health and Safety at Work etc. Act 1974, tax legislation, and the Modern Slavery Act 2015 framework.</p>
-            <p className="mt-4 text-black">Facial recognition is the control we use to address this. It is the only practical method that verifies, at the point of work, that the worker performing the work is the same individual who registered with Accept and passed Accept's checks.</p>
+            <p className="mt-4 text-black">Facial recognition is the control we use to address this. It is the only practical method that verifies, at the point of work, that the worker performing the work is the same individual who registered with Accept and passed Accept&apos;s checks.</p>
             
             <h3 className="text-lg font-semibold mt-8 mb-2 text-[#312252]">How facial recognition works in practice</h3>
             <p className="text-black"><strong>At registration:</strong> we take a photograph of you, with your knowledge. The photograph is enrolled in our facial recognition service. The service is hosted in the United Kingdom only.</p>
             <p className="text-black"><strong>At each shift:</strong> when you clock in or out at a check-in device, the device captures a live image of your face. The facial recognition service compares that live image against your enrolled photograph and returns a match or no-match result, which records the time of attendance. Live clock-in images are kept for 14 days and are then automatically deleted.</p>
-            <p className="text-black"><strong>If you have not worked a shift for 90 days:</strong> your enrolment in the facial recognition service is automatically deleted. The photograph is not retained anywhere else on Accept's systems. If you return to work after that period, you would be re-enrolled with a fresh photograph.</p>
+            <p className="text-black"><strong>If you have not worked a shift for 90 days:</strong> your enrolment in the facial recognition service is automatically deleted. The photograph is not retained anywhere else on Accept&apos;s systems. If you return to work after that period, you would be re-enrolled with a fresh photograph.</p>
             <p className="text-black">Right-to-work documents (passport, biometric residence permit, share code evidence) are separate from the facial recognition system and are retained as part of your personnel records — see Section 11.</p>
             
             <h3 className="text-lg font-semibold mt-8 mb-2 text-[#312252]">If the system flags a mismatch</h3>
@@ -168,10 +168,10 @@ export default function PrivacyPolicy() {
             <h3 className="text-lg font-semibold mt-8 mb-2 text-[#312252]">Lawful bases for facial recognition processing</h3>
             <p className="text-black">We rely on:</p>
             <ul className="list-disc pl-6 space-y-1 text-black">
-              <li><strong>Article 6(1)(f) UK GDPR</strong> — legitimate interests, including the prevention of identity-related fraud, the discharge of our and our clients' statutory duties, and the accurate administration of payroll.</li>
+              <li><strong>Article 6(1)(f) UK GDPR</strong> — legitimate interests, including the prevention of identity-related fraud, the discharge of our and our clients&apos; statutory duties, and the accurate administration of payroll.</li>
               <li><strong>Article 9(2)(g) UK GDPR</strong> — substantial public interest, read with paragraph 10 of Schedule 1 Part 2 of the Data Protection Act 2018 (preventing or detecting unlawful acts), in respect of the biometric data.</li>
             </ul>
-            <p className="text-black">We do not rely on consent. Consent is not the appropriate lawful basis in an employment context where there is an imbalance of power between us and you, and the Information Commissioner's Office has issued specific guidance on this point.</p>
+            <p className="text-black">We do not rely on consent. Consent is not the appropriate lawful basis in an employment context where there is an imbalance of power between us and you, and the Information Commissioner&apos;s Office has issued specific guidance on this point.</p>
             <p className="text-black">We maintain an Appropriate Policy Document covering this processing, in accordance with Schedule 1 Part 4 of the Data Protection Act 2018. A copy is available on request.</p>
             
             <h3 className="text-lg font-semibold mt-8 mb-2 text-[#312252]">The alternative process — your right not to use facial recognition</h3>
@@ -200,7 +200,7 @@ export default function PrivacyPolicy() {
             <ul className="list-disc pl-6 space-y-1 text-black">
               <li>AI tools may produce suitability scores or rankings to help a consultant prioritise their attention.</li>
               <li>A named human consultant reviews candidate information and makes the actual decision.</li>
-              <li>Consultants have the authority and the information to override the AI's recommendation, and do so where they consider the AI is wrong.</li>
+              <li>Consultants have the authority and the information to override the AI&apos;s recommendation, and do so where they consider the AI is wrong.</li>
             </ul>
             <p className="mt-4 text-black">We rely on the legitimate interests basis (Article 6(1)(f) UK GDPR) for this processing. We have assessed that this is necessary for our recruitment services and is not overridden by your rights, given the safeguards in place.</p>
             <p className="font-medium mt-4 text-[#312252]">You have the right to:</p>
@@ -221,7 +221,7 @@ export default function PrivacyPolicy() {
             <p className="text-black">Where a client requires equal opportunities monitoring, or where we conduct our own monitoring, we may ask for information about your ethnic background, gender, disability, age, sexual orientation, religion or other characteristics. This is sensitive personal data and we ask for your explicit consent before collecting it. Providing this information is voluntary and your decision will not affect your working relationship with us. Where information is shared with clients it is anonymised.</p>
             
             <h3 className="text-lg font-semibold mt-6 mb-2 text-[#312252]">Criminal records</h3>
-            <p className="text-black">Where a client's pre-engagement screening requires a criminal record check, we will explain the process to you and obtain your explicit consent before proceeding. The check is carried out by an authorised provider.</p>
+            <p className="text-black">Where a client&apos;s pre-engagement screening requires a criminal record check, we will explain the process to you and obtain your explicit consent before proceeding. The check is carried out by an authorised provider.</p>
             
             <h3 className="text-lg font-semibold mt-6 mb-2 text-[#312252]">Health and disability</h3>
             <p className="text-black">We may process health and disability information where this is relevant to your safety, fitness for work, or where we are required to make reasonable adjustments. We rely on Article 9(2)(b) UK GDPR (employment law) and Article 9(2)(h) (occupational health) where applicable.</p>
@@ -249,7 +249,7 @@ export default function PrivacyPolicy() {
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-black">Article 6(1)(f) — legitimate interests</td>
-                    <td className="px-4 py-3 text-black">Processing necessary for our (or others') legitimate interests, including running our business, providing services, preventing fraud and substitution, and supporting AI-assisted consultant decisions. We have assessed these interests against your rights and concluded they are not overridden, with safeguards in place.</td>
+                    <td className="px-4 py-3 text-black">Processing necessary for our (or others&apos;) legitimate interests, including running our business, providing services, preventing fraud and substitution, and supporting AI-assisted consultant decisions. We have assessed these interests against your rights and concluded they are not overridden, with safeguards in place.</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-black">Article 6(1)(a) — consent</td>
@@ -276,7 +276,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-bold border-l-4 border-[#312252] pl-4 text-[#312252]">9. Sharing your data with third parties</h2>
             <p className="text-black">We share personal data with the following categories of recipient:</p>
             <h3 className="text-lg font-semibold mt-6 mb-2 text-[#312252]">Clients</h3>
-            <p className="text-black">We share with the client at whose site you are working: your name, role, attendance records, identity-verified clock-in/out times, and other information necessary to manage the assignment, billing and the client's own statutory duties (such as right-to-work and health and safety).</p>
+            <p className="text-black">We share with the client at whose site you are working: your name, role, attendance records, identity-verified clock-in/out times, and other information necessary to manage the assignment, billing and the client&apos;s own statutory duties (such as right-to-work and health and safety).</p>
             
             <h3 className="text-lg font-semibold mt-6 mb-2 text-[#312252]">Authorities and regulators</h3>
             <p className="text-black">We share data with HMRC, the Department for Work and Pensions, the Home Office, the Health and Safety Executive, and other regulators where required by law or for the purposes set out in this notice.</p>
@@ -332,7 +332,7 @@ export default function PrivacyPolicy() {
                 </tbody>
               </table>
             </div>
-            <p className="text-black">Each processor is bound by a written contract requiring them to process your data only on Accept's instructions, to apply appropriate security, and to comply with UK data protection law.</p>
+            <p className="text-black">Each processor is bound by a written contract requiring them to process your data only on Accept&apos;s instructions, to apply appropriate security, and to comply with UK data protection law.</p>
             <p className="text-black"><strong>Professional advisors and insurers:</strong> We may share data with our legal, accounting, audit and insurance advisors where necessary.</p>
             <p className="text-black"><strong>Business transfers:</strong> If Accept sells, transfers or merges parts of its business or assets, your data may be transferred to a third party as part of that transaction. The receiving party will be required to use your data in line with this notice.</p>
           </section>
@@ -375,7 +375,7 @@ export default function PrivacyPolicy() {
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-black">Enrolment in the facial recognition service (the photograph used for matching)</td>
-                    <td className="px-4 py-3 text-black">Automatically deleted 90 days after the worker's last shift. Deleted earlier on objection or switch to alternative process. Not retained anywhere else on Accept's systems.</td>
+                    <td className="px-4 py-3 text-black">Automatically deleted 90 days after the worker&apos;s last shift. Deleted earlier on objection or switch to alternative process. Not retained anywhere else on Accept&apos;s systems.</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-black">Live clock-in images (captured at point of attendance)</td>
@@ -431,7 +431,7 @@ export default function PrivacyPolicy() {
               <li><strong>Right to object</strong> — to object to processing carried out on the basis of legitimate interests, including direct marketing and (specifically) facial recognition processing.</li>
               <li><strong>Rights in relation to AI-supported decisions</strong> — to be informed about, express your view on, and contest decisions where AI tools have been used.</li>
               <li><strong>Right to withdraw consent</strong> — where we have relied on your consent, you may withdraw it at any time without affecting processing carried out before the withdrawal.</li>
-              <li><strong>Right to complain to the Information Commissioner's Office (ICO)</strong> — see <a href="https://ico.org.uk" className="text-primary hover:underline">ico.org.uk</a>.</li>
+              <li><strong>Right to complain to the Information Commissioner&apos;s Office (ICO)</strong> — see <a href="https://ico.org.uk" className="text-primary hover:underline">ico.org.uk</a>.</li>
             </ul>
             <p className="text-black">Exercising your rights does not affect your pay, shift allocation, treatment or any other aspect of your working relationship with Accept.</p>
             <p className="text-black">To exercise any of these rights, please contact us using the details in Section 18.</p>
@@ -480,9 +480,9 @@ export default function PrivacyPolicy() {
               <p className="text-black">Website: <a href="https://www.acceptrec.co.uk" className="text-primary hover:underline">www.acceptrec.co.uk</a></p>
             </div>
 
-            <p className="mt-8 text-black">You also have the right to complain to the Information Commissioner's Office:</p>
+            <p className="mt-8 text-black">You also have the right to complain to the Information Commissioner&apos;s Office:</p>
             <div className="bg-neutral-50 p-6 rounded-xl border border-neutral-100 flex flex-col gap-2 not-prose text-black">
-              <p className="font-bold text-lg text-[#312252]">Information Commissioner's Office</p>
+              <p className="font-bold text-lg text-[#312252]">Information Commissioner&apos;s Office</p>
               <p className="text-black">Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF</p>
               <p className="text-black">Helpline: 0303 123 1113</p>
               <p className="text-black">Website: <a href="https://ico.org.uk" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">ico.org.uk</a></p>
