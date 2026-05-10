@@ -23,6 +23,27 @@ const nextConfig = {
     ],
   },
 
+  async headers() {
+    return [
+      {
+        // Az összes .vercel.app URL-re noindex, nofollow
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: '.*\\.vercel\\.app',
+          },
+        ],
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
+    ];
+  },
+
   async redirects() {
     return [
       // Átirányítás a Microsoft Bookings oldalra
